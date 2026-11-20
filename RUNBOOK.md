@@ -23,8 +23,13 @@ Never mock or distort a deity; no violence shown (tell it with light, objects, c
 ## 2. Script (`script.json`, copy the shape of `examples/ganga/script.json`)
 - Hindi, conversational, like telling a friend. Hook question → escalation → surprise → twist → loop-back last line.
 - 20-26 lines, ~45-55 s at voice speed 1.1. One line = one CUT (1.5-3.5 s). Sentences end in "." "?" (not "।").
-- Last 2 lines always: "ऐसी ही अनकही कहानियों के लिए," / "फ़ॉलो करें, अनटोल्ड स्टोरीज़." with caps "ऐसी ही *अनकही कहानियाँ" / "फ़ॉलो करें | *Untold Stories".
-- Captions: 2-4 words, exactly one `*`red word each. Numbers written as said.
+- Last 2 lines always: "ऐसी ही अनकही कहानियों के लिए," / "फ़ॉलो करें, अनटोल्ड स्टोरीज़." with caps "Aisi hi *ankahi kahaniyon ke liye" / "Follow karein | *Untold Stories".
+- Captions are in **Hinglish (Roman script)**, the user's choice: e.g. `"caps": "Aasmaan mein *teen shahar"`,
+  `"Ek *sone ka | ek *chaandi ka | aur ek *lohe ka"`, last line `"Follow karein | *Untold Stories"`.
+  Simple everyday spelling (mein, hai, aur, ka/ki/ke, nahi, Mahadev, Brahma ji, Vishnu, Shiv). 2-4 words, exactly one
+  `*`red word. Keep each caption chunk to the same words, in the same order, as the Hindi it shows, so the timing
+  (placed by word count inside the line) lands on the right words. The `text` (what the voice reads) stays in Hindi.
+- Numbers written as said.
 - `voice`: "hm_omega", `speed`: 1.12-1.17, `music`: "devotional", and the sound the user chose (deep voice, low quiet bass-heavy music):
   `"voice_fx": "rubberband=pitch=0.85:formant=shifted,bass=g=5:f=120,equalizer=f=3200:t=q:w=1:g=1.5,aecho=0.85:0.75:45|90:0.16|0.08,acompressor=threshold=-20dB:ratio=3:attack=8:release=200"`, `"music_db": -26`, `"music_sa": 110`, `"music_lp": 2000`, `"music_sub": 0.65`. Target: voice >= 11 dB above the music. List `sources`.
 
