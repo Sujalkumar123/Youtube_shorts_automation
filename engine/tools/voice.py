@@ -100,7 +100,15 @@ def main():
             a = 0.0 if j == 0 else cuts[j][1]; b = n if j == len(g) - 1 else cuts[j + 1][0]
             lines[i] = {'i': i, 'text': S['lines'][i]['text'], 'start': round(t + a, 3), 'end': round(t + b, 3)}
             print(f'{i:2d} {lines[i]["start"]:6.2f}-{lines[i]["end"]:6.2f}  {S["lines"][i]["text"]}', flush=True)
-        gap = np.zeros(int(float(S['lines'][g[-1]].get('gap', S.get('gap', 0.3))) * SR))
+        gsec = float(S['lines'][g[-1]].get('gap', S.get('gap', 0.3)))
+        gap = np.zeros(int(gsec * SR))
+        if S.get('breaths', True) and gsec >= 0.25 and g[-1] < len(S['lines']) - 1:   # a soft inhale at the end of the pause, like a real narrator
+            bl = int(0.24 * SR); rng_b = np.random.default_rng(len(groups) + g[0]); nb = rng_b.standard_normal(bl)
+            from scipy import signal as _sg
+            b_, a_ = _sg.butter(2, [500 / (SR / 2), 2600 / (SR / 2)], 'band'); nb = _sg.lfilter(b_, a_, nb)
+            env_b = np.sin(np.pi * np.linspace(0, 1, bl)) ** 1.6 * np.linspace(0.6, 1, bl)
+            nb = nb / (np.abs(nb).max() + 1e-9) * env_b * 0.035 * np.abs(x).max()
+            st_b = max(0, len(gap) - bl - int(0.04 * SR)); gap[st_b:st_b + bl] += nb[:len(gap) - st_b]
         out += [x, gap]; t += (len(x) + len(gap)) / SR
     outro = np.zeros(int(float(S.get('outro', 0.9)) * SR)); out.append(outro)
     y = np.concatenate(out); y = y / (np.abs(y).max() + 1e-9) * 0.9

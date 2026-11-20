@@ -34,6 +34,7 @@ Never mock or distort a deity; no violence shown (tell it with light, objects, c
 - Use "..." for held breaths, "!" for awe, "?" for questions; Kokoro reads punctuation.
 - Pace per sentence with a `speed` on the sentence's line: 0.95-1.0 for reveals, sacred names and the twist;
   1.12-1.2 for build-ups and lists; default 1.12.
+- Breaths: voice.py adds a soft inhale in pauses >= 0.25 s (script.json `"breaths": true`, the default).
 - Pauses: `gap` 0.5-0.8 after a reveal or before the twist, 0.2-0.3 elsewhere. Do not exceed ~60 s total.
 
 ## 3. Visuals (original every time: this is what keeps the channel monetizable)
