@@ -190,7 +190,7 @@ def reverb(x, secs=3.2, wet=0.45, seed=3):
 
 def music_devotional():
     """deep devotional bed: tanpura (Pa Sa' Sa' Sa), sub drone on Sa, slow low strings"""
-    SA = 138.6; t = np.arange(N) / SR; x = np.zeros(N)
+    SA = float(script.get('music_sa', 138.6)); t = np.arange(N) / SR; x = np.zeros(N)
     seq = [SA * 0.75, SA * 2 * 0.5 * 2, SA * 2 * 0.5 * 2, SA / 2]          # Pa, Sa', Sa', low Sa
     step = 1.15; k = 0
     while k * step < DUR + 1:
@@ -204,7 +204,7 @@ def music_devotional():
         for dt in (-0.25, 0.3): pad += sig_saw(f * (1 + dt / 100), t)
     pad = lp(lp(pad, 520), 520) * (0.55 + 0.45 * np.sin(2 * np.pi * t / 14 - 1) ** 2)
     pad = pad / (np.abs(pad).max() + 1e-9)
-    y = lp(x, 2800) + sub * 0.45 + pad * 0.32
+    y = lp(x, float(script.get('music_lp', 2800))) + sub * float(script.get('music_sub', 0.45)) + pad * 0.32
     fade = np.ones(N); fo = int(2.0 * SR); fade[-fo:] = np.linspace(1, 0, fo); fi = int(1.0 * SR); fade[:fi] *= np.linspace(0, 1, fi)
     return y / (np.abs(y).max() + 1e-9) * fade
 

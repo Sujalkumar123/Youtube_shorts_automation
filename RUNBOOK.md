@@ -25,8 +25,8 @@ Never mock or distort a deity; no violence shown (tell it with light, objects, c
 - 20-26 lines, ~45-55 s at voice speed 1.1. One line = one CUT (1.5-3.5 s). Sentences end in "." "?" (not "।").
 - Last 2 lines always: "ऐसी ही अनकही कहानियों के लिए," / "फ़ॉलो करें, अनटोल्ड स्टोरीज़." with caps "ऐसी ही *अनकही कहानियाँ" / "फ़ॉलो करें | *Untold Stories".
 - Captions: 2-4 words, exactly one `*`red word each. Numbers written as said.
-- `voice`: "hm_omega", `speed`: 1.1, `music`: "devotional", `music_db`: -23, and the deeper-voice setting the user chose:
-  `"voice_fx": "rubberband=pitch=0.89:formant=shifted,bass=g=3:f=130,equalizer=f=3500:t=q:w=1:g=1.5"`. List `sources`.
+- `voice`: "hm_omega", `speed`: 1.12-1.17, `music`: "devotional", and the sound the user chose (deep voice, low quiet bass-heavy music):
+  `"voice_fx": "rubberband=pitch=0.85:formant=shifted,bass=g=5:f=120,equalizer=f=3200:t=q:w=1:g=1.5"`, `"music_db": -26`, `"music_sa": 110`, `"music_lp": 2000`, `"music_sub": 0.65`. Target: voice >= 11 dB above the music. List `sources`.
 
 ## 3. Visuals (original every time: this is what keeps the channel monetizable)
 - `bash` copy `engine/` to `~/work/<slug>/`, replace `src/shots.js` with today's shots (one per line).

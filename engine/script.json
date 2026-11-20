@@ -116,6 +116,9 @@
    "caps": "फ़ॉलो करें | *Untold Stories"
   }
  ],
- "music_db": -23,
- "voice_fx": "rubberband=pitch=0.89:formant=shifted,bass=g=3:f=130,equalizer=f=3500:t=q:w=1:g=1.5"
+ "music_db": -26,
+ "voice_fx": "rubberband=pitch=0.85:formant=shifted,bass=g=5:f=120,equalizer=f=3200:t=q:w=1:g=1.5",
+ "music_sa": 110,
+ "music_lp": 2000,
+ "music_sub": 0.65
 }

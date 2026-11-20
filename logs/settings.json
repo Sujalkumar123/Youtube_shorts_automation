@@ -28,5 +28,13 @@
  "youtube_channel": "Untold Stories (@untoldstories-z8b, UCfCYsHOoAr5qzldDgRoXNsQ)",
  "zapier_account": "untoldstories844@gmail.com",
  "flow": "private preview + Telegram alert ~30 min early, STOP check, then public at slot + live alert",
- "studio_repo": "Sujalkumar123/Youtube_shorts_automation (branch: main)"
+ "studio_repo": "Sujalkumar123/Youtube_shorts_automation (branch: main)",
+ "sound": {
+  "voice_fx": "rubberband=pitch=0.85:formant=shifted,bass=g=5:f=120,equalizer=f=3200:t=q:w=1:g=1.5",
+  "music_db": -26,
+  "music_sa": 110,
+  "music_lp": 2000,
+  "music_sub": 0.65,
+  "note": "user: deeper voice, lower & quieter background with more bass (2026-11-20)"
+ }
 }
