@@ -6,6 +6,10 @@
    "start": "07:15",
    "publish": "08:00"
   },
+  "afternoon": {
+   "start": "14:15",
+   "publish": "15:00"
+  },
   "evening": {
    "start": "19:15",
    "publish": "20:00"
