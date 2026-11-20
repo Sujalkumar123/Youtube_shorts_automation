@@ -1,0 +1,16 @@
+# YouTube trend scans (newest first)
+
+## 2026-11-21 00:10 IST, query "पौराणिक कथा shorts", last 7 days, IN/hi, by views
+| views | title | concept |
+|---|---|---|
+| 5,750,459 | छठी मैया की कोई मूर्ति क्यों नहीं होती? | festival mystery (Chhath) |
+| 1,390,016 | Shani Dev Ki Drishti Ep 2, Hanuman, Lanka Dahan | Hanuman/Shani series |
+| 1,096,367 | छठी मैया कौन हैं? | festival origin (Chhath) |
+| 806,767 | सूर्यदेव के सात घोड़े और अरुण देव की कथा | hidden meaning of a symbol |
+| 703,844 | गोवर्धन पर्वत हर दिन धरती में क्यों समा रहा है? | curse / living mystery |
+| 604,860 | भगवान विष्णु चार महीने सोते नहीं… फिर कहाँ जाते हैं? | festival (Dev Uthani) mystery |
+| 579,822 | तुलसी बनकर धरती पर क्यों आईं माता लक्ष्मी? | festival (Tulsi Vivah) origin |
+| 527,407 | ॐ का पूरा अर्थ? कार्तिकेय ने बताया रहस्य | secret meaning |
+| 374,619 | Why God Was Cursed to Be Born as a Human (Vishnu's 10 avatars) | curse / origin |
+| 361,902 | कैसे बने थे सुदर्शन चक्र और त्रिशूल? | origin of divine weapons |
+Pattern: "क्यों / रहस्य" questions about familiar things; festival tie-ins; curses; origins of symbols and weapons.

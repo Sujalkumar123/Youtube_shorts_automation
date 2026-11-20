@@ -10,15 +10,26 @@ is drawn by `engine/src/main.js` (`drawBrand`), on every frame.
   word timing falls back to the exact line times). Chrome, ffmpeg and Node 22 must be present.
 - Read `logs/topics.json` (every topic already made, with its palette and scene types) and `logs/notes.md` (lessons).
 
-## 1. Pick today's topic (trending, untold, not repeated)
-Search the web (several searches, India-focused, current week):
-- Hindu festivals and auspicious days in the next 7 days (Panchang / drikpanchang), and what's being searched for them.
-- Trending Indian-mythology topics on YouTube Shorts / Google Trends India this week (devotional, Mahabharata,
-  Ramayana, Shiva, Krishna, Hanuman, Devi, temples, Puranic stories).
-Pick ONE story that is (a) tied to something trending or a festival this week, (b) a lesser-known "untold" angle, not a
-topic or story already in `logs/topics.json`, (c) documented in reliable sources: Valmiki Ramayana, Mahabharata,
-Puranas (wisdomlib.org, sacred-texts.com), Britannica, temple/government sites. Keep the sources.
-Never mock or distort a deity; no violence shown (tell it with light, objects, consequences); no caste or political angle.
+## 1. Pick today's topic from what is trending ON YOUTUBE (do this every run)
+**a. YouTube trend scan (Zapier YouTube connector).** Run 4-6 searches with `youtube_find_video`
+(`order: viewCount`, `published_after`: 7 days ago, `region_code: IN`, `relevance_language: hi`, `video_duration: short`,
+`max_results: 15`), queries such as: "पौराणिक कथा shorts", "mahadev story shorts", "hanuman ji katha shorts",
+"krishna leela rahasya shorts", "mahabharat unknown facts shorts", "ramayan rahasya shorts", plus this week's festival.
+Then rank them by real numbers with one `youtube_make_api_get_request` GET /youtube/v3/videos
+`part=statistics&id=<up to 50 ids>&fields=items(id,statistics(viewCount,likeCount,commentCount))` (1 quota unit).
+Score = views ÷ days since publish. Write the top 10 (title, views, views/day, concept) to `logs/trends.md`
+(newest scan on top, keep the last 7 days).
+**b. Read the pattern, not the video.** Note which DEITIES, STORIES and HOOK STYLES are winning (e.g. "क्यों/रहस्य"
+mystery questions about something familiar, a festival this week, a curse, a hidden origin, "X ने Y क्यों किया?").
+**c. Choose.** Pick ONE story in a winning concept/deity/festival that is NOT in `logs/topics.json`, with our own
+untold angle. Never copy another creator's script, title, structure or frames: same concept, our original story,
+facts from the scriptures. Prefer what is rising this week (high views/day) and a festival in the next 7 days
+(also search the web for this week's festivals/Panchang).
+**d. Title in the winning style:** a Hindi mystery question/hook + short English, ending with #shorts,
+e.g. `गोवर्धन पर्वत हर दिन धरती में क्यों समा रहा है? | The Curse of Govardhan #shorts`.
+**e. Sources:** the story must be documented (Ramayana, Mahabharata, Puranas via wisdomlib.org/sacred-texts.com,
+Britannica, temple/government sites). Keep the sources for the description.
+Never mock or distort a deity; no violence shown; no caste or political angle.
 
 ## 2. Script (`script.json`, copy the shape of `examples/ganga/script.json`)
 - Hindi, conversational, like telling a friend. Hook question → escalation → surprise → twist → loop-back last line.
