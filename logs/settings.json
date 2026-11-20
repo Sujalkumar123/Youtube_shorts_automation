@@ -22,7 +22,7 @@
  "media_repo": "Sujalkumar123/Youtube_shorts_automation (branch: media)",
  "privacy": "public",
  "approval": false,
- "notify": "telegram (via Zapier)",
+ "notify": "Telegram ONLY for problems (failed step, quality gate FAIL, not posted). Silent on success.",
  "telegram_chat": "1289292985",
  "telegram_bot": "@Story_teller844_bot",
  "youtube_channel": "Untold Stories (@untoldstories-z8b, UCfCYsHOoAr5qzldDgRoXNsQ)",
@@ -38,5 +38,6 @@
   "note": "user: deeper voice, lower & quieter background with more bass (2026-11-20)",
   "narration_style": "emotional storyteller: per-sentence pace, dramatic pauses, light echo (2026-11-20)"
  },
- "captions": "Hinglish (Roman script), from 2026-11-21"
+ "captions": "Hinglish (Roman script), from 2026-11-21",
+ "preview_alerts": false
 }

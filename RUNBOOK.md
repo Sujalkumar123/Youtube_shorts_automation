@@ -77,6 +77,13 @@ Then `node tools/capture.mjs video renders/<slug>.mp4` and a share copy under 35
 `ffmpeg -i renders/<slug>.mp4 -vf hqdn3d=2:2:4:4 -c:v libx264 -crf 23 -preset slow -pix_fmt yuv420p -c:a aac -b:a 160k -movflags +faststart renders/<slug>-yt.mp4`
 Cover: the strongest frame (`capture.mjs frames`).
 
+**Quality gate (mandatory, nothing is uploaded without PASS):**
+`~/.faceless-shorts/venv/bin/python tools/quality_gate.py . renders/<slug>-yt.mp4`
+It checks 1080x1920, 30-75 s, audio present, voice >= 9 dB above the music (from data/levels.json written by mix.py),
+the video contains the current mix, every line has captions and word timing, no black screen, no frozen picture, < 35 MB.
+On FAIL: fix the cause (re-voice / re-mix / fix the shot / re-render) and run it again. If it still fails after one
+fix, do NOT upload: send the Telegram problem alert (section 6b) with the reasons from review/quality.json.
+
 ## 5. Metadata
 - Title: Hindi hook + short English, under 70 chars, e.g. `गंगा धरती पर कैसे आईं? | The Untold Story of Bhagirath`.
 - Description: 2-3 Hindi lines + 1 English line, then "Sources:" (the texts), then 5-8 hashtags drawn from this
@@ -93,19 +100,20 @@ Slots (IST): 08:00, 15:00, 20:00 (`logs/settings.json`). The run starts 75 min e
    then Zapier YouTube "Upload Video" (`youtube_upload_video`) with `privacy_status` "private", category 27,
    made_for_kids false, notify_subscribers true, default_language/default_audio_language "hi", title (end it with #shorts)/description/tags.
    Afterwards `git rm` the mp4 from the media branch, commit and push (branch deletion is blocked; removing the file is enough).
-2. **Preview alert.** Zapier Telegram "Send Message" to `telegram_chat`:
+2. **No preview alert** (the user wants Telegram ONLY for problems). Skip this message unless `logs/settings.json`
+   has `"preview_alerts": true`:
    "🔒 Untold Stories preview (private): <title>\n<topic>\nGoes PUBLIC at <slot> IST. Reply STOP to this bot to keep it private."
    with a button "Watch preview" → https://www.youtube.com/watch?v=<id> (the user is signed in, so it plays for them).
 3. **Wait until the slot time** (sleep in short intervals).
 4. **Stop check.** Zapier Telegram "New Message" (`telegram_new_message`, chat `telegram_chat`): if the user sent
-   "stop"/"STOP"/"रोको" after the preview alert, do NOT publish; send "⏸ Kept private: <title>" and log it.
+   "stop"/"STOP"/"रोको" in the last hour, do NOT publish; send "⏸ Kept private: <title>" and log it.
    Also read the video (YouTube "Make API GET Request" on /youtube/v3/videos?part=status&id=<id>): if it is gone or the
    user already changed it, leave it alone.
 5. **Go public.** YouTube "Make API Mutating Request" (`youtube_make_api_mutating_request`): PUT
    https://www.googleapis.com/youtube/v3/videos?part=status with body
    `{"id":"<id>","status":{"privacyStatus":"public","embeddable":true,"license":"youtube","publicStatsViewable":true,"selfDeclaredMadeForKids":false}}`
    and fail_on_errors true. Verify with a GET that privacyStatus is "public".
-6. **Live alert.** Telegram: "✅ LIVE now: <title>" with button "Watch on YouTube".
+6. **No success message.** When everything worked, send nothing (only problems go to Telegram).
 - If any step fails, send "⚠️ Untold Stories <slot> failed at <step>: <reason>" to Telegram and log it.
 - If Zapier is not available in the session: send the MP4 + cover + metadata to the user in the session instead.
 ## 6b. Problems → Telegram, always (the user watches Telegram, not this session)

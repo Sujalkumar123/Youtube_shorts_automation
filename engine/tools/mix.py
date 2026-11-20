@@ -247,6 +247,14 @@ for c in cj['cues']:
     i = int(c['t'] * SR); n = min(len(x), N - i)
     if n > 0 and i >= 0: fxbus[i:i + n] += x[:n]
 mix += reverb(fxbus, 2.6, 0.4, seed=7)
+# levels for the quality gate: voice vs everything else, measured on the speech parts
+try:
+    _L = json.loads((P / 'data/lines.json').read_text())['lines']; _sp = np.zeros(N, bool)
+    for _l in _L: _sp[int(_l['start'] * SR):int(_l['end'] * SR)] = True
+    _rms = lambda x: 20 * np.log10(np.sqrt(np.mean(x ** 2)) + 1e-12)
+    _v = voice.mean(1)[_sp] if voice is not None else np.zeros(1); _b = (mix - (voice if voice is not None else 0)).mean(1)[_sp]
+    (P / 'data/levels.json').write_text(json.dumps({'voice_db': round(_rms(_v), 2), 'bed_db': round(_rms(_b), 2), 'gap_db': round(_rms(_v) - _rms(_b), 2)}))
+except Exception as _e: print('levels not written:', _e)
 # master: gentle soft-clip, peak -1 dBFS
 mix = np.tanh(mix * 1.2) / 1.2
 mix *= db(-1) / (np.abs(mix).max() + 1e-9)
