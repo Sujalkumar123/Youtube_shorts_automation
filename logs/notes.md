@@ -7,3 +7,4 @@
 - Reusable story pieces live in examples/<slug>/shots.js (city, brahma, maya, chariot, meruBow, vishnuArrow, kashi in examples/tripura). Copy what you need.
 - Shiva archer shot: draw meruBow in FRONT of shiva at his hand, nock the arrow before release; keep props above y 1500 (caption strip).
 - Kokoro Hindi at speed 1.17 still ~2.5 words/s: 25 lines ≈ 64 s. Shorts accept up to 3 min, but aim for 22-24 lines.
+- 2026-11-20: first live upload WZL7iiv6jno via raw.githubusercontent media branch + Zapier upload_video (private) + raw PUT videos?part=status (public). All three steps verified working.

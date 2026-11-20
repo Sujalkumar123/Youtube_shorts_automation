@@ -19,7 +19,7 @@
   }
  },
  "upload": "zapier",
- "media_repo": "Sujalkumar123/untold-stories-media",
+ "media_repo": "Sujalkumar123/Youtube_shorts_automation (branch: media)",
  "privacy": "public",
  "approval": false,
  "notify": "telegram (via Zapier)",
@@ -27,5 +27,6 @@
  "telegram_bot": "@Story_teller844_bot",
  "youtube_channel": "Untold Stories (@untoldstories-z8b, UCfCYsHOoAr5qzldDgRoXNsQ)",
  "zapier_account": "untoldstories844@gmail.com",
- "flow": "private preview + Telegram alert ~30 min early, STOP check, then public at slot + live alert"
+ "flow": "private preview + Telegram alert ~30 min early, STOP check, then public at slot + live alert",
+ "studio_repo": "Sujalkumar123/Youtube_shorts_automation (branch: main)"
 }

@@ -60,10 +60,14 @@ Cover: the strongest frame (`capture.mjs frames`).
 
 ## 6. Publish: private preview ~30 min before, public at the slot (no approval needed)
 Slots (IST): 08:00, 15:00, 20:00 (`logs/settings.json`). The run starts 75 min early.
-1. **Private upload as soon as the video is ready (target: 30 min before the slot).** Put the `-yt.mp4` on a GitHub
-   release of the PUBLIC media repo (`media_repo`), verify the download URL (`curl -sSIL` → 200, video content-type),
+1. **Private upload as soon as the video is ready (target: 30 min before the slot).** GitHub releases are blocked in
+   these sessions, so: in a clone of Sujalkumar123/Youtube_shorts_automation, `git fetch --depth 1 origin media`,
+   check out branch `media`, copy the `-yt.mp4` to `media/<slug>.mp4`, commit and push. The file URL is
+   https://raw.githubusercontent.com/Sujalkumar123/youtube_shorts_automation/media/media/<slug>.mp4
+   — verify it (`curl -sSIL` → 200 and the right content-length),
    then Zapier YouTube "Upload Video" (`youtube_upload_video`) with `privacy_status` "private", category 27,
-   made_for_kids false, notify_subscribers true, title/description/tags. Delete the release afterwards.
+   made_for_kids false, notify_subscribers true, default_language/default_audio_language "hi", title (end it with #shorts)/description/tags.
+   Afterwards `git rm` the mp4 from the media branch, commit and push (branch deletion is blocked; removing the file is enough).
 2. **Preview alert.** Zapier Telegram "Send Message" to `telegram_chat`:
    "🔒 Untold Stories preview (private): <title>\n<topic>\nGoes PUBLIC at <slot> IST. Reply STOP to this bot to keep it private."
    with a button "Watch preview" → https://www.youtube.com/watch?v=<id> (the user is signed in, so it plays for them).
