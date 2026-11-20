@@ -16,5 +16,8 @@
  "privacy": "public",
  "approval": false,
  "notify": "telegram (via Zapier)",
- "telegram_chat": "set in the Zapier Telegram action"
+ "telegram_chat": "1289292985",
+ "telegram_bot": "@Story_teller844_bot",
+ "youtube_channel": "Untold Stories (@untoldstories-z8b, UCfCYsHOoAr5qzldDgRoXNsQ)",
+ "zapier_account": "untoldstories844@gmail.com"
 }
