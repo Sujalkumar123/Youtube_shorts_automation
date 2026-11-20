@@ -57,16 +57,17 @@ Cover: the strongest frame (`capture.mjs frames`).
   week's trend research (mix: 2 broad #IndianMythology #HinduMythology, 3-4 story-specific, 1-2 trending/festival),
   ending with `#shorts`.
 
-## 6. Publish (review window)
-- If a Zapier connector with the YouTube "Upload Video" action is available in this session AND
-  `logs/settings.json` has `"upload": "zapier"`: put the MP4 on a GitHub release of the PUBLIC media repo named in
-  `logs/settings.json` (`media_repo`), verify the download URL returns a video, upload as **private** with
-  `publish_at` = today's publish slot (12:00 or 20:00 IST) if the action supports it, else **private**. Delete the
-  release asset afterwards. Category 27 (Education), made_for_kids false, notify_subscribers true.
-- Otherwise: send the MP4 + cover + title/description/hashtags to the user (SendUserFile + PushNotification) so they
-  can post it from the YouTube app.
-- Always notify the user: topic, YouTube link (or file), publish time, and "reply STOP to cancel".
-
+## 6. Publish (automatic, public, no approval: the user's choice)
+- Upload through the Zapier connector's YouTube "Upload Video" action (YouTubeV4CLIAPI / upload_video). Zapier needs a
+  URL it can fetch: create a GitHub release on the PUBLIC media repo in `logs/settings.json` (`media_repo`), attach the
+  `-yt.mp4`, verify the download URL returns a video (`curl -sSIL`), then upload with `privacy_status` "public",
+  category 27 (Education), made_for_kids false, notify_subscribers true, embeddable true, title/description/tags from
+  section 5. Delete the release afterwards. A vertical video of 60 s or less becomes a Short automatically.
+- Then notify on Telegram through the Zapier Telegram "Send Message" action (chat from `logs/settings.json`
+  `telegram_chat`): "✅ Untold Stories: <title> is live: https://www.youtube.com/watch?v=<id>  (<topic>)". If anything
+  failed, send "⚠️ Untold Stories run failed: <reason>" instead.
+- If Zapier is not connected in this session: send the MP4 + cover + metadata to the user in this session
+  (SendUserFile + PushNotification) and say Zapier is needed for auto-posting.
 ## 7. Log (always, even if something failed)
 Append to `logs/topics.json`: date, slot, slug, topic, story, palette, scene types, new kit pieces, title, hashtags,
 youtube id/status, and problems. Add lessons to `logs/notes.md`. Commit + push to the studio repo (never the video).
