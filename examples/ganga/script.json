@@ -1,0 +1,120 @@
+{
+ "title": "गंगा धरती पर कैसे आईं?",
+ "voice": "hm_omega",
+ "speed": 1.1,
+ "lead": 0.4,
+ "outro": 1.4,
+ "gap": 0.3,
+ "music": "devotional",
+ "sources": [
+  "Valmiki Ramayana, Bala Kanda (cantos 38-44): Sagara's 60,000 sons, Kapila, Bhagiratha's penance, Shiva receives Ganga on his locks, Ganga follows Bhagiratha to the ashes",
+  "Puranic Encyclopaedia (Vettam Mani), entries Sagara and Ganga: Indra steals the horse, Kapila reduces the sons to ash; Anshuman and Dilipa precede Bhagiratha; Ganga called Bhagirathi",
+  "Sagar Island / Gangasagar Mela (Wikipedia): Kapil Muni's ashram placed at Sagar Island where the Ganges meets the Bay of Bengal"
+ ],
+ "lines": [
+  {
+   "text": "गंगा तो स्वर्ग में बहती थीं,",
+   "caps": "गंगा *स्वर्ग में"
+  },
+  {
+   "text": "फिर धरती पर आईं कैसे?",
+   "caps": "धरती पर | आईं *कैसे?",
+   "gap": 0.35
+  },
+  {
+   "text": "राजा सगर के साठ हज़ार बेटे,",
+   "caps": "राजा *सगर के | *साठ हज़ार बेटे"
+  },
+  {
+   "text": "एक खोया हुआ घोड़ा ढूँढते हुए,",
+   "caps": "खोया हुआ *घोड़ा"
+  },
+  {
+   "text": "कपिल मुनि के आश्रम पहुँचे,",
+   "caps": "कपिल *मुनि के | *आश्रम पहुँचे"
+  },
+  {
+   "text": "और मुनि की आँखें खुलते ही,",
+   "caps": "मुनि की आँखें | *खुलते ही"
+  },
+  {
+   "text": "सब राख हो गए.",
+   "caps": "सब *राख हो गए",
+   "gap": 0.35
+  },
+  {
+   "text": "उन्हें मुक्ति सिर्फ़ गंगा का जल दिला सकता था.",
+   "caps": "उन्हें *मुक्ति | सिर्फ़ *गंगा का जल"
+  },
+  {
+   "text": "पीढ़ियाँ बीत गईं,",
+   "caps": "पीढ़ियाँ *बीत गईं"
+  },
+  {
+   "text": "फिर राजा भगीरथ ने,",
+   "caps": "राजा *भगीरथ ने"
+  },
+  {
+   "text": "बरसों तक कठोर तप किया.",
+   "caps": "बरसों तक कठोर *तप"
+  },
+  {
+   "text": "गंगा मान गईं,",
+   "caps": "गंगा *मान गईं"
+  },
+  {
+   "text": "पर उनका वेग इतना तेज़ था,",
+   "caps": "उनका *वेग | इतना *तेज़"
+  },
+  {
+   "text": "कि धरती ही टूट जाती.",
+   "caps": "धरती *टूट जाती"
+  },
+  {
+   "text": "तब शिव ने,",
+   "caps": "तब *शिव ने"
+  },
+  {
+   "text": "उन्हें अपनी जटाओं में थाम लिया,",
+   "caps": "अपनी *जटाओं में"
+  },
+  {
+   "text": "और धीरे-धीरे धरती पर छोड़ा.",
+   "caps": "*धीरे-धीरे धरती पर"
+  },
+  {
+   "text": "भगीरथ आगे-आगे चले, गंगा पीछे-पीछे,",
+   "caps": "भगीरथ *आगे-आगे | गंगा *पीछे-पीछे"
+  },
+  {
+   "text": "हिमालय से सागर तक.",
+   "caps": "हिमालय से *सागर तक"
+  },
+  {
+   "text": "और जहाँ राख पड़ी थी,",
+   "caps": "जहाँ *राख पड़ी थी"
+  },
+  {
+   "text": "वहाँ आज है गंगासागर.",
+   "caps": "आज है *गंगासागर"
+  },
+  {
+   "text": "इसीलिए गंगा का एक नाम है,",
+   "caps": "गंगा का एक *नाम"
+  },
+  {
+   "text": "भागीरथी.",
+   "caps": "*भागीरथी",
+   "gap": 0.5
+  },
+  {
+   "text": "ऐसी ही अनकही कहानियों के लिए,",
+   "caps": "ऐसी ही *अनकही कहानियाँ"
+  },
+  {
+   "text": "फ़ॉलो करें, अनटोल्ड स्टोरीज़.",
+   "caps": "फ़ॉलो करें | *Untold Stories"
+  }
+ ],
+ "music_db": -23
+}

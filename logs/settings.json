@@ -1,0 +1,2 @@
+{"channel": "Untold Stories", "voice": "hm_omega", "slots_ist": {"morning": {"make": "09:00", "publish": "12:00"}, "evening": {"make": "18:00", "publish": "20:00"}},
+ "upload": "send-to-user", "media_repo": null}

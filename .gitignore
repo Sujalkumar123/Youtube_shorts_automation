@@ -1,0 +1,6 @@
+renders/
+review/
+__pycache__/
+*.mp4
+*.wav
+work/
