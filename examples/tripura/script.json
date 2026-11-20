@@ -1,0 +1,119 @@
+{
+ "title": "एक बाण, तीन शहर | Why Gods Celebrate Dev Deepawali",
+ "voice": "hm_omega",
+ "speed": 1.17,
+ "lead": 0.4,
+ "outro": 1.4,
+ "gap": 0.28,
+ "music": "devotional",
+ "music_db": -23,
+ "voice_fx": "rubberband=pitch=0.89:formant=shifted,bass=g=3:f=130,equalizer=f=3500:t=q:w=1:g=1.5",
+ "sources": [
+  "Shiva Purana, Rudra Samhita, Yuddha Khanda (the burning of Tripura): Brahma has Maya build cities of gold, silver and steel for Tarakaksha, Kamalaksha and Vidyunmali, in heaven, sky and earth; Shiva burns them with a single arrow",
+  "Puranic Encyclopaedia (Vettam Mani), 'Tripura': the cities can be destroyed only when together and by one arrow; Vasuki the string, Vishnu the arrow, Brahma the charioteer",
+  "Tripurantaka / Kartika Purnima (Wikipedia): Earth as the chariot, Sun and Moon as wheels, Mount Meru as the bow; the victory is celebrated on Kartik Purnima as Tripurari Purnima / Dev Deepawali",
+  "Dev Deepawali 2026 date: Tuesday 24 November 2026 (Drik Panchang via hindutone.com, bhaktibharat.com)"
+ ],
+ "lines": [
+  {
+   "text": "आसमान में कभी तीन शहर उड़ते थे.",
+   "caps": "आसमान में *तीन शहर"
+  },
+  {
+   "text": "एक सोने का, एक चाँदी का, और एक लोहे का.",
+   "caps": "एक *सोने का | एक *चाँदी का | और एक *लोहे का"
+  },
+  {
+   "text": "इन्हें असुरों के शिल्पी मय ने बनाया था,",
+   "caps": "असुरों के शिल्पी *मय"
+  },
+  {
+   "text": "तारकासुर के तीन बेटों के लिए.",
+   "caps": "तारकासुर के *तीन बेटे"
+  },
+  {
+   "text": "ब्रह्मा जी से उन्हें एक अजीब वरदान मिला था.",
+   "caps": "ब्रह्मा जी का *वरदान"
+  },
+  {
+   "text": "ये शहर तभी नष्ट होंगे,",
+   "caps": "तभी *नष्ट होंगे"
+  },
+  {
+   "text": "जब हज़ार साल में एक बार तीनों एक सीध में आएँ,",
+   "caps": "हज़ार साल में *एक बार | तीनों *एक सीध में"
+  },
+  {
+   "text": "और कोई उन्हें एक ही बाण से भेद दे.",
+   "caps": "*एक ही बाण से"
+  },
+  {
+   "text": "जब असुरों का अत्याचार बढ़ा,",
+   "caps": "असुरों का *अत्याचार"
+  },
+  {
+   "text": "तो देवता महादेव की शरण में पहुँचे.",
+   "caps": "*महादेव की शरण में"
+  },
+  {
+   "text": "फिर बना ऐसा रथ, जैसा कभी नहीं बना.",
+   "caps": "ऐसा *रथ | जैसा *कभी नहीं बना"
+  },
+  {
+   "text": "धरती उसका रथ बनी,",
+   "caps": "*धरती बनी रथ"
+  },
+  {
+   "text": "सूरज और चाँद उसके पहिए,",
+   "caps": "सूरज और चाँद *पहिए"
+  },
+  {
+   "text": "और ब्रह्मा जी ख़ुद सारथी.",
+   "caps": "ब्रह्मा जी *सारथी"
+  },
+  {
+   "text": "मेरु पर्वत धनुष बना, वासुकि नाग उसकी डोर,",
+   "caps": "मेरु पर्वत *धनुष | वासुकि *डोर"
+  },
+  {
+   "text": "और बाण, स्वयं भगवान विष्णु.",
+   "caps": "और बाण | स्वयं *विष्णु"
+  },
+  {
+   "text": "और जैसे ही तीनों शहर एक सीध में आए,",
+   "caps": "तीनों शहर *एक सीध में"
+  },
+  {
+   "text": "महादेव ने एक ही बाण छोड़ा.",
+   "caps": "महादेव का *एक बाण"
+  },
+  {
+   "text": "तीनों शहर एक साथ भस्म हो गए.",
+   "caps": "एक साथ *भस्म"
+  },
+  {
+   "text": "उस दिन कार्तिक पूर्णिमा थी,",
+   "caps": "*कार्तिक पूर्णिमा"
+  },
+  {
+   "text": "और देवताओं ने दीप जलाकर उत्सव मनाया.",
+   "caps": "देवताओं का *दीपोत्सव"
+  },
+  {
+   "text": "इसीलिए इसे कहते हैं, देव दीपावली.",
+   "caps": "*देव दीपावली"
+  },
+  {
+   "text": "इस साल, चौबीस नवंबर को.",
+   "caps": "*चौबीस नवंबर"
+  },
+  {
+   "text": "ऐसी ही अनकही कहानियों के लिए,",
+   "caps": "ऐसी ही *अनकही कहानियाँ"
+  },
+  {
+   "text": "फ़ॉलो करें, अनटोल्ड स्टोरीज़.",
+   "caps": "फ़ॉलो करें | *Untold Stories"
+  }
+ ]
+}

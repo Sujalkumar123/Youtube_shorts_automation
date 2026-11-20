@@ -4,3 +4,6 @@
 - Map labels near Prayag/Kashi collide: give each place its own offset.
 - Voice/music balance target: voice >= 10 dB above the bed (music_db -23).
 - Cloud sessions: Whisper (HuggingFace) and temp file hosts are blocked; GitHub and the Kokoro model download work.
+- Reusable story pieces live in examples/<slug>/shots.js (city, brahma, maya, chariot, meruBow, vishnuArrow, kashi in examples/tripura). Copy what you need.
+- Shiva archer shot: draw meruBow in FRONT of shiva at his hand, nock the arrow before release; keep props above y 1500 (caption strip).
+- Kokoro Hindi at speed 1.17 still ~2.5 words/s: 25 lines ≈ 64 s. Shorts accept up to 3 min, but aim for 22-24 lines.

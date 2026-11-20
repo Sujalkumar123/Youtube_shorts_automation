@@ -1,6 +1,91 @@
 [
- {"date": "2026-11-20", "slot": "manual", "slug": "ganga-descent", "topic": "Descent of Ganga (Bhagiratha, Sagara's sons, Kapila, Shiva's jata, Gangasagar)",
-  "palette": ["cosmic night", "dusk", "dawn"], "scenes": ["heaven river", "India map", "dusk skyline + warriors", "sunset ashram", "Himalaya ranges", "torrent", "Shiva on Kailash", "Gangasagar diyas"],
-  "new_kit": ["raja", "warrior", "kapila", "shiva", "horse"], "title": "गंगा धरती पर कैसे आईं? | The Untold Story of Bhagirath",
-  "hashtags": ["#Ganga", "#Bhagirath", "#Shiva", "#HinduMythology", "#Gangasagar", "#UntoldStories", "#IndianMythology", "#Shorts"], "youtube": "not uploaded"}
+ {
+  "date": "2026-11-20",
+  "slot": "manual",
+  "slug": "ganga-descent",
+  "topic": "Descent of Ganga (Bhagiratha, Sagara's sons, Kapila, Shiva's jata, Gangasagar)",
+  "palette": [
+   "cosmic night",
+   "dusk",
+   "dawn"
+  ],
+  "scenes": [
+   "heaven river",
+   "India map",
+   "dusk skyline + warriors",
+   "sunset ashram",
+   "Himalaya ranges",
+   "torrent",
+   "Shiva on Kailash",
+   "Gangasagar diyas"
+  ],
+  "new_kit": [
+   "raja",
+   "warrior",
+   "kapila",
+   "shiva",
+   "horse"
+  ],
+  "title": "गंगा धरती पर कैसे आईं? | The Untold Story of Bhagirath",
+  "hashtags": [
+   "#Ganga",
+   "#Bhagirath",
+   "#Shiva",
+   "#HinduMythology",
+   "#Gangasagar",
+   "#UntoldStories",
+   "#IndianMythology",
+   "#Shorts"
+  ],
+  "youtube": "not uploaded"
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "manual test",
+  "slug": "tripura",
+  "topic": "Tripurasura and Dev Deepawali (Kartik Purnima, 24 Nov 2026)",
+  "palette": [
+   "cosmic",
+   "blood-red dusk",
+   "Kashi night with lamps"
+  ],
+  "scenes": [
+   "flying cities",
+   "orbit alignment diagram",
+   "Maya blueprint",
+   "asura brothers silhouettes",
+   "Brahma on lotus",
+   "cosmic chariot",
+   "Meru bow + Vasuki",
+   "Vishnu arrow",
+   "Shiva archer",
+   "light dissolve",
+   "Kashi ghats with diyas",
+   "calendar"
+  ],
+  "new_kit": [
+   "city",
+   "brahma",
+   "maya",
+   "blueprint",
+   "chariot",
+   "meruBow",
+   "vishnuArrow",
+   "kashi",
+   "devas",
+   "align3 (in examples/tripura/shots.js)"
+  ],
+  "title": "एक बाण, तीन शहर | Why Gods Celebrate Dev Deepawali",
+  "hashtags": [
+   "#DevDeepawali",
+   "#KartikPurnima",
+   "#Tripurari",
+   "#Mahadev",
+   "#ShivPuran",
+   "#IndianMythology",
+   "#UntoldStories",
+   "#shorts"
+  ],
+  "youtube": "pending (media repo missing)"
+ }
 ]
