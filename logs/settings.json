@@ -3,15 +3,18 @@
  "voice": "hm_omega",
  "slots_ist": {
   "morning": {
-   "start": "07:15",
+   "start": "06:45",
+   "private_preview": "07:30",
    "publish": "08:00"
   },
   "afternoon": {
-   "start": "14:15",
+   "start": "13:45",
+   "private_preview": "14:30",
    "publish": "15:00"
   },
   "evening": {
-   "start": "19:15",
+   "start": "18:45",
+   "private_preview": "19:30",
    "publish": "20:00"
   }
  },
@@ -23,5 +26,6 @@
  "telegram_chat": "1289292985",
  "telegram_bot": "@Story_teller844_bot",
  "youtube_channel": "Untold Stories (@untoldstories-z8b, UCfCYsHOoAr5qzldDgRoXNsQ)",
- "zapier_account": "untoldstories844@gmail.com"
+ "zapier_account": "untoldstories844@gmail.com",
+ "flow": "private preview + Telegram alert ~30 min early, STOP check, then public at slot + live alert"
 }

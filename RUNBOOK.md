@@ -58,17 +58,27 @@ Cover: the strongest frame (`capture.mjs frames`).
   week's trend research (mix: 2 broad #IndianMythology #HinduMythology, 3-4 story-specific, 1-2 trending/festival),
   ending with `#shorts`.
 
-## 6. Publish (automatic, public, no approval: the user's choice)
-- Upload through the Zapier connector's YouTube "Upload Video" action (YouTubeV4CLIAPI / upload_video). Zapier needs a
-  URL it can fetch: create a GitHub release on the PUBLIC media repo in `logs/settings.json` (`media_repo`), attach the
-  `-yt.mp4`, verify the download URL returns a video (`curl -sSIL`), then upload with `privacy_status` "public",
-  category 27 (Education), made_for_kids false, notify_subscribers true, embeddable true, title/description/tags from
-  section 5. Delete the release afterwards. A vertical video of 60 s or less becomes a Short automatically.
-- Then notify on Telegram through the Zapier Telegram "Send Message" action (chat from `logs/settings.json`
-  `telegram_chat`): "✅ Untold Stories: <title> is live: https://www.youtube.com/watch?v=<id>  (<topic>)". If anything
-  failed, send "⚠️ Untold Stories run failed: <reason>" instead.
-- If Zapier is not connected in this session: send the MP4 + cover + metadata to the user in this session
-  (SendUserFile + PushNotification) and say Zapier is needed for auto-posting.
+## 6. Publish: private preview ~30 min before, public at the slot (no approval needed)
+Slots (IST): 08:00, 15:00, 20:00 (`logs/settings.json`). The run starts 75 min early.
+1. **Private upload as soon as the video is ready (target: 30 min before the slot).** Put the `-yt.mp4` on a GitHub
+   release of the PUBLIC media repo (`media_repo`), verify the download URL (`curl -sSIL` → 200, video content-type),
+   then Zapier YouTube "Upload Video" (`youtube_upload_video`) with `privacy_status` "private", category 27,
+   made_for_kids false, notify_subscribers true, title/description/tags. Delete the release afterwards.
+2. **Preview alert.** Zapier Telegram "Send Message" to `telegram_chat`:
+   "🔒 Untold Stories preview (private): <title>\n<topic>\nGoes PUBLIC at <slot> IST. Reply STOP to this bot to keep it private."
+   with a button "Watch preview" → https://www.youtube.com/watch?v=<id> (the user is signed in, so it plays for them).
+3. **Wait until the slot time** (sleep in short intervals).
+4. **Stop check.** Zapier Telegram "New Message" (`telegram_new_message`, chat `telegram_chat`): if the user sent
+   "stop"/"STOP"/"रोको" after the preview alert, do NOT publish; send "⏸ Kept private: <title>" and log it.
+   Also read the video (YouTube "Make API GET Request" on /youtube/v3/videos?part=status&id=<id>): if it is gone or the
+   user already changed it, leave it alone.
+5. **Go public.** YouTube "Make API Mutating Request" (`youtube_make_api_mutating_request`): PUT
+   https://www.googleapis.com/youtube/v3/videos?part=status with body
+   `{"id":"<id>","status":{"privacyStatus":"public","embeddable":true,"license":"youtube","publicStatsViewable":true,"selfDeclaredMadeForKids":false}}`
+   and fail_on_errors true. Verify with a GET that privacyStatus is "public".
+6. **Live alert.** Telegram: "✅ LIVE now: <title>" with button "Watch on YouTube".
+- If any step fails, send "⚠️ Untold Stories <slot> failed at <step>: <reason>" to Telegram and log it.
+- If Zapier is not available in the session: send the MP4 + cover + metadata to the user in the session instead.
 ## 7. Log (always, even if something failed)
 Append to `logs/topics.json`: date, slot, slug, topic, story, palette, scene types, new kit pieces, title, hashtags,
 youtube id/status, and problems. Add lessons to `logs/notes.md`. Commit + push to the studio repo (never the video).
