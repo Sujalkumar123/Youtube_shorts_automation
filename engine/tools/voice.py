@@ -77,7 +77,7 @@ def main():
     voice = a.voice or S.get('voice', 'am_michael'); speed = a.speed or S.get('speed', 1.0)
     k = Kokoro(str(KDIR / 'kokoro-v1.0.onnx'), str(KDIR / 'voices-v1.0.bin'))
     lang = 'hi' if voice.startswith('h') else ('en-gb' if voice.startswith('b') else 'en-us')
-    say = lambda text: trim(np.asarray(k.create(text, voice=voice, speed=speed, lang=lang)[0], dtype=np.float64))
+    say = lambda text, sp=None: trim(np.asarray(k.create(text, voice=voice, speed=sp or speed, lang=lang)[0], dtype=np.float64))
     # group the lines into whole sentences (a line ending in . ? ! closes one; "break": true forces a close)
     groups, cur = [], []
     for i, ln in enumerate(S['lines']):
@@ -85,10 +85,11 @@ def main():
         if re.search(r'[.?!]["\')]*$', ln['text'].strip()) or ln.get('break') or i == len(S['lines']) - 1: groups.append(cur); cur = []
     out = [np.zeros(int(S.get('lead', 0.4) * SR))]; t = len(out[0]) / SR; lines = [None] * len(S['lines'])
     for g in groups:
-        x = say(' '.join(S['lines'][i]['text'] for i in g))
+        sp = S['lines'][g[-1]].get('speed') or S['lines'][g[0]].get('speed')   # per-sentence pace: slow for reveals, fast for build-ups
+        x = say(' '.join(S['lines'][i]['text'] for i in g), sp)
         cuts = [0.0]
         if len(g) > 1:                                    # find each cut inside the sentence
-            lens = np.array([len(say(S['lines'][i]['text'])) for i in g], dtype=float)
+            lens = np.array([len(say(S['lines'][i]['text'], sp)) for i in g], dtype=float)
             pauses = silences(x)
             for c in np.cumsum(lens)[:-1] / lens.sum() * len(x) / SR:
                 near = [p for p in pauses if abs((p[0] + p[1]) / 2 - c) < 0.4]
