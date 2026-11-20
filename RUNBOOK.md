@@ -92,6 +92,11 @@ fix, do NOT upload: send the Telegram problem alert (section 6b) with the reason
   week's trend research (mix: 2 broad #IndianMythology #HinduMythology, 3-4 story-specific, 1-2 trending/festival),
   ending with `#shorts`.
 
+## 6.0 Which uploader
+If `~/.untold/secrets.json` (or YT_* env vars) exists AND `logs/settings.json` has `"uploader": "direct"`, use
+`tools/yt_direct.py` (upload private → wait → publish; problems via `yt_direct.py telegram`). Otherwise use Zapier as below.
+Setup and the free YouTube audit: docs/youtube-api-setup.md.
+
 ## 6. Publish: private preview ~30 min before, public at the slot (no approval needed)
 Slots (IST): 08:00, 15:00, 20:00 (`logs/settings.json`). The run starts 75 min early.
 1. **Private upload as soon as the video is ready (target: 30 min before the slot).** GitHub releases are blocked in
