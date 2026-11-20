@@ -218,7 +218,12 @@ mix = np.zeros((N, 2))
 vf = P / 'data/narration.wav'
 voice = None
 if vf.exists():
-    v = load_audio(vf)[:N]; voice = np.zeros((N, 2)); voice[:len(v)] = v
+    vfx = script.get('voice_fx')          # e.g. deeper voice: "rubberband=pitch=0.89:formant=shifted,bass=g=3:f=130,equalizer=f=3500:t=q:w=1:g=1.5"
+    if vfx:
+        out = subprocess.run(['ffmpeg', '-v', 'error', '-i', str(vf), '-af', vfx, '-f', 'f32le', '-ac', '2', '-ar', str(SR), '-'], capture_output=True, check=True).stdout
+        v = np.frombuffer(out, dtype=np.float32).reshape(-1, 2).astype(np.float64)[:N]
+    else: v = load_audio(vf)[:N]
+    voice = np.zeros((N, 2)); voice[:len(v)] = v
     rms = np.sqrt(np.mean(voice ** 2) + 1e-12); voice *= db(-19) / rms
     mix += voice
 # music
