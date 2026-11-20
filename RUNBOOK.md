@@ -11,9 +11,11 @@ is drawn by `engine/src/main.js` (`drawBrand`), on every frame.
 - Read `logs/topics.json` (every topic already made, with its palette and scene types) and `logs/notes.md` (lessons).
 
 ## 1. Pick today's topic from what is trending ON YOUTUBE (do this every run)
-**a. YouTube trend scan (Zapier YouTube connector).** Run 4-6 searches with `youtube_find_video`
+**Zapier budget: every Zapier call costs 2 tasks of the user's monthly plan. Use as few as possible.**
+**a. YouTube trend scan (Zapier YouTube connector) ONLY in the morning run,** and only if `logs/trends.md` has no
+scan from today. Afternoon/evening runs reuse today's scan (pick a different story/concept). Use at most 2 searches with `youtube_find_video`
 (`order: viewCount`, `published_after`: 7 days ago, `region_code: IN`, `relevance_language: hi`, `video_duration: short`,
-`max_results: 15`), queries such as: "पौराणिक कथा shorts", "mahadev story shorts", "hanuman ji katha shorts",
+`max_results: 25`), queries such as (pick the 2 best for this week): "पौराणिक कथा shorts", "mahadev story shorts", "hanuman ji katha shorts",
 "krishna leela rahasya shorts", "mahabharat unknown facts shorts", "ramayan rahasya shorts", plus this week's festival.
 Then rank them by real numbers with one `youtube_make_api_get_request` GET /youtube/v3/videos
 `part=statistics&id=<up to 50 ids>&fields=items(id,statistics(viewCount,likeCount,commentCount))` (1 quota unit).
@@ -104,15 +106,11 @@ Slots (IST): 08:00, 15:00, 20:00 (`logs/settings.json`). The run starts 75 min e
    has `"preview_alerts": true`:
    "🔒 Untold Stories preview (private): <title>\n<topic>\nGoes PUBLIC at <slot> IST. Reply STOP to this bot to keep it private."
    with a button "Watch preview" → https://www.youtube.com/watch?v=<id> (the user is signed in, so it plays for them).
-3. **Wait until the slot time** (sleep in short intervals).
-4. **Stop check.** Zapier Telegram "New Message" (`telegram_new_message`, chat `telegram_chat`): if the user sent
-   "stop"/"STOP"/"रोको" in the last hour, do NOT publish; send "⏸ Kept private: <title>" and log it.
-   Also read the video (YouTube "Make API GET Request" on /youtube/v3/videos?part=status&id=<id>): if it is gone or the
-   user already changed it, leave it alone.
+3. **Wait until the slot time** (sleep in short intervals). (No STOP check and no extra GET: save Zapier tasks.)
 5. **Go public.** YouTube "Make API Mutating Request" (`youtube_make_api_mutating_request`): PUT
    https://www.googleapis.com/youtube/v3/videos?part=status with body
    `{"id":"<id>","status":{"privacyStatus":"public","embeddable":true,"license":"youtube","publicStatsViewable":true,"selfDeclaredMadeForKids":false}}`
-   and fail_on_errors true. Verify with a GET that privacyStatus is "public".
+   and fail_on_errors true. Its response shows the new privacyStatus: that is the verification (no extra GET).
 6. **No success message.** When everything worked, send nothing (only problems go to Telegram).
 - If any step fails, send "⚠️ Untold Stories <slot> failed at <step>: <reason>" to Telegram and log it.
 - If Zapier is not available in the session: send the MP4 + cover + metadata to the user in the session instead.
