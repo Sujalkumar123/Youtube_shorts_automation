@@ -108,6 +108,19 @@ Slots (IST): 08:00, 15:00, 20:00 (`logs/settings.json`). The run starts 75 min e
 6. **Live alert.** Telegram: "✅ LIVE now: <title>" with button "Watch on YouTube".
 - If any step fails, send "⚠️ Untold Stories <slot> failed at <step>: <reason>" to Telegram and log it.
 - If Zapier is not available in the session: send the MP4 + cover + metadata to the user in the session instead.
+## 6b. Problems → Telegram, always (the user watches Telegram, not this session)
+Wrap every step. If ANY step fails or looks wrong, send to Telegram (Zapier Telegram "Send Message", chat 1289292985):
+"⚠️ Untold Stories <slot> problem
+Step: <research / script / visuals / voice / render / upload / public / log>
+What happened: <one plain sentence>
+Done so far: <e.g. video rendered, not uploaded>
+What I did: <retried / used fallback / skipped>
+Needs you: <nothing | what the user should do, in one line>"
+Retry a failed step once before alerting. Fallbacks: trend scan fails → use web search + logs/trends.md; a scene fails QA →
+simplify it rather than skip the video; upload fails → retry once, then alert with the file kept on branch media.
+If the video is late, still publish it as soon as it's ready and say so. If Zapier itself is unreachable (so Telegram
+can't be sent), tell the user in this session: the app's push notification is the fallback.
+
 ## 7. Log (always, even if something failed)
 Append to `logs/topics.json`: date, slot, slug, topic, story, palette, scene types, new kit pieces, title, hashtags,
 youtube id/status, and problems. Add lessons to `logs/notes.md`. Commit + push to the studio repo (never the video).
