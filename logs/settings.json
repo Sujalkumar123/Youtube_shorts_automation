@@ -3,12 +3,12 @@
  "voice": "hm_omega",
  "slots_ist": {
   "morning": {
-   "make": "08:33",
-   "publish": "on completion"
+   "start": "07:15",
+   "publish": "08:00"
   },
   "evening": {
-   "make": "17:33",
-   "publish": "on completion"
+   "start": "19:15",
+   "publish": "20:00"
   }
  },
  "upload": "zapier",
