@@ -8,6 +8,9 @@ is drawn by `engine/src/main.js` (`drawBrand`), on every frame.
 - The repo is cloned at `~/untold-stories-studio`. The skill's scripts are in `engine/skill-scripts/`.
 - `bash engine/skill-scripts/setup.sh` until the Python env + Kokoro voice are OK (Whisper may fail: that is fine, the
   word timing falls back to the exact line times). Chrome, ffmpeg and Node 22 must be present.
+- **Prepared slot check (first thing):** if `logs/settings.json` → `prepared_slots` has an entry for today's slot
+  (e.g. "2026-11-22 morning"), a video for this slot is already uploaded with a scheduled publish time. Do NOT make
+  another video. At the slot time, only if it is still private, do the go-public PUT (section 6 step 5) for that id. Then log and stop.
 - Read `logs/topics.json` (every topic already made, with its palette and scene types) and `logs/notes.md` (lessons).
 
 ## 1. Pick today's topic from what is trending ON YOUTUBE (do this every run)

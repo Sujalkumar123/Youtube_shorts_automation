@@ -1,0 +1,146 @@
+{
+ "title": "शिव का त्रिशूल सूर्य के टुकड़े से क्यों बना? | The Sun's Sacrifice #shorts",
+ "voice": "eleven:Sahir",
+ "eleven_voice": "4LIpEnnggPcuL2KuRQIO",
+ "eleven_model": "eleven_multilingual_v2",
+ "eleven_stability": 0.42,
+ "eleven_style": 0.4,
+ "lead": 0.3,
+ "outro": 1.1,
+ "gap": 0.2,
+ "breaths": false,
+ "music": "devotional",
+ "voice_fx": "highpass=f=60,equalizer=f=130:t=q:w=1:g=3,equalizer=f=6500:t=q:w=1.5:g=-1.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9",
+ "music_db": -25,
+ "music_sa": 110,
+ "music_lp": 2000,
+ "music_sub": 0.9,
+ "sources": [
+  "Vishnu Purana, Book 3, Chapter 2 (H.H. Wilson translation, sacred-texts.com/hin/vp/vp089.htm): Sanjna, daughter of Vishwakarma, wife of the Sun, unable to bear his fervour, leaves Chhaya (Shadow) in her place and goes to the forest as a mare; Vishwakarma places the Sun on his lathe and grinds off an eighth of his brightness; from it he forms the discus of Vishnu, the trident of Shiva, the weapon of Kubera, the lance of Kartikeya and the weapons of the other gods",
+  "Markandeya Purana, chapters 77-78 (Pargiter): Chhaya favours her own children; Yama's question; the Sun learns the truth and finds Sanjna as a mare in Uttara Kuru"
+ ],
+ "lines": [
+  {
+   "text": "भगवान शिव का त्रिशूल,",
+   "caps": "Bhagwan *Shiv ka trishul",
+   "speed": 1.05
+  },
+  {
+   "text": "सूर्य देव के एक टुकड़े से बना है.",
+   "caps": "Surya dev ke ek *tukde se bana hai",
+   "speed": 1.05,
+   "gap": 0.31
+  },
+  {
+   "text": "और इसकी वजह थी... एक पत्नी का दर्द.",
+   "caps": "Aur iski *wajah thi | ek patni ka *dard",
+   "speed": 1.05,
+   "gap": 0.34
+  },
+  {
+   "text": "विश्वकर्मा की बेटी संज्ञा, सूर्य देव से ब्याही गईं.",
+   "caps": "Vishwakarma ki beti *Sanjna | Surya dev se *byaahi gayi",
+   "gap": 0.2
+  },
+  {
+   "text": "पर सूर्य का तेज, इतना प्रचंड था,",
+   "caps": "Par Surya ka *tej | itna *prachand tha"
+  },
+  {
+   "text": "कि संज्ञा, अपने पति की ओर देख भी नहीं पाती थीं.",
+   "caps": "Ki Sanjna apne pati ki or | *dekh bhi nahi paati thi",
+   "gap": 0.26
+  },
+  {
+   "text": "बच्चे हुए... यम और यमुना.",
+   "caps": "*Bachche hue | *Yam aur Yamuna",
+   "gap": 0.2
+  },
+  {
+   "text": "फिर एक रात, संज्ञा ने एक फ़ैसला लिया.",
+   "caps": "Phir ek *raat | Sanjna ne ek *faisla liya",
+   "speed": 1.07,
+   "gap": 0.28
+  },
+  {
+   "text": "अपनी ही परछाईं से, एक स्त्री बनाई... छाया.",
+   "caps": "Apni hi *parchhai se | ek stri banayi | *Chhaya",
+   "speed": 1.07,
+   "gap": 0.22
+  },
+  {
+   "text": "और कहा, मेरी जगह रहना.",
+   "caps": "Aur kaha | *meri jagah rehna",
+   "gap": 0.22
+  },
+  {
+   "text": "संज्ञा घोड़ी बनकर, दूर जंगल में तप करने चली गईं.",
+   "caps": "Sanjna *ghodi bankar | door jungle mein *tap karne chali gayi",
+   "gap": 0.28
+  },
+  {
+   "text": "पर असली मोड़, अभी बाकी था.",
+   "caps": "Par asli *mod | abhi *baaki tha",
+   "speed": 1.05,
+   "gap": 0.31
+  },
+  {
+   "text": "पर छाया, संज्ञा के बच्चों से, प्यार नहीं करती थी.",
+   "caps": "Par *Chhaya | Sanjna ke bachchon se | *pyaar nahi karti thi",
+   "gap": 0.2
+  },
+  {
+   "text": "एक दिन यम ने पूछा... माँ, ऐसा क्यों?",
+   "caps": "Ek din *Yam ne poochha | *Maa, aisa kyon?",
+   "speed": 1.07,
+   "gap": 0.31
+  },
+  {
+   "text": "तब सूर्य देव समझ गए, ये संज्ञा नहीं है.",
+   "caps": "Tab Surya dev *samajh gaye | ye *Sanjna nahi hai",
+   "speed": 1.07,
+   "gap": 0.28
+  },
+  {
+   "text": "सूर्य ने संज्ञा को ढूँढ लिया. पर वो लौटतीं कैसे?",
+   "caps": "Surya ne Sanjna ko *dhoondh liya | par wo *lautti kaise?",
+   "gap": 0.28
+  },
+  {
+   "text": "तब सूर्य ने, अपनी पत्नी के लिए, अपना तेज कटवाया.",
+   "caps": "Tab Surya ne | apni *patni ke liye | apna *tej katwaya",
+   "speed": 1.05,
+   "gap": 0.34
+  },
+  {
+   "text": "विश्वकर्मा ने तेज का आठवाँ भाग, उतार दिया.",
+   "caps": "Vishwakarma ne tej ka | *aathvan bhaag | *utaar diya",
+   "gap": 0.22
+  },
+  {
+   "text": "उसी धूल से बने, शिव का त्रिशूल, विष्णु का चक्र,",
+   "caps": "Usi *dhool se bane | Shiv ka *trishul | Vishnu ka *chakra"
+  },
+  {
+   "text": "और कार्तिकेय की शक्ति.",
+   "caps": "Aur Kartikeya ki *shakti",
+   "speed": 1.05,
+   "gap": 0.34
+  },
+  {
+   "text": "देवताओं के शस्त्र... एक पति के प्रेम से जन्मे.",
+   "caps": "Devtaon ke *shastra | ek pati ke *prem se janme",
+   "speed": 1.05,
+   "gap": 0.39
+  },
+  {
+   "text": "ऐसी ही अनकही कहानियों के लिए,",
+   "caps": "Aisi hi *ankahi kahaniyon ke liye"
+  },
+  {
+   "text": "फ़ॉलो करें, अनटोल्ड स्टोरीज़.",
+   "caps": "Follow karein | *Untold Stories"
+  }
+ ],
+ "eleven_speed": 1.16
+}

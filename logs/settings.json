@@ -40,5 +40,13 @@
  },
  "captions": "Hinglish (Roman script), from 2026-11-21",
  "preview_alerts": false,
- "zapier_budget": "~9 Zapier calls/day for 3 videos (morning trend scan 3 + 2 per video) + watchdog 3/day = ~12 calls = ~24 tasks/day (~720/month). Free plan = 100 tasks/month (not enough); Pro trial ends 2026-12-05."
+ "zapier_budget": "~9 Zapier calls/day for 3 videos (morning trend scan 3 + 2 per video) + watchdog 3/day = ~12 calls = ~24 tasks/day (~720/month). Free plan = 100 tasks/month (not enough); Pro trial ends 2026-12-05.",
+ "prepared_slots": {
+  "2026-11-22 morning": {
+   "youtube": "QmWmgymDXBU",
+   "slug": "surya-tej",
+   "publish_at": "2026-11-22T08:00:00+05:30",
+   "note": "made manually with the ElevenLabs Sahir voice; scheduled with publishAt"
+  }
+ }
 }

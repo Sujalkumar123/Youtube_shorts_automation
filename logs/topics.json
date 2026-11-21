@@ -255,5 +255,31 @@
   "duration_s": 72.87,
   "quality_gate": "PASS (voice 15.0 dB over music, 31.8 MB)",
   "problems": []
+ },
+ {
+  "date": "2026-11-22",
+  "slot": "morning (manual, Sahir voice)",
+  "slug": "surya-tej",
+  "topic": "Sanjna can't bear Surya's radiance, leaves Chhaya (her shadow) in her place, becomes a mare; Yama's question; Vishwakarma trims 1/8 of the Sun; trishul, chakra and shakti made from the dust",
+  "story": "Vishnu Purana 3.2; Markandeya Purana 77-78",
+  "palette": [
+   "night Kailash",
+   "golden court",
+   "indigo night",
+   "forest green",
+   "forge orange",
+   "dawn"
+  ],
+  "scenes": [
+   "trishul rise",
+   "sun shard",
+   "court wedding",
+   "shadow twin",
+   "mare in forest",
+   "lathe with sparks",
+   "weapons from gold dust"
+  ],
+  "youtube": "QmWmgymDXBU",
+  "voice": "ElevenLabs Sahir"
  }
 ]
