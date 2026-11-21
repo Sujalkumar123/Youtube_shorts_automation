@@ -15,3 +15,4 @@
 - 23 lines at speed ~1.16 gave 66.6 s; a first 25-line draft was 83 s (over the 75 s gate). Keep lines short: ~6-8 Hindi words.
 - New kit: devi (sari, poses stand/boon/hold/namaste/bow/serve), aruna (upper body + dawn-light swirl), garuda, naga, egg (crack/open), vessel, suryaRath (sun + 7 horses + Aruna), atmos.dawnSky. Example in examples/aruna.
 - Close-up "hands holding an object": straight forearms from the bottom corners to the object's sides + cupped hand ellipses; a bent-arm shape read like a ladder.
+- 2026-11-21: go-public PUT: put part=status in the `querystring` param (url .../youtube/v3/videos), NOT in the URL; the URL form failed with Zapier error "'status'" (cost one extra call).

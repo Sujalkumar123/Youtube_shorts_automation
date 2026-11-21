@@ -135,9 +135,11 @@
    "#shorts"
   ],
   "youtube_id": "wpOev47bmls",
-  "status": "uploaded private, public scheduled 08:00 IST",
+  "status": "public 2026-11-21 08:00 IST (verified privacyStatus=public)",
   "duration_s": 66.6,
   "quality_gate": "PASS (voice 13.6 dB over music, 29.5 MB)",
-  "problems": []
+  "problems": [
+   "go-public PUT with ?part=status in the URL returned Zapier error \"'status'\"; retried with querystring {part: status} -> 200 public"
+  ]
  }
 ]
