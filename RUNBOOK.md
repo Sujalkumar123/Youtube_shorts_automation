@@ -43,8 +43,8 @@ Never mock or distort a deity; no violence shown; no caste or political angle.
   `*`red word. Keep each caption chunk to the same words, in the same order, as the Hindi it shows, so the timing
   (placed by word count inside the line) lands on the right words. The `text` (what the voice reads) stays in Hindi.
 - Numbers written as said.
-- `voice`: "hm_omega", `speed`: 1.12-1.17, `music`: "devotional", and the sound the user chose ("Omega Sahir-style" voice the user picked 2026-11-21: deep, warm, natural; low quiet bass-heavy music):
-  `"voice_fx": "rubberband=pitch=0.88:formant=preserved,highpass=f=60,equalizer=f=160:t=q:w=1:g=4,equalizer=f=300:t=q:w=1.2:g=-1.5,equalizer=f=2500:t=q:w=1:g=1.5,equalizer=f=6500:t=q:w=1.5:g=-3,aecho=0.8:0.6:28|55:0.08|0.04,acompressor=threshold=-22dB:ratio=3.5:attack=5:release=180,alimiter=limit=0.9"`, `"music_db": -26`, `"music_sa": 110`, `"music_lp": 2000`, `"music_sub": 0.65`. Target: voice >= 11 dB above the music. List `sources`.
+- `voice`: "hm_omega", `speed`: 1.03, `music`: "devotional", and the sound the user chose ("Omega Sahir-style" voice the user picked 2026-11-21: deep, warm, natural; low quiet bass-heavy music):
+  `"voice_fx": "rubberband=pitch=0.93:formant=preserved,highpass=f=70,equalizer=f=150:t=q:w=1:g=3,equalizer=f=320:t=q:w=1.2:g=-1.5,equalizer=f=2200:t=q:w=1:g=1,equalizer=f=7000:t=q:w=1.5:g=-2.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9"`, `"music_db": -26`, `"music_sa": 110`, `"music_lp": 2000`, `"music_sub": 0.65`. Target: voice >= 11 dB above the music. List `sources`.
 
 ### Script craft: every script must pass this before voicing (the user wants "achi achi" stories)
 1. **Trend-led angle.** From today's `logs/trends.md` top 10, write down the 2-3 HOOK PATTERNS winning this week
@@ -66,8 +66,12 @@ Never mock or distort a deity; no violence shown; no caste or political angle.
 - Write like a storyteller at a temple, not a newsreader: talk to the viewer ("सोचिए...", "पर क्या आप जानते हैं?"),
   short punchy lines at the climax, a question before each reveal ("और बाण?" → "स्वयं भगवान विष्णु.").
 - Use "..." for held breaths, "!" for awe, "?" for questions; Kokoro reads punctuation.
-- Pace per sentence with a `speed` on the sentence's line: 0.95-1.0 for reveals, sacred names and the twist;
-  1.12-1.2 for build-ups and lists; default 1.12.
+- Pace per sentence with a `speed` on the sentence's line, and VARY it line to line (same speed every line sounds AI):
+  0.9-0.97 for reveals, sacred names and the twist; 1.0-1.08 for normal telling; 1.08-1.12 only for quick build-ups.
+  Default 1.03. (User 2026-11-21: voice felt "AI", wants natural human.) Never use 1.15+.
+- Human rhythm: short sentences (4-10 words), commas where a person takes a mini-breath ("एक माँ, जिसने अपने ही बेटे को,
+  समय से पहले जगा दिया."), split a long sentence into two, sometimes a 1-2 word line ("सोचिए..." / "पर क्यों?").
+  Mix question, statement, whisper-like short line. Avoid bookish words; use spoken Hindi.
 - Breaths: voice.py adds a soft inhale in pauses >= 0.25 s (script.json `"breaths": true`, the default).
 - Pauses: `gap` 0.5-0.8 after a reveal or before the twist, 0.2-0.3 elsewhere. Do not exceed ~60 s total.
 
