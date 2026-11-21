@@ -519,3 +519,124 @@ export function vishnu(x, y, o = {}) {
   ctx.restore();
   return { hl, hr, ul, ur };
 }
+
+// ═════════ RISHI (standing sage: Pulastya) ═════════
+/** o = { s, t, pose: 'stand'|'walk'|'carry'|'strain'|'pull'|'curse'|'namaste', dir, mood: 'calm'|'angry', aura } -> returns the raised hand [x, y] in world coords */
+export function rishi(x, y, o = {}) {
+  const s = o.s || 1, t = o.t || 0, pose = o.pose || 'stand', dir = o.dir || 1, wk = pose === 'walk' ? Math.sin(t * 6) : 0;
+  const ROBE = '#D9822F', ROBE_D = '#B8641F', BEARD = '#EFEBE2';
+  ctx.save(); ctx.translate(x, y); ctx.scale(s * dir, s);
+  if (o.aura) glow(0, -600, 520, A.paleGold, 0.3 * o.aura);
+  // back arm
+  const BA = { stand: [-14, -6], walk: [-14 - wk * 12, -10], carry: [-20, -10], strain: [-40, 30], pull: [40, 70], curse: [-20, -10], namaste: [-30, 70] }[pose] || [-14, -6];
+  limb(-86, -700, BA[0], 160, BA[1], 140, 50, 38, SKIN_D);
+  // legs
+  for (const k of [-1, 1]) { const a = pose === 'walk' ? k * wk * 14 : (pose === 'strain' || pose === 'pull') ? k * 10 : 0; limb(k * 40, -330, a, 170, a, 150, 52, 40, SKIN_D); }
+  // robe (dhoti + uttariya)
+  cut(() => { ctx.beginPath(); ctx.moveTo(-96, -520); ctx.lineTo(96, -520); ctx.quadraticCurveTo(130, -360, 120, -150); ctx.lineTo(-120, -150); ctx.quadraticCurveTo(-130, -360, -96, -520); ctx.closePath(); }, ROBE);
+  ctx.strokeStyle = 'rgba(0,0,0,0.15)'; ctx.lineWidth = 5; for (const xx of [-40, 10, 50]) { ctx.beginPath(); ctx.moveTo(xx * 0.7, -500); ctx.lineTo(xx * 1.2, -160); ctx.stroke(); }
+  // torso
+  cut(() => { ctx.beginPath(); ctx.moveTo(-100, -760); ctx.quadraticCurveTo(-116, -640, -92, -510); ctx.lineTo(92, -510); ctx.quadraticCurveTo(116, -640, 100, -760); ctx.quadraticCurveTo(0, -785, -100, -760); ctx.closePath(); }, SKIN);
+  cut(P_poly([[-100, -770], [-50, -778], [96, -530], [56, -512]]), ROBE_D, { shadow: 0.3, edge: 3 });
+  // rudraksha mala
+  for (let i = 0; i <= 14; i++) { const an = Math.PI * (0.1 + 0.8 * i / 14); circle(Math.cos(an) * 70, -790 + Math.sin(an) * 150, 9, '#6A3A22'); }
+  // head
+  cut(P_rr(-24, -840, 48, 60, 16), SKIN_D, { shadow: 0.2, edge: 0 });
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, -900, 62, 74, 0, 0, TAU); }, SKIN);
+  // jata bun
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, -1000, 50, 44, 0, 0, TAU); }, '#D8D0C0', { shadow: 0.4, edge: 3 });
+  cut(() => { ctx.beginPath(); ctx.moveTo(-64, -900); ctx.quadraticCurveTo(-70, -975, 0, -975); ctx.quadraticCurveTo(70, -975, 64, -900); ctx.quadraticCurveTo(50, -950, 0, -950); ctx.quadraticCurveTo(-50, -950, -64, -900); ctx.closePath(); }, '#D8D0C0', { shadow: 0.2, edge: 2 });
+  // tripundra
+  ctx.strokeStyle = '#F7F3EA'; ctx.lineWidth = 4; for (const yy of [-930, -922, -914]) { ctx.beginPath(); ctx.moveTo(-30, yy); ctx.lineTo(30, yy); ctx.stroke(); } circle(0, -922, 4, CRIMSON);
+  // brows + eyes
+  const ang = o.mood === 'angry';
+  ctx.strokeStyle = '#E8E2D6'; ctx.lineWidth = 7; ctx.lineCap = 'round'; for (const k of [-1, 1]) { ctx.beginPath(); ctx.moveTo(k * 10, ang ? -894 : -900); ctx.lineTo(k * 44, ang ? -910 : -904); ctx.stroke(); }
+  eyes(-886, o.eyes ?? (ang ? 1 : 0), 24, INK, 0.9);
+  // beard
+  cut(() => { ctx.beginPath(); ctx.moveTo(-58, -880); ctx.quadraticCurveTo(-66, -800, -26, -720); ctx.quadraticCurveTo(0, -680, 26, -720); ctx.quadraticCurveTo(66, -800, 58, -880); ctx.quadraticCurveTo(30, -846, 0, -848); ctx.quadraticCurveTo(-30, -846, -58, -880); ctx.closePath(); }, BEARD, { shadow: 0.4, edge: 3 });
+  cut(() => { ctx.beginPath(); ctx.moveTo(-28, -862); ctx.quadraticCurveTo(0, -876, 28, -862); ctx.quadraticCurveTo(0, -866, -28, -862); }, BEARD, { shadow: 0, edge: 2 });
+  if (ang) { ctx.strokeStyle = '#5A2A1A'; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(-14, -840); ctx.lineTo(14, -840); ctx.stroke(); }
+  // front arm
+  const FA = { stand: [14, 6], walk: [14 + wk * 12, 10], carry: [150, 176], strain: [120, 150], pull: [-40, -70], curse: [120, 150], namaste: [30, -78] }[pose] || [14, 6];
+  const h = limb(86, -700, FA[0], 160, FA[1], 140, 50, 38, SKIN);
+  if (pose === 'carry' || pose === 'strain') cut(() => { ctx.beginPath(); ctx.ellipse(h[0], h[1] - 8, 40, 14, 0, 0, TAU); }, SKIN, { shadow: 0.3, edge: 2 });
+  else if (pose === 'curse') { ctx.save(); ctx.translate(h[0], h[1]); cut(P_rr(-20, -60, 40, 64, 16), SKIN, { shadow: 0.3, edge: 2 }); cut(P_rr(-6, -110, 14, 56, 6), SKIN, { shadow: 0.2, edge: 2 }); ctx.restore(); }
+  else cut(P_circ(h[0], h[1], 22), SKIN, { shadow: 0.2, edge: 2 });
+  ctx.restore();
+  return [x + dir * h[0] * s, y + h[1] * s];
+}
+
+// ═════════ GIRI (a living mountain: Govardhan / Drona) ═════════
+/** a rounded cut-paper mountain whose base centre is (x, y); o = { s, t, col: [base, mid, top], glowA, trees, falls, seed, shake } */
+export function giri(x, y, o = {}) {
+  const s = o.s || 1, t = o.t || 0, seed = o.seed || 3, [c0, c1, c2] = o.col || ['#3E5A2E', '#557A3A', '#7FA052'];
+  ctx.save(); ctx.translate(x + (o.shake ? Math.sin(t * 60) * o.shake * 8 : 0), y); ctx.scale(s, s);
+  if (o.glowA) { glow(0, -260, 560, '#FFE2A0', 0.4 * o.glowA); }
+  const body = (w, h, sd) => () => { ctx.beginPath(); ctx.moveTo(-w, 0); for (let i = 0; i <= 40; i++) { const k = i / 40, xx = -w + 2 * w * k; const yy = -h * Math.pow(Math.sin(Math.PI * k), 0.8) * (1 + 0.12 * Math.sin(k * 17 + sd) + 0.06 * Math.sin(k * 41 + sd * 2)); ctx.lineTo(xx, yy); } ctx.closePath(); };
+  cut(body(420, 420, seed), c0, { shadow: 0.9, edge: 4 });
+  cut(body(320, 360, seed + 2), c1, { shadow: 0.5, edge: 3 });
+  cut(body(190, 300, seed + 5), c2, { shadow: 0.4, edge: 3 });
+  // rocks (shilas)
+  for (let i = 0; i < 9; i++) { const rx = -330 + rnd(seed * 7 + i) * 660, ry = -20 - rnd(seed * 3 + i) * 120; cut(() => { ctx.beginPath(); ctx.ellipse(rx, ry, 22 + rnd(i) * 18, 11 + rnd(i + 3) * 7, 0, 0, TAU); }, '#8A7A62', { shadow: 0.3, edge: 2 }); }
+  // little trees
+  if (o.trees ?? 1) for (let i = 0; i < 14; i++) { const k = rnd(seed * 11 + i), xx = -300 + k * 600, hh = 340 * Math.pow(Math.sin(Math.PI * (xx + 420) / 840), 0.8) * (0.25 + rnd(i * 5) * 0.55); const th = 34 + rnd(i * 2) * 22; cut(P_poly([[xx - th * 0.45, -hh], [xx, -hh - th * 1.5], [xx + th * 0.45, -hh]]), i % 2 ? '#2E4A24' : '#3A5E2C', { shadow: 0.35, edge: 2 }); }
+  // waterfalls
+  if (o.falls) { ctx.save(); ctx.globalAlpha = o.falls; for (const [fx, top] of [[-90, -300], [110, -270]]) { const g = ctx.createLinearGradient(0, top, 0, 0); g.addColorStop(0, 'rgba(220,235,255,0.9)'); g.addColorStop(1, 'rgba(220,235,255,0.2)'); ctx.fillStyle = g; ctx.fillRect(fx - 8, top, 16, -top); for (let i = 0; i < 4; i++) circle(fx, top + ((t * 300 + i * 80) % -top), 6, 'rgba(255,255,255,0.8)'); } ctx.restore(); }
+  // peacock-blue sacred glow line at the peak (Giriraj)
+  if (o.crown) { glow(0, -400, 120, '#FFE9B0', 0.6 * o.crown); }
+  ctx.restore();
+}
+
+// ═════════ KRISHNA (standing; flute or lifting Govardhan on the little finger) ═════════
+const KB = '#3A5FA8', KB_D = '#2A4A88';
+/** o = { s, t, pose: 'flute'|'lift', aura } -> returns fingertip [x, y] in world coords for 'lift' */
+export function krishna(x, y, o = {}) {
+  const s = o.s || 1, t = o.t || 0, pose = o.pose || 'flute';
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  if (o.aura) glow(0, -600, 600, '#9FC4FF', 0.3 * o.aura);
+  // legs (one crossed, tribhanga hint)
+  limb(-36, -330, 6, 170, 4, 150, 52, 40, KB_D); limb(36, -330, -14, 170, -8, 150, 52, 40, KB_D);
+  // pitambar dhoti
+  cut(() => { ctx.beginPath(); ctx.moveTo(-96, -520); ctx.lineTo(96, -520); ctx.quadraticCurveTo(130, -380, 110, -170); ctx.lineTo(-110, -170); ctx.quadraticCurveTo(-130, -380, -96, -520); ctx.closePath(); }, PITA);
+  ctx.strokeStyle = CRIMSON; ctx.lineWidth = 7; ctx.beginPath(); ctx.moveTo(-110, -180); ctx.lineTo(110, -180); ctx.stroke();
+  // back arm (left): lift = straight up, flute = across to the mouth
+  const back = pose === 'lift' ? limb(-86, -720, -172, 170, -178, 150, 50, 38, KB) : limb(-86, -720, 40, 150, 150, 120, 50, 38, KB_D);
+  // torso
+  cut(() => { ctx.beginPath(); ctx.moveTo(-100, -770); ctx.quadraticCurveTo(-116, -640, -92, -510); ctx.lineTo(92, -510); ctx.quadraticCurveTo(116, -640, 100, -770); ctx.quadraticCurveTo(0, -795, -100, -770); ctx.closePath(); }, KB);
+  for (let i = 0; i <= 16; i++) { const an = Math.PI * (0.1 + 0.8 * i / 16); circle(Math.cos(an) * 90, -790 + Math.sin(an) * 230, 11, i % 2 ? '#E8899A' : '#F2C14E'); }
+  for (const r of [56, 76]) { ctx.strokeStyle = GOLD; ctx.lineWidth = 7; ctx.beginPath(); ctx.arc(0, -805, r, 0.22 * Math.PI, 0.78 * Math.PI); ctx.stroke(); }
+  // head
+  cut(P_rr(-24, -840, 48, 60, 16), KB_D, { shadow: 0.2, edge: 0 });
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, -900, 62, 74, 0, 0, TAU); }, KB);
+  cut(() => { ctx.beginPath(); ctx.moveTo(-66, -880); ctx.quadraticCurveTo(-90, -960, -30, -985); ctx.quadraticCurveTo(0, -995, 30, -985); ctx.quadraticCurveTo(90, -960, 66, -880); ctx.quadraticCurveTo(56, -950, 0, -952); ctx.quadraticCurveTo(-56, -950, -66, -880); ctx.closePath(); }, INK, { shadow: 0.2, edge: 2 });
+  cut(P_rr(-62, -968, 124, 22, 8), GOLD, { shadow: 0.3, edge: 2 });
+  // peacock feather
+  ctx.save(); ctx.translate(30, -975); ctx.rotate(0.35); ctx.strokeStyle = '#4F7A3A'; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, -120); ctx.stroke();
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, -110, 30, 52, 0, 0, TAU); }, '#2E8A6A', { shadow: 0.3, edge: 2 }); cut(() => { ctx.beginPath(); ctx.ellipse(0, -104, 18, 28, 0, 0, TAU); }, '#1E4FA0', { shadow: 0, edge: 0 }); circle(0, -100, 9, '#F2C14E'); ctx.restore();
+  for (const k of [-1, 1]) circle(k * 64, -870, 9, GOLD);
+  ctx.strokeStyle = '#1C2A44'; ctx.lineWidth = 5; ctx.lineCap = 'round'; for (const k of [-1, 1]) { ctx.beginPath(); ctx.moveTo(k * 10, -930); ctx.quadraticCurveTo(k * 26, -940, k * 44, -932); ctx.stroke(); }
+  eyes(-908, 0, 24, '#1C2A44', 0.95);
+  ctx.strokeStyle = '#C8323D'; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(-14, -864); ctx.quadraticCurveTo(0, -854, 14, -864); ctx.stroke();
+  ctx.strokeStyle = '#F7EFDC'; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(-6, -930); ctx.lineTo(-8, -960); ctx.moveTo(6, -930); ctx.lineTo(8, -960); ctx.stroke();
+  // front arm
+  let tip = null;
+  if (pose === 'lift') { const h = back; cut(P_circ(h[0], h[1], 20), KB, { shadow: 0.2, edge: 2 }); cut(P_rr(h[0] - 5, h[1] - 54, 10, 40, 5), KB, { shadow: 0.2, edge: 2 }); tip = [h[0], h[1] - 54];
+    const f = limb(86, -720, 30, 160, 10, 140, 50, 38, KB); cut(P_circ(f[0], f[1], 22), KB, { shadow: 0.2, edge: 2 }); }
+  else { const f = limb(86, -720, -40, 150, -150, 120, 50, 38, KB); cut(P_circ(f[0], f[1], 20), KB, { shadow: 0.2, edge: 2 });
+    ctx.save(); ctx.translate(-40, -858); ctx.rotate(0.12); cut(P_rr(-150, -9, 300, 18, 8), '#B07A22', { shadow: 0.3, edge: 2 }); for (let i = 0; i < 5; i++) circle(-90 + i * 40, 0, 4, '#5A3A12'); ctx.restore(); }
+  ctx.restore();
+  return tip ? [x + tip[0] * s, y + tip[1] * s] : null;
+}
+
+/** a simple cut-paper cow (Braj) */
+export function cow(x, y, s = 1, dir = 1, col = '#EFE3C8') {
+  ctx.save(); ctx.translate(x, y); ctx.scale(s * dir, s);
+  for (const lx of [-70, -40, 50, 80]) cut(P_rr(lx - 9, -70, 18, 72, 6), '#C9B89A', { shadow: 0.3, edge: 2 });
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, -100, 110, 50, 0, 0, TAU); }, col, { shadow: 0.5, edge: 3 });
+  cut(() => { ctx.beginPath(); ctx.ellipse(-20, -110, 34, 20, 0.3, 0, TAU); }, '#8A6A48', { shadow: 0, edge: 0 });
+  cut(() => { ctx.beginPath(); ctx.ellipse(120, -130, 34, 26, 0.4, 0, TAU); }, col, { shadow: 0.4, edge: 2 });
+  ctx.strokeStyle = '#C9B89A'; ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(116, -152); ctx.quadraticCurveTo(110, -186, 96, -186); ctx.moveTo(132, -150); ctx.quadraticCurveTo(140, -184, 154, -182); ctx.stroke();
+  ctx.strokeStyle = col; ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(-108, -110); ctx.quadraticCurveTo(-130, -70, -122, -40); ctx.stroke();
+  circle(118, -112, 6, '#A8322D');
+  ctx.restore();
+}

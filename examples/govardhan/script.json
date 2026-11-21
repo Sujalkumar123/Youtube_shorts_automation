@@ -1,0 +1,152 @@
+{
+ "title": "गोवर्धन पर्वत को श्राप किसने दिया? | Pulastya's Curse #shorts",
+ "voice": "hm_omega",
+ "speed": 1.1,
+ "lead": 0.4,
+ "outro": 1.0,
+ "gap": 0.24,
+ "breaths": true,
+ "music": "devotional",
+ "voice_fx": "rubberband=pitch=0.93:formant=preserved,highpass=f=70,equalizer=f=150:t=q:w=1:g=3,equalizer=f=320:t=q:w=1.2:g=-1.5,equalizer=f=2200:t=q:w=1:g=1,equalizer=f=7000:t=q:w=1.5:g=-2.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9",
+ "music_db": -26,
+ "music_sa": 110,
+ "music_lp": 2000,
+ "music_sub": 0.65,
+ "sources": [
+  "Garga Samhita, Vrindavana Khanda, chapter 2, 'Description of Giriraja Govardhana's Birth' (wisdomlib.org, Garga Samhita English, verses 2.2.17-50): Govardhana, son of Mount Drona, is seen by the sage Pulastya, who asks Drona for his son to take to Kashi; Govardhana agrees on the condition that wherever he is set down he will stay; over Vraja he grows heavy, is set down and will not rise; Pulastya curses him to diminish every day by the measure of a sesame seed",
+  "Bhagavata Purana, Canto 10, chapters 24-25: Krishna lifts Govardhana for seven days to shelter Vraja from Indra's rain (Govardhan Puja)",
+  "Govardhan Hill, Mathura (Braj tradition): the parikrama around the hill is about 21 km"
+ ],
+ "lines": [
+  {
+   "text": "एक पर्वत, हर दिन, तिल भर छोटा हो रहा है.",
+   "caps": "Ek *parvat | har din | *til bhar | chhota ho raha hai",
+   "speed": 1.08,
+   "gap": 0.28
+  },
+  {
+   "text": "किसी भूकंप से नहीं... एक श्राप से.",
+   "caps": "Kisi *bhookamp se nahi... | ek *shraap se",
+   "speed": 1.03,
+   "gap": 0.48
+  },
+  {
+   "text": "ये है गोवर्धन, जिसे कृष्ण ने उठाया था.",
+   "caps": "Ye hai *Govardhan | jise *Krishna ne | uthaya tha",
+   "speed": 1.12,
+   "gap": 0.23
+  },
+  {
+   "text": "पर ये पर्वत, ब्रज का था ही नहीं.",
+   "caps": "Par ye *parvat | *Braj ka | tha hi nahi",
+   "speed": 1.14,
+   "gap": 0.33
+  },
+  {
+   "text": "ये था पर्वतराज द्रोण का बेटा, बहुत दूर, शाल्मली द्वीप में.",
+   "caps": "Ye tha parvatraj *Drona ka beta | bahut *door | *Shalmali dweep mein",
+   "speed": 1.12,
+   "gap": 0.23
+  },
+  {
+   "text": "एक दिन, महर्षि पुलस्त्य वहाँ आए.",
+   "caps": "Ek din | maharshi *Pulastya | wahan aaye",
+   "speed": 1.13,
+   "gap": 0.22
+  },
+  {
+   "text": "उन्हें काशी में तप के लिए, यही पर्वत चाहिए था.",
+   "caps": "Unhe *Kashi mein | tap ke liye | *yahi parvat chahiye tha",
+   "speed": 1.14,
+   "gap": 0.23
+  },
+  {
+   "text": "पिता द्रोण रो पड़े... पर ऋषि को मना कौन करे?",
+   "caps": "Pita Drona *ro pade... | par rishi ko | *mana kaun kare?",
+   "speed": 1.1,
+   "gap": 0.33
+  },
+  {
+   "text": "गोवर्धन की शर्त थी, जहाँ आप मुझे रखेंगे, मैं वहीं रहूँगा.",
+   "caps": "Govardhan ki *shart thi | jahan aap mujhe rakhenge | main *wahin rahunga",
+   "speed": 1.05,
+   "gap": 0.28
+  },
+  {
+   "text": "ऋषि मान गए, और पर्वत को हथेली पर उठा लिया.",
+   "caps": "Rishi *maan gaye | aur parvat ko | *hatheli par utha liya",
+   "speed": 1.14,
+   "gap": 0.23
+  },
+  {
+   "text": "पर असली मोड़ अभी बाक़ी था...",
+   "caps": "Par asli *mod | abhi *baaki tha",
+   "speed": 1.06,
+   "gap": 0.38
+  },
+  {
+   "text": "ब्रज के ऊपर, गोवर्धन को याद आया, यहीं तो कृष्ण आएँगे!",
+   "caps": "*Braj ke upar | Govardhan ko *yaad aaya | yahin to *Krishna aayenge!",
+   "speed": 1.08,
+   "gap": 0.23
+  },
+  {
+   "text": "और पर्वत... भारी होने लगा.",
+   "caps": "Aur parvat... | *bhaari hone laga",
+   "speed": 1.03,
+   "gap": 0.28
+  },
+  {
+   "text": "ऋषि ने एक पल के लिए, उसे नीचे रख दिया.",
+   "caps": "Rishi ne *ek pal ke liye | use *neeche rakh diya",
+   "speed": 1.13,
+   "gap": 0.23
+  },
+  {
+   "text": "फिर उठाया... पर पर्वत, हिला तक नहीं.",
+   "caps": "Phir *uthaya... | par parvat | *hila tak nahi",
+   "speed": 1.06,
+   "gap": 0.38
+  },
+  {
+   "text": "क्रोधित ऋषि बोले, तुम हर दिन, तिल भर घटोगे!",
+   "caps": "*Krodhit rishi bole | tum *har din | *til bhar ghatoge!",
+   "speed": 1.02,
+   "gap": 0.53
+  },
+  {
+   "text": "गोवर्धन ने श्राप सह लिया, पर ब्रज नहीं छोड़ा.",
+   "caps": "Govardhan ne | *shraap seh liya | par *Braj nahi chhoda",
+   "speed": 1.08,
+   "gap": 0.33
+  },
+  {
+   "text": "फिर उसी कृष्ण ने, उसे उँगली पर उठाकर, ब्रज को बचाया.",
+   "caps": "Phir usi *Krishna ne | use *ungli par uthakar | Braj ko *bachaya",
+   "speed": 1.1,
+   "gap": 0.33
+  },
+  {
+   "text": "आज भी भक्त, उसकी परिक्रमा करते हैं.",
+   "caps": "Aaj bhi *bhakt | uski *parikrama karte hain",
+   "speed": 1.14,
+   "gap": 0.23
+  },
+  {
+   "text": "हर दिन थोड़ा छोटा... पर भक्ति में, सबसे बड़ा.",
+   "caps": "Har din *thoda chhota... | par *bhakti mein | sabse *bada",
+   "speed": 1.03,
+   "gap": 0.48
+  },
+  {
+   "text": "ऐसी ही अनकही कहानियों के लिए,",
+   "caps": "Aisi hi *ankahi | *kahaniyon ke liye",
+   "speed": 1.14
+  },
+  {
+   "text": "फ़ॉलो करें, अनटोल्ड स्टोरीज़.",
+   "caps": "*Follow karein | *Untold Stories",
+   "speed": 1.13
+  }
+ ]
+}

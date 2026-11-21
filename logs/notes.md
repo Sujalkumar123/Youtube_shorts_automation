@@ -21,3 +21,7 @@
 - Seated close-ups: keep the seat above y 1540 (vishnu at y 1530, s 1.4) so it doesn't sit under the caption strip.
 - Sensitive acts (an eye offering) shown symbolically: an eye outline that blooms into a light-lotus, hand raised with light; never anatomical.
 - 24 lines at speed ~1.0-1.17 with gaps = 64.6 s; good length.
+- 2026-11-21 evening (govardhan): trend pattern "X क्यों/किसने?" + curse + festival (Kartik Purnima). Hooks considered: (1) "एक पर्वत, हर दिन, तिल भर छोटा हो रहा है." (2) "गोवर्धन को श्राप किसने दिया?" (3) "कृष्ण का पर्वत, ब्रज का था ही नहीं." Kept 1 (paradox, repeatable fact) with 3 as line 4. Self-score: hook 5, emotion 4, twist 4, clarity 5, loop 4.
+- Kokoro hm_omega at the RUNBOOK speeds (0.95-1.08) is slower than earlier notes: 26 lines = 85 s, 24 = 76 s. Needed 22 short lines at 1.02-1.14 for 72.9 s. Write ~22 lines of 5-8 words from the start.
+- Wisdomlib verse pages beyond the first two need per-URL approval in subagents (blocked unattended); use web search snippets + the chapter title for the source line.
+- New kit: cast.rishi (standing sage, poses incl. carry = palm-up hand returned for props), cast.giri (cut-paper mountain, tree cones not dots: dots read as polka spots), cast.krishna (flute / lift with fingertip), cast.cow. When drawing a prop on a hand inside a translated ctx, rishi() returns coords relative to that ctx: don't subtract the translation again.

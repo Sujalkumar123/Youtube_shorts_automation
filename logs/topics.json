@@ -195,5 +195,65 @@
   "duration_s": 64.6,
   "quality_gate": "PASS (voice 14.1 dB over music, 24.2 MB)",
   "problems": []
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "evening",
+  "slug": "govardhan",
+  "topic": "Pulastya's curse on Govardhan: son of Mount Drona (Shalmali dvipa), carried on the sage's palm toward Kashi, grows heavy over Braj, is set down and won't rise; cursed to shrink by a sesame seed daily; later Krishna lifts him (Kartik Purnima 24 Nov 2026 tie-in)",
+  "story": "Garga Samhita, Vrindavana Khanda 2; Bhagavata Purana 10.24-25",
+  "palette": [
+   "Braj amber dusk",
+   "Shalmali teal ocean night",
+   "Kashi dawn violet",
+   "indigo night flight",
+   "curse red",
+   "monsoon slate",
+   "parikrama night",
+   "sunrise gold"
+  ],
+  "scene_types": [
+   "shrinking hill + falling sesame seed",
+   "curse ring",
+   "Krishna lifting hill on finger",
+   "dashed outline of missing hill",
+   "Drona mountain with waterfalls (tears)",
+   "sage walking on shore",
+   "Kashi ghats vision",
+   "golden stamp ring",
+   "sage lifting hill onto palm",
+   "night flight on clouds",
+   "Braj with cows + flute vision",
+   "heavy hill pressure rings",
+   "setting down + dust puff",
+   "pulling rooted hill",
+   "angry curse",
+   "villagers sheltering in rain",
+   "diya ring parikrama",
+   "sunrise halo"
+  ],
+  "new_kit": [
+   "cast.rishi (standing sage; poses stand/walk/carry/strain/pull/curse/namaste; mood angry; returns raised hand)",
+   "cast.giri (living mountain; trees, rocks, waterfalls, glow, shake)",
+   "cast.krishna (standing; flute/lift, returns fingertip)",
+   "cast.cow",
+   "braj/ocean/night/til/rain/people in examples/govardhan/shots.js"
+  ],
+  "title": "गोवर्धन पर्वत को श्राप किसने दिया? | Pulastya's Curse #shorts",
+  "hashtags": [
+   "#Govardhan",
+   "#GovardhanParvat",
+   "#Krishna",
+   "#Braj",
+   "#KartikPurnima",
+   "#IndianMythology",
+   "#HinduMythology",
+   "#shorts"
+  ],
+  "youtube_id": "TYtIlrzNMhM",
+  "status": "private, uploaded 19:10 IST; public at 20:00 IST pending",
+  "duration_s": 72.87,
+  "quality_gate": "PASS (voice 15.0 dB over music, 31.8 MB)",
+  "problems": []
  }
 ]
