@@ -151,3 +151,13 @@ export function partial(pts, p) {
 }
 /** dark vignette over the frame (shot-level, before captions) */
 export function vignette(a = 0.55, col = '#0A0D1F') { const g = ctx.createRadialGradient(540, 900, 420, 540, 960, 1250); g.addColorStop(0, rgba(col, 0)); g.addColorStop(1, rgba(col, a)); ctx.fillStyle = g; ctx.fillRect(-400, -400, W + 800, H + 800); }
+
+// ═════════ dawn (added for "aruna") ═════════
+/** a red dawn sky, k 0..1 = how far the glow has risen. horizon at y */
+export function dawnSky(t, k = 1, y = 1150, seed = 2) {
+  const mix = (a, b, p) => { const pa = parseInt(a.slice(1), 16), pb = parseInt(b.slice(1), 16); return '#' + [16, 8, 0].map((s) => Math.round(lerp((pa >> s) & 255, (pb >> s) & 255, p)).toString(16).padStart(2, '0')).join(''); };
+  gradSky([[0, mix('#0B0F2A', '#2A2050', k)], [0.35, mix('#1A1C46', '#7A2E52', k)], [0.55, mix('#2A2456', '#D2503A', k)], [0.62, mix('#3A2A5A', '#F2964A', k)], [1, mix('#20183A', '#3A1E2A', k)]]);
+  stars(t, 90, -200, 700, seed, 1 - k * 0.85);
+  glow(540, y, 900 * (0.5 + k), '#FF6A3A', 0.45 * k); glow(540, y, 420 * (0.5 + k), '#FFD08A', 0.4 * k);
+  paperGrain(0.05, seed);
+}

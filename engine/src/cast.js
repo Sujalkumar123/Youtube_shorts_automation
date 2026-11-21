@@ -218,3 +218,209 @@ export function horse(x, y, s = 1, walk = 0, dir = 1) {
   ctx.restore();
   function leg(lx, i, c) { cut(() => { ctx.beginPath(); ctx.save(); ctx.translate(lx, -150); ctx.rotate(lg(i)); ctx.moveTo(-18, 0); ctx.lineTo(18, 0); ctx.lineTo(12, 140); ctx.lineTo(-12, 140); ctx.closePath(); ctx.restore(); }, c, { shadow: 0.4, edge: 3 }); ctx.save(); ctx.translate(lx, -150); ctx.rotate(lg(i)); ctx.fillStyle = '#5A4632'; ctx.fillRect(-14, 132, 28, 16); ctx.restore(); }
 }
+
+// ═════════ DEVI (Kadru, Vinata, any queen / goddess) — added for "aruna" ═════════
+/** standing woman in a sari, base at (x, y). o = { h, t, sari, border, pallu, pose: 'stand'|'boon'|'hold'|'namaste'|'bow'|'serve', eyes 0..1, dir, crown, glowA, hair } */
+export function devi(o) {
+  const s = (o.h || 900) / 1150, t = o.t || 0, pose = o.pose || 'stand', sari = o.sari || '#B8475A', border = o.border || GOLD, pallu = o.pallu || sari;
+  const bow = pose === 'bow' ? 1 : pose === 'serve' ? 0.6 : 0;
+  ctx.save(); ctx.translate(o.x, o.y); ctx.scale(s * (o.dir || 1), s);
+  if (o.glowA) glow(0, -700, 520, A.paleGold, 0.3 * o.glowA);
+  // long hair behind (braid down the back)
+  cut(() => { ctx.beginPath(); ctx.moveTo(-74, -930); ctx.quadraticCurveTo(-120, -760, -70, -560); ctx.quadraticCurveTo(-30, -520, -10, -600); ctx.lineTo(70, -840); ctx.quadraticCurveTo(80, -930, -74, -930); ctx.closePath(); }, o.hair || INK, { shadow: 0.4, edge: 3 });
+  ctx.save(); ctx.translate(0, -780); ctx.rotate(-0.12 * bow); ctx.translate(0, 780);
+  // back arm
+  const back = { stand: [-12, -4], boon: [-150, -170], hold: [-30, 60], namaste: [-30, 70], bow: [-30, 70], serve: [-40, 40] }[pose] || [-12, -4];
+  limb(-92, -730, back[0], 165, back[1], 145, 56, 40, SKIN_D);
+  ctx.restore();
+  // skirt of the sari: flared, with pleats and a gold border
+  cut(() => { ctx.beginPath(); ctx.moveTo(-100, -520); ctx.lineTo(100, -520); ctx.quadraticCurveTo(150, -260, 175, -10); ctx.quadraticCurveTo(0, 14, -175, -10); ctx.quadraticCurveTo(-150, -260, -100, -520); ctx.closePath(); }, sari);
+  ctx.strokeStyle = 'rgba(0,0,0,0.16)'; ctx.lineWidth = 5; for (const x of [-20, 20, 60]) { ctx.beginPath(); ctx.moveTo(x * 0.6, -500); ctx.lineTo(x * 1.6, -12); ctx.stroke(); }
+  cut(() => { ctx.beginPath(); ctx.moveTo(-178, -40); ctx.quadraticCurveTo(0, -18, 178, -40); ctx.lineTo(176, -8); ctx.quadraticCurveTo(0, 16, -176, -8); ctx.closePath(); }, border, { shadow: 0.2, edge: 2 });
+  for (const k of [-1, 1]) cut(() => { ctx.beginPath(); ctx.ellipse(k * 50, -4, 40, 15, 0, 0, TAU); }, SKIN_D, { shadow: 0.3, edge: 2 });
+  ctx.save(); ctx.translate(0, -520); ctx.rotate(-0.12 * bow); ctx.translate(0, 520);
+  // torso (blouse) + bare midriff
+  cut(() => { ctx.beginPath(); ctx.moveTo(-96, -770); ctx.quadraticCurveTo(-112, -640, -82, -520); ctx.lineTo(82, -520); ctx.quadraticCurveTo(112, -640, 96, -770); ctx.quadraticCurveTo(0, -795, -96, -770); ctx.closePath(); }, SKIN);
+  cut(() => { ctx.beginPath(); ctx.moveTo(-98, -770); ctx.quadraticCurveTo(-104, -680, -92, -640); ctx.lineTo(92, -640); ctx.quadraticCurveTo(104, -680, 98, -770); ctx.quadraticCurveTo(0, -792, -98, -770); ctx.closePath(); }, border === GOLD ? '#7A2E3A' : border, { shadow: 0.3, edge: 2 });
+  // pallu over the left shoulder, falling behind
+  cut(P_poly([[-100, -780], [-40, -790], [96, -540], [100, -480], [40, -470]]), pallu, { shadow: 0.4, edge: 3 });
+  cut(P_poly([[-100, -780], [-86, -788], [104, -500], [96, -486]]), border, { shadow: 0, edge: 0 });
+  // jewellery
+  for (const [r, w, c] of [[60, 8, GOLD], [80, 6, GOLD]]) { ctx.strokeStyle = c; ctx.lineWidth = w; ctx.beginPath(); ctx.arc(0, -805, r, 0.22 * Math.PI, 0.78 * Math.PI); ctx.stroke(); }
+  cut(P_poly([[0, -712], [-12, -735], [0, -752], [12, -735]]), CRIMSON, { shadow: 0.2, edge: 2 });
+  // neck + head
+  cut(P_rr(-26, -840, 52, 70, 18), SKIN_D, { shadow: 0.2, edge: 0 });
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, -900, 62, 76, 0, 0, TAU); }, SKIN);
+  // hair parted, covering the top of the head
+  cut(() => { ctx.beginPath(); ctx.moveTo(-66, -880); ctx.quadraticCurveTo(-74, -985, 0, -988); ctx.quadraticCurveTo(74, -985, 66, -880); ctx.quadraticCurveTo(56, -950, 0, -952); ctx.quadraticCurveTo(-56, -950, -66, -880); ctx.closePath(); }, o.hair || INK, { shadow: 0.2, edge: 2 });
+  ctx.strokeStyle = CRIMSON; ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(0, -985); ctx.lineTo(0, -955); ctx.stroke();
+  if (o.crown) { cut(() => { ctx.beginPath(); ctx.moveTo(-60, -960); ctx.lineTo(-66, -1010); ctx.lineTo(-34, -992); ctx.lineTo(0, -1040); ctx.lineTo(34, -992); ctx.lineTo(66, -1010); ctx.lineTo(60, -960); ctx.quadraticCurveTo(0, -975, -60, -960); ctx.closePath(); }, GOLD, { shadow: 0.3, edge: 2 }); circle(0, -1000, 8, CRIMSON); }
+  for (const k of [-1, 1]) { circle(k * 64, -885, 10, SKIN_D); circle(k * 66, -858, 10, GOLD); }
+  ctx.strokeStyle = INK; ctx.lineWidth = 5; ctx.lineCap = 'round'; for (const k of [-1, 1]) { ctx.beginPath(); ctx.moveTo(k * 12, -936); ctx.quadraticCurveTo(k * 28, -946, k * 44, -937); ctx.stroke(); }
+  eyes(-912, o.eyes ?? 0, 25, INK, 0.9);
+  circle(0, -942, 7, CRIMSON);
+  ctx.strokeStyle = '#8E3A34'; ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(-14, -864); ctx.quadraticCurveTo(0, -858 + (o.sad ? -8 : 4), 14, -864); ctx.stroke();
+  circle(14, -878, 4, GOLD);
+  // front arm
+  const front = { stand: [12, 4], boon: [150, 170], hold: [40, -70], namaste: [40, -78], bow: [40, -78], serve: [60, -40] }[pose] || [12, 4];
+  const hand = limb(92, -730, front[0], 165, front[1], 145, 56, 40, SKIN);
+  for (const [hx, hy] of [hand]) { ctx.strokeStyle = GOLD; ctx.lineWidth = 7; ctx.beginPath(); ctx.arc(hx, hy - 6, 20, 0, TAU); ctx.stroke(); }
+  if (pose === 'namaste' || pose === 'bow') cut(() => { ctx.beginPath(); ctx.ellipse(hand[0] - 6, hand[1] - 14, 18, 34, 0.2, 0, TAU); }, SKIN, { shadow: 0.3, edge: 2 });
+  ctx.restore();
+  ctx.restore();
+  return hand;
+}
+
+// ═════════ ARUNA, the charioteer of the dawn (upper body; below the waist only light) ═════════
+const AR = '#D9653F', AR_D = '#B44A2E', AR_L = '#F08A5A';
+/** o = { s, t, aura 0..1, mood: 'calm'|'angry', eyes 0..1, reins: [x, y] (in local units) | null, age: 0 baby .. 1 youth, mist 0..1 } */
+export function aruna(x, y, o = {}) {
+  const s = o.s || 1, t = o.t || 0, aura = o.aura ?? 1, angry = o.mood === 'angry', age = o.age ?? 1;
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  const sc = lerp(0.62, 1, age); ctx.scale(sc, sc);
+  if (aura > 0) { glow(0, -330, 560, angry ? '#FF4A2A' : '#FF9A5A', 0.45 * aura); glow(0, -360, 260, '#FFE2B0', 0.3 * aura);
+    ctx.save(); ctx.globalAlpha = aura; ctx.strokeStyle = rgba(angry ? '#FF6A4A' : A.gold, 0.85); ctx.lineWidth = 6; ctx.beginPath(); ctx.arc(0, -420, 150, 0, TAU); ctx.stroke(); ctx.restore(); }
+  // below the waist: no legs — a swirl of dawn light
+  const m = o.mist ?? 1;
+  if (m > 0) { ctx.save(); ctx.globalAlpha = m; for (let i = 0; i < 6; i++) { const yy = -10 + i * 34, r = 150 - i * 18 + Math.sin(t * 2 + i) * 10; cut(() => { ctx.beginPath(); ctx.ellipse(Math.sin(t * 1.3 + i) * 16, yy, r, 34, 0, 0, TAU); }, i % 2 ? '#FFB37A' : '#FFD39A', { shadow: 0.2, edge: 0 }); }
+    glow(0, 40, 260, '#FFC27A', 0.7); ctx.restore(); }
+  // back arm
+  const rein = o.reins;
+  limb(-86, -300, rein ? 60 : -14, 120, rein ? 100 : -6, 108, 48, 36, AR_D, GOLD);
+  // torso (bare, glowing red-gold) with a gold sash and belt
+  cut(() => { ctx.beginPath(); ctx.moveTo(-100, -320); ctx.quadraticCurveTo(-112, -170, -86, -30); ctx.lineTo(86, -30); ctx.quadraticCurveTo(112, -170, 100, -320); ctx.quadraticCurveTo(0, -345, -100, -320); ctx.closePath(); }, AR);
+  const g = ctx.createLinearGradient(-110, 0, 110, 0); g.addColorStop(0, 'rgba(0,0,0,0.16)'); g.addColorStop(0.5, 'rgba(255,230,180,0.18)'); g.addColorStop(1, 'rgba(0,0,0,0.1)'); ctx.fillStyle = g; ctx.fill();
+  cut(P_rr(-92, -60, 184, 40, 12), '#7A2E3A', { shadow: 0.3, edge: 3 }); cut(P_rr(-92, -52, 184, 9, 4), GOLD, { shadow: 0, edge: 0 });
+  cut(P_poly([[-100, -320], [-60, -330], [92, -64], [52, -56]]), GOLD, { shadow: 0.3, edge: 2 });
+  for (const [r, w] of [[56, 8], [76, 6]]) { ctx.strokeStyle = GOLD; ctx.lineWidth = w; ctx.beginPath(); ctx.arc(0, -350, r, 0.2 * Math.PI, 0.8 * Math.PI); ctx.stroke(); }
+  // head
+  cut(P_rr(-24, -390, 48, 60, 16), AR_D, { shadow: 0.2, edge: 0 });
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, -440, 58, 68, 0, 0, TAU); }, AR_L);
+  for (const k of [-1, 1]) { circle(k * 60, -430, 10, AR_D); circle(k * 62, -404, 10, GOLD); }
+  ctx.strokeStyle = '#3A160E'; ctx.lineWidth = 5; ctx.lineCap = 'round';
+  for (const k of [-1, 1]) { ctx.beginPath(); if (angry) { ctx.moveTo(k * 10, -474); ctx.lineTo(k * 44, -486); } else { ctx.moveTo(k * 10, -478); ctx.quadraticCurveTo(k * 26, -488, k * 42, -480); } ctx.stroke(); }
+  eyes(-456, o.eyes ?? 0, 23, '#3A160E', 0.85);
+  ctx.strokeStyle = '#7A2A1A'; ctx.lineWidth = 5; ctx.beginPath(); if (angry) { ctx.moveTo(-14, -410); ctx.lineTo(14, -410); } else { ctx.moveTo(-13, -414); ctx.quadraticCurveTo(0, -405, 13, -414); } ctx.stroke();
+  ctx.fillStyle = CRIMSON; ctx.fillRect(-3, -500, 6, 22);
+  // crown with a small sun
+  cut(P_rr(-64, -520, 128, 24, 8), GOLD, { shadow: 0.3, edge: 2 });
+  cut(() => { ctx.beginPath(); ctx.moveTo(-62, -516); ctx.lineTo(-56, -560); ctx.lineTo(-28, -546); ctx.lineTo(0, -600); ctx.lineTo(28, -546); ctx.lineTo(56, -560); ctx.lineTo(62, -516); ctx.closePath(); }, GOLD, { shadow: 0.3, edge: 2 });
+  glow(0, -566, 50, '#FFE2A0', 0.8); circle(0, -566, 14, '#FFF3C4');
+  // front arm (holding the reins, or resting)
+  const hand = limb(86, -300, rein ? 70 : 14, 120, rein ? 110 : 6, 108, 48, 36, AR, GOLD);
+  if (rein) { ctx.strokeStyle = '#E8B13E'; ctx.lineWidth = 6; for (const dy of [0, 14]) { ctx.beginPath(); ctx.moveTo(hand[0], hand[1] + dy); ctx.quadraticCurveTo((hand[0] + rein[0]) / 2, Math.max(hand[1], rein[1]) + 60, rein[0], rein[1] + dy); ctx.stroke(); } }
+  ctx.restore();
+  return hand;
+}
+
+// ═════════ GARUDA: eagle-headed, golden body, great red-gold wings ═════════
+/** wing 0..1 spread; o = { s, t, aura, kalash (carry the amrita pot) } */
+export function garuda(x, y, o = {}) {
+  const s = o.s || 1, t = o.t || 0, wing = o.wing ?? 1, flap = Math.sin(t * 5) * 0.12 * wing;
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  glow(0, -300, 700, '#FFB040', 0.4 * (o.aura ?? 1)); glow(0, -300, 300, '#FFF0C0', 0.3 * (o.aura ?? 1));
+  // wings: layered feathers, each layer a fan
+  for (const k of [-1, 1]) {
+    ctx.save(); ctx.translate(k * 70, -330); ctx.rotate(k * (-0.25 + flap) * wing); ctx.scale(k * lerp(0.25, 1, wing), lerp(0.4, 1, wing));
+    const rows = [['#8E2A1E', 560, 22], ['#C8452A', 470, 18], ['#E98A2E', 360, 14], ['#F2C14E', 240, 10]];
+    rows.forEach(([col, len, n]) => { for (let i = 0; i < n; i++) { const a = -0.9 + (i / (n - 1)) * 1.5, l = len * (0.75 + 0.25 * Math.sin((i / (n - 1)) * Math.PI)); cut(() => { ctx.beginPath(); ctx.save(); ctx.rotate(a); ctx.moveTo(0, -12); ctx.quadraticCurveTo(l * 0.6, -34, l, 0); ctx.quadraticCurveTo(l * 0.6, 34, 0, 12); ctx.restore(); ctx.closePath(); }, col, { shadow: 0.35, edge: 2 }); } });
+    ctx.restore();
+  }
+  // tail feathers
+  for (let i = -3; i <= 3; i++) cut(() => { ctx.beginPath(); ctx.save(); ctx.rotate(i * 0.16); ctx.moveTo(-18, -60); ctx.quadraticCurveTo(-30, 80, 0, 180); ctx.quadraticCurveTo(30, 80, 18, -60); ctx.restore(); ctx.closePath(); }, i % 2 ? '#C8452A' : '#E98A2E', { shadow: 0.3, edge: 2 });
+  // body: golden human torso with a dhoti
+  cut(() => { ctx.beginPath(); ctx.moveTo(-90, -40); ctx.lineTo(90, -40); ctx.lineTo(70, 60); ctx.lineTo(-70, 60); ctx.closePath(); }, '#7A2E3A', { shadow: 0.4, edge: 3 });
+  cut(() => { ctx.beginPath(); ctx.moveTo(-100, -380); ctx.quadraticCurveTo(-115, -200, -88, -40); ctx.lineTo(88, -40); ctx.quadraticCurveTo(115, -200, 100, -380); ctx.quadraticCurveTo(0, -405, -100, -380); ctx.closePath(); }, '#E0A93A');
+  for (let i = 0; i < 4; i++) { ctx.strokeStyle = 'rgba(150,90,20,0.35)'; ctx.lineWidth = 4; ctx.beginPath(); ctx.arc(0, -330 + i * 60, 60, 0.15 * Math.PI, 0.85 * Math.PI); ctx.stroke(); }
+  for (const [r, w] of [[60, 9], [82, 6]]) { ctx.strokeStyle = '#FFE7A0'; ctx.lineWidth = w; ctx.beginPath(); ctx.arc(0, -410, r, 0.2 * Math.PI, 0.8 * Math.PI); ctx.stroke(); }
+  // arms folded forward, holding the kalash
+  for (const k of [-1, 1]) limb(k * 92, -360, k * 30, 120, -k * 70, 100, 46, 36, '#D89A2E', '#FFE7A0');
+  if (o.kalash) { glow(0, -250, 160, '#FFF6D0', 0.8); cut(() => { ctx.beginPath(); ctx.ellipse(0, -230, 52, 48, 0, 0, TAU); }, '#E8B13E', { shadow: 0.5, edge: 3 }); cut(P_rr(-26, -296, 52, 30, 8), '#B07A22', { shadow: 0.3, edge: 2 }); for (let i = 0; i < 5; i++) cut(() => { ctx.beginPath(); ctx.ellipse(-28 + i * 14, -306, 8, 22, (i - 2) * 0.3, 0, TAU); }, '#6E9A4A', { shadow: 0.2, edge: 1 }); }
+  // eagle head: white-gold feathers, hooked beak, crown
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, -490, 70, 84, 0, 0, TAU); }, '#F4EEE2');
+  cut(() => { ctx.beginPath(); ctx.moveTo(-70, -470); ctx.quadraticCurveTo(-60, -400, 0, -400); ctx.quadraticCurveTo(60, -400, 70, -470); ctx.quadraticCurveTo(0, -440, -70, -470); ctx.closePath(); }, '#E0A93A', { shadow: 0.2, edge: 2 });
+  cut(() => { ctx.beginPath(); ctx.moveTo(-20, -488); ctx.quadraticCurveTo(20, -500, 34, -470); ctx.quadraticCurveTo(40, -440, 20, -420); ctx.quadraticCurveTo(22, -446, 0, -456); ctx.closePath(); }, '#F2C14E', { shadow: 0.3, edge: 2 });
+  for (const k of [-1, 1]) { ctx.fillStyle = '#2A1C14'; ctx.beginPath(); ctx.ellipse(k * 32, -506, 10, 8, 0, 0, TAU); ctx.fill(); ctx.strokeStyle = '#2A1C14'; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(k * 16, -524); ctx.lineTo(k * 50, -520); ctx.stroke(); }
+  cut(P_rr(-70, -585, 140, 26, 8), GOLD, { shadow: 0.3, edge: 2 });
+  cut(() => { ctx.beginPath(); ctx.moveTo(-68, -580); ctx.lineTo(-60, -630); ctx.lineTo(-30, -612); ctx.lineTo(0, -670); ctx.lineTo(30, -612); ctx.lineTo(60, -630); ctx.lineTo(68, -580); ctx.closePath(); }, GOLD, { shadow: 0.3, edge: 2 }); circle(0, -625, 10, CRIMSON);
+  ctx.restore();
+}
+
+// ═════════ NAGA: a cobra rising, hood spread ═════════
+/** rise 0..1; col body colour; dir 1/-1 */
+export function naga(x, y, s, t = 0, rise = 1, col = '#3E6E5A', dir = 1) {
+  if (rise <= 0) return; ctx.save(); ctx.translate(x, y); ctx.scale(s * dir, s * rise);
+  const sw = Math.sin(t * 2.2 + x) * 10;
+  // coil on the ground
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, -14, 70, 22, 0, 0, TAU); }, col, { shadow: 0.4, edge: 3 });
+  // body S-curve
+  const pts = [[30, -20], [50 + sw * 0.3, -70], [10 + sw, -120], [-10 + sw, -170], [0 + sw, -220]];
+  ctx.save(); ctx.lineCap = 'round'; ctx.lineJoin = 'round'; smoothPts(pts); ctx.strokeStyle = '#F7EFDC'; ctx.lineWidth = 42; ctx.stroke(); smoothPts(pts); ctx.strokeStyle = col; ctx.lineWidth = 34; ctx.stroke(); smoothPts(pts); ctx.strokeStyle = 'rgba(255,240,200,0.35)'; ctx.lineWidth = 12; ctx.stroke(); ctx.restore();
+  // hood
+  ctx.save(); ctx.translate(sw, -240);
+  cut(() => { ctx.beginPath(); ctx.moveTo(0, 40); ctx.quadraticCurveTo(-70, 10, -54, -40); ctx.quadraticCurveTo(-30, -84, 0, -86); ctx.quadraticCurveTo(30, -84, 54, -40); ctx.quadraticCurveTo(70, 10, 0, 40); ctx.closePath(); }, col, { shadow: 0.5, edge: 3 });
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, -14, 26, 34, 0, 0, TAU); }, '#D8C890', { shadow: 0, edge: 0 });
+  ctx.strokeStyle = 'rgba(40,30,20,0.6)'; ctx.lineWidth = 4; ctx.beginPath(); ctx.arc(-12, -30, 9, 0, TAU); ctx.moveTo(21, -30); ctx.arc(12, -30, 9, 0, TAU); ctx.stroke();
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, -80, 22, 18, 0, 0, TAU); }, col, { shadow: 0.2, edge: 2 });
+  for (const k of [-1, 1]) circle(k * 10, -84, 4, '#F2C14E');
+  ctx.restore(); ctx.restore();
+}
+
+// ═════════ EGG + the warm clay vessel ═════════
+/** o = { crack 0..1, open 0..1 (top shell lifts away), glow 0..1, col, spots } */
+export function egg(x, y, r, t = 0, o = {}) {
+  const crack = o.crack || 0, open = o.open || 0, col = o.col || '#F3E9D2';
+  ctx.save(); ctx.translate(x, y);
+  if (o.glow) glow(0, 0, r * 3, o.glowCol || '#FFE0A0', 0.55 * o.glow);
+  const shape = (y0, y1) => () => { ctx.beginPath(); ctx.save(); ctx.beginPath(); ctx.restore(); ctx.ellipse(0, 0, r * 0.78, r, 0, 0, TAU); };
+  if (open <= 0) {
+    cut(shape(), col, { shadow: 0.6, edge: 3 });
+    ctx.save(); ctx.beginPath(); ctx.ellipse(0, 0, r * 0.78, r, 0, 0, TAU); ctx.clip(); const g = ctx.createRadialGradient(-r * 0.3, -r * 0.4, 0, 0, 0, r * 1.2); g.addColorStop(0, 'rgba(255,255,255,0.45)'); g.addColorStop(1, 'rgba(0,0,0,0.18)'); ctx.fillStyle = g; ctx.fillRect(-r, -r, r * 2, r * 2);
+    if (o.spots) for (let i = 0; i < 9; i++) circle((rnd(i + 3) - 0.5) * r * 1.2, (rnd(i * 5) - 0.5) * r * 1.6, r * 0.06 + rnd(i) * r * 0.05, o.spots);
+    ctx.restore();
+    if (crack > 0) { ctx.save(); ctx.globalCompositeOperation = 'lighter'; ctx.strokeStyle = rgba('#FFE7A0', 0.95); ctx.lineWidth = Math.max(3, r * 0.05); ctx.shadowColor = '#FFD070'; ctx.shadowBlur = 20; ctx.beginPath(); const n = 7; for (let i = 0; i <= n * crack; i++) { const xx = -r * 0.7 + (i / n) * r * 1.4, yy = -r * 0.05 + (i % 2 ? -1 : 1) * r * 0.12; i ? ctx.lineTo(xx, yy) : ctx.moveTo(xx, yy); } ctx.stroke(); ctx.restore(); }
+  } else {
+    // bottom half stays, top half lifts and tilts away
+    const zig = (k) => { for (let i = 0; i <= 7; i++) { const xx = (k > 0 ? -1 : 1) * (-r * 0.78 + (i / 7) * r * 1.56), yy = (i % 2 ? -1 : 1) * r * 0.12; ctx.lineTo(xx, yy); } };
+    cut(() => { ctx.beginPath(); ctx.ellipse(0, 0, r * 0.78, r, 0, 0, Math.PI); zig(1); ctx.closePath(); }, col, { shadow: 0.6, edge: 3 });
+    ctx.save(); ctx.translate(r * 0.9 * open, -r * 1.3 * open); ctx.rotate(0.9 * open); ctx.globalAlpha = clamp(1.4 - open);
+    cut(() => { ctx.beginPath(); ctx.ellipse(0, 0, r * 0.78, r, 0, Math.PI, TAU); zig(-1); ctx.closePath(); }, col, { shadow: 0.6, edge: 3 });
+    ctx.restore();
+  }
+  ctx.restore();
+}
+/** a wide clay vessel (the warm pots the eggs were kept in) */
+export function vessel(x, y, s, col = '#9C5A32') {
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  cut(() => { ctx.beginPath(); ctx.moveTo(-200, -120); ctx.quadraticCurveTo(-240, 40, -120, 90); ctx.lineTo(120, 90); ctx.quadraticCurveTo(240, 40, 200, -120); ctx.closePath(); }, col, { shadow: 0.7, edge: 4 });
+  cut(P_rr(-215, -140, 430, 34, 14), '#B87442', { shadow: 0.3, edge: 3 });
+  ctx.strokeStyle = 'rgba(242,193,78,0.7)'; ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(-205, -60); ctx.quadraticCurveTo(0, -30, 205, -60); ctx.stroke();
+  for (let i = 0; i < 7; i++) circle(-150 + i * 50, -20, 7, '#F2C14E');
+  ctx.restore();
+}
+
+// ═════════ the Sun's chariot: one great wheel, seven horses, the sun behind ═════════
+/** o = { sunR, horses 0..1 (how many appear), driver (draw Aruna), run (gallop) } */
+export function suryaRath(x, y, s, t, o = {}) {
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  const R = o.sunR ?? 330;
+  glow(-120, -420, R * 2.6, '#FF9A3A', 0.5); glow(-120, -420, R * 1.3, '#FFE6A0', 0.55);
+  cut(P_circ(-120, -420, R), '#F6C04A', { shadow: 0, edge: 0 });
+  ctx.save(); ctx.globalCompositeOperation = 'lighter'; for (let i = 0; i < 24; i++) { const a = i / 24 * TAU + t * 0.1; ctx.strokeStyle = rgba('#FFE6A0', 0.35); ctx.lineWidth = 10; ctx.beginPath(); ctx.moveTo(-120 + Math.cos(a) * R * 1.05, -420 + Math.sin(a) * R * 1.05); ctx.lineTo(-120 + Math.cos(a) * R * 1.3, -420 + Math.sin(a) * R * 1.3); ctx.stroke(); } ctx.restore();
+  // horses (7), staggered in depth, galloping to the right
+  const n = Math.round(7 * (o.horses ?? 1));
+  for (let i = n - 1; i >= 0; i--) { const hx = 260 + (i % 2) * 40 - Math.floor(i / 2) * 6 + i * 22, hy = -40 - i * 26; ctx.save(); ctx.globalAlpha = 1 - i * 0.06; horse(hx, hy, 0.62 - i * 0.015, t * 11 + i * 0.7, 1); ctx.restore(); if (i === 0) glow(hx + 120, hy - 200, 200, '#FFE6A0', 0.25); }
+  // chariot body + wheel
+  cut(() => { ctx.beginPath(); ctx.moveTo(-260, -300); ctx.lineTo(60, -300); ctx.quadraticCurveTo(110, -240, 90, -130); ctx.lineTo(-250, -130); ctx.quadraticCurveTo(-290, -220, -260, -300); ctx.closePath(); }, '#B07A22', { shadow: 0.8, edge: 4 });
+  cut(P_rr(-270, -320, 350, 28, 12), '#F2C14E', { shadow: 0.3, edge: 3 });
+  ctx.strokeStyle = '#7A4A1A'; ctx.lineWidth = 5; for (let i = 0; i < 5; i++) { ctx.beginPath(); ctx.moveTo(-230 + i * 70, -290); ctx.lineTo(-230 + i * 70, -140); ctx.stroke(); }
+  // pole to the horses
+  ctx.strokeStyle = '#7A4A1A'; ctx.lineWidth = 16; ctx.beginPath(); ctx.moveTo(80, -170); ctx.lineTo(330, -170); ctx.stroke();
+  ctx.save(); ctx.translate(-100, -110); ctx.rotate(t * 3); const wr = 130;
+  cut(P_circ(0, 0, wr), '#8A5A1E', { shadow: 0.6, edge: 4 }); cut(P_circ(0, 0, wr - 22), '#3A2A1A', { shadow: 0, edge: 0 });
+  ctx.strokeStyle = '#E8B13E'; ctx.lineWidth = 10; for (let i = 0; i < 12; i++) { const a = i / 12 * TAU; ctx.beginPath(); ctx.moveTo(Math.cos(a) * 20, Math.sin(a) * 20); ctx.lineTo(Math.cos(a) * (wr - 22), Math.sin(a) * (wr - 22)); ctx.stroke(); }
+  cut(P_circ(0, 0, 30), '#F2C14E', { shadow: 0.3, edge: 3 }); ctx.restore();
+  // Aruna at the front, holding the reins
+  if (o.driver !== 0) aruna(30, -270, { s: 0.62, t, aura: o.driverAura ?? 0.8, eyes: 0, reins: [620, 20], mist: 1 });
+  ctx.restore();
+}

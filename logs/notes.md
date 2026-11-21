@@ -10,3 +10,8 @@
 - 2026-11-20: first live upload WZL7iiv6jno via raw.githubusercontent media branch + Zapier upload_video (private) + raw PUT videos?part=status (public). All three steps verified working.
 - 2026-11-20 user feedback: voice deeper (pitch 0.85, bass +5), background lower and bassier (music_db -26, drone on A=110 Hz, lp 2000, sub 0.65). Measured gap voice/music 11 dB, voice ~112 Hz.
 - 2026-11-20: user wants the most realistic FREE voice. Microsoft (speech.platform.bing.com) and Google TTS are blocked from cloud sessions; ElevenLabs declined (paid). Kokoro hm_omega/hm_psi + emotional pacing + breaths is the best available here.
+- 2026-11-21 morning: trends.md already had today's 00:10 scan, so no Zapier trend scan (saved 3 calls). Picked Aruna (Surya's seven horses/Arun was trending).
+- Hinglish caps are placed by WORD COUNT (Roman never matches the Hindi), so each line's caps should transliterate the whole line, chunk by chunk, with one * per chunk.
+- 23 lines at speed ~1.16 gave 66.6 s; a first 25-line draft was 83 s (over the 75 s gate). Keep lines short: ~6-8 Hindi words.
+- New kit: devi (sari, poses stand/boon/hold/namaste/bow/serve), aruna (upper body + dawn-light swirl), garuda, naga, egg (crack/open), vessel, suryaRath (sun + 7 horses + Aruna), atmos.dawnSky. Example in examples/aruna.
+- Close-up "hands holding an object": straight forearms from the bottom corners to the object's sides + cupped hand ellipses; a bent-arm shape read like a ladder.

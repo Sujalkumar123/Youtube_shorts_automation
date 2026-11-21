@@ -1,0 +1,154 @@
+{
+ "title": "सूर्य के सारथी के पैर क्यों नहीं हैं? | Aruna, the Unfinished Son #shorts",
+ "voice": "hm_omega",
+ "speed": 1.16,
+ "lead": 0.4,
+ "outro": 1.3,
+ "gap": 0.22,
+ "breaths": true,
+ "music": "devotional",
+ "voice_fx": "rubberband=pitch=0.85:formant=shifted,bass=g=5:f=120,equalizer=f=3200:t=q:w=1:g=1.5,aecho=0.85:0.75:45|90:0.16|0.08,acompressor=threshold=-20dB:ratio=3:attack=8:release=200",
+ "music_db": -26,
+ "music_sa": 110,
+ "music_lp": 2000,
+ "music_sub": 0.65,
+ "sources": [
+  "Mahabharata, Adi Parva, Astika Parva, section XVI (K.M. Ganguli translation, sacred-texts.com/hin/m01/m01017.htm): Kashyapa's wives Kadru and Vinata; Kadru asks for a thousand Naga sons, Vinata for two sons superior to them; the eggs kept 500 years; Vinata breaks one egg, the son's upper body is formed but the lower half is not; Aruna curses her to be the slave of her rival for 500 years, says the other son will free her, and rises into the sky to become the charioteer of Surya",
+  "Mahabharata, Adi Parva, sections XX-XXXIV (Ganguli): Vinata becomes Kadru's slave after the wager on the horse Uchchaihshravas; Garuda brings the amrita and frees his mother",
+  "Aruna (Hinduism), Wikipedia and wisdomlib.org: Aruna as the charioteer of Surya and the personification of the reddish glow of the rising sun (arunodaya)"
+ ],
+ "lines": [
+  {
+   "text": "हर सुबह सूरज से पहले जो लाली आती है,",
+   "caps": "Har *subah suraj se pehle | jo *laali aati hai",
+   "speed": 1.12
+  },
+  {
+   "text": "वो एक देवता हैं, जिनके पैर ही नहीं.",
+   "caps": "Wo ek *devta hain | jinke *pair hi nahi",
+   "gap": 0.4
+  },
+  {
+   "text": "सूर्य के सारथी... अरुण.",
+   "caps": "Surya ke *saarthi | *Arun",
+   "speed": 1.0,
+   "gap": 0.45
+  },
+  {
+   "text": "पर उनके पैर, क्यों नहीं बने?",
+   "caps": "Par unke *pair | *kyon nahi bane?",
+   "speed": 1.08,
+   "gap": 0.4
+  },
+  {
+   "text": "ऋषि कश्यप की पत्नियाँ थीं, कद्रू और विनता.",
+   "caps": "Rishi *Kashyap ki patniyan thi | *Kadru aur Vinata",
+   "speed": 1.18,
+   "gap": 0.25
+  },
+  {
+   "text": "कद्रू ने माँगे हज़ार नाग बेटे,",
+   "caps": "*Kadru ne maange | *hazaar naag bete",
+   "speed": 1.2
+  },
+  {
+   "text": "और विनता ने बस दो, पर उनसे भी शक्तिशाली.",
+   "caps": "Aur Vinata ne bas *do | par unse bhi *shaktishaali",
+   "speed": 1.2,
+   "gap": 0.28
+  },
+  {
+   "text": "पाँच सौ साल बाद, कद्रू के नाग निकल आए.",
+   "caps": "*Paanch sau saal baad | Kadru ke *naag nikal aaye",
+   "speed": 1.2,
+   "gap": 0.28
+  },
+  {
+   "text": "पर विनता के अंडे... चुप रहे.",
+   "caps": "Par *Vinata ke ande | *chup rahe",
+   "speed": 1.04,
+   "gap": 0.45
+  },
+  {
+   "text": "बेचैन होकर, विनता ने एक अंडा पहले ही तोड़ दिया!",
+   "caps": "*Bechain hokar | Vinata ne ek *anda | pehle hi *tod diya",
+   "speed": 1.16,
+   "gap": 0.4
+  },
+  {
+   "text": "और अंदर से निकला... एक अधूरा बच्चा.",
+   "caps": "Aur andar se *nikla | ek *adhoora baccha",
+   "speed": 1.0,
+   "gap": 0.5
+  },
+  {
+   "text": "ऊपर तेजस्वी शरीर, पर पैर थे ही नहीं.",
+   "caps": "Upar *tejasvi sharir | par *pair the hi nahi",
+   "speed": 1.04,
+   "gap": 0.4
+  },
+  {
+   "text": "दर्द में अरुण ने, माँ को श्राप दे दिया.",
+   "caps": "Dard mein *Arun ne | maa ko *shraap de diya",
+   "speed": 1.08,
+   "gap": 0.3
+  },
+  {
+   "text": "पाँच सौ साल, अपनी सौत की दासी बनकर रहोगी!",
+   "caps": "*Paanch sau saal | apni *saut ki | *daasi bankar rahogi",
+   "speed": 1.1,
+   "gap": 0.45
+  },
+  {
+   "text": "पर फिर बोले, दूसरा अंडा मत तोड़ना,",
+   "caps": "Par phir *bole | doosra anda *mat todna",
+   "speed": 1.06
+  },
+  {
+   "text": "उसका बेटा ही आपको मुक्त करेगा.",
+   "caps": "Uska *beta hi | aapko *mukt karega",
+   "speed": 1.06,
+   "gap": 0.4
+  },
+  {
+   "text": "और वो दूसरा बेटा था... स्वयं गरुड़!",
+   "caps": "Aur wo doosra *beta tha | swayam *Garud!",
+   "speed": 1.02,
+   "gap": 0.35
+  },
+  {
+   "text": "जो अमृत लाकर, माँ को छुड़ा लाए.",
+   "caps": "Jo *amrit laakar | maa ko *chhuda laaye",
+   "speed": 1.16,
+   "gap": 0.35
+  },
+  {
+   "text": "और अरुण?",
+   "caps": "Aur *Arun?",
+   "speed": 1.04,
+   "gap": 0.3
+  },
+  {
+   "text": "वो आकाश में उठे, और सूर्य के सारथी बन गए.",
+   "caps": "Wo *aakaash mein uthe | aur *Surya ke | *saarthi ban gaye",
+   "speed": 1.14,
+   "gap": 0.3
+  },
+  {
+   "text": "इसीलिए हर भोर की लाली को, अरुणोदय कहते हैं.",
+   "caps": "Isiliye har *bhor ki | *laali ko | *Arunoday kehte hain",
+   "speed": 1.02,
+   "gap": 0.45
+  },
+  {
+   "text": "ऐसी ही अनकही कहानियों के लिए,",
+   "caps": "Aisi hi *ankahi | *kahaniyon ke liye",
+   "speed": 1.14
+  },
+  {
+   "text": "फ़ॉलो करें, अनटोल्ड स्टोरीज़.",
+   "caps": "*Follow karein | *Untold Stories",
+   "speed": 1.1
+  }
+ ]
+}
