@@ -21,27 +21,79 @@ function drawBrand() {
   ctx.restore();
 }
 
-function draw(t) {
-  t = clamp(t, 0, T.dur - 1e-4);
-  ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.letterSpacing = '0px';
-  ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H);
-  const S = OP._shots; let i = S.length - 1; while (i > 0 && S[i].at > t) i--;
-  const sh = S[i], end = i < S.length - 1 ? S[i + 1].at : T.dur, d = end - sh.at, lt = t - sh.at;
-  // camera: punch-in on the cut + a slow push across the shot ("camera always moving")
+// ── cinematic layer (engine-wide, every video): transitions, impact shake/flash, handheld sway, grade, light leak, dust ──
+// Per shot (optional): trans: 'fade'|'flash'|'whip'|'zoom'|'dip'|'cut' (default chosen from the cue at the cut), fx: false to skip the grade.
+const TR = 0.32;                                                // transition length (s)
+const IMPACT = { drum: 1, slam: 1, thud: 0.8, damru: 0.35 }, BLOOM = { bell: 1, conch: 0.8, sparkle: 0.5 };
+let mainCtx = null, offA = null, offB = null;
+function off() { const c = document.createElement('canvas'); c.width = W; c.height = H; return c; }
+function camera(sh, lt, d, t) {
   const punch = 1 + 0.06 * (1 - eo(clamp(lt / 0.25)));
   const drift = 1 + (sh.zoom ?? 0.06) * eio(clamp(lt / d));
   const [cx, cy] = sh.cam || [540, 900];
-  ctx.save(); ctx.translate(cx, cy); ctx.scale(punch * drift, punch * drift); ctx.translate(-cx, -cy);
-  sh.draw(lt, d, t);
+  // handheld sway + impact shake from the sound cues
+  let sx = Math.sin(t * 0.71) * 5 + Math.sin(t * 1.37) * 2, sy = Math.sin(t * 0.53) * 4, rot = Math.sin(t * 0.41) * 0.0025;
+  for (const c of OP._impacts) { const dt = t - c.t; if (dt < 0 || dt > 0.45) continue; const a = c.k * Math.exp(-dt * 9); sx += Math.sin(dt * 90) * 16 * a; sy += Math.cos(dt * 77) * 12 * a; rot += Math.sin(dt * 60) * 0.006 * a; }
+  ctx.translate(cx + sx, cy + sy); ctx.rotate(rot); ctx.scale(punch * drift, punch * drift); ctx.translate(-cx, -cy);
+}
+function renderShot(i, lt, t, target) {
+  const S = OP._shots, sh = S[i], end = i < S.length - 1 ? S[i + 1].at : T.dur, d = end - sh.at;
+  const g = target.getContext('2d'); setCtx(g);
+  g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; g.letterSpacing = '0px'; g.fillStyle = '#000'; g.fillRect(0, 0, W, H);
+  g.save(); camera(sh, clamp(lt, 0, d), d, t); sh.draw(clamp(lt, 0, d), d, t); g.restore();
+  setCtx(mainCtx);
+}
+function autoTrans(sh) {
+  if (sh.trans) return sh.trans;
+  const c = OP._cueList.find((c) => Math.abs(c.t - sh.at) < 0.25);
+  if (c && IMPACT[c.type] >= 0.8) return 'flash';
+  if (c && c.type === 'whoosh') return 'whip';
+  if (c && (c.type === 'swell' || c.type === 'conch')) return 'zoom';
+  return 'fade';
+}
+function grade(t, sh) {
+  if (sh.fx === false) return;
+  ctx.save();
+  // teal shadows / warm highlights (soft-light), like a film grade
+  const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, 'rgba(40,70,110,0.55)'); g.addColorStop(0.55, 'rgba(128,128,128,0)'); g.addColorStop(1, 'rgba(255,150,70,0.5)');
+  ctx.globalCompositeOperation = 'soft-light'; ctx.globalAlpha = 0.35; ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  // drifting light leak
+  const lx = 540 + Math.sin(t * 0.23) * 620, ly = 500 + Math.cos(t * 0.17) * 520, r = ctx.createRadialGradient(lx, ly, 0, lx, ly, 700);
+  r.addColorStop(0, 'rgba(255,170,90,0.9)'); r.addColorStop(1, 'rgba(255,170,90,0)');
+  ctx.globalCompositeOperation = 'screen'; ctx.globalAlpha = 0.10 + 0.05 * Math.sin(t * 0.9); ctx.fillStyle = r; ctx.fillRect(0, 0, W, H);
+  // floating dust in the light
+  ctx.globalAlpha = 1; for (let i = 0; i < 28; i++) { const sd = i * 12.9898, px = ((Math.sin(sd) * 43758.5453 % 1 + 1) % 1) * W + Math.sin(t * 0.3 + i) * 40, py = (((Math.cos(sd) * 24634.6345 % 1 + 1) % 1) * H - t * (12 + i % 5 * 6)) % H; const yy = py < 0 ? py + H : py; ctx.fillStyle = `rgba(255,236,190,${0.12 + 0.12 * Math.sin(t * 2 + i)})`; ctx.beginPath(); ctx.arc(px, yy, 1.5 + (i % 3), 0, Math.PI * 2); ctx.fill(); }
+  // impact flash + bell bloom
+  for (const c of OP._cueList) { const dt = t - c.t; if (dt < 0 || dt > 0.6) continue;
+    if (IMPACT[c.type]) { ctx.globalCompositeOperation = 'screen'; ctx.globalAlpha = 0.22 * IMPACT[c.type] * Math.exp(-dt * 10); ctx.fillStyle = '#FFE2B0'; ctx.fillRect(0, 0, W, H); }
+    if (BLOOM[c.type]) { const b = ctx.createRadialGradient(540, 800, 0, 540, 800, 900); b.addColorStop(0, 'rgba(255,220,150,1)'); b.addColorStop(1, 'rgba(255,220,150,0)'); ctx.globalCompositeOperation = 'screen'; ctx.globalAlpha = 0.16 * BLOOM[c.type] * Math.sin(Math.PI * dt / 0.6); ctx.fillStyle = b; ctx.fillRect(0, 0, W, H); } }
   ctx.restore();
+}
+
+function draw(t) {
+  t = clamp(t, 0, T.dur - 1e-4);
+  if (!mainCtx) { mainCtx = ctx; offA = off(); offB = off(); }
+  setCtx(mainCtx); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over'; ctx.letterSpacing = '0px';
+  ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H);
+  const S = OP._shots; let i = S.length - 1; while (i > 0 && S[i].at > t) i--;
+  const sh = S[i], lt = t - sh.at, tr = i > 0 ? autoTrans(sh) : 'cut', k = clamp(lt / TR);
+  renderShot(i, lt, t, offA);
+  if (i > 0 && k < 1 && tr !== 'cut') {
+    const p = S[i - 1]; renderShot(i - 1, sh.at - p.at + lt, t, offB);
+    const e = eio(k);
+    if (tr === 'whip') { for (let j = 0; j < 4; j++) { ctx.globalAlpha = 0.3; ctx.drawImage(offB, -e * W * 0.9 - j * 26, 0); ctx.drawImage(offA, (1 - e) * W * 0.9 + j * 26, 0); } ctx.globalAlpha = 1; ctx.drawImage(offA, (1 - e) * W * 0.9, 0); }
+    else if (tr === 'zoom') { ctx.drawImage(offB, 0, 0); ctx.globalAlpha = e; const z = 1.25 - 0.25 * e; ctx.drawImage(offA, W / 2 - W * z / 2, H / 2 - H * z / 2, W * z, H * z); }
+    else if (tr === 'dip') { if (e < 0.5) { ctx.drawImage(offB, 0, 0); ctx.globalAlpha = e * 2; } else { ctx.drawImage(offA, 0, 0); ctx.globalAlpha = 2 - e * 2; } ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H); }
+    else { ctx.drawImage(offB, 0, 0); ctx.globalAlpha = e; ctx.drawImage(offA, 0, 0); }
+    ctx.globalAlpha = 1;
+    if (tr === 'flash') { ctx.globalCompositeOperation = 'screen'; ctx.globalAlpha = 0.85 * (1 - e); ctx.fillStyle = '#FFF1D6'; ctx.fillRect(0, 0, W, H); ctx.globalCompositeOperation = 'source-over'; ctx.globalAlpha = 1; }
+  } else ctx.drawImage(offA, 0, 0);
+  grade(t, sh);
   ctx.globalAlpha = 1; ctx.letterSpacing = '0px';
-  // film grain (cached noise tiles, changes every frame)
+  // film grain (cached noise tiles)
   if (!OP._grain) { OP._grain = [0, 1, 2, 3].map((k) => { const c = document.createElement('canvas'); c.width = 360; c.height = 640; const g = c.getContext('2d'), im = g.createImageData(360, 640); let sd = 1234 + k * 999; for (let i = 0; i < im.data.length; i += 4) { sd = (sd * 16807) % 2147483647; const v = sd % 256; im.data[i] = im.data[i + 1] = im.data[i + 2] = v; im.data[i + 3] = 255; } g.putImageData(im, 0, 0); return c; }); }
   ctx.save(); ctx.globalAlpha = 0.05; ctx.globalCompositeOperation = 'overlay'; ctx.imageSmoothingEnabled = false; ctx.drawImage(OP._grain[Math.floor(t * 10) % 4], 0, 0, W, H); ctx.restore();
-
-  // channel watermark: Untold Stories (top-left, clear of the Shorts UI)
   drawBrand();
-  // fade from / to black on the first and last 0.25 s
   const fade = Math.min(clamp(t / 0.25), clamp((T.dur - t) / 0.35));
   if (fade < 1) { ctx.fillStyle = '#000'; ctx.globalAlpha = 1 - fade; ctx.fillRect(0, 0, W, H); ctx.globalAlpha = 1; }
   drawCaption(t);
@@ -56,6 +108,7 @@ function draw(t) {
     const { shots, cues } = buildShots();
     shots.sort((a, b) => a.at - b.at);
     OP._shots = shots; OP.script = script;
+    OP._cueList = cues.slice().sort((a, b) => a.t - b.t); OP._impacts = OP._cueList.filter((c) => IMPACT[c.type]).map((c) => ({ t: c.t, k: IMPACT[c.type] * (c.gain ?? 1) }));
     OP.duration = () => T.dur;
     OP.draw = draw;
     OP.frame = (t, q = 0.92) => { draw(t); return cv.toDataURL('image/jpeg', q); };

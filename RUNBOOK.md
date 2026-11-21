@@ -104,6 +104,23 @@ Never mock or distort a deity; no violence shown; no caste or political angle.
   scene types, camera moves. Never re-use a whole shot list.
 - Faces: closed-eye serene for deities; limbs use `limb()` with angles 0 = down, + = toward +x (outward on the right).
 
+### Visual quality bar (user 2026-11-22: "more effects, better background, amazing and trendy")
+The engine now adds to EVERY video by itself: transitions between shots (fade / gold flash on drum-slam cues /
+whip on whoosh / zoom on swell-conch; override per shot with `trans`), camera shake + flash on impact cues, handheld
+sway, a film grade, a drifting light leak and floating dust. Use the sound cues generously: they also drive the visuals.
+On top of that, every script's shots must have:
+- **Depth in every background:** at least 3 layers (sky/far, mid, near foreground silhouette) moving at different
+  speeds (parallax with `lt`), plus atmosphere: mist, god rays, motes/embers/petals, glows. No flat single-colour backdrops.
+- **One WOW shot every ~5 lines:** a big reveal with scale and light (a god appearing in a blaze, a weapon forming
+  from swirling particles, a shockwave ring, a cosmic zoom-out, fire/lightning, a giant silhouette against the sun).
+- **Motion in every shot:** something always moves (characters rise/turn, particles, light pulses, cloth/hair sway,
+  camera targets that change); no static frame longer than 1.5 s.
+- **Kinetic text:** name slips and a ribbon for the key word of the twist; a big "?" before the reveal.
+- **Colour journey:** each act its own palette (e.g. night indigo → fire orange → dawn gold); the hook shot is the
+  most striking frame (it is also the thumbnail).
+- **Trendy pacing:** a cut every 2-3.5 s, the hook visual in the first 0.5 s, the reveal with a flash + drum + bell.
+- Check `review/all.jpg` against this list; fix any flat, empty or static shot before rendering.
+
 ## 4. Build + QA (from the faceless-shorts skill, section 3-4)
 ```
 cd ~/work/<slug>
