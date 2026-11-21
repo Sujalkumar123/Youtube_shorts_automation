@@ -11,6 +11,8 @@ is drawn by `engine/src/main.js` (`drawBrand`), on every frame.
 - **Prepared slot check (first thing):** if `logs/settings.json` → `prepared_slots` has an entry for today's slot
   (e.g. "2026-11-22 morning"), a video for this slot is already uploaded with a scheduled publish time. Do NOT make
   another video. At the slot time, only if it is still private, do the go-public PUT (section 6 step 5) for that id. Then log and stop.
+- **ElevenLabs key:** the scheduled-task prompt gives the key; write it to `~/.untold/secrets.json`
+  as {"ELEVENLABS_API_KEY": "..."} (chmod 600). NEVER write it to the repo, a log, a commit or Telegram.
 - Read `logs/topics.json` (every topic already made, with its palette and scene types) and `logs/notes.md` (lessons).
 
 ## 1. Pick today's topic from what is trending ON YOUTUBE (do this every run)
@@ -46,8 +48,18 @@ Never mock or distort a deity; no violence shown; no caste or political angle.
   `*`red word. Keep each caption chunk to the same words, in the same order, as the Hindi it shows, so the timing
   (placed by word count inside the line) lands on the right words. The `text` (what the voice reads) stays in Hindi.
 - Numbers written as said.
-- `voice`: "hm_omega", `speed`: 1.03, `music`: "devotional", and the sound the user chose ("Omega Sahir-style" voice the user picked 2026-11-21: deep, warm, natural; low quiet bass-heavy music):
-  `"voice_fx": "rubberband=pitch=0.93:formant=preserved,highpass=f=70,equalizer=f=150:t=q:w=1:g=3,equalizer=f=320:t=q:w=1.2:g=-1.5,equalizer=f=2200:t=q:w=1:g=1,equalizer=f=7000:t=q:w=1.5:g=-2.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9"`, `"music_db": -26`, `"music_sa": 110`, `"music_lp": 2000`, `"music_sub": 0.65`. Target: voice >= 11 dB above the music. List `sources`.
+- **Voice = ElevenLabs "Sahir" (the user's choice from 2026-11-22, for EVERY video).** script.json:
+  `"voice": "eleven:Sahir"`, `"eleven_voice": "4LIpEnnggPcuL2KuRQIO"`, `"eleven_model": "eleven_multilingual_v2"`,
+  `"eleven_stability": 0.42`, `"eleven_style": 0.4`, `"eleven_speed": 1.16`, `"breaths": false`, `"lead": 0.3`, `"outro": 1.1`,
+  `"gap": 0.2` (line gaps 0.25-0.5 after reveals), per-line `speed` 1.05-1.2 (ElevenLabs range 0.7-1.2; Sahir is slow),
+  `"music": "devotional"`, `"music_db": -25`, `"music_sa": 110`, `"music_lp": 2000`, `"music_sub": 0.9` (the user wants bass),
+  `"voice_fx": "highpass=f=60,equalizer=f=130:t=q:w=1:g=3,equalizer=f=6500:t=q:w=1.5:g=-1.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9"`.
+  Length: ~23 lines of 5-9 Hindi words ≈ 73 s. Re-timing (gaps/pauses) reuses the cached lines in data/eleven (no credits).
+- **Fallback:** if ElevenLabs fails (no key, HTTP error, out of credits, blocked), voice with Kokoro instead
+  (`"voice": "hm_omega"`, `speed` 1.03, `"breaths": true`, `"voice_fx": "<logs/settings.json kokoro_voice_fx>"`, music_sub 0.65)
+  so the slot still posts, and send a Telegram problem alert saying the Sahir voice failed and why.
+- **Credits:** run `tools/voice_eleven.py --test` first; it prints credits_left. If < 2500, still make this video
+  with Sahir if it fits (~1000 per short), and send a Telegram alert "ElevenLabs credits low: <n> left (~<n/1000> shorts)".
 
 ### Script craft: every script must pass this before voicing (the user wants "achi achi" stories)
 1. **Trend-led angle.** From today's `logs/trends.md` top 10, write down the 2-3 HOOK PATTERNS winning this week
@@ -91,7 +103,7 @@ Never mock or distort a deity; no violence shown; no caste or political angle.
 ## 4. Build + QA (from the faceless-shorts skill, section 3-4)
 ```
 cd ~/work/<slug>
-~/.faceless-shorts/venv/bin/python tools/voice.py .
+~/.faceless-shorts/venv/bin/python tools/voice_eleven.py .     # Sahir (fallback: tools/voice.py . with Kokoro)
 ~/.faceless-shorts/venv/bin/python tools/words.py .
 node tools/capture.mjs check && node tools/capture.mjs cues && ~/.faceless-shorts/venv/bin/python tools/mix.py .
 node tools/capture.mjs sheet review/all.jpg 0.5 10      # READ the whole sheet, then key frames full size

@@ -48,5 +48,12 @@
    "publish_at": "2026-11-22T08:00:00+05:30",
    "note": "made manually with the ElevenLabs Sahir voice; scheduled with publishAt"
   }
- }
+ },
+ "voice_engine": "elevenlabs",
+ "eleven_voice": {
+  "name": "Sahir",
+  "id": "4LIpEnnggPcuL2KuRQIO",
+  "plan": "starter 40k credits/month, ~1000 per short"
+ },
+ "kokoro_voice_fx": null
 }
