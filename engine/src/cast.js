@@ -1,5 +1,5 @@
 // The cast, in cut paper with real character: Shiva, a raja (Sagara / Bhagiratha), Kapila, the princes, the horse.
-import { ctx, TAU, clamp, lerp, rnd, circle, ell } from './core/lib.js';
+import { ctx, TAU, clamp, lerp, rnd, circle, ell, eob } from './core/lib.js';
 import * as K from './core/kit.js';
 import { A, glow, rgba } from './atmos.js';
 const { cut, P_poly, P_circ, P_rr } = K;
@@ -423,4 +423,99 @@ export function suryaRath(x, y, s, t, o = {}) {
   // Aruna at the front, holding the reins
   if (o.driver !== 0) aruna(30, -270, { s: 0.62, t, aura: o.driverAura ?? 0.8, eyes: 0, reins: [620, 20], mist: 1 });
   ctx.restore();
+}
+
+// ═════════ VISHNU (seated, four arms), SHIVLING, LOTUS, SUDARSHAN (added 2026-11-21, hari-netra) ═════════
+const VB = '#3E6FB4', VB_D = '#2C5590', VB_L = '#5E8FD0', PITA = '#F2C14E', PITA_D = '#D69A2A';
+/** a pink lotus at (x, y) (base of the bloom). s scale, open 0..1, col petal colour */
+export function lotus(x, y, s = 1, open = 1, col = '#E8899A', tip = '#FBD3DA', a = 1) {
+  if (s <= 0 || a <= 0) return; ctx.save(); ctx.globalAlpha *= a; ctx.translate(x, y); ctx.scale(s, s);
+  const petal = (ang, len, wid, c) => { ctx.save(); ctx.rotate(ang); cut(() => { ctx.beginPath(); ctx.moveTo(0, 0); ctx.quadraticCurveTo(-wid, -len * 0.55, 0, -len); ctx.quadraticCurveTo(wid, -len * 0.55, 0, 0); ctx.closePath(); }, c, { shadow: 0.3, edge: 2 }); ctx.restore(); };
+  const sp = 0.25 + 0.75 * open;
+  for (const k of [-3, 3, -2, 2]) petal(k * 0.32 * sp, 64, 26, col);
+  for (const k of [-1, 1]) petal(k * 0.28 * sp, 74, 26, col);
+  petal(0, 80, 28, tip);
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, 0, 40, 10, 0, 0, TAU); }, '#4F7A3A', { shadow: 0.2, edge: 2 });
+  ctx.restore();
+}
+/** Shivling on its pitha. o = { s, flowers (0..1 heap of lotuses on top), glowA } */
+export function shivling(x, y, o = {}) {
+  const s = o.s || 1, t = o.t || 0; ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  if (o.glowA) { glow(0, -260, 420, A.paleGold, 0.4 * o.glowA); }
+  cut(P_rr(-200, -70, 400, 70, 16), '#4A4E66', { shadow: 0.8, edge: 4 });
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, -90, 230, 56, 0, 0, TAU); }, '#5A5F7A', { shadow: 0.6, edge: 4 });
+  cut(() => { ctx.beginPath(); ctx.moveTo(200, -110); ctx.lineTo(330, -100); ctx.quadraticCurveTo(350, -84, 330, -70); ctx.lineTo(200, -66); ctx.closePath(); }, '#5A5F7A', { shadow: 0.5, edge: 4 });
+  cut(() => { ctx.beginPath(); ctx.moveTo(-110, -100); ctx.lineTo(-110, -300); ctx.quadraticCurveTo(-110, -420, 0, -420); ctx.quadraticCurveTo(110, -420, 110, -300); ctx.lineTo(110, -100); ctx.closePath(); }, '#363A52', { shadow: 0.7, edge: 4 });
+  ctx.strokeStyle = 'rgba(255,255,255,0.08)'; ctx.lineWidth = 30; ctx.beginPath(); ctx.moveTo(-60, -110); ctx.lineTo(-60, -330); ctx.stroke();
+  ctx.strokeStyle = '#EDE6DA'; ctx.lineWidth = 9; ctx.lineCap = 'round'; for (const dy of [-330, -305, -280]) { ctx.beginPath(); ctx.moveTo(-70, dy); ctx.quadraticCurveTo(0, dy + 12, 70, dy); ctx.stroke(); }
+  circle(0, -305, 11, CRIMSON);
+  ctx.strokeStyle = GOLD; ctx.lineWidth = 6; ctx.beginPath(); ctx.ellipse(0, -90, 230, 56, 0, 0, TAU); ctx.stroke();
+  const fl = o.flowers || 0; if (fl > 0) { const n = Math.floor(14 * fl); for (let i = 0; i < n; i++) { const ax = (rnd(i * 3 + 1) - 0.5) * 300, ay = -110 - rnd(i * 5 + 2) * 30 - (i > 7 ? 26 : 0); lotus(ax, ay, 0.55, 1, i % 3 ? '#E8899A' : '#F2A7B4'); } }
+  ctx.restore();
+}
+/** the Sudarshana chakra: spinning gold discus with flames. r radius */
+export function sudarshan(x, y, r, t, a = 1) {
+  if (a <= 0 || r <= 0) return; ctx.save(); ctx.globalAlpha *= a; ctx.translate(x, y);
+  glow(0, 0, r * 2.6, '#FFB45A', 0.55); glow(0, 0, r * 1.2, '#FFF2C0', 0.5);
+  ctx.save(); ctx.rotate(t * 4);
+  cut(() => { ctx.beginPath(); for (let i = 0; i <= 48; i++) { const an = i / 48 * TAU, rr = i % 2 ? r * 1.12 : r; ctx.lineTo(Math.cos(an) * rr, Math.sin(an) * rr); } ctx.closePath(); }, '#F2C14E', { shadow: 0.5, edge: 3 });
+  cut(P_circ(0, 0, r * 0.82), '#E0782E', { shadow: 0, edge: 2 }); cut(P_circ(0, 0, r * 0.7), '#F6D98A', { shadow: 0, edge: 0 });
+  ctx.strokeStyle = '#B07A22'; ctx.lineWidth = Math.max(3, r * 0.06); for (let i = 0; i < 12; i++) { const an = i / 12 * TAU; ctx.beginPath(); ctx.moveTo(Math.cos(an) * r * 0.18, Math.sin(an) * r * 0.18); ctx.lineTo(Math.cos(an) * r * 0.68, Math.sin(an) * r * 0.68); ctx.stroke(); }
+  cut(P_circ(0, 0, r * 0.2), '#B07A22', { shadow: 0, edge: 2 }); circle(0, 0, r * 0.09, '#FFF2C0');
+  ctx.restore();
+  ctx.save(); ctx.globalCompositeOperation = 'lighter'; for (let i = 0; i < 16; i++) { const an = i / 16 * TAU - t * 6; const fx = Math.cos(an) * r * 1.15, fy = Math.sin(an) * r * 1.15; glow(fx, fy, r * 0.25, '#FF8A3D', 0.35 + 0.15 * Math.sin(t * 9 + i)); } ctx.restore();
+  ctx.restore();
+}
+/** Vishnu seated in padmasana, base (bottom of crossed legs) at (x, y). o = { s, t, aura, pose: 'dhyana'|'namaste'|'offer'|'raise'|'bless', chakra 0..1 (on the upper right finger), shankha, eyeGlow 0..1 } */
+export function vishnu(x, y, o = {}) {
+  const s = o.s || 1, t = o.t || 0, pose = o.pose || 'dhyana', aura = o.aura ?? 0.8;
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  if (aura > 0) { glow(0, -620, 560, '#9FC4FF', 0.28 * aura); glow(0, -680, 260, '#FFF2C0', 0.25 * aura);
+    ctx.save(); ctx.globalAlpha *= aura; ctx.strokeStyle = rgba(A.gold, 0.85); ctx.lineWidth = 7; ctx.beginPath(); ctx.arc(0, -690, 190, 0, TAU); ctx.stroke(); ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(0, -690, 212, 0, TAU); ctx.stroke();
+      for (let i = 0; i < 20; i++) { const an = i / 20 * TAU + t * 0.12; ctx.beginPath(); ctx.moveTo(Math.cos(an) * 220, -690 + Math.sin(an) * 220); ctx.lineTo(Math.cos(an) * 242, -690 + Math.sin(an) * 242); ctx.stroke(); } ctx.restore(); }
+  // upper (back) arms: raised, holding conch (left) and chakra (right)
+  const ul = limb(-112, -520, -140, 130, -176, 120, 54, 42, VB_D, GOLD), ur = limb(112, -520, 140, 130, 176, 120, 54, 42, VB_D, GOLD);
+  if (o.shankha ?? 1) { ctx.save(); ctx.translate(ul[0], ul[1] - 30); ctx.rotate(-0.4); cut(() => { ctx.beginPath(); ctx.moveTo(-22, 40); ctx.quadraticCurveTo(-46, -10, -8, -58); ctx.quadraticCurveTo(30, -40, 26, 10); ctx.quadraticCurveTo(20, 40, -22, 40); ctx.closePath(); }, '#F7F3EA', { shadow: 0.4, edge: 3 }); ctx.strokeStyle = '#C9B8A0'; ctx.lineWidth = 4; ctx.beginPath(); ctx.arc(-4, -6, 16, 0, 5); ctx.stroke(); ctx.restore(); }
+  cut(P_circ(ul[0], ul[1], 26), VB_D, { shadow: 0.2, edge: 2 }); cut(P_circ(ur[0], ur[1], 26), VB_D, { shadow: 0.2, edge: 2 });
+  // crossed legs under the pitambar
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, -70, 290, 86, 0, 0, TAU); }, PITA);
+  cut(() => { ctx.beginPath(); ctx.ellipse(-120, -78, 120, 40, 0.12, 0, TAU); }, PITA_D, { shadow: 0.3, edge: 3 });
+  cut(() => { ctx.beginPath(); ctx.ellipse(130, -72, 110, 38, -0.12, 0, TAU); }, PITA_D, { shadow: 0.3, edge: 3 });
+  for (const k of [-1, 1]) cut(() => { ctx.beginPath(); ctx.ellipse(k * 70, -110, 48, 20, k * 0.3, 0, TAU); }, VB, { shadow: 0.3, edge: 3 });
+  ctx.strokeStyle = CRIMSON; ctx.lineWidth = 8; ctx.beginPath(); ctx.ellipse(0, -70, 288, 84, 0, 0.1 * Math.PI, 0.9 * Math.PI); ctx.stroke();
+  // torso
+  const torso = () => { ctx.beginPath(); ctx.moveTo(-130, -560); ctx.quadraticCurveTo(-150, -380, -110, -170); ctx.lineTo(110, -170); ctx.quadraticCurveTo(150, -380, 130, -560); ctx.quadraticCurveTo(0, -590, -130, -560); ctx.closePath(); };
+  cut(torso, VB); ctx.save(); torso(); ctx.clip(); const g = ctx.createLinearGradient(-150, 0, 150, 0); g.addColorStop(0, rgba(VB_D, 0.9)); g.addColorStop(0.45, rgba(VB_L, 0.55)); g.addColorStop(1, rgba(VB_D, 0.7)); ctx.fillStyle = g; ctx.fillRect(-200, -620, 400, 480); ctx.restore();
+  cut(P_rr(-118, -210, 236, 40, 12), PITA_D, { shadow: 0.3, edge: 3 }); cut(P_rr(-118, -200, 236, 10, 4), CRIMSON, { shadow: 0, edge: 0 });
+  // sacred thread + vanamala + kaustubha
+  ctx.strokeStyle = '#F7EFDC'; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(-110, -555); ctx.quadraticCurveTo(10, -380, 100, -200); ctx.stroke();
+  for (let i = 0; i <= 18; i++) { const k = i / 18, an = Math.PI * (0.08 + 0.84 * k), px = Math.cos(an) * 120, py = -560 + Math.sin(an) * 300; circle(px, py, 13, i % 2 ? '#E8899A' : '#F2C14E'); circle(px, py + 2, 6, i % 2 ? '#F6C0CA' : '#4F7A3A'); }
+  for (const [r, w, c] of [[60, 9, GOLD], [84, 6, GOLD]]) { ctx.strokeStyle = c; ctx.lineWidth = w; ctx.beginPath(); ctx.arc(0, -590, r, 0.2 * Math.PI, 0.8 * Math.PI); ctx.stroke(); }
+  cut(P_poly([[0, -470], [-18, -500], [0, -526], [18, -500]]), '#C8323D', { shadow: 0.2, edge: 2 }); glow(0, -498, 40, '#FF7A8A', 0.5);
+  // front arms by pose
+  const FA = { dhyana: [[-30, 50], [30, -50]], namaste: [[-12, 100], [12, -100]], offer: [[-12, 100], [12, -100]], raise: [[-30, 50], [40, -170]], bless: [[-30, 50], [40, 172]] }[pose] || [[-30, 50], [30, -50]];
+  const hl = limb(-120, -540, FA[0][0], 160, FA[0][1], 140, 60, 44, VB, GOLD);
+  const hr = limb(120, -540, FA[1][0], 160, FA[1][1], pose === 'raise' ? 150 : 140, 60, 44, VB, GOLD);
+  if (pose === 'namaste' || pose === 'offer') { const mx = (hl[0] + hr[0]) / 2, my = (hl[1] + hr[1]) / 2; cut(() => { ctx.beginPath(); ctx.moveTo(mx - 26, my + 16); ctx.quadraticCurveTo(mx - 24, my - 70, mx, my - 96); ctx.quadraticCurveTo(mx + 24, my - 70, mx + 26, my + 16); ctx.closePath(); }, VB, { shadow: 0.3, edge: 3 }); if (pose === 'offer') lotus(mx, my - 40, 0.9, 1); }
+  else { cut(P_circ(hl[0], hl[1], 26), VB, { shadow: 0.2, edge: 2 }); cut(P_circ(hr[0], hr[1], 26), VB, { shadow: 0.2, edge: 2 }); }
+  if (pose === 'bless') { ctx.save(); ctx.translate(hr[0], hr[1]); cut(() => { ctx.beginPath(); ctx.roundRect(-26, -70, 52, 78, 22); }, VB, { shadow: 0.3, edge: 3 }); for (let i = 0; i < 4; i++) cut(P_rr(-24 + i * 13, -108 + Math.abs(i - 1.5) * 6, 11, 44, 5), VB, { shadow: 0.2, edge: 2 }); ctx.restore(); }
+  // neck + head
+  cut(P_rr(-30, -640, 60, 70, 20), VB_D, { shadow: 0.2, edge: 0 });
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, -700, 72, 86, 0, 0, TAU); }, VB);
+  for (const k of [-1, 1]) { cut(() => { ctx.beginPath(); ctx.ellipse(k * 78, -680, 14, 30, 0, 0, TAU); }, GOLD, { shadow: 0.2, edge: 2 }); }
+  ctx.strokeStyle = '#1C2A44'; ctx.lineWidth = 5; ctx.lineCap = 'round'; for (const k of [-1, 1]) { ctx.beginPath(); ctx.moveTo(k * 12, -740); ctx.quadraticCurveTo(k * 30, -752, k * 50, -742); ctx.stroke(); }
+  eyes(-716, 0, 30, '#1C2A44', 1.15);
+  if (o.eyeGlow > 0) { glow(30, -716, 120, '#FFF2C0', 0.7 * o.eyeGlow); glow(30, -716, 50, '#FFFFFF', 0.6 * o.eyeGlow); }
+  ctx.strokeStyle = '#1C2A44'; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(-18, -660); ctx.quadraticCurveTo(0, -650, 18, -660); ctx.stroke();
+  // tilak (urdhva pundra)
+  ctx.strokeStyle = '#F7EFDC'; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(-10, -752); ctx.lineTo(-14, -790); ctx.moveTo(10, -752); ctx.lineTo(14, -790); ctx.stroke(); ctx.fillStyle = CRIMSON; ctx.fillRect(-3, -790, 6, 36);
+  // kirita mukut (tall crown)
+  cut(() => { ctx.beginPath(); ctx.moveTo(-80, -770); ctx.lineTo(-62, -940); ctx.quadraticCurveTo(0, -990, 62, -940); ctx.lineTo(80, -770); ctx.quadraticCurveTo(0, -790, -80, -770); ctx.closePath(); }, GOLD, { shadow: 0.5, edge: 3 });
+  cut(P_poly([[-62, -940], [0, -1030], [62, -940]]), GOLD, { shadow: 0.4, edge: 3 }); circle(0, -1036, 12, '#F7EFDC');
+  cut(P_rr(-84, -800, 168, 24, 8), GOLD_D, { shadow: 0.2, edge: 2 }); for (let i = -3; i <= 3; i++) circle(i * 23, -788, 5, i % 2 ? '#F7EFDC' : CRIMSON);
+  cut(P_poly([[0, -870], [-20, -900], [0, -930], [20, -900]]), CRIMSON, { shadow: 0.2, edge: 2 }); for (const k of [-1, 1]) cut(P_poly([[k * 40, -860], [k * 30, -880], [k * 40, -900], [k * 50, -880]]), '#3E7A5A', { shadow: 0.2, edge: 2 });
+  // chakra on the upper right finger
+  if (o.chakra > 0) sudarshan(ur[0], ur[1] - 90, 70 * eob(clamp(o.chakra)), t, clamp(o.chakra * 2));
+  ctx.restore();
+  return { hl, hr, ul, ur };
 }

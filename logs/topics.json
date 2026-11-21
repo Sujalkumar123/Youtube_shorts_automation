@@ -141,5 +141,59 @@
   "problems": [
    "go-public PUT with ?part=status in the URL returned Zapier error \"'status'\"; retried with querystring {part: status} -> 200 public"
   ]
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "afternoon",
+  "slug": "hari-netra",
+  "topic": "Vishnu offers his lotus-eye to Shiva when one of 1000 lotuses goes missing; receives the Sudarshana Chakra (Vaikuntha Chaturdashi, 23 Nov 2026)",
+  "story": "Shiva Purana, Kotirudra Samhita 34 (Harishvara)",
+  "palette": [
+   "moonlit Kailash blue",
+   "temple sanctum plum",
+   "daitya blood-red",
+   "lotus pink + gold",
+   "Kashi night"
+  ],
+  "scene_types": [
+   "seated four-armed Vishnu",
+   "eye-to-lotus bloom",
+   "Shivling with lotus heap",
+   "daitya horde silhouettes",
+   "lotus pond",
+   "floating names of Shiva",
+   "lotus basket",
+   "counter 900->999->1000",
+   "reaching hand into empty basket",
+   "vow lamp flicker",
+   "Shiva in clouds",
+   "Shiva rising from linga",
+   "Hari and Hara side by side",
+   "Sudarshana chakra",
+   "Kashi ghats with floating diyas"
+  ],
+  "new_kit": [
+   "cast.vishnu (seated, 4 arms, poses dhyana/namaste/offer/raise/bless, chakra, eyeGlow)",
+   "cast.shivling (flowers heap)",
+   "cast.lotus",
+   "cast.sudarshan",
+   "kailash/sanctum/basket/eyeLotus/names in examples/hari-netra/shots.js"
+  ],
+  "title": "विष्णु ने अपनी आँख क्यों चढ़ा दी? | Vishnu's Eye for Shiva #shorts",
+  "hashtags": [
+   "#VaikunthChaturdashi",
+   "#SudarshanChakra",
+   "#Mahadev",
+   "#LordVishnu",
+   "#HariHar",
+   "#IndianMythology",
+   "#HinduMythology",
+   "#shorts"
+  ],
+  "youtube_id": "fNmMlvHxxBk",
+  "status": "uploaded private 14:01 IST; public at 15:00 pending",
+  "duration_s": 64.6,
+  "quality_gate": "PASS (voice 14.1 dB over music, 24.2 MB)",
+  "problems": []
  }
 ]

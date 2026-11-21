@@ -16,3 +16,8 @@
 - New kit: devi (sari, poses stand/boon/hold/namaste/bow/serve), aruna (upper body + dawn-light swirl), garuda, naga, egg (crack/open), vessel, suryaRath (sun + 7 horses + Aruna), atmos.dawnSky. Example in examples/aruna.
 - Close-up "hands holding an object": straight forearms from the bottom corners to the object's sides + cupped hand ellipses; a bent-arm shape read like a ladder.
 - 2026-11-21: go-public PUT: put part=status in the `querystring` param (url .../youtube/v3/videos), NOT in the URL; the URL form failed with Zapier error "'status'" (cost one extra call).
+- 2026-11-21 afternoon: setup.sh's first voice download failed silently; running `voice.py --download` directly worked. Retry it before alerting.
+- New kit (hari-netra): cast.vishnu (seated four-armed; front-arm poses dhyana/namaste/offer/raise/bless; upper hands conch + optional chakra; eyeGlow), cast.shivling ({flowers} heap of lotuses), cast.lotus, cast.sudarshan. Scene helpers kailash/sanctum/basket/eyeLotus/names in examples/hari-netra/shots.js.
+- Seated close-ups: keep the seat above y 1540 (vishnu at y 1530, s 1.4) so it doesn't sit under the caption strip.
+- Sensitive acts (an eye offering) shown symbolically: an eye outline that blooms into a light-lotus, hand raised with light; never anatomical.
+- 24 lines at speed ~1.0-1.17 with gaps = 64.6 s; good length.
