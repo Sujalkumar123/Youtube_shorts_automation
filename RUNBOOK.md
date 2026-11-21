@@ -43,8 +43,8 @@ Never mock or distort a deity; no violence shown; no caste or political angle.
   `*`red word. Keep each caption chunk to the same words, in the same order, as the Hindi it shows, so the timing
   (placed by word count inside the line) lands on the right words. The `text` (what the voice reads) stays in Hindi.
 - Numbers written as said.
-- `voice`: "hm_omega", `speed`: 1.12-1.17, `music`: "devotional", and the sound the user chose (deep voice, low quiet bass-heavy music):
-  `"voice_fx": "rubberband=pitch=0.85:formant=shifted,bass=g=5:f=120,equalizer=f=3200:t=q:w=1:g=1.5,aecho=0.85:0.75:45|90:0.16|0.08,acompressor=threshold=-20dB:ratio=3:attack=8:release=200"`, `"music_db": -26`, `"music_sa": 110`, `"music_lp": 2000`, `"music_sub": 0.65`. Target: voice >= 11 dB above the music. List `sources`.
+- `voice`: "hm_omega", `speed`: 1.12-1.17, `music`: "devotional", and the sound the user chose ("Omega Sahir-style" voice the user picked 2026-11-21: deep, warm, natural; low quiet bass-heavy music):
+  `"voice_fx": "rubberband=pitch=0.88:formant=preserved,highpass=f=60,equalizer=f=160:t=q:w=1:g=4,equalizer=f=300:t=q:w=1.2:g=-1.5,equalizer=f=2500:t=q:w=1:g=1.5,equalizer=f=6500:t=q:w=1.5:g=-3,aecho=0.8:0.6:28|55:0.08|0.04,acompressor=threshold=-22dB:ratio=3.5:attack=5:release=180,alimiter=limit=0.9"`, `"music_db": -26`, `"music_sa": 110`, `"music_lp": 2000`, `"music_sub": 0.65`. Target: voice >= 11 dB above the music. List `sources`.
 
 ### Script craft: every script must pass this before voicing (the user wants "achi achi" stories)
 1. **Trend-led angle.** From today's `logs/trends.md` top 10, write down the 2-3 HOOK PATTERNS winning this week
