@@ -57,7 +57,11 @@ Never mock or distort a deity; no violence shown; no caste or political angle.
   Length: ~23 lines of 5-9 Hindi words ≈ 73 s. Re-timing (gaps/pauses) reuses the cached lines in data/eleven (no credits).
 - **Fallback:** if ElevenLabs fails (no key, HTTP error, out of credits, blocked), voice with Kokoro instead
   (`"voice": "hm_omega"`, `speed` 1.03, `"breaths": true`, `"voice_fx": "<logs/settings.json kokoro_voice_fx>"`, music_sub 0.65)
-  so the slot still posts, and send a Telegram problem alert saying the Sahir voice failed and why.
+  so the slot still posts, and send this Telegram message (the user's wording):
+  "⚠️ ElevenLabs (Sahir) se voice nahi aa rahi (<reason: credits khatam / key error / blocked>). Ab Omega voice use kar rahe hain. Video <slot> pe time se post hoga."
+  Send it once per day at most (note it in logs/notes.md with the date; later runs that day stay quiet about it).
+  Every next run still tries ElevenLabs first, so Sahir comes back by itself once credits renew or a new key is added;
+  when it works again after a fallback day, send one message: "✅ ElevenLabs (Sahir) voice wapas chal rahi hai." 
 - **Credits:** run `tools/voice_eleven.py --test` first; it prints credits_left. If < 2500, still make this video
   with Sahir if it fits (~1000 per short), and send a Telegram alert "ElevenLabs credits low: <n> left (~<n/1000> shorts)".
 
