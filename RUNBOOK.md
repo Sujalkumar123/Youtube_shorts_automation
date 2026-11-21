@@ -46,6 +46,22 @@ Never mock or distort a deity; no violence shown; no caste or political angle.
 - `voice`: "hm_omega", `speed`: 1.12-1.17, `music`: "devotional", and the sound the user chose (deep voice, low quiet bass-heavy music):
   `"voice_fx": "rubberband=pitch=0.85:formant=shifted,bass=g=5:f=120,equalizer=f=3200:t=q:w=1:g=1.5,aecho=0.85:0.75:45|90:0.16|0.08,acompressor=threshold=-20dB:ratio=3:attack=8:release=200"`, `"music_db": -26`, `"music_sa": 110`, `"music_lp": 2000`, `"music_sub": 0.65`. Target: voice >= 11 dB above the music. List `sources`.
 
+### Script craft: every script must pass this before voicing (the user wants "achi achi" stories)
+1. **Trend-led angle.** From today's `logs/trends.md` top 10, write down the 2-3 HOOK PATTERNS winning this week
+   (e.g. "X ने Y क्यों किया?", "रहस्य जो कोई नहीं जानता", a curse, a forbidden act, a festival this week). Our hook uses
+   one of those patterns on OUR story (never their wording).
+2. **Write 3 hooks, keep the best.** Line 1 (<= 2.5 s) must create a question the viewer NEEDS answered: a paradox,
+   a shocking fact or a direct challenge ("भगवान विष्णु ने अपनी ही आँख क्यों अर्पित कर दी?"). No greetings, no "आज हम...".
+3. **Arc (20-26 lines):** hook (1-2) → the world + the person we feel for (3-6) → the problem/curse grows (7-12) →
+   the darkest moment, short lines, slower (13-16) → the reveal/twist the hook promised (17-20) → why it still
+   matters today (a festival, a temple, a ritual, a sunrise) (21-22) → loop line that echoes the hook → follow lines.
+4. **Feel, not facts.** Every 3-4 lines give one human emotion (a mother's fear, a son's anger, a god's devotion).
+   Concrete images over adjectives ("एक हज़ार कमल... और एक कम"), one surprising detail the viewer can repeat to a friend.
+5. **Open loops:** at line ~8 and ~15 tease what's coming ("पर असली मोड़ अभी बाक़ी था...") so they stay to the end.
+6. **Self-score 1-5** on hook, emotion, twist, clarity, loop. Anything < 4 → rewrite that part before voicing.
+   Write the scores and the 3 hooks you considered in `logs/notes.md` under the run.
+7. Facts stay true to the source; drama comes from HOW it's told, never by inventing events.
+
 ### Emotional, natural narration (the user asked for it)
 - Write like a storyteller at a temple, not a newsreader: talk to the viewer ("सोचिए...", "पर क्या आप जानते हैं?"),
   short punchy lines at the climax, a question before each reveal ("और बाण?" → "स्वयं भगवान विष्णु.").
