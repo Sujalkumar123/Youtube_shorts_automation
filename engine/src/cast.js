@@ -640,3 +640,74 @@ export function cow(x, y, s = 1, dir = 1, col = '#EFE3C8') {
   circle(118, -112, 6, '#A8322D');
   ctx.restore();
 }
+
+// ═════════ MATSYA (added for "matsya"): Vishnu's fish avatar, boat, cupped hands, storm ═════════
+/** golden fish facing +x, centre (x, y), body length ~420*s. o = { rot, dir, glow 0..1, horn 0..1, silhouette } */
+export function matsya(x, y, s, t = 0, o = {}) {
+  if (s <= 0) return; const sil = o.silhouette, wag = Math.sin(t * 5) * 0.18;
+  const BODY = sil ? '#04101A' : '#E8A83A', BELLY = sil ? '#04101A' : '#FFE29A', FIN = sil ? '#04101A' : '#D8702A', SC = sil ? null : 'rgba(150,80,20,0.45)';
+  ctx.save(); ctx.translate(x, y); ctx.rotate(o.rot || 0); ctx.scale(s * (o.dir || 1), s);
+  if (o.glow && !sil) { glow(0, 0, 340, '#FFC860', 0.45 * o.glow); glow(0, 0, 200, '#FFF2C0', 0.25 * o.glow); }
+  // tail
+  ctx.save(); ctx.translate(-190, 0); ctx.rotate(wag);
+  cut(() => { ctx.beginPath(); ctx.moveTo(10, 0); ctx.quadraticCurveTo(-60, -40, -130, -120); ctx.quadraticCurveTo(-90, 0, -130, 120); ctx.quadraticCurveTo(-60, 40, 10, 0); ctx.closePath(); }, FIN, { shadow: 0.4, edge: 3 });
+  ctx.restore();
+  // dorsal + belly fins
+  cut(() => { ctx.beginPath(); ctx.moveTo(-90, -78); ctx.quadraticCurveTo(-20, -170 + wag * 40, 70, -84); ctx.closePath(); }, FIN, { shadow: 0.3, edge: 3 });
+  cut(() => { ctx.beginPath(); ctx.moveTo(-30, 76); ctx.quadraticCurveTo(-10, 140, 50, 78); ctx.closePath(); }, FIN, { shadow: 0.3, edge: 2 });
+  // body
+  cut(() => { ctx.beginPath(); ctx.moveTo(220, 0); ctx.bezierCurveTo(170, -110, -60, -120, -200, -10); ctx.quadraticCurveTo(-210, 0, -200, 10); ctx.bezierCurveTo(-60, 120, 170, 110, 220, 0); ctx.closePath(); }, BODY, { shadow: 0.6, edge: 4 });
+  if (!sil) {
+    cut(() => { ctx.beginPath(); ctx.moveTo(200, 20); ctx.bezierCurveTo(140, 90, -40, 100, -170, 20); ctx.bezierCurveTo(-40, 60, 120, 50, 200, 20); ctx.closePath(); }, BELLY, { shadow: 0, edge: 0 });
+    ctx.strokeStyle = SC; ctx.lineWidth = 4; for (let i = 0; i < 5; i++) for (let j = -1; j <= 1; j++) { ctx.beginPath(); ctx.arc(-110 + i * 50 + (j & 1) * 25, j * 36, 22, -Math.PI / 2, Math.PI / 2); ctx.stroke(); }
+    ctx.strokeStyle = 'rgba(150,70,20,0.7)'; ctx.lineWidth = 5; ctx.beginPath(); ctx.arc(130, 0, 60, -0.9, 0.9); ctx.stroke();
+    // serene closed eye
+    ctx.strokeStyle = '#3A1C08'; ctx.lineWidth = 6; ctx.lineCap = 'round'; ctx.beginPath(); ctx.arc(168, -26, 14, 0.15 * Math.PI, 0.85 * Math.PI); ctx.stroke();
+    circle(176, -48, 5, rgba('#FFF6D0', 0.8));
+  }
+  // single horn on the head
+  if (o.horn) { ctx.save(); ctx.globalAlpha *= clamp(o.horn); cut(() => { ctx.beginPath(); ctx.moveTo(140, -76); ctx.quadraticCurveTo(190, -150, 250, -210); ctx.quadraticCurveTo(200, -130, 182, -64); ctx.closePath(); }, sil ? BODY : '#FFE6A0', { shadow: 0.4, edge: 3 }); if (!sil) glow(250, -210, 60, '#FFF6D0', 0.6); ctx.restore(); }
+  ctx.restore();
+}
+/** wooden boat with a canopy; centre of the deck at (x, y). o = { rot, sages 0..7, lamp 0..1 } */
+export function naav(x, y, s, t = 0, o = {}) {
+  ctx.save(); ctx.translate(x, y); ctx.rotate(o.rot || 0); ctx.scale(s, s);
+  if (o.lamp) glow(150, -150, 160, '#FFC060', 0.5 * o.lamp);
+  // canopy
+  cut(P_rr(-200, -230, 18, 230, 4), '#4A2A18', { shadow: 0.4, edge: 2 }); cut(P_rr(170, -230, 18, 230, 4), '#4A2A18', { shadow: 0.4, edge: 2 });
+  cut(() => { ctx.beginPath(); ctx.moveTo(-230, -220); ctx.quadraticCurveTo(-10, -320, 220, -220); ctx.lineTo(220, -200); ctx.quadraticCurveTo(-10, -290, -230, -200); ctx.closePath(); }, '#A8322D', { shadow: 0.4, edge: 3 });
+  // sages: little saffron figures with white beards
+  const n = Math.round(o.sages || 0); for (let i = 0; i < n; i++) { const sx = -160 + i * 50, bob = Math.sin(t * 2 + i) * 3;
+    cut(P_poly([[sx - 24, 0], [sx, -95 + bob], [sx + 24, 0]]), '#D9822F', { shadow: 0.2, edge: 2 }); cut(P_circ(sx, -112 + bob, 19), SKIN, { shadow: 0.2, edge: 2 });
+    cut(P_poly([[sx - 12, -106 + bob], [sx + 12, -106 + bob], [sx, -78 + bob]]), '#EFEBE2', { shadow: 0, edge: 0 }); cut(P_circ(sx, -132 + bob, 10), INK, { shadow: 0, edge: 0 }); }
+  if (o.lamp) { cut(P_rr(142, -170, 16, 40, 4), '#2A1C14', { shadow: 0, edge: 0 }); circle(150, -178, 12, rgba('#FFD070', 0.9 * o.lamp)); }
+  // hull
+  cut(() => { ctx.beginPath(); ctx.moveTo(-330, -60); ctx.quadraticCurveTo(-300, 10, -220, 50); ctx.lineTo(220, 50); ctx.quadraticCurveTo(300, 10, 330, -60); ctx.quadraticCurveTo(0, -20, -330, -60); ctx.closePath(); }, '#7A4A2A', { shadow: 0.7, edge: 4 });
+  ctx.strokeStyle = 'rgba(242,193,78,0.6)'; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(-300, -30); ctx.quadraticCurveTo(0, 10, 300, -30); ctx.stroke();
+  ctx.restore();
+}
+/** two cupped hands seen from the front, palms centre at (x, y): straight forearms from the bottom corners */
+export function cuppedHands(x, y, s, t = 0, col = SKIN) {
+  ctx.save(); ctx.translate(x, y + Math.sin(t * 1.5) * 4); ctx.scale(s, s);
+  for (const d of [-1, 1]) cut(P_poly([[d * 60, 60], [d * 210, 40], [d * 330, 900], [d * 150, 900]]), SKIN_D, { shadow: 0.5, edge: 3 });
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, 20, 220, 90, 0, 0, Math.PI); ctx.lineTo(-220, 0); ctx.closePath(); }, col, { shadow: 0.6, edge: 4 });
+  for (const d of [-1, 1]) cut(() => { ctx.beginPath(); ctx.ellipse(d * 200, -6, 40, 26, d * 0.4, 0, TAU); }, col, { shadow: 0.3, edge: 2 });
+  // fingers: two rows of rounded fingertips curling up along the front rim, a seam where the little fingers meet, thumbs on top
+  for (const d of [-1, 1]) for (let i = 0; i < 4; i++) { const fx = d * (40 + i * 46), fy = 92 - i * 14; cut(() => { ctx.beginPath(); ctx.ellipse(fx, fy, 24, 40, d * (0.15 + i * 0.12), 0, TAU); }, col, { shadow: 0.35, edge: 2 }); }
+  ctx.strokeStyle = 'rgba(80,40,20,0.45)'; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(0, 50); ctx.lineTo(0, 120); ctx.stroke();
+  for (const d of [-1, 1]) cut(() => { ctx.beginPath(); ctx.ellipse(d * 180, -30, 22, 56, d * 0.9, 0, TAU); }, col, { shadow: 0.3, edge: 2 });
+  ctx.restore();
+}
+/** a jagged lightning bolt from (x, y0) to y1, a = alpha */
+export function lightning(x, y0, y1, t, a = 1, seed = 1) {
+  if (a <= 0) return; const pts = [[x, y0]]; let cx = x; for (let i = 1; i <= 12; i++) { cx += (rnd(seed * 31 + i) - 0.5) * 160; pts.push([cx, lerp(y0, y1, i / 12)]); }
+  ctx.save(); ctx.globalCompositeOperation = 'lighter'; ctx.lineJoin = 'miter';
+  for (const [w, c] of [[40, rgba('#8FB0FF', 0.25 * a)], [16, rgba('#DDE8FF', 0.7 * a)], [6, rgba('#FFFFFF', a)]]) { ctx.strokeStyle = c; ctx.lineWidth = w; ctx.beginPath(); pts.forEach((p, i) => (i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]))); ctx.stroke(); }
+  ctx.restore(); glow(x, y0 + 200, 500, '#BFD0FF', 0.4 * a);
+}
+/** slanted rain over the frame, k 0..1 = intensity */
+export function rain(t, k = 1) {
+  ctx.save(); ctx.strokeStyle = rgba('#BFD0E8', 0.35 * k); ctx.lineWidth = 3; ctx.beginPath();
+  for (let i = 0; i < Math.round(160 * k); i++) { const ph = (t * 1.8 + rnd(i)) % 1, x = rnd(i + 7) * 1400 - 200 - ph * 200, y = ph * 2100 - 100; ctx.moveTo(x, y); ctx.lineTo(x - 22, y + 70); }
+  ctx.stroke(); ctx.restore();
+}

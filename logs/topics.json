@@ -282,5 +282,59 @@
   "youtube": "QmWmgymDXBU",
   "voice": "ElevenLabs Sahir",
   "youtube_status": "public (verified 08:01 IST 2026-11-22 by the scheduled morning run; publishAt worked, no PUT needed)"
+ },
+ {
+  "date": "2026-11-22",
+  "slot": "afternoon",
+  "slug": "matsya",
+  "topic": "Matsya, Vishnu's first avatar: tiny fish in Satyavrata's palms outgrows kamandal/pot/pond/Ganga/ocean, reveals Vishnu, pralaya in 7 days, boat with saptarishi/seeds/creatures tied by Vasuki to the golden horn; Satyavrata becomes Manu (manushya); Kartik Purnima tie-in",
+  "story": "Bhagavata Purana 8.24; Matsya Purana 1-2; Shatapatha Brahmana 1.8.1",
+  "palette": [
+   "ocean night teal",
+   "river dawn rose",
+   "noon river blue",
+   "deep indigo + divine gold",
+   "storm slate + lightning",
+   "golden dawn"
+  ],
+  "scene_types": [
+   "giant fish arc over boat",
+   "underwater silhouette",
+   "cupped hands close-up",
+   "kamandal splash",
+   "pot/pond/Ganga montage",
+   "colossal fish vs tiny king",
+   "Vishnu on lotus over ocean",
+   "boat boarding",
+   "lightning storm",
+   "Vasuki rope tow",
+   "Manu at dawn with people silhouettes"
+  ],
+  "new_kit": [
+   "cast.matsya (golden fish, horn, silhouette)",
+   "cast.naav (boat with sages + lamp)",
+   "cast.cuppedHands",
+   "cast.lightning",
+   "cast.rain"
+  ],
+  "title": "एक छोटी मछली ने पूरी दुनिया कैसे बचाई? | Vishnu's First Avatar #shorts",
+  "hashtags": [
+   "#IndianMythology",
+   "#HinduMythology",
+   "#MatsyaAvatar",
+   "#Dashavatar",
+   "#BhagwanVishnu",
+   "#KartikPurnima",
+   "#PauranikKatha",
+   "#shorts"
+  ],
+  "youtube_id": "HfmVAtqrlrg",
+  "status": "uploaded private 14:11 IST with publishAt 2026-11-22T15:00+05:30 (YouTube schedules it; no PUT needed)",
+  "voice": "ElevenLabs Sahir (credits_left 38935 before voicing)",
+  "duration_s": 73.2,
+  "quality_gate": "PASS (2nd encode; first at crf 23 was 41 MB)",
+  "problems": [
+   "first -yt.mp4 at crf 23 was 41 MB (>35 MB): re-encoded at -b:v 3200k -> 29.5 MB"
+  ]
  }
 ]

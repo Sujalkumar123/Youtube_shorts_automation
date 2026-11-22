@@ -1,0 +1,159 @@
+{
+ "title": "एक छोटी मछली ने पूरी दुनिया कैसे बचाई? | Vishnu's First Avatar #shorts",
+ "voice": "eleven:Sahir",
+ "eleven_voice": "4LIpEnnggPcuL2KuRQIO",
+ "eleven_model": "eleven_multilingual_v2",
+ "eleven_stability": 0.42,
+ "eleven_style": 0.4,
+ "eleven_speed": 1.16,
+ "lead": 0.3,
+ "outro": 0.8,
+ "gap": 0.2,
+ "breaths": false,
+ "music": "devotional",
+ "voice_fx": "highpass=f=60,equalizer=f=130:t=q:w=1:g=3,equalizer=f=6500:t=q:w=1.5:g=-1.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9",
+ "music_db": -25,
+ "music_sa": 110,
+ "music_lp": 2000,
+ "music_sub": 0.9,
+ "sources": [
+  "Bhagavata Purana, Canto 8, Chapter 24 (Matsya avatara): King Satyavrata offers water in the Kritamala river, a tiny fish in his joined palms asks for protection; kamandalu, pot, pond, lake, ocean; the fish is Vishnu; pralaya in seven days; a boat with the seven sages, seeds and creatures; tied with the serpent Vasuki to the fish's horn; Satyavrata becomes Vaivasvata Manu",
+  "Matsya Purana, chapters 1-2: Manu and the fish that keeps growing, the boat and the horn",
+  "Shatapatha Brahmana 1.8.1: the oldest version of Manu and the fish (the flood and the boat tied to the horn)"
+ ],
+ "lines": [
+  {
+   "text": "एक छोटी सी मछली ने, पूरी दुनिया बचा ली.",
+   "caps": "Ek *chhoti si machhli ne | poori duniya *bacha li",
+   "speed": 1.05,
+   "gap": 0.23
+  },
+  {
+   "text": "पर वो मछली थी कौन?",
+   "caps": "Par wo *machhli | thi *kaun?",
+   "speed": 1.08,
+   "gap": 0.27
+  },
+  {
+   "text": "राजा सत्यव्रत, नदी में अर्घ्य दे रहे थे.",
+   "caps": "Raja *Satyavrat | nadi mein *arghya de rahe the",
+   "gap": 0.18
+  },
+  {
+   "text": "तभी उनकी अंजुलि में, एक नन्ही मछली आई.",
+   "caps": "Tabhi unki *anjuli mein | ek nanhi *machhli aayi",
+   "gap": 0.18
+  },
+  {
+   "text": "मछली बोली, राजन, मुझे बचा लो.",
+   "caps": "*Machhli boli | Rajan mujhe *bacha lo",
+   "speed": 1.07,
+   "gap": 0.19
+  },
+  {
+   "text": "दयालु राजा ने उसे, कमंडल में रख लिया.",
+   "caps": "*Dayalu raja ne use | *kamandal mein rakh liya",
+   "gap": 0.18
+  },
+  {
+   "text": "सुबह तक, मछली कमंडल से बड़ी हो गई.",
+   "caps": "*Subah tak machhli | kamandal se *badi ho gayi",
+   "gap": 0.18
+  },
+  {
+   "text": "फिर घड़ा, फिर तालाब, फिर गंगा... वो बढ़ती ही गई.",
+   "caps": "Phir ghada, phir *taalaab | phir Ganga wo *badhti hi gayi",
+   "speed": 1.1,
+   "gap": 0.18
+  },
+  {
+   "text": "आख़िर में, समुद्र भी उसके लिए छोटा पड़ गया.",
+   "caps": "Aakhir mein *samudra bhi | uske liye *chhota pad gaya",
+   "gap": 0.23
+  },
+  {
+   "text": "पर असली रहस्य, अभी बाकी था.",
+   "caps": "Par asli *rahasya | abhi *baaki tha",
+   "speed": 1.05,
+   "gap": 0.25
+  },
+  {
+   "text": "राजा ने हाथ जोड़कर पूछा, आप कौन हैं?",
+   "caps": "Raja ne haath *jodkar poochha | *aap kaun hain?",
+   "speed": 1.07,
+   "gap": 0.23
+  },
+  {
+   "text": "मछली के भीतर से, एक दिव्य प्रकाश फूटा.",
+   "caps": "Machhli ke *bheetar se | ek divya *prakaash phoota",
+   "gap": 0.18
+  },
+  {
+   "text": "वो स्वयं भगवान विष्णु थे.",
+   "caps": "Wo swayam *Bhagwan Vishnu the",
+   "speed": 1.05,
+   "gap": 0.29
+  },
+  {
+   "text": "उन्होंने कहा, सात दिन में, प्रलय आएगा.",
+   "caps": "Unhone kaha *saat din mein | *pralay aayega",
+   "speed": 1.07,
+   "gap": 0.18
+  },
+  {
+   "text": "एक नाव आएगी. उसमें सप्तऋषि, बीज और जीव रखना.",
+   "caps": "Ek *naav aayegi | usmein *saptarishi | beej aur *jeev rakhna",
+   "speed": 1.1,
+   "gap": 0.19
+  },
+  {
+   "text": "और सातवें दिन... आसमान फट पड़ा.",
+   "caps": "Aur *saatven din | *aasmaan phat pada",
+   "speed": 1.05,
+   "gap": 0.23
+  },
+  {
+   "text": "चारों ओर बस पानी, और अँधेरा.",
+   "caps": "Chaaron or bas *paani | aur *andhera",
+   "speed": 1.05,
+   "gap": 0.23
+  },
+  {
+   "text": "तभी लहरों से निकला, एक सुनहरा सींग वाला मत्स्य.",
+   "caps": "Tabhi *lehron se nikla | ek sunehra seeng wala *Matsya",
+   "speed": 1.07,
+   "gap": 0.23
+  },
+  {
+   "text": "वासुकि नाग की रस्सी से, नाव सींग से बँधी.",
+   "caps": "Vasuki naag ki *rassi se | naav *seeng se bandhi",
+   "gap": 0.18
+  },
+  {
+   "text": "मत्स्य ने, सृष्टि को प्रलय के पार कराया.",
+   "caps": "*Matsya ne | srishti ko pralay ke *paar karaya",
+   "speed": 1.05,
+   "gap": 0.27
+  },
+  {
+   "text": "वही राजा बने मनु... और उनसे हम, मनुष्य.",
+   "caps": "Wahi raja bane *Manu | aur unse hum *manushya",
+   "speed": 1.05,
+   "gap": 0.29
+  },
+  {
+   "text": "हम सब, उसी नन्ही मछली के बचाए हैं.",
+   "caps": "Hum sab *usi | nanhi machhli ke *bachaaye hain",
+   "speed": 1.05,
+   "gap": 0.23
+  },
+  {
+   "text": "ऐसी ही अनकही कहानियों के लिए,",
+   "caps": "Aisi hi *ankahi kahaniyon ke liye"
+  },
+  {
+   "text": "फ़ॉलो करें, अनटोल्ड स्टोरीज़.",
+   "caps": "Follow karein | *Untold Stories"
+  }
+ ]
+}
