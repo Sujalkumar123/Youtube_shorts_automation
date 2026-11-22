@@ -336,5 +336,65 @@
   "problems": [
    "first -yt.mp4 at crf 23 was 41 MB (>35 MB): re-encoded at -b:v 3200k -> 29.5 MB"
   ]
+ },
+ {
+  "date": "2026-11-22",
+  "slot": "evening",
+  "slug": "hanuman-naam",
+  "topic": "Baby Hanuman mistakes the rising Sun for a fruit, flies to it; Surya does not burn him; Indra's vajra strikes his chin (hanu), he falls; Vayu withdraws into a cave and the world's breath stops; Brahma revives him, devas give boons, Indra names him Hanuman; the sages' curse to forget his power until reminded; Jambavan reminds him and he leaps the ocean",
+  "story": "Valmiki Ramayana, Kishkindha Kanda 66; Uttara Kanda 35-36",
+  "palette": [
+   "cosmic indigo + red sun",
+   "rose dawn Anjaneri hills",
+   "fire gold",
+   "storm slate + vajra blue",
+   "ash grey",
+   "Brahma gold",
+   "night indigo",
+   "ocean dawn"
+  ],
+  "scenes": [
+   "flight to the sun",
+   "temple arch name reveal",
+   "mother and child",
+   "sun-fruit with leaf",
+   "Surya blaze",
+   "Indra on storm cloud",
+   "vajra bolt (symbolic flash)",
+   "fall with light trail",
+   "Vayu wind swirl",
+   "cave mouth",
+   "breathless world",
+   "Brahma descent",
+   "devas boons",
+   "face close-up chin glow",
+   "ashram mischief",
+   "sages' curse aura drain",
+   "shore with Jamvant",
+   "ocean leap with gada"
+  ],
+  "new_kit": [
+   "cast.hanuman (child/adult, poses stand/reach/fly/limp/leap/sit, aura, gada, chinGlow)",
+   "cast.vajra",
+   "cast.jamvant",
+   "cast.wind"
+  ],
+  "title": "हनुमान जी अपनी शक्ति क्यों भूल गए? | How Hanuman Got His Name #shorts",
+  "hashtags": [
+   "#IndianMythology",
+   "#HinduMythology",
+   "#Hanuman",
+   "#HanumanJi",
+   "#Ramayan",
+   "#BajrangBali",
+   "#JaiShreeRam",
+   "#shorts"
+  ],
+  "voice": "ElevenLabs Sahir",
+  "duration_s": 74.4,
+  "youtube": "A_kloXXdkZc",
+  "status": "uploaded private, publishAt 2026-11-22 20:00 IST (scheduled by YouTube)",
+  "quality_gate": "PASS (voice 11.2 dB above music, 29.9 MB)",
+  "problems": []
  }
 ]

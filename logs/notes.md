@@ -35,3 +35,9 @@
 - Encode: dark/rain/particle-heavy videos blow past 35 MB at crf 23 (41 MB). Use `-b:v 3200k -maxrate 4500k -bufsize 9000k` for the -yt copy (29.5 MB, PASS).
 - New kit: cast.matsya(x,y,s,t,{rot,dir,glow,horn,silhouette}) horn tip at local (250,-210); cast.naav (boat, sages 0..7, lamp); cast.cuppedHands (needs finger bumps + thumbs or it reads as a stool); cast.lightning; cast.rain. Example scenes in examples/matsya/shots.js (Vasuki rope = atmos.luminous with {col,hi}).
 - Upload with publish_at again worked (1 Zapier call per video total).
+- 2026-11-22 evening (hanuman-naam): no trend scan (reused 11-21 patterns: "X क्यों?", curse/origin, hidden meaning of a name). Hooks considered: (1) "हनुमान जी को, अपनी ही ताक़त याद क्यों नहीं थी?" (2) "हनुमान नाम का मतलब, एक चोट है." (3) "एक बच्चे ने सूरज को फल समझ लिया." Kept 1 (paradox about the familiar), 2 became the answer line, 3 the inciting image. Self-score: hook 5, emotion 4, twist 4, clarity 4, loop 4. ElevenLabs credits 38593 before voicing. 2 Zapier calls total (inspect + upload with publish_at).
+- Sahir: 22 story lines + 2 follow = 76.7 s first pass; gaps -0.1 each and outro 0.7 from cache = 74.4 s (gate PASS but tight). Next time 20 story lines.
+- mix.py cue types are only: inhale heartbeat whoosh slide pop plop gulp boing bubbles sizzle sparkle thud slam tock zip alarm bell conch damru drum swell (no thunder/wind/flute/waves/drone).
+- Cut-paper hole (cave mouth / arch window): draw the inner path in the OPPOSITE winding to the outer rect, else the fill covers everything.
+- Kokoro model download failed again in setup.sh (not needed: Sahir worked).
+- New kit: cast.hanuman(x,y,{s,t,pose stand|reach|fly|limp|leap|sit,rot,age 0..1,eyes,aura,gada,chinGlow,dir}) (fly: rot ~0.8-1.0 so he heads right), cast.vajra(x,y,s,rot,glow,t), cast.jamvant(x,y,{s,t,eyes,dir}), cast.wind(cx,cy,r,t,a). Scene helpers sun/suryaDev/clouds/speedLines/ring/shore/ashram in examples/hanuman-naam/shots.js.

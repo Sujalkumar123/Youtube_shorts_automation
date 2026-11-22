@@ -1,7 +1,7 @@
 // The cast, in cut paper with real character: Shiva, a raja (Sagara / Bhagiratha), Kapila, the princes, the horse.
 import { ctx, TAU, clamp, lerp, rnd, circle, ell, eob } from './core/lib.js';
 import * as K from './core/kit.js';
-import { A, glow, rgba } from './atmos.js';
+import { A, glow, rgba, godRays } from './atmos.js';
 const { cut, P_poly, P_circ, P_rr } = K;
 const SKIN = '#B97A4E', SKIN_D = '#9C6340', INK = '#2A1C14', GOLD = '#E0A93A', GOLD_D = '#B07A22', CRIMSON = '#A8322D', CREAM = '#EFE3C8';
 const rad = (d) => d * Math.PI / 180;
@@ -710,4 +710,82 @@ export function rain(t, k = 1) {
   ctx.save(); ctx.strokeStyle = rgba('#BFD0E8', 0.35 * k); ctx.lineWidth = 3; ctx.beginPath();
   for (let i = 0; i < Math.round(160 * k); i++) { const ph = (t * 1.8 + rnd(i)) % 1, x = rnd(i + 7) * 1400 - 200 - ph * 200, y = ph * 2100 - 100; ctx.moveTo(x, y); ctx.lineTo(x - 22, y + 70); }
   ctx.stroke(); ctx.restore();
+}
+
+// ═════════ HANUMAN (child or adult vanara), VAJRA, JAMVANT, WIND ═════════
+/** hanuman(x, y, o) feet at (x, y). o = { s, t, pose: 'stand'|'reach'|'fly'|'limp'|'leap'|'sit', rot (rad, whole figure), age 0 child..1 adult, eyes 0..1, aura, gada, chinGlow } */
+export function hanuman(x, y, o = {}) {
+  const s = o.s || 1, t = o.t || 0, pose = o.pose || 'stand', age = o.age ?? 0, rot = o.rot || 0;
+  const B = '#D9622B', BD = '#B04A1C', FACE = '#F2B27A', DHOTI = '#F2B53A', RED = '#C8401E';
+  const hr = lerp(92, 66, age), tl = lerp(170, 250, age), ll = lerp(95, 150, age), al = lerp(80, 125, age), lw = lerp(46, 54, age);
+  const hipY = -2 * ll - 10, shY = hipY - tl, hy = shY - hr * 0.85;
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(s * (o.dir || 1), s);
+  if (o.aura) { glow(0, hy + 100, 420 + 80 * age, '#FFD27A', 0.35 * o.aura); godRays(0, hy + 100, 0, TAU, 16, 520, '#FFE6A0', 0.12 * o.aura, t); }
+  const sw = Math.sin(t * 3) * 6;
+  // tail (behind)
+  ctx.save(); ctx.lineCap = 'round'; ctx.strokeStyle = BD; ctx.lineWidth = lerp(22, 26, age) + 6; ctx.beginPath(); ctx.moveTo(-10, hipY + 20);
+  ctx.bezierCurveTo(-180, hipY + 40 + sw, -220, hipY - 160, -140, hipY - 260 - sw); ctx.bezierCurveTo(-90, hipY - 320, -40, hipY - 270, -80, hipY - 230); ctx.stroke();
+  ctx.strokeStyle = B; ctx.lineWidth = lerp(22, 26, age); ctx.stroke(); ctx.restore();
+  const LEG = { stand: [[-6, 4], [6, -4]], reach: [[-8, 4], [10, -4]], fly: [[-25, -40], [-10, -20]], limp: [[30, 70], [15, 60]], leap: [[-40, -70], [20, -30]], sit: [[70, -60], [-70, 60]] }[pose] || [[-6, 4], [6, -4]];
+  const ARM = { stand: [[-18, -8], [18, 8]], reach: [[-25, -20], [165, 175]], fly: [[-60, -40], [170, 178]], limp: [[40, 20], [60, 30]], leap: [[-70, -50], [160, 172]], sit: [[-30, 60], [30, -60]] }[pose] || [[-18, -8], [18, 8]];
+  // back arm + leg
+  limb(-lw * 0.6, shY + 20, ARM[0][0], al, ARM[0][1], al, lw * 0.9, lw * 0.75, BD, GOLD);
+  limb(-lw * 0.5, hipY, LEG[0][0], ll, LEG[0][1], ll, lw * 1.1, lw * 0.85, BD);
+  limb(lw * 0.5, hipY, LEG[1][0], ll, LEG[1][1], ll, lw * 1.1, lw * 0.85, B);
+  // torso + dhoti
+  cut(() => { ctx.beginPath(); ctx.moveTo(-lw * 1.3, shY); ctx.quadraticCurveTo(-lw * 1.6, (shY + hipY) / 2, -lw * 1.1, hipY + 10); ctx.lineTo(lw * 1.1, hipY + 10); ctx.quadraticCurveTo(lw * 1.6, (shY + hipY) / 2, lw * 1.3, shY); ctx.quadraticCurveTo(0, shY - 22, -lw * 1.3, shY); ctx.closePath(); }, B);
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, (shY + hipY) / 2 + 10, lw * 0.9, tl * 0.32, 0, 0, TAU); }, FACE, { shadow: 0.2, edge: 0 });
+  cut(() => { ctx.beginPath(); ctx.moveTo(-lw * 1.25, hipY - 30); ctx.lineTo(lw * 1.25, hipY - 30); ctx.lineTo(lw * 1.35, hipY + ll * 0.7); ctx.lineTo(0, hipY + ll * 0.5); ctx.lineTo(-lw * 1.35, hipY + ll * 0.7); ctx.closePath(); }, DHOTI, { shadow: 0.4, edge: 3 });
+  cut(P_rr(-lw * 1.3, hipY - 40, lw * 2.6, 22, 8), RED, { shadow: 0.2, edge: 2 });
+  if (age > 0.5) { cut(P_poly([[-lw * 1.3, shY + 6], [-lw * 0.9, shY], [lw * 1.1, hipY - 40], [lw * 0.7, hipY - 36]]), '#F6E7C0', { shadow: 0.2, edge: 2 }); }
+  // front arm
+  const h = limb(lw * 0.6, shY + 20, ARM[1][0], al, ARM[1][1], al, lw * 0.9, lw * 0.75, B, GOLD);
+  cut(P_circ(h[0], h[1], lw * 0.45), FACE, { shadow: 0.2, edge: 2 });
+  if (o.gada) { ctx.save(); ctx.translate(h[0], h[1]); ctx.rotate(Math.atan2(h[1] - h[3], h[0] - h[2]) - Math.PI / 2); cut(P_rr(-9, -10, 18, 200, 8), '#B07A22', { shadow: 0.3, edge: 2 }); glow(0, 260, 120, '#FFD27A', 0.5); cut(P_circ(0, 250, 70), GOLD, { shadow: 0.5, edge: 3 }); cut(P_circ(-18, 232, 20), '#FFE6A0', { shadow: 0, edge: 0 }); ctx.restore(); }
+  // head
+  for (const k of [-1, 1]) { cut(P_circ(k * hr * 0.98, hy + 4, hr * 0.32), B, { shadow: 0.3, edge: 3 }); cut(P_circ(k * hr * 0.98, hy + 4, hr * 0.18), FACE, { shadow: 0, edge: 0 }); }
+  cut(P_circ(0, hy, hr), B);
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, hy + hr * 0.08, hr * 0.72, hr * 0.66, 0, 0, TAU); }, FACE, { shadow: 0.2, edge: 0 });
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, hy + hr * 0.5, hr * 0.56, hr * 0.38, 0, 0, TAU); }, '#F6C898', { shadow: 0.3, edge: 2 });
+  if (o.chinGlow) { glow(0, hy + hr * 0.75, hr * 1.2, '#FFE6A0', 0.8 * o.chinGlow); cut(() => { ctx.beginPath(); ctx.ellipse(0, hy + hr * 0.72, hr * 0.3, hr * 0.13, 0, 0, TAU); }, rgba('#FFD27A', o.chinGlow), { shadow: 0, edge: 0 }); }
+  eyes(hy - hr * 0.08, o.eyes ?? 0, hr * 0.3, INK, hr / 80);
+  circle(-hr * 0.1, hy + hr * 0.35, hr * 0.06, INK); circle(hr * 0.1, hy + hr * 0.35, hr * 0.06, INK);
+  ctx.strokeStyle = INK; ctx.lineWidth = 4 * hr / 80; ctx.lineCap = 'round'; ctx.beginPath(); ctx.arc(0, hy + hr * 0.5, hr * 0.22, 0.2 * Math.PI, 0.8 * Math.PI); ctx.stroke();
+  ctx.fillStyle = RED; ctx.fillRect(-3, hy - hr * 0.55, 6, hr * 0.28);
+  if (age > 0.5) { cut(() => { ctx.beginPath(); ctx.moveTo(-hr * 0.8, hy - hr * 0.6); ctx.lineTo(-hr * 0.7, hy - hr * 1.35); ctx.lineTo(-hr * 0.3, hy - hr * 1.1); ctx.lineTo(0, hy - hr * 1.6); ctx.lineTo(hr * 0.3, hy - hr * 1.1); ctx.lineTo(hr * 0.7, hy - hr * 1.35); ctx.lineTo(hr * 0.8, hy - hr * 0.6); ctx.closePath(); }, GOLD, { shadow: 0.4, edge: 3 }); circle(0, hy - hr * 0.85, 9, CRIMSON); }
+  else cut(() => { ctx.beginPath(); ctx.moveTo(-20, hy - hr * 0.95); ctx.quadraticCurveTo(0, hy - hr * 1.45, 26, hy - hr * 1.25); ctx.quadraticCurveTo(10, hy - hr * 1.1, 20, hy - hr * 0.95); ctx.closePath(); }, BD, { shadow: 0.2, edge: 2 });
+  ctx.restore();
+}
+/** Indra's vajra: centre at (x, y), long axis vertical before rot */
+export function vajra(x, y, s, rot = 0, g = 1, t = 0) {
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(s, s);
+  if (g) { glow(0, 0, 260, '#9FC0FF', 0.5 * g); glow(0, 0, 120, '#FFFFFF', 0.4 * g); }
+  for (const k of [-1, 1]) {
+    for (const a of [-0.55, -0.27, 0, 0.27, 0.55]) cut(() => { ctx.beginPath(); ctx.moveTo(Math.sin(a) * 26, k * 60); ctx.quadraticCurveTo(Math.sin(a) * 120, k * 130, Math.sin(a) * 30, k * 210); ctx.quadraticCurveTo(Math.sin(a) * 80, k * 130, -Math.sin(a) * 6, k * 60); ctx.closePath(); }, a === 0 ? '#FFE6A0' : GOLD, { shadow: 0.3, edge: 2 });
+    cut(P_circ(0, k * 58, 30), GOLD_D, { shadow: 0.3, edge: 2 });
+  }
+  cut(P_rr(-20, -50, 40, 100, 12), GOLD, { shadow: 0.4, edge: 3 }); cut(P_circ(0, 0, 18), '#9FC0FF', { shadow: 0, edge: 0 });
+  ctx.restore();
+}
+/** Jamvant (Jambavan), the old bear-king, standing with a staff; feet at (x, y) */
+export function jamvant(x, y, o = {}) {
+  const s = o.s || 1, t = o.t || 0, dir = o.dir || 1, F = '#4A3020', FD = '#33200F', MZ = '#C8A07A';
+  ctx.save(); ctx.translate(x, y); ctx.scale(s * dir, s);
+  cut(P_rr(150, -900, 18, 900, 8), '#6A4A2A', { shadow: 0.4, edge: 2 });
+  cut(() => { ctx.beginPath(); ctx.moveTo(-170, 0); ctx.quadraticCurveTo(-230, -420, -120, -620); ctx.quadraticCurveTo(0, -700, 120, -620); ctx.quadraticCurveTo(230, -420, 170, 0); ctx.closePath(); }, F);
+  cut(() => { ctx.beginPath(); ctx.moveTo(-120, -40); ctx.quadraticCurveTo(-150, -300, -60, -460); ctx.lineTo(60, -460); ctx.quadraticCurveTo(150, -300, 120, -40); ctx.closePath(); }, '#D98B3A', { shadow: 0.3, edge: 3 });
+  limb(110, -560, 40 + Math.sin(t * 2) * 4, 150, 150, 120, 64, 52, FD);
+  for (const k of [-1, 1]) cut(P_circ(k * 92, -770, 40), FD, { shadow: 0.3, edge: 3 });
+  cut(P_circ(0, -700, 120), F);
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, -650, 70, 52, 0, 0, TAU); }, MZ, { shadow: 0.2, edge: 2 }); circle(0, -672, 16, INK);
+  cut(() => { ctx.beginPath(); ctx.moveTo(-80, -640); ctx.quadraticCurveTo(-90, -500, 0, -420); ctx.quadraticCurveTo(90, -500, 80, -640); ctx.quadraticCurveTo(0, -600, -80, -640); ctx.closePath(); }, '#EFEBE2', { shadow: 0.3, edge: 3 });
+  eyes(-730, o.eyes ?? 1, 42, INK, 1);
+  ctx.strokeStyle = '#EFEBE2'; ctx.lineWidth = 8; for (const k of [-1, 1]) { ctx.beginPath(); ctx.moveTo(k * 20, -760); ctx.lineTo(k * 66, -772); ctx.stroke(); }
+  ctx.restore();
+}
+/** swirling wind ribbons around (cx, cy) */
+export function wind(cx, cy, r, t, a = 1, n = 7, col = '#DDEBFF') {
+  ctx.save(); ctx.lineCap = 'round';
+  for (let i = 0; i < n; i++) { const a0 = t * (1.4 + i * 0.12) + i * 0.9, rr = r * (0.6 + 0.5 * rnd(i + 3)); ctx.strokeStyle = rgba(col, a * (0.35 + 0.3 * rnd(i))); ctx.lineWidth = 6 + 10 * rnd(i + 9); ctx.beginPath(); ctx.ellipse(cx, cy, rr, rr * 0.42, 0.2 * Math.sin(i), a0, a0 + 1.6 + rnd(i) * 1.2); ctx.stroke(); }
+  ctx.restore();
 }

@@ -1,0 +1,165 @@
+{
+ "voice": "eleven:Sahir",
+ "eleven_voice": "4LIpEnnggPcuL2KuRQIO",
+ "eleven_model": "eleven_multilingual_v2",
+ "eleven_stability": 0.42,
+ "eleven_style": 0.4,
+ "eleven_speed": 1.16,
+ "lead": 0.3,
+ "outro": 0.7,
+ "gap": 0.2,
+ "breaths": false,
+ "music": "devotional",
+ "voice_fx": "highpass=f=60,equalizer=f=130:t=q:w=1:g=3,equalizer=f=6500:t=q:w=1.5:g=-1.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9",
+ "music_db": -25,
+ "music_sa": 110,
+ "music_lp": 2000,
+ "music_sub": 0.9,
+ "title": "हनुमान जी अपनी शक्ति क्यों भूल गए? | How Hanuman Got His Name #shorts",
+ "sources": [
+  "Valmiki Ramayana, Kishkindha Kanda, Sarga 66: Jambavan reminds Hanuman of his birth to Anjana and Vayu; as a child he leapt at the rising Sun thinking it a fruit; Indra's vajra struck him, he fell and his jaw (hanu) was broken, hence 'Hanuman'; Vayu withdrew the air; Brahma and the gods gave boons",
+  "Valmiki Ramayana, Uttara Kanda, Sargas 35-36: the Sun does not burn him; the curse of the sages that he would forget his strength until reminded"
+ ],
+ "lines": [
+  {
+   "text": "हनुमान जी को, अपनी ही ताक़त याद क्यों नहीं थी?",
+   "caps": "*Hanuman ji ko | apni hi *taaqat | yaad kyon *nahi thi?",
+   "speed": 1.08,
+   "gap": 0.15
+  },
+  {
+   "text": "इसका जवाब, उनके नाम में छिपा है.",
+   "caps": "Iska *jawaab | unke *naam mein | *chhipa hai",
+   "speed": 1.1,
+   "gap": 0.2
+  },
+  {
+   "text": "बहुत पहले, अंजना माँ का एक नन्हा बेटा था.",
+   "caps": "Bahut *pehle | Anjana *maa ka | ek *nanha beta tha",
+   "speed": 1.12,
+   "gap": 0.08
+  },
+  {
+   "text": "एक सुबह, उसे बहुत ज़ोर की भूख लगी.",
+   "caps": "Ek *subah | use bahut *zor ki | *bhookh lagi",
+   "speed": 1.14,
+   "gap": 0.08
+  },
+  {
+   "text": "उसने आसमान में देखा, एक लाल, पका हुआ फल.",
+   "caps": "Usne *aasmaan mein dekha | ek *laal | pakka hua *phal",
+   "speed": 1.12,
+   "gap": 0.12
+  },
+  {
+   "text": "वो फल नहीं था... वो सूर्य देव थे!",
+   "caps": "Wo *phal nahi tha | wo *Surya dev the!",
+   "speed": 1.05,
+   "gap": 0.25
+  },
+  {
+   "text": "और नन्हा बालक, उड़ चला, सूरज की ओर.",
+   "caps": "Aur *nanha baalak | *ud chala | *Suraj ki or",
+   "speed": 1.18,
+   "gap": 0.08
+  },
+  {
+   "text": "सूर्य देव ने उसे जलाया नहीं, पर इंद्र डर गए.",
+   "caps": "*Surya dev ne use | *jalaya nahi | par *Indra dar gaye",
+   "speed": 1.14,
+   "gap": 0.1
+  },
+  {
+   "text": "पर असली मोड़, अभी बाक़ी था...",
+   "caps": "Par *asli mod | abhi *baaki tha",
+   "speed": 1.08,
+   "gap": 0.2
+  },
+  {
+   "text": "इंद्र का वज्र, सीधे ठुड्डी पर लगा.",
+   "caps": "Indra ka *vajra | seedhe *thuddi par laga",
+   "speed": 1.12,
+   "gap": 0.1
+  },
+  {
+   "text": "और वो धरती पर आ गिरा.",
+   "caps": "Aur wo *dharti par | aa *gira",
+   "speed": 1.08,
+   "gap": 0.25
+  },
+  {
+   "text": "बेटे को ऐसे देखकर, पवन देव रूठ गए.",
+   "caps": "Bete ko *aise dekhkar | *Pavan dev | *rooth gaye",
+   "speed": 1.1,
+   "gap": 0.1
+  },
+  {
+   "text": "वो उसे गोद में लेकर, गुफा में चले गए.",
+   "caps": "Wo use *god mein lekar | *gufa mein | *chale gaye",
+   "speed": 1.12,
+   "gap": 0.1
+  },
+  {
+   "text": "और पूरी दुनिया की, साँसें थम गईं.",
+   "caps": "Aur poori *duniya ki | *saansein tham gayin",
+   "speed": 1.05,
+   "gap": 0.3
+  },
+  {
+   "text": "तब ब्रह्मा जी आए, और बालक को जीवन दिया.",
+   "caps": "Tab *Brahma ji aaye | aur *baalak ko | *jeevan diya",
+   "speed": 1.1,
+   "gap": 0.1
+  },
+  {
+   "text": "हर देवता ने वरदान दिया, और इंद्र ने नाम दिया.",
+   "caps": "Har *devta ne | *vardaan diya | aur *Indra ne | *naam diya",
+   "speed": 1.14,
+   "gap": 0.15
+  },
+  {
+   "text": "हनु यानी ठुड्डी... हनुमान!",
+   "caps": "*Hanu yaani thuddi | *Hanuman!",
+   "speed": 1.05,
+   "gap": 0.3
+  },
+  {
+   "text": "पर नटखट बालक, ऋषियों को सताने लगा.",
+   "caps": "Par *natkhat baalak | rishiyon ko *sataane laga",
+   "speed": 1.14,
+   "gap": 0.08
+  },
+  {
+   "text": "तो ऋषियों ने कहा, तुम अपनी शक्ति भूल जाओगे, जब तक कोई याद ना दिलाए.",
+   "caps": "To *rishiyon ne kaha | tum apni *shakti | *bhool jaoge | jab tak *koi | *yaad na dilaaye",
+   "speed": 1.16,
+   "gap": 0.2
+  },
+  {
+   "text": "सालों बाद, समुद्र के किनारे, जामवंत ने याद दिलाया...",
+   "caps": "Saalon *baad | *samudra ke kinaare | *Jamvant ne | yaad *dilaaya",
+   "speed": 1.12,
+   "gap": 0.15
+  },
+  {
+   "text": "और हनुमान ने, एक छलांग में समुद्र पार कर लिया!",
+   "caps": "Aur *Hanuman ne | ek *chhalaang mein | samudra *paar kar liya!",
+   "speed": 1.12,
+   "gap": 0.2
+  },
+  {
+   "text": "और वो एक ठुड्डी का निशान, बन गया उनका नाम.",
+   "caps": "Aur wo ek *thuddi ka nishaan | ban gaya unka *naam",
+   "speed": 1.06,
+   "gap": 0.25
+  },
+  {
+   "text": "ऐसी ही अनकही कहानियों के लिए,",
+   "caps": "Aisi hi *ankahi kahaniyon ke liye"
+  },
+  {
+   "text": "फ़ॉलो करें, अनटोल्ड स्टोरीज़.",
+   "caps": "Follow karein | *Untold Stories"
+  }
+ ]
+}
