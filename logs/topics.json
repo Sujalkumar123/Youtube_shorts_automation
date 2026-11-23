@@ -509,5 +509,65 @@
   "duration_s": 71.2,
   "quality_gate": "PASS (voice +10.7 dB, 28.2 MB)",
   "problems": []
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "evening",
+  "slug": "shadanan",
+  "topic": "Why Kartikeya has six faces",
+  "story": "Tarakasura's boon, Shiva's tej carried by Agni and Ganga to the Saravana reeds, six babies on six lotuses, six Krittikas, Parvati embraces them into one: Shadanana Kartikeya, deva senapati; the month Kartik named after the Krittikas",
+  "palette": [
+   "cosmic saffron",
+   "asura blood-red",
+   "Kailash moon blue",
+   "fear slate",
+   "wedding rose gold",
+   "tej white-gold",
+   "Agni fire orange",
+   "Saravana night teal",
+   "lotus dawn pink",
+   "Krittika star violet",
+   "embrace gold",
+   "Kartik full-moon night"
+  ],
+  "scene_types": [
+   "six-faced hero",
+   "giant asura silhouette",
+   "samadhi on Kailash",
+   "three-worlds rings",
+   "wedding arch",
+   "tej orb burst",
+   "Agni with flame crown",
+   "reed lake",
+   "six lotuses birth",
+   "stars falling into maidens",
+   "6-to-1 spiral merge",
+   "vel light-wave dissolving shadow",
+   "full moon + Pleiades + diya ghat"
+  ],
+  "new_kit": [
+   "miniHead",
+   "kumar (six faces)",
+   "asura",
+   "krittikas",
+   "star",
+   "pleiades",
+   "reeds",
+   "flames",
+   "agniDev"
+  ],
+  "title": "महादेव के बेटे के छह मुख क्यों हैं? | Why Kartikeya Has Six Faces #shorts",
+  "hashtags": [
+   "#IndianMythology",
+   "#HinduMythology",
+   "#Kartikeya",
+   "#Mahadev",
+   "#ShivParvati",
+   "#KartikPurnima",
+   "#पौराणिककथा",
+   "#shorts"
+  ],
+  "youtube": "0y5I88DFP-A (private, publishAt 2026-11-23 20:00 IST)",
+  "problems": null
  }
 ]
