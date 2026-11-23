@@ -396,5 +396,61 @@
   "status": "uploaded private, publishAt 2026-11-22 20:00 IST (scheduled by YouTube)",
   "quality_gate": "PASS (voice 11.2 dB above music, 29.9 MB)",
   "problems": []
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "morning",
+  "slug": "ravana-naam",
+  "topic": "How Ravana got his name (Ravana lifts Kailash)",
+  "story": "Valmiki Ramayana Uttara Kanda 16: Dashanan takes Pushpaka from Kubera, is stopped over Kailash by Nandi, mocks him and is cursed (vanaras will destroy his race), lifts Kailash, Shiva presses it with his toe, Ravana's cry shakes the three worlds, 1000 years of praise, Shiva names him Ravana; the curse comes true through the vanara army",
+  "palette": [
+   "blood-red night",
+   "Alaka gold",
+   "flight dusk violet",
+   "moonlit Kailash blue",
+   "curse crimson",
+   "quake slate",
+   "divine gold",
+   "cosmic indigo",
+   "Lanka dawn saffron"
+  ],
+  "scene_types": [
+   "ten-headed king hero shot",
+   "heads counting up",
+   "flying vimana",
+   "guardian with trident",
+   "mountain lift",
+   "Shiva on the peak pressing down",
+   "shockwave cry",
+   "star-wheel time lapse",
+   "name ribbon",
+   "vanara army silhouettes"
+  ],
+  "new_kit": [
+   "ravana (10 heads, poses stand/lift/strain/pray, laugh)",
+   "head (crowned)",
+   "pushpak (flying vimana)",
+   "nandi (gana with trident + horn crown)",
+   "kailashPeak",
+   "vanara silhouette",
+   "om glyph"
+  ],
+  "title": "रावण का नाम 'रावण' किसने रखा? | How Ravana Got His Name #shorts",
+  "hashtags": [
+   "#IndianMythology",
+   "#HinduMythology",
+   "#Ravan",
+   "#Mahadev",
+   "#Kailash",
+   "#Ramayan",
+   "#Nandi",
+   "#shorts"
+  ],
+  "youtube_id": "lCaaC-I7PM8",
+  "status": "uploaded private ~07:06 IST with publishAt 2026-11-23 08:00 IST (scheduled by YouTube)",
+  "voice": "ElevenLabs Sahir (credits 38230 before voicing)",
+  "duration_s": 73.02,
+  "quality_gate": "PASS (voice 11.0 dB above music, 29.2 MB)",
+  "problems": []
  }
 ]
