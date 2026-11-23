@@ -452,5 +452,62 @@
   "duration_s": 73.02,
   "quality_gate": "PASS (voice 11.0 dB above music, 29.2 MB)",
   "problems": []
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "afternoon",
+  "slug": "nandi-vahan",
+  "topic": "How Nandi became Shiva's vahan / why people whisper in Nandi's ear",
+  "story": "Shiva Purana Shatarudra 6-7, Linga Purana 1.42-44: Shilada's ayonija son Nandi, Mitra-Varuna prophecy of one more year, tapas by the river, Shiva makes him immortal, lord of ganas and vahan",
+  "palette": [
+   "temple night amber",
+   "forest dusk",
+   "boon gold",
+   "rose dawn field",
+   "prophecy slate",
+   "grief rain indigo",
+   "river night teal",
+   "storm slate",
+   "Kailash moon blue",
+   "temple dusk saffron",
+   "cosmic gold"
+  ],
+  "scene_types": [
+   "temple sanctum + bull",
+   "child rising from earth",
+   "hourglass prophecy",
+   "river tapas",
+   "storm tapas",
+   "Shiva descends",
+   "bull materialises",
+   "whisper close-up",
+   "light thread to Kailash"
+  ],
+  "new_kit": [
+   "nandiBull (seated bull, garland, glowEar)",
+   "sanctum (arched doorway with Shivling)",
+   "hourglass",
+   "hut",
+   "plough/furrows",
+   "sound waves",
+   "gaze beam",
+   "petals"
+  ],
+  "title": "लोग नंदी के कान में क्या कहते हैं? | The Untold Story of Nandi #shorts",
+  "hashtags": [
+   "#IndianMythology",
+   "#HinduMythology",
+   "#Nandi",
+   "#Mahadev",
+   "#ShivPuran",
+   "#HarHarMahadev",
+   "#KartikPurnima",
+   "#shorts"
+  ],
+  "youtube": "XNNllvIfBE0 (private, publishAt 2026-11-23 15:00 IST)",
+  "voice": "ElevenLabs Sahir",
+  "duration_s": 71.2,
+  "quality_gate": "PASS (voice +10.7 dB, 28.2 MB)",
+  "problems": []
  }
 ]
