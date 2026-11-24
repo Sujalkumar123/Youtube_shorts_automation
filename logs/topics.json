@@ -704,5 +704,76 @@
   "problems": [
    "setup.sh Kokoro download failed again (Sahir worked, no fallback needed)"
   ]
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "evening",
+  "slug": "kaliya-garuda",
+  "topic": "Why Kaliya hid in the Yamuna: Saubhari's curse on Garuda",
+  "story": "Bhagavata Purana 10.16-17: Kaliya eats Garuda's offering at Ramanaka, is struck by Garuda's wing, flees to the Kalindi pool where Saubhari's curse bars Garuda; poisons the Yamuna; Krishna dances on his hoods, spares him, his footprints protect him from Garuda",
+  "palette": [
+   "poison-green night",
+   "ember dusk",
+   "ocean teal",
+   "full-moon violet",
+   "venom green",
+   "crimson",
+   "fire orange",
+   "slate night",
+   "rose dawn Yamuna",
+   "kund dusk",
+   "cosmic violet",
+   "underwater teal",
+   "noon gold",
+   "grief blue",
+   "curse crimson",
+   "seal storm",
+   "black poison",
+   "Krishna blue blaze",
+   "bowed indigo",
+   "footprint gold",
+   "dawn sea",
+   "Vrindavan ghat night"
+  ],
+  "scenes": [
+   "serpent rising from water",
+   "Garuda barred by a dome",
+   "island in the sea",
+   "moon offering altar",
+   "venom close-up",
+   "Garuda wing strike",
+   "river chase",
+   "forest pool",
+   "underwater sage + fish",
+   "Garuda catches fish",
+   "curse + seal circle",
+   "river turns black",
+   "Krishna dances on hoods",
+   "footprints of light",
+   "ghat with diyas"
+  ],
+  "new_kit": [
+   "kaliya (five hoods, bow, feet)",
+   "footprint",
+   "fish",
+   "kadamba",
+   "dome",
+   "smallNaga"
+  ],
+  "title": "कालिया नाग यमुना में ही क्यों छिपा था? | Kaliya's Secret #shorts",
+  "hashtags": [
+   "#IndianMythology",
+   "#HinduMythology",
+   "#KrishnaLeela",
+   "#KaliyaNaag",
+   "#Garuda",
+   "#Vrindavan",
+   "#KrishnaRahasya",
+   "#shorts"
+  ],
+  "youtube_id": "6B3sAwq3brA (private, publishAt 2026-11-24 20:00 IST)",
+  "voice": "ElevenLabs Sahir",
+  "duration_s": 68.8,
+  "problems": "none (full render + slow-preset encode exceeded one 10-min shell call; re-encoded with -preset fast)"
  }
 ]

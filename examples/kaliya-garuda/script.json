@@ -1,0 +1,166 @@
+{
+ "voice": "eleven:Sahir",
+ "eleven_voice": "4LIpEnnggPcuL2KuRQIO",
+ "eleven_model": "eleven_multilingual_v2",
+ "eleven_stability": 0.42,
+ "eleven_style": 0.4,
+ "eleven_speed": 1.16,
+ "lead": 0.3,
+ "outro": 1.1,
+ "gap": 0.2,
+ "breaths": false,
+ "music": "devotional",
+ "voice_fx": "highpass=f=60,equalizer=f=130:t=q:w=1:g=3,equalizer=f=6500:t=q:w=1.5:g=-1.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9",
+ "music_db": -25,
+ "music_sa": 110,
+ "music_lp": 2000,
+ "music_sub": 0.9,
+ "title": "कालिया नाग यमुना में ही क्यों छिपा था? | Kaliya's Secret #shorts",
+ "sources": [
+  "Bhagavata Purana, Skandha 10, chapters 16-17 (Kaliya-damana): Kaliya poisons the Kalindi pool of the Yamuna; Krishna dances on his hoods; the Naga-patnis pray; Krishna sends him back to Ramanaka island and says Garuda will not harm him, as his hoods bear Krishna's footprints (10.16.63)",
+  "Bhagavata Purana 10.17.1-12: the monthly offerings of the nagas to Garuda at Ramanaka, Kaliya eats Garuda's share, Garuda strikes him with his left wing; the sage Saubhari, doing tapas in the Yamuna, cursed Garuda after he seized a fish there, so Garuda could not enter that pool",
+  "Kaliya Ghat (Kaliya Daman Ghat), Vrindavan, Uttar Pradesh"
+ ],
+ "lines": [
+  {
+   "text": "कालिया नाग, यमुना में ही क्यों छिपा था?",
+   "caps": "*Kaliya naag | *Yamuna mein hi | kyon *chhipa tha?",
+   "speed": 1.1,
+   "gap": 0.12
+  },
+  {
+   "text": "जहाँ गरुड़ जी भी, आ नहीं सकते थे?",
+   "caps": "Jahaan *Garud ji bhi | aa *nahi | sakte *the?",
+   "speed": 1.12,
+   "gap": 0.22
+  },
+  {
+   "text": "समुद्र के बीच, रमणक द्वीप. नागों का घर.",
+   "caps": "Samudra ke *beech | *Ramanak dweep | *Naagon ka ghar",
+   "speed": 1.14,
+   "gap": 0.1
+  },
+  {
+   "text": "हर महीने, नाग गरुड़ को भेंट चढ़ाते थे.",
+   "caps": "Har *maheene | naag *Garud ko | *bhent chadhaate the",
+   "speed": 1.14,
+   "gap": 0.1
+  },
+  {
+   "text": "पर कालिया को, अपने ज़हर पर घमंड था.",
+   "caps": "Par *Kaliya ko | apne *zehar par | *ghamand tha",
+   "speed": 1.1,
+   "gap": 0.12
+  },
+  {
+   "text": "उसने गरुड़ का भोग, ख़ुद खा लिया!",
+   "caps": "Usne Garud ka *bhog | *khud | kha *liya!",
+   "speed": 1.12,
+   "gap": 0.15
+  },
+  {
+   "text": "गरुड़ आए... और एक पंख की चोट से, कालिया गिर पड़ा.",
+   "caps": "*Garud aaye | aur ek *pankh ki | *chot se | Kaliya *gir pada",
+   "speed": 1.15,
+   "gap": 0.12
+  },
+  {
+   "text": "पर असली रहस्य, अभी बाक़ी था...",
+   "caps": "Par asli *rahasya | abhi *baaki tha",
+   "speed": 1.08,
+   "gap": 0.22
+  },
+  {
+   "text": "भागकर वो पहुँचा, वृंदावन की यमुना में.",
+   "caps": "*Bhaagkar | vo *pahuncha | *Vrindavan ki | *Yamuna mein",
+   "speed": 1.14,
+   "gap": 0.1
+  },
+  {
+   "text": "एक ही कुंड, जहाँ गरुड़ कभी नहीं आते.",
+   "caps": "Ek hi *kund | jahaan *Garud | kabhi *nahi aate",
+   "speed": 1.1,
+   "gap": 0.15
+  },
+  {
+   "text": "क्यों?",
+   "caps": "*Kyon?",
+   "speed": 1.05,
+   "gap": 0.2
+  },
+  {
+   "text": "वहाँ सौभरि ऋषि, पानी के अंदर तप करते थे.",
+   "caps": "Vahaan *Saubhari rishi | paani ke *andar | *tap karte the",
+   "speed": 1.12,
+   "gap": 0.1
+  },
+  {
+   "text": "एक दिन, भूखे गरुड़ ने, एक मछली पकड़ ली.",
+   "caps": "Ek *din | *bhookhe Garud ne | ek *machhli | *pakad li",
+   "speed": 1.14,
+   "gap": 0.12
+  },
+  {
+   "text": "बाक़ी मछलियाँ, दुख से तड़प उठीं.",
+   "caps": "Baaki *machhliyan | *dukh se | *tadap uthin",
+   "speed": 1.08,
+   "gap": 0.15
+  },
+  {
+   "text": "ऋषि ने श्राप दिया...",
+   "caps": "Rishi ne *shraap diya",
+   "speed": 1.05,
+   "gap": 0.18
+  },
+  {
+   "text": "गरुड़ यहाँ फिर आए, तो उसी पल मरेंगे!",
+   "caps": "*Garud yahaan | phir *aaye | to *usi pal | *marenge!",
+   "speed": 1.1,
+   "gap": 0.22
+  },
+  {
+   "text": "उसके ज़हर से, यमुना काली पड़ गई.",
+   "caps": "Uske *zehar se | Yamuna *kaali | pad *gayi",
+   "speed": 1.12,
+   "gap": 0.12
+  },
+  {
+   "text": "तब कृष्ण कूदे, और फनों पर नाचने लगे!",
+   "caps": "Tab *Krishna koode | aur *phanon par | *naachne lage",
+   "speed": 1.15,
+   "gap": 0.2
+  },
+  {
+   "text": "कालिया हार गया... पर कृष्ण ने उसे मारा नहीं.",
+   "caps": "Kaliya *haar gaya | par *Krishna ne | use *maara nahi",
+   "speed": 1.1,
+   "gap": 0.15
+  },
+  {
+   "text": "बोले, मेरे चरणों के निशान, अब तुम्हारे फन पर हैं.",
+   "caps": "Bole, mere *charanon | ke *nishaan | ab *tumhaare | *phan par hain",
+   "speed": 1.08,
+   "gap": 0.12
+  },
+  {
+   "text": "गरुड़ अब, तुम्हें कभी छुएँगे नहीं.",
+   "caps": "*Garud ab | tumhein *kabhi | *chhuenge nahi",
+   "speed": 1.06,
+   "gap": 0.25
+  },
+  {
+   "text": "कहते हैं, आज भी नाग के फन पर, वो निशान दिखते हैं.",
+   "caps": "*Kehte hain | aaj bhi *naag ke | *phan par | vo *nishaan dikhte hain",
+   "speed": 1.08,
+   "gap": 0.22
+  },
+  {
+   "text": "ऐसी ही अनकही कहानियों के लिए,",
+   "caps": "Aisi hi *ankahi kahaniyon ke liye"
+  },
+  {
+   "text": "फ़ॉलो करें, अनटोल्ड स्टोरीज़.",
+   "caps": "Follow karein | *Untold Stories"
+  }
+ ]
+}
