@@ -41,7 +41,9 @@ Quick summary (RULES.md wins if anything here differs):
   No top title banners, no name slips/ribbons/pills while a caption is on screen, no logo badge (`brand_badge` off).
   Put each caption in an EMPTY part of the frame: set `capY` on the shot (default 1400; e.g. 420 when the bottom is busy).
   Keep the existing end card.
-- **Description template, 3-5 hashtags, posting rules:** see RULES.md sections 7-8.
+- **Description template and 3-5 hashtags:** RULES.md section 7.
+- **Posting schedule EXCEPTION (user, 2026-11-25, after reading RULES.md): keep 3 shorts a day at 08:00 / 15:00 /
+  20:00 IST. Ignore RULES.md section 8 ("1 a day at 4:15 PM, never 3") until the 2026-12-25 review decides.**
 
 **a. YouTube trend scan (Zapier YouTube connector) ONLY in the morning run,** and only if `logs/trends.md` has no
 scan from today. Afternoon/evening runs reuse today's scan (pick a different story/concept). Use at most 2 searches with `youtube_find_video`
