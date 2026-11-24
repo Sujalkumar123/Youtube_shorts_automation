@@ -2,7 +2,7 @@
 // window.OP is the API tools/capture.mjs drives: ready, bootError, duration(), draw(t), frame(t, q), cues(), shots().
 import { W, H, setCtx, ctx, clamp, eo, eio } from './core/lib.js';
 import { T, loadTiming } from './core/timing.js';
-import { buildCaptions, drawCaption, captionList } from './core/captions.js';
+import { buildCaptions, drawCaption, captionList, CAP } from './core/captions.js';
 import { buildShots } from './shots.js';
 
 const cv = document.getElementById('cv');
@@ -93,9 +93,10 @@ function draw(t) {
   // film grain (cached noise tiles)
   if (!OP._grain) { OP._grain = [0, 1, 2, 3].map((k) => { const c = document.createElement('canvas'); c.width = 360; c.height = 640; const g = c.getContext('2d'), im = g.createImageData(360, 640); let sd = 1234 + k * 999; for (let i = 0; i < im.data.length; i += 4) { sd = (sd * 16807) % 2147483647; const v = sd % 256; im.data[i] = im.data[i + 1] = im.data[i + 2] = v; im.data[i + 3] = 255; } g.putImageData(im, 0, 0); return c; }); }
   ctx.save(); ctx.globalAlpha = 0.05; ctx.globalCompositeOperation = 'overlay'; ctx.imageSmoothingEnabled = false; ctx.drawImage(OP._grain[Math.floor(t * 10) % 4], 0, 0, W, H); ctx.restore();
-  drawBrand();
+  if (OP.script && OP.script.brand_badge) drawBrand();
   const fade = Math.min(clamp(t / 0.25), clamp((T.dur - t) / 0.35));
   if (fade < 1) { ctx.fillStyle = '#000'; ctx.globalAlpha = 1 - fade; ctx.fillRect(0, 0, W, H); ctx.globalAlpha = 1; }
+  CAP.y = sh.capY ?? 1400;   // per shot: put the caption in an empty part of the frame (shot.capY)
   drawCaption(t);
 }
 

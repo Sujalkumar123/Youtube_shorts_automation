@@ -2,7 +2,7 @@
 
   python tools/quality_gate.py . renders/<slug>-yt.mp4
 
-Checks: 1080x1920 · 30-150 s · audio present and loud enough · voice clearly above the music (>= 9 dB) ·
+Checks: 1080x1920 · 30-150 s · audio present and loud enough · voice clearly above the music (>= 14 dB) ·
 voice really exists (narration not silent, lines timed) · every script line has captions · no black gaps · no frozen
 video · file under 35 MB. Exit code 0 = PASS, 1 = FAIL.
 """
@@ -37,7 +37,7 @@ try:
     if db(mix) < -30: fails.append(f'audio too quiet ({db(mix):.1f} dB)')
     if db(nar) < -40: fails.append('narration is silent: the voice was not generated')
     lv = json.loads((P / 'data/levels.json').read_text()); notes.append(f"voice above music: {lv['gap_db']:.1f} dB")
-    if lv['gap_db'] < 9: fails.append(f"music too loud under the voice (voice only {lv['gap_db']:.1f} dB above, need >= 9)")
+    if lv['gap_db'] < 14: fails.append(f"music too loud under the voice (voice only {lv['gap_db']:.1f} dB above, need >= 14; lower music_db)")
     ref = loadb(P / 'data/mix.wav'); k = min(len(ref), len(mix), 24000 * 20)
     if k > 24000 and abs(np.corrcoef(ref[:k], mix[:k])[0, 1]) < 0.6: fails.append('the video does not contain the current mix (audio mismatch): re-render')
     if len(Lj) != len(S['lines']): fails.append(f"voice timing has {len(Lj)} lines but the script has {len(S['lines'])}")

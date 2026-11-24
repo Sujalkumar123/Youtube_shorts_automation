@@ -227,15 +227,19 @@ if vf.exists():
     rms = np.sqrt(np.mean(voice ** 2) + 1e-12); voice *= db(-19) / rms
     mix += voice
 # music
+try: t0 = json.loads((P / 'data/lines.json').read_text())['lines'][0]['start']
+except Exception: t0 = 0.0
 mus = script.get('music', 'bed')
 if mus and mus != 'none':
     m = music_bed() if mus == 'bed' else music_tension() if mus == 'tension' else music_devotional() if mus == 'devotional' else None
     if m is None:
         a = load_audio(P / mus)[:N]; m = np.zeros(N); m[:len(a)] = a.mean(1); m /= np.abs(m).max() + 1e-9
-    m = reverb(m, 3.0, 0.35) * db(script.get('music_db', -24) if voice is not None else -20)
+    m = reverb(m, 3.0, 0.35) * db(script.get('music_db', -29) if voice is not None else -20)
     if voice is not None:                                                        # duck under the voice
         lev = np.abs(voice.mean(1)); lev = signal.lfilter([1 - 0.9995], [1, -0.9995], lev); lev /= lev.max() + 1e-9
         m *= (1 - 0.55 * np.clip(lev * 3, 0, 1))[:, None]
+    # rule 2026-11-25: NOTHING before the first spoken word; music fades in from the first word
+    i0, fi = int(t0 * SR), int(0.6 * SR); m[:i0] = 0; m[i0:i0 + fi] *= np.linspace(0, 1, len(m[i0:i0 + fi]))[:, None]
     mix += m
 # effects (on their own bus, then reverb for depth)
 fxbus = np.zeros(N)
@@ -244,9 +248,14 @@ for c in cj['cues']:
     if not fn: print('unknown cue type, skipped:', c['type']); continue
     x = fn(**({'d': c['dur']} if c.get('dur') else {}))
     x = lp(x, 5000) * db(LEVEL[c['type']]) * c.get('gain', 1.0) / (np.abs(x).max() + 1e-9) * 0.9
+    if c['t'] < t0: print('cue before the first word, skipped:', c['type'], c['t']); continue
     i = int(c['t'] * SR); n = min(len(x), N - i)
     if n > 0 and i >= 0: fxbus[i:i + n] += x[:n]
-mix += reverb(fxbus, 2.6, 0.4, seed=7)
+fxw = reverb(fxbus, 2.6, 0.4, seed=7) * db(-3)
+if voice is not None:                                                            # effects also duck under the voice
+    lev2 = np.abs(voice.mean(1)); lev2 = signal.lfilter([1 - 0.999], [1, -0.999], lev2); lev2 /= lev2.max() + 1e-9
+    fxw = fxw * ((1 - 0.6 * np.clip(lev2 * 3, 0, 1))[:, None] if fxw.ndim == 2 else (1 - 0.6 * np.clip(lev2 * 3, 0, 1)))
+mix += fxw
 # levels for the quality gate: voice vs everything else, measured on the speech parts
 try:
     _L = json.loads((P / 'data/lines.json').read_text())['lines']; _sp = np.zeros(N, bool)

@@ -16,42 +16,33 @@ is drawn by `engine/src/main.js` (`drawBrand`), on every frame.
 - Read `logs/topics.json` (every topic already made, with its palette and scene types) and `logs/notes.md` (lessons).
 
 ## 1. Pick today's topic from what is trending ON YOUTUBE (do this every run)
-**0. THE MAYA EFFECTS PLAYBOOK (user 2026-11-25: "implement the same thing"). It overrides older rules below where they differ.**
-Studied @maya_effects.official (300k subs, 24.3M views, 41 videos, Hindi mythology): its median short gets ~130k views,
-its best get 2-4M. What it does, and what we now do:
-- **Schedule: KEEP our three slots, 08:00 / 15:00 / 20:00 IST** (user 2026-11-25). Maya posts its main short at
-  ~16:15-16:45 IST; a scheduled review on 2026-12-25 switches us to 16:30 + 20:30 only if views stay low for a month.
-  The 20:00 short gets the strongest topic of the day.
-- **Topics: famous epic characters, told from the scripture, correcting the popular version.** Their hits are all
-  Ramayana / Vishnu-family stories everyone half-knows: Lakshmana's sleep (3.0M), Hanuman at Rama's door (3.7M),
-  Sheshnag & Vasuki (3.9M), Gajendra (1.9M), Rahu-Ketu (2.3M), the bow that burned three cities (588k). Pick a famous
-  character (Rama, Sita, Lakshmana, Hanuman, Ravana, Krishna, Arjuna, Karna, Bhishma, Shiva, Parvati, Vishnu, Garuda)
-  and ONE detail from the text that most people don't know or get wrong. Ramayana first, then Mahabharata, then Puranas.
-  Their numbered series (Shiva-Shakti Ep 1-6) did far worse (20-130k): do NOT make series, every short stands alone.
-- **Title = ONE English sentence that states a paradox or a surprising claim** (no question-word clickbait, no Hindi
-  title, max 1 emoji, ≤ 95 characters, no hashtags in the title). Shape: "<famous character> <did/never did X>. <twist>."
-  Our own wording always, e.g. "Ravana's ten heads were not his own. Shiva gave them back.",
-  "Karna knew he was a Pandava before the war. He fought for Duryodhana anyway."
-- **The hook line (narration line 1) says the same paradox in Hindi**, in the first 2 s, then line 2 promises the
-  answer from the source text ("पर वाल्मीकि रामायण कुछ और कहती है...").
-- **Length 80-150 s, sweet spot ~90-110 s** (28-40 lines). Their 80-110 s shorts are the biggest hits.
-- **Hindi narration + ENGLISH subtitles** (they reach viewers beyond Hindi). This replaces the Hinglish captions:
-  `"caps"` = natural English translation of the line, 2-5 words per chunk, one `*` key word, e.g.
-  `"Lakshmana *never slept | for *fourteen years"`.
-- **Description, their format:** line 1 = one-sentence summary that names the source ("..., as the Valmiki Ramayana
-  tells it."); a blank line; 2 short lines on what most retellings get wrong and what the text says ("In Hindi, with
-  English subtitles."); a blank line; "Script & adaptation based on <text, book, chapter>."; then 2-3 hashtags only:
-  `#shorts #<Character> #<Epic>`. Tags: the character, the epic, "<character> story in Hindi", "<epic> unknown facts".
-- **Credibility is the brand:** every short cites the exact text (book/kanda/parva, chapter). When the popular story
-  differs from the text, say so: "ज़्यादातर कहानियों में... पर शिव पुराण में...".
-- **Their look (from their own store page, janimea.com): painted 2.5D scenes drawn in code with Claude Code (no AI
-  images, no stock footage), parallax layers, slow camera pushes, smoke / dust / firelight, a cinematic score of brass,
-  choir, strings and taiko, mixed at -14 LUFS.** Same method as ours, so match it: every shot gets 3+ parallax layers,
-  a slow push or drift, at least one atmosphere effect (smoke, dust motes, embers, mist, god rays, firelight flicker),
-  and the music bed swells at the reveal.
-- **Keep** our comment ask at the end (it lifted comments on the other channel) and the Sahir voice.
+**0. CHANNEL RULES (user, 2026-11-25): `docs/RULES.md` is the source of truth. Read it IN FULL first; it replaces
+every older rule in this runbook where they conflict (titles, hooks, length, captions, sound, description, topics).**
+Quick summary (RULES.md wins if anything here differs):
+- **Hook = line 1 = the title:** a contradiction / surprising fact about a FAMOUS figure, stated as a fact, 8-16 Hindi
+  words, under 3 s. Never a question ("क्यों/कैसे/किसने", "क्या आप जानते हैं"), never scene-setting, shloka, disclaimer,
+  channel name or music first. Title = that sentence in Hindi, < 70 chars, no "#shorts", no "| English" part.
+  Every 3rd short: English title (same line) as a test; record `"title_lang": "en"|"hi"` in logs/topics.json.
+- **Topics:** famous figure + a fact almost nobody knows. Ramayana first, then Shiva, Krishna, Vishnu's avatars, big
+  Mahabharata names. No episodes. Never repeat Maya Effects' stories or ours (lists in RULES.md section 3).
+  **Week 1 queue (25 Nov-1 Dec), use in this order unless a festival fits better:** Ahalya, Narasimha, Lakshman Rekha,
+  Karna's armour, Shabari, Savitri, Ram Setu/Nala. Then: Bhishma's chosen death day, Abhimanyu and the chakravyuha,
+  Arjuna as Brihannala, Markandeya, Neelkanth, Ganesha writing the Mahabharata, Vamana and Bali, Hanuman burning Lanka.
+- **Length 85-100 s, ~160-170 Hindi words.** Beats: hook → stakes → setup → turn → twist → closing line that flips the
+  hook → "ऐसी ही अनकही कहानियों के लिए फॉलो करें Untold Stories।" (this replaces the comment-ask ending; the comment
+  question goes in the description). Folk/later details marked "कहा जाता है"/"तुलसीदास लिखते हैं", always AFTER the hook.
+- **Sound:** voice starts at 0.0-0.3 s (`"lead": 0.15`); no music/cue before the first word (mix.py now enforces it);
+  music ≥ 15 dB under the voice (default `music_db` -29; the quality gate fails under 14 dB); final encode -14 LUFS.
+- **Visuals:** frame 1 SHOWS the contradiction. ONE signature art style on every short, never rotated:
+  **Pattachitra-inspired cut paper** (Odisha scroll painting): bold black outlines on figures, flat red / ochre / yellow /
+  indigo / green fills, cream "patta" background, a thin decorative floral border on the frame, stylised big almond
+  eyes in profile. Not leather puppets (Maya's look). Keep motion, parallax and atmosphere.
+- **One text layer at a time:** only the Hinglish caption (Roman script, as before: one short phrase, one `*` word).
+  No top title banners, no name slips/ribbons/pills while a caption is on screen, no logo badge (`brand_badge` off).
+  Put each caption in an EMPTY part of the frame: set `capY` on the shot (default 1400; e.g. 420 when the bottom is busy).
+  Keep the existing end card.
+- **Description template, 3-5 hashtags, posting rules:** see RULES.md sections 7-8.
 
-**Zapier budget: every Zapier call costs 2 tasks of the user's monthly plan. Use as few as possible.**
 **a. YouTube trend scan (Zapier YouTube connector) ONLY in the morning run,** and only if `logs/trends.md` has no
 scan from today. Afternoon/evening runs reuse today's scan (pick a different story/concept). Use at most 2 searches with `youtube_find_video`
 (`order: viewCount`, `published_after`: 7 days ago, `region_code: IN`, `relevance_language: hi`, `video_duration: short`,
@@ -100,9 +91,9 @@ Never mock or distort a deity; no violence shown; no caste or political angle.
 - Numbers written as said.
 - **Voice = ElevenLabs "Sahir" (the user's choice from 2026-11-22, for EVERY video).** script.json:
   `"voice": "eleven:Sahir"`, `"eleven_voice": "4LIpEnnggPcuL2KuRQIO"`, `"eleven_model": "eleven_multilingual_v2"`,
-  `"eleven_stability": 0.42`, `"eleven_style": 0.4`, `"eleven_speed": 1.16`, `"breaths": false`, `"lead": 0.3`, `"outro": 1.1`,
+  `"eleven_stability": 0.42`, `"eleven_style": 0.4`, `"eleven_speed": 1.16`, `"breaths": false`, `"lead": 0.15`, `"outro": 1.1`,
   `"gap": 0.2` (line gaps 0.25-0.5 after reveals), per-line `speed` 1.05-1.2 (ElevenLabs range 0.7-1.2; Sahir is slow),
-  `"music": "devotional"`, `"music_db": -25`, `"music_sa": 110`, `"music_lp": 2000`, `"music_sub": 0.9` (the user wants bass),
+  `"music": "devotional"`, `"music_db": -29` (≥ 15 dB under the voice, RULES.md), `"music_sa": 110`, `"music_lp": 2000`, `"music_sub": 0.9` (the user wants bass),
   `"voice_fx": "highpass=f=60,equalizer=f=130:t=q:w=1:g=3,equalizer=f=6500:t=q:w=1.5:g=-1.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9"`.
   Length: ~23 lines of 5-9 Hindi words ≈ 73 s. Re-timing (gaps/pauses) reuses the cached lines in data/eleven (no credits).
 - **Fallback:** if ElevenLabs fails (no key, HTTP error, out of credits, blocked), voice with Kokoro instead

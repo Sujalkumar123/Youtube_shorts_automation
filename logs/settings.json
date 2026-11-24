@@ -38,7 +38,7 @@
   "note": "user: deeper voice, lower & quieter background with more bass (2026-11-20)",
   "narration_style": "emotional storyteller: per-sentence pace, dramatic pauses, light echo (2026-11-20)"
  },
- "captions": "English subtitles (Maya playbook, from 2026-11-25); Hindi narration",
+ "captions": "Hinglish (Roman script), one text layer at a time (docs/RULES.md, 2026-11-25)",
  "preview_alerts": false,
  "zapier_budget": "~9 Zapier calls/day for 3 videos (morning trend scan 3 + 2 per video) + watchdog 3/day = ~12 calls = ~24 tasks/day (~720/month). Free plan = 100 tasks/month (not enough); Pro trial ends 2026-12-05.",
  "prepared_slots": {
@@ -69,5 +69,8 @@
   ],
   "since": "2026-11-20",
   "review": "2026-12-25: if views stay low for a month, switch to 16:30 + 20:30 IST (Maya Effects timing)"
- }
+ },
+ "art_style": "Pattachitra-inspired cut paper (docs/RULES.md: one signature style, never rotated)",
+ "music_db": -29,
+ "brand_badge": false
 }
