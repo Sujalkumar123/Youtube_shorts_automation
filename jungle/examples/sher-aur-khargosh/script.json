@@ -1,0 +1,161 @@
+{
+ "title": "शेर एक खरगोश से कैसे हार गया? 🦁🐰 | The Lion and the Clever Rabbit #shorts",
+ "brand": "Jungle Ki Kahaniyan",
+ "voice": "hm_omega",
+ "speed": 1.05,
+ "breaths": true,
+ "lead": 0.4,
+ "outro": 1.2,
+ "music": "bed",
+ "music_db": -24,
+ "voice_fx": "rubberband=pitch=0.93:formant=preserved,highpass=f=70,equalizer=f=150:t=q:w=1:g=3,equalizer=f=320:t=q:w=1.2:g=-1.5,equalizer=f=2200:t=q:w=1:g=1,equalizer=f=7000:t=q:w=1.5:g=-2.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9",
+ "sources": [
+  "Panchatantra, Book 1 (Mitra-bheda): the lion Bhasuraka and the clever hare who shows him his reflection in a well"
+ ],
+ "lines": [
+  {
+   "text": "जंगल का राजा शेर... एक छोटे से खरगोश से हार गया.",
+   "caps": "Jungle ka raja *sher | ek chhote se *khargosh se haar gaya",
+   "speed": 1.17,
+   "gap": 0.3
+  },
+  {
+   "text": "पर कैसे? सुनिए ये मज़ेदार कहानी.",
+   "caps": "Par *kaise? | Suniye ye *mazedaar kahani",
+   "speed": 1.22,
+   "gap": 0.34
+  },
+  {
+   "text": "एक घने जंगल में, भासुरक नाम का एक शेर रहता था.",
+   "caps": "Ek ghane *jungle mein | Bhasurak naam ka ek *sher rehta tha",
+   "speed": 1.22,
+   "gap": 0.22
+  },
+  {
+   "text": "वो बहुत घमंडी था, और रोज़ कई जानवरों का शिकार करता था.",
+   "caps": "Wo bahut *ghamandi tha | aur roz kai jaanwaron ka *shikaar karta tha",
+   "speed": 1.25,
+   "gap": 0.26
+  },
+  {
+   "text": "डरे हुए जानवरों ने, एक सभा बुलाई.",
+   "caps": "Dare hue jaanwaron ne | ek *sabha bulayi",
+   "speed": 1.22,
+   "gap": 0.22
+  },
+  {
+   "text": "और शेर से कहा, महाराज, रोज़ हम ख़ुद एक जानवर आपके पास भेजेंगे.",
+   "caps": "Aur sher se kaha | *Maharaj | roz hum khud ek jaanwar | aapke paas *bhejenge",
+   "speed": 1.25,
+   "gap": 0.26
+  },
+  {
+   "text": "शेर मान गया. बस खाना वक़्त पर आना चाहिए!",
+   "caps": "Sher *maan gaya | bas khana *waqt par aana chahiye!",
+   "speed": 1.22,
+   "gap": 0.34
+  },
+  {
+   "text": "एक दिन, बारी आई एक छोटे से खरगोश की.",
+   "caps": "Ek din *baari aayi | ek chhote se *khargosh ki",
+   "speed": 1.17,
+   "gap": 0.3
+  },
+  {
+   "text": "खरगोश डरा नहीं... उसने सोचा, और एक तरकीब निकाली.",
+   "caps": "Khargosh *dara nahi | usne socha | aur ek *tarkeeb nikali",
+   "speed": 1.17,
+   "gap": 0.34
+  },
+  {
+   "text": "वो जानबूझकर, बहुत देर से शेर के पास पहुँचा.",
+   "caps": "Wo jaanboojhkar | bahut *der se | sher ke paas pahuncha",
+   "speed": 1.22,
+   "gap": 0.26
+  },
+  {
+   "text": "शेर दहाड़ा, इतनी देर क्यों? और इतना छोटा खाना?",
+   "caps": "Sher *dahaada | itni der kyon? | aur itna *chhota khana?",
+   "speed": 1.25,
+   "gap": 0.3
+  },
+  {
+   "text": "खरगोश बोला, महाराज, रास्ते में एक दूसरा शेर मिला.",
+   "caps": "Khargosh bola | Maharaj | raaste mein ek *doosra sher mila",
+   "speed": 1.2,
+   "gap": 0.26
+  },
+  {
+   "text": "वो कहता है, इस जंगल का असली राजा वो है.",
+   "caps": "Wo kehta hai | is jungle ka *asli raja | wo hai",
+   "speed": 1.2,
+   "gap": 0.3
+  },
+  {
+   "text": "ये सुनते ही, शेर का गुस्सा आसमान पर पहुँच गया.",
+   "caps": "Ye sunte hi | sher ka *gussa | aasmaan par pahunch gaya",
+   "speed": 1.25,
+   "gap": 0.22
+  },
+  {
+   "text": "चलो, दिखाओ मुझे वो शेर!",
+   "caps": "Chalo | *dikhao mujhe | wo sher!",
+   "speed": 1.25,
+   "gap": 0.26
+  },
+  {
+   "text": "खरगोश उसे ले गया, एक गहरे कुएँ के पास.",
+   "caps": "Khargosh use le gaya | ek gehre *kuein ke paas",
+   "speed": 1.22,
+   "gap": 0.26
+  },
+  {
+   "text": "बोला, वो शेर इसी किले के अंदर छिपा है.",
+   "caps": "Bola | wo sher isi *kile ke andar | chhipa hai",
+   "speed": 1.2,
+   "gap": 0.34
+  },
+  {
+   "text": "शेर ने झाँका... पानी में उसे दिखा, एक और गुस्से वाला शेर.",
+   "caps": "Sher ne *jhaanka | paani mein use dikha | ek aur *gusse wala sher",
+   "speed": 1.17,
+   "gap": 0.3
+  },
+  {
+   "text": "वो उसकी अपनी परछाईं थी!",
+   "caps": "Wo uski apni *parchhai thi!",
+   "speed": 1.12,
+   "gap": 0.38
+  },
+  {
+   "text": "शेर ज़ोर से दहाड़ा, और कुएँ में कूद गया.",
+   "caps": "Sher zor se dahaada | aur kuein mein *kood gaya",
+   "speed": 1.25,
+   "gap": 0.22
+  },
+  {
+   "text": "छपाक! और उस दिन से, जंगल में सब आज़ाद थे.",
+   "caps": "*Chhapaak! | aur us din se | jungle mein sab *aazaad the",
+   "speed": 1.22,
+   "gap": 0.41
+  },
+  {
+   "text": "सीख: बुद्धि, ताक़त से बड़ी होती है.",
+   "caps": "Seekh | *buddhi | taakat se badi hoti hai",
+   "speed": 1.12,
+   "gap": 0.45
+  },
+  {
+   "text": "आपको ये कहानी कैसी लगी? कमेंट में बताइए.",
+   "caps": "Aapko ye kahani kaisi lagi? | *Comment mein bataiye",
+   "speed": 1.2,
+   "gap": 0.22
+  },
+  {
+   "text": "और ऐसी ही कहानियों के लिए, फ़ॉलो करें.",
+   "caps": "Aur aisi hi kahaniyon ke liye | *Follow karein",
+   "speed": 1.2,
+   "gap": 0.0
+  }
+ ]
+}

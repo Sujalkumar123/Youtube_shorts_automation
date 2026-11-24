@@ -11,12 +11,12 @@ const OP = (window.OP = { ready: false });
 
 function drawBrand() {
   ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 0.92;
-  ctx.font = '700 34px Martel'; const label = 'Untold Stories', tw = ctx.measureText(label).width, x = 44, y = 74, h = 62, w = tw + 92;
+  ctx.font = '700 34px Martel'; const label = (OP.script && OP.script.brand) || 'Untold Stories', tw = ctx.measureText(label).width, x = 44, y = 74, h = 62, w = tw + 92;
   ctx.shadowColor = 'rgba(0,0,0,0.45)'; ctx.shadowBlur = 14; ctx.shadowOffsetY = 4;
   ctx.fillStyle = 'rgba(14,16,40,0.72)'; ctx.beginPath(); ctx.roundRect(x, y, w, h, 31); ctx.fill(); ctx.shadowBlur = 0; ctx.shadowOffsetY = 0;
   ctx.strokeStyle = 'rgba(242,193,78,0.85)'; ctx.lineWidth = 2.5; ctx.stroke();
   ctx.fillStyle = '#A8322D'; ctx.beginPath(); ctx.arc(x + 32, y + h / 2, 17, 0, Math.PI * 2); ctx.fill();
-  ctx.fillStyle = '#F6D98A'; ctx.font = '700 22px Martel'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('U', x + 32, y + h / 2 + 2);
+  ctx.fillStyle = '#F6D98A'; ctx.font = '700 22px Martel'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(label[0], x + 32, y + h / 2 + 2);
   ctx.font = '700 34px Martel'; ctx.textAlign = 'left'; ctx.fillStyle = '#F6D98A'; ctx.fillText(label, x + 60, y + h / 2 + 3);
   ctx.restore();
 }
