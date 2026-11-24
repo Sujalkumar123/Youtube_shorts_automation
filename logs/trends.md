@@ -1,3 +1,22 @@
+## Scan 2026-11-25 (manual, 2 searches + 1 stats call; views as of 25 Nov)
+**Big trend: Nitesh Tiwari's "Ramayana: Part 1" (Ranbir Kapoor as Rama and Parashurama, Yash as Ravana, Sai Pallavi as Sita,
+Sunny Deol as Hanuman) released 5 Nov 2026 and crossed ₹1,384 cr worldwide in 11 days. Ramayana searches are at a peak:
+Ramayana topics first. Do NOT use the film's name, actors or images and do not tag #yash #ranbirkapoor etc. (misleading).**
+Top Hindi-mythology shorts published 11-24 Nov (views, ~views/day, concept):
+1. Ravana took the WRONG Sita?! Maya Sita (Kissayatri) 387k, ~77k/day: "the version you know is wrong"
+2. Ravana lifted Kailash, Nandi's curse (Mytho Facts, Telugu) 596k, ~66k/day (we did Ravana's name already)
+3. Did Sita know the Ramayana beforehand? (NB Show Telugu) 607k, ~43k/day
+4. Why is Valmiki's Ramayana so brutal? (The Unknown Ones, English) 509k, ~39k/day: "the TV version is the soft one"
+5. Why couldn't Rama's arrows hurt Ravana? Durga's untold story (Stack Bhakti) 398k, ~33k/day
+6. Kumbhakarna asked for sleep himself?! (PAURANIX) 185k, ~31k/day
+7. Karna lost 3 things before facing Arjuna (Katha Anante) 339k, ~24k/day
+8. Krishna fought Yama for his guru (KaliYug) 63k in 3 days, ~21k/day
+9. Arjuna's own wife planned his death (IMPOSSIBLE YESTERDAY) 251k, ~18k/day
+10. Mandodari: the untold story 149k; Lakshmana/Urmila's 14 years 99-103k (Maya's story, do not repeat)
+Pattern: famous Ramayana/Mahabharata figure + "the popular version is wrong / one hidden detail", 1-3 min, English or Hindi titles.
+Festivals ahead (Drik Panchang / panchang sites): Margashirsha begins 25 Nov; Kalabhairav Jayanti 30 Nov-1 Dec; Utpanna
+Ekadashi 4 Dec; Vivah Panchami 14 Dec; Gita Jayanti + Mokshada/Vaikuntha Ekadashi 20 Dec; Dattatreya Jayanti 23 Dec.
+
 # YouTube trend scans (newest first)
 
 ## 2026-11-24 06:50 IST, queries "mahabharat unknown facts shorts" + "krishna leela rahasya shorts", since 11-17, IN/hi, by views

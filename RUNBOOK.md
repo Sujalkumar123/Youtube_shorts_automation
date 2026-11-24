@@ -25,9 +25,25 @@ Quick summary (RULES.md wins if anything here differs):
   Every 3rd short: English title (same line) as a test; record `"title_lang": "en"|"hi"` in logs/topics.json.
 - **Topics:** famous figure + a fact almost nobody knows. Ramayana first, then Shiva, Krishna, Vishnu's avatars, big
   Mahabharata names. No episodes. Never repeat Maya Effects' stories or ours (lists in RULES.md section 3).
-  **Week 1 queue (25 Nov-1 Dec), use in this order unless a festival fits better:** Ahalya, Narasimha, Lakshman Rekha,
-  Karna's armour, Shabari, Savitri, Ram Setu/Nala. Then: Bhishma's chosen death day, Abhimanyu and the chakravyuha,
-  Arjuna as Brihannala, Markandeya, Neelkanth, Ganesha writing the Mahabharata, Vamana and Bali, Hanuman burning Lanka.
+  **TOPIC QUEUE (from the 2026-11-25 trend scan, see logs/trends.md). The Ramayana film (released 5 Nov) has Ramayana
+  searches at a peak: lean Ramayana. Pick the next unused item; festival items go in the 1-3 days before the festival.**
+  Week 1 (25 Nov-1 Dec): Ahalya, Narasimha, Lakshman Rekha, Karna's armour, Shabari, Savitri, Ram Setu/Nala, plus:
+  - Parashurama's challenge after Rama broke Shiva's bow (Valmiki Bala Kanda 74-76). Hook idea: "राम ने शिव का धनुष तोड़ा। अगले ही दिन विष्णु का धनुष लेकर परशुराम सामने खड़े थे।"
+  - Kumbhakarna's slip of the tongue (Valmiki Uttara Kanda 10). "कुम्भकर्ण ने नींद कभी माँगी ही नहीं थी। उसकी ज़ुबान फिसल गई।"
+  - Maya Sita (Kurma Purana / Brahmavaivarta; name the source after the hook). "रावण जिस सीता को लंका ले गया, कुछ पुराण कहते हैं वो असली सीता थीं ही नहीं।" (keep "कुछ पुराण" in line 1: it is not in Valmiki)
+  - FESTIVAL 30 Nov/1 Dec Kalabhairav Jayanti: Bhairava takes Brahma's fifth head (Shiva Purana). "ब्रह्मा जी के पाँच सिर थे। पाँचवाँ सिर शिव के ही एक रूप ने काट दिया।"
+  Week 2-3 (2-15 Dec):
+  - FESTIVAL 4 Dec Utpanna Ekadashi: Ekadashi is a goddess born from Vishnu to slay Mura (Padma Purana). "एकादशी कोई तारीख नहीं, एक देवी हैं, जो विष्णु के शरीर से जन्मीं।"
+  - Krishna brings Sandipani's son back from Yama (Bhagavata 10.45). "कृष्ण ने गुरु-दक्षिणा में यमराज से एक मरा हुआ बच्चा वापस ले लिया।"
+  - Arjuna killed by his own son Babruvahana, revived by Ulupi (Mahabharata, Ashvamedhika Parva). "जिस अर्जुन को भीष्म और कर्ण नहीं मार पाए, उसे उसके अपने बेटे ने मार दिया।"
+  - Sampati burned his wings shielding Jatayu from the Sun (Valmiki Kishkindha 58-61). "जटायु का एक बड़ा भाई था, जिसने उसे बचाने के लिए अपने पंख जला दिए।"
+  - Vibhishana made immortal (chiranjeevi) by Rama; Mandodari's warnings to Ravana (Valmiki Yuddha Kanda); Rama worshipping Durga before the battle (Krittivasi Ramayana, label it: "बंगाल की कृत्तिवासी रामायण कहती है...").
+  - Bhishma's chosen death day, Abhimanyu and the chakravyuha, Arjuna as Brihannala, Markandeya, Neelkanth, Ganesha writing the Mahabharata, Vamana and Bali, Hanuman burning Lanka.
+  - FESTIVAL 14 Dec Vivah Panchami: all four brothers married the same day in Mithila (Valmiki Bala Kanda 73). "राम-सीता की शादी अकेली नहीं थी। उसी दिन, उसी मंडप में, चारों भाइयों की शादी हुई।" (NOT the bow-lifting story: Maya did Pinaka and Sita)
+  Week 4 (16-25 Dec):
+  - FESTIVAL 20 Dec Gita Jayanti: Arjuna was not the only one who heard the Gita (Sanjaya by divine sight, Hanuman on the flag; Bhishma Parva). "कुरुक्षेत्र में गीता सिर्फ़ अर्जुन ने नहीं सुनी थी।"
+  - FESTIVAL 23 Dec Datta Jayanti: Anasuya turns Brahma, Vishnu and Shiva into infants (Markandeya Purana / tradition, label it). "ब्रह्मा, विष्णु और महेश, तीनों एक साध्वी की गोद में बच्चे बन गए।"
+  Trend scan each morning run can add to this list; never copy another creator's script or wording.
 - **Length 85-100 s, ~160-170 Hindi words.** Beats: hook → stakes → setup → turn → twist → closing line that flips the
   hook → "ऐसी ही अनकही कहानियों के लिए फॉलो करें Untold Stories।" (this replaces the comment-ask ending; the comment
   question goes in the description). Folk/later details marked "कहा जाता है"/"तुलसीदास लिखते हैं", always AFTER the hook.
