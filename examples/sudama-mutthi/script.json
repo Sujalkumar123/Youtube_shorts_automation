@@ -1,0 +1,159 @@
+{
+ "voice": "eleven:Sahir",
+ "eleven_voice": "4LIpEnnggPcuL2KuRQIO",
+ "eleven_model": "eleven_multilingual_v2",
+ "eleven_stability": 0.42,
+ "eleven_style": 0.4,
+ "eleven_speed": 1.16,
+ "lead": 0.3,
+ "outro": 0.8,
+ "gap": 0.2,
+ "breaths": false,
+ "music": "devotional",
+ "voice_fx": "highpass=f=60,equalizer=f=130:t=q:w=1:g=3,equalizer=f=6500:t=q:w=1.5:g=-1.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9",
+ "music_db": -25,
+ "music_sa": 110,
+ "music_lp": 2000,
+ "music_sub": 0.9,
+ "title": "रुक्मिणी ने कृष्ण का हाथ क्यों पकड़ा? | Krishna & Sudama #shorts",
+ "sources": [
+  "Bhagavata Purana, Skandha 10, chapters 80-81 (Sudama / the brahmin friend Shridama-Kuchela): his wife begs four handfuls of flattened rice from neighbours; Krishna embraces him, washes his feet, takes the bundle and eats a handful; Rukmini holds his hand at the second; Sudama returns without asking and finds his home transformed",
+  "Sudama Mandir, Porbandar (Sudamapuri), Gujarat"
+ ],
+ "lines": [
+  {
+   "text": "रुक्मिणी ने, कृष्ण का हाथ क्यों पकड़ लिया?",
+   "caps": "*Rukmini ne | Krishna ka *haath | kyon *pakad liya?",
+   "speed": 1.1,
+   "gap": 0.12
+  },
+  {
+   "text": "वो भी, जब वो चावल खा रहे थे?",
+   "caps": "Vo bhi, jab vo | *chaawal | kha *rahe the?",
+   "speed": 1.12,
+   "gap": 0.22
+  },
+  {
+   "text": "एक गरीब ब्राह्मण, सुदामा. कृष्ण का बचपन का दोस्त.",
+   "caps": "Ek *gareeb Brahman | *Sudama | Krishna ka *bachpan | ka *dost",
+   "speed": 1.14,
+   "gap": 0.1
+  },
+  {
+   "text": "घर में, बच्चों के लिए खाना तक नहीं था.",
+   "caps": "Ghar mein | *bachchon ke liye | khaana tak *nahi tha",
+   "speed": 1.1,
+   "gap": 0.12
+  },
+  {
+   "text": "पत्नी बोली, द्वारका जाइए... आपके मित्र राजा हैं.",
+   "caps": "Patni boli | *Dwarka jaiye | aapke *mitra | *raja hain",
+   "speed": 1.12,
+   "gap": 0.1
+  },
+  {
+   "text": "पत्नी ने पड़ोस से, मुट्ठी भर चिवड़ा माँगकर बाँध दिया.",
+   "caps": "Patni ne *pados se | mutthi bhar *chivda | maangkar *baandh diya",
+   "speed": 1.15,
+   "gap": 0.08
+  },
+  {
+   "text": "फटे कपड़े में, एक छोटी सी पोटली.",
+   "caps": "*Phate kapde mein | ek chhoti si *potli",
+   "speed": 1.08,
+   "gap": 0.17
+  },
+  {
+   "text": "पर असली मोड़, अभी बाक़ी था...",
+   "caps": "Par asli *mod | abhi *baaki tha",
+   "speed": 1.08,
+   "gap": 0.22
+  },
+  {
+   "text": "द्वारका का महल... और दरवाज़े पर, एक फटेहाल ब्राह्मण.",
+   "caps": "*Dwarka ka mahal | aur *darwaaze par | ek *phatehaal Brahman",
+   "speed": 1.14,
+   "gap": 0.1
+  },
+  {
+   "text": "कृष्ण ने देखा, और दौड़कर गले लगा लिया!",
+   "caps": "Krishna ne *dekha | aur *daudkar | gale *laga liya",
+   "speed": 1.12,
+   "gap": 0.17
+  },
+  {
+   "text": "अपने हाथों से, सुदामा के पैर धोए.",
+   "caps": "Apne *haathon se | Sudama ke *pair dhoye",
+   "speed": 1.06,
+   "gap": 0.17
+  },
+  {
+   "text": "पर सुदामा, पोटली छिपाए बैठे रहे.",
+   "caps": "Par *Sudama | *potli chhupaaye | baithe *rahe",
+   "speed": 1.1,
+   "gap": 0.08
+  },
+  {
+   "text": "एक राजा को, चिवड़ा कैसे दें?",
+   "caps": "Ek *raja ko | chivda *kaise dein?",
+   "speed": 1.08,
+   "gap": 0.17
+  },
+  {
+   "text": "कृष्ण मुस्कुराए... और पोटली छीन ली!",
+   "caps": "Krishna *muskuraaye | aur potli *chheen li",
+   "speed": 1.08,
+   "gap": 0.2
+  },
+  {
+   "text": "एक मुट्ठी खाई... दूसरी उठाई ही थी, कि...",
+   "caps": "Ek *mutthi khaai | *doosri uthaai | hi thi, *ki",
+   "speed": 1.06,
+   "gap": 0.12
+  },
+  {
+   "text": "रुक्मिणी ने हाथ थाम लिया.",
+   "caps": "*Rukmini ne | haath *thaam liya",
+   "speed": 1.02,
+   "gap": 0.25
+  },
+  {
+   "text": "बोलीं, एक मुट्ठी ने ही, सब कुछ दे दिया है.",
+   "caps": "*Bolin, ek mutthi ne hi | *sab kuchh | de *diya hai",
+   "speed": 1.08,
+   "gap": 0.17
+  },
+  {
+   "text": "सुदामा कुछ माँगे बिना, लौट आए.",
+   "caps": "Sudama kuchh *maange bina | *laut aaye",
+   "speed": 1.1,
+   "gap": 0.12
+  },
+  {
+   "text": "और देखा... झोपड़ी की जगह, सोने का महल!",
+   "caps": "Aur *dekha | *jhopdi ki jagah | *sone ka mahal",
+   "speed": 1.06,
+   "gap": 0.22
+  },
+  {
+   "text": "आज भी, सच्ची दोस्ती का नाम है... कृष्ण-सुदामा.",
+   "caps": "Aaj bhi | *sachchi dosti ka naam hai | *Krishna-Sudama",
+   "speed": 1.06,
+   "gap": 0.17
+  },
+  {
+   "text": "कहते हैं, एक और मुट्ठी में, कृष्ण अपना सब कुछ दे देते.",
+   "caps": "Kehte hain | ek aur *mutthi mein | Krishna apna *sab kuchh | de *dete",
+   "speed": 1.06,
+   "gap": 0.22
+  },
+  {
+   "text": "ऐसी ही अनकही कहानियों के लिए,",
+   "caps": "Aisi hi *ankahi kahaniyon ke liye"
+  },
+  {
+   "text": "फ़ॉलो करें, अनटोल्ड स्टोरीज़.",
+   "caps": "Follow karein | *Untold Stories"
+  }
+ ]
+}

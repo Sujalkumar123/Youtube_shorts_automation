@@ -641,5 +641,68 @@
    "setup.sh Kokoro model download failed (fallback voice unavailable; Sahir worked)",
    "first voice pass 75.1 s: gaps -0.08 + outro 0.7 from cache = 73.3 s"
   ]
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "afternoon",
+  "slug": "sudama-mutthi",
+  "topic": "Why Rukmini held Krishna's hand (Krishna & Sudama, the handful of flattened rice)",
+  "story": "Poor brahmin Sudama, Krishna's childhood friend; wife begs chivda from neighbours; Krishna embraces him, washes his feet, snatches the bundle, eats one handful; Rukmini holds his hand at the second; Sudama returns without asking and finds a golden palace (Bhagavata Purana 10.80-81)",
+  "palette": [
+   "Dwarka night gold",
+   "rice-light violet",
+   "village dawn rose",
+   "hut lamp amber",
+   "wife's dusk",
+   "neighbour lane grey-blue",
+   "potli amber",
+   "road sunset",
+   "Dwarka sea gold",
+   "embrace white-gold",
+   "palace turquoise",
+   "hidden-potli crimson",
+   "doubt slate",
+   "Krishna blue blaze",
+   "eating gold",
+   "grip crimson-gold",
+   "cosmic worlds",
+   "golden-palace reveal",
+   "friendship sunset"
+  ],
+  "scene_types": [
+   "hands close-up grip",
+   "rice swirl",
+   "village hut",
+   "palace scale shot",
+   "embrace run-in",
+   "feet washing close-up",
+   "scales symbol",
+   "hut-to-palace transform",
+   "cosmic worlds bloom"
+  ],
+  "new_kit": [
+   "grains",
+   "potli",
+   "jhopdi",
+   "mahal",
+   "handGrip",
+   "world (examples/sudama-mutthi/shots.js)"
+  ],
+  "title": "रुक्मिणी ने कृष्ण का हाथ क्यों पकड़ा? | Krishna & Sudama #shorts",
+  "hashtags": [
+   "#IndianMythology",
+   "#HinduMythology",
+   "#KrishnaSudama",
+   "#ShriKrishna",
+   "#Rukmini",
+   "#KrishnaLeela",
+   "#Dosti",
+   "#shorts"
+  ],
+  "youtube_id": "MDydvRkZkBw",
+  "status": "uploaded private ~14:05 IST with publishAt 2026-11-24 15:00 IST (scheduled by YouTube)",
+  "problems": [
+   "setup.sh Kokoro download failed again (Sahir worked, no fallback needed)"
+  ]
  }
 ]
