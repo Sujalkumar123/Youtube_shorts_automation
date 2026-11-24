@@ -1,5 +1,20 @@
 # YouTube trend scans (newest first)
 
+## 2026-11-24 06:50 IST, queries "mahabharat unknown facts shorts" + "krishna leela rahasya shorts", since 11-17, IN/hi, by views
+| views | views/day | title | concept |
+|---|---|---|---|
+| 788,688 | ~158k | श्री कृष्ण और सुदामा के मिलन की अद्भुत कहानी | Krishna friendship emotion |
+| 46,065 | ~46k | మహాభారత యుద్ధంలో మొదట మరణించింది ఎవరో తెలుసా? | "who first ...?" Mahabharat war fact |
+| 43,844 | ~9k | वस्त्र हरण लीला का सही अर्थ क्या है? | hidden meaning of a leela |
+| 41,137 | ~24k | श्री कृष्ण और कालिया नाग का रहस्य | Krishna rahasya |
+| 30,312 | ~30k | अश्वत्थामा के अनसुने तथ्य | chiranjeevi mystery |
+| 28,498 | ~5k | राधा रानी ने प्रेम का कौन सा रहस्य बताया | Radha-Krishna rahasya |
+| 28,328 | ~10k (4.5k likes) | Khatu Dham Mein Aaj Bhi Zinda Hai Baba Shyam Ka Sheesh | Barbarik / Khatu Shyam (very high engagement) |
+| 27,633 | ~5k | कान्हा की माखन चोरी का मजेदार रहस्य | bal leela |
+| 21,947 | ~11k | दानवीर कर्ण से जुड़े 15 रोचक तथ्य | Karna facts |
+| 21,561 | ~21k | अर्जुन को इंद्रपुत्र क्यों कहा जाता है? | "X को Y क्यों कहा जाता है?" name mystery |
+Pattern: Mahabharat "क्यों कहा जाता है / रहस्य" name-origin questions, Krishna rahasya, Khatu Shyam/Barbarik with strong engagement (Dev Uthani = Khatu Shyam janmotsav last week). Weaker week overall than 11-23. Picked: Barbarik -> why Khatu Shyam is "Haare ka Sahara".
+
 ## 2026-11-23 06:50 IST, queries "पौराणिक कथा shorts" + "mahadev story shorts", since 11-16, IN/hi, by views
 | views | views/day | title | concept |
 |---|---|---|---|

@@ -1,0 +1,159 @@
+{
+ "voice": "eleven:Sahir",
+ "eleven_voice": "4LIpEnnggPcuL2KuRQIO",
+ "eleven_model": "eleven_multilingual_v2",
+ "eleven_stability": 0.42,
+ "eleven_style": 0.4,
+ "eleven_speed": 1.16,
+ "lead": 0.3,
+ "outro": 0.7,
+ "gap": 0.2,
+ "breaths": false,
+ "music": "devotional",
+ "voice_fx": "highpass=f=60,equalizer=f=130:t=q:w=1:g=3,equalizer=f=6500:t=q:w=1.5:g=-1.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9",
+ "music_db": -25,
+ "music_sa": 110,
+ "music_lp": 2000,
+ "music_sub": 0.9,
+ "title": "खाटू श्याम को 'हारे का सहारा' क्यों कहते हैं? | The Story of Barbarik #shorts",
+ "sources": [
+  "Skanda Purana, Maheshvara Khanda, Kaumarika Khanda: Barbarika, son of Ghatotkacha (grandson of Bhima), gains siddhis by worshipping the Goddesses; Krishna takes his head before the war and it watches the battle from a hilltop",
+  "Khatu Shyam tradition of Rajasthan: the three infallible arrows, the peepal-leaf test, the vow to fight for the losing side, the sheesh daan, and Krishna's boon that he will be worshipped as Shyam in Kali Yuga; the head enshrined at Khatu (Sikar)"
+ ],
+ "lines": [
+  {
+   "text": "महाभारत का युद्ध, एक ही पल में ख़त्म हो सकता था.",
+   "caps": "Mahabharat ka *yuddh | ek hi *pal mein | *khatm ho sakta tha",
+   "speed": 1.12,
+   "gap": 0.08
+  },
+  {
+   "text": "बस तीन बाणों से. पर किसके?",
+   "caps": "Bas *teen baanon se | par *kiske?",
+   "speed": 1.1,
+   "gap": 0.22
+  },
+  {
+   "text": "भीम का पोता, घटोत्कच का बेटा, बर्बरीक.",
+   "caps": "*Bheem ka pota | *Ghatotkach ka beta | *Barbareek",
+   "speed": 1.12,
+   "gap": 0.12
+  },
+  {
+   "text": "देवी की तपस्या से, उसे तीन अमोघ बाण मिले.",
+   "caps": "*Devi ki tapasya se | use teen *amogh | baan *mile",
+   "speed": 1.14,
+   "gap": 0.08
+  },
+  {
+   "text": "एक बाण, पूरी सेना को निशाना बना सकता था.",
+   "caps": "Ek *baan | poori *sena ko | *nishaana bana sakta tha",
+   "speed": 1.14,
+   "gap": 0.12
+  },
+  {
+   "text": "उसने माँ से एक वचन दिया था...",
+   "caps": "Usne *maa se | ek *vachan diya tha",
+   "speed": 1.1,
+   "gap": 0.08
+  },
+  {
+   "text": "मैं हमेशा, हारने वाले की तरफ़ से लड़ूँगा.",
+   "caps": "Main *hamesha | *haarne waale ki | taraf se *ladoonga",
+   "speed": 1.1,
+   "gap": 0.17
+  },
+  {
+   "text": "पर असली मोड़, अभी बाक़ी था...",
+   "caps": "Par asli *mod | abhi *baaki tha",
+   "speed": 1.08,
+   "gap": 0.22
+  },
+  {
+   "text": "रास्ते में, एक ब्राह्मण ने उसे रोका.",
+   "caps": "*Raaste mein | ek *Brahman ne | use *roka",
+   "speed": 1.12,
+   "gap": 0.08
+  },
+  {
+   "text": "बोले, एक बाण से, इस पीपल के सारे पत्ते भेदो.",
+   "caps": "*Bole, ek baan se | is *peepal ke | saare patte *bhedo",
+   "speed": 1.14,
+   "gap": 0.12
+  },
+  {
+   "text": "ब्राह्मण ने चुपके से, एक पत्ता पैर के नीचे छिपा लिया.",
+   "caps": "Brahman ne *chupke se | ek *patta | *pair ke neeche | *chhupa liya",
+   "speed": 1.16,
+   "gap": 0.12
+  },
+  {
+   "text": "बाण चला... हर पत्ता छिदा...",
+   "caps": "*Baan chala | har *patta chhida",
+   "speed": 1.08,
+   "gap": 0.08
+  },
+  {
+   "text": "और फिर, ब्राह्मण के पैर पर आकर रुक गया!",
+   "caps": "Aur *phir | Brahman ke *pair par | *aakar ruk gaya",
+   "speed": 1.1,
+   "gap": 0.27
+  },
+  {
+   "text": "वो ब्राह्मण, स्वयं श्रीकृष्ण थे.",
+   "caps": "Vo *Brahman | swayam *Shrikrishna the",
+   "speed": 1.05,
+   "gap": 0.22
+  },
+  {
+   "text": "जो पक्ष हारता, बर्बरीक उधर चला जाता.",
+   "caps": "Jo *paksh haarta | Barbareek *udhar chala jaata",
+   "speed": 1.12,
+   "gap": 0.08
+  },
+  {
+   "text": "ऐसे में, अंत में बस वही बचता.",
+   "caps": "*Aise mein | ant mein bas *vahi bachta",
+   "speed": 1.1,
+   "gap": 0.17
+  },
+  {
+   "text": "तब कृष्ण ने, दान में उसका शीश माँगा.",
+   "caps": "Tab *Krishna ne | *daan mein | uska *sheesh maanga",
+   "speed": 1.08,
+   "gap": 0.22
+  },
+  {
+   "text": "और बर्बरीक ने, मुस्कुराकर, शीश दान कर दिया.",
+   "caps": "Aur *Barbareek ne | *muskurakar | sheesh *daan kar diya",
+   "speed": 1.05,
+   "gap": 0.27
+  },
+  {
+   "text": "कृष्ण बोले, कलियुग में तुम, मेरे नाम से पूजे जाओगे.",
+   "caps": "Krishna *bole | *Kaliyug mein tum | mere *naam se | *pooje jaaoge",
+   "speed": 1.1,
+   "gap": 0.12
+  },
+  {
+   "text": "आज खाटू में, वही शीश, श्याम बाबा बनकर पूजा जाता है.",
+   "caps": "Aaj *Khatu mein | vahi *sheesh | *Shyam Baba bankar | *pooja jaata hai",
+   "speed": 1.12,
+   "gap": 0.17
+  },
+  {
+   "text": "जो हारे का साथ दे, वही, हारे का सहारा.",
+   "caps": "Jo *haare ka saath de | *vahi | haare ka *sahaara",
+   "speed": 1.04,
+   "gap": 0.22
+  },
+  {
+   "text": "ऐसी ही अनकही कहानियों के लिए,",
+   "caps": "Aisi hi *ankahi kahaniyon ke liye"
+  },
+  {
+   "text": "फ़ॉलो करें, अनटोल्ड स्टोरीज़.",
+   "caps": "Follow karein | *Untold Stories"
+  }
+ ]
+}

@@ -569,5 +569,77 @@
   ],
   "youtube": "0y5I88DFP-A (private, publishAt 2026-11-23 20:00 IST)",
   "problems": null
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "morning",
+  "slug": "barbarik-sheesh",
+  "topic": "Why Khatu Shyam is called 'Haare ka Sahara' (Barbarik)",
+  "story": "Barbarik, Bhima's grandson and Ghatotkacha's son, gets three infallible arrows from the Devi, vows to his mother to fight for the losing side; Krishna as a brahmin tests him with the peepal leaves (one hidden under his foot, the arrow stops there); realises he would keep switching sides until only he remained; asks for his head as daan; Barbarik gives it smiling; Krishna's boon: worshipped as Shyam in Kali Yuga; Khatu Shyam today",
+  "palette": [
+   "Kurukshetra ember dusk",
+   "arrow violet",
+   "forest dusk",
+   "Devi gold",
+   "war slate",
+   "lamp amber",
+   "scale crimson",
+   "night indigo",
+   "rose dawn road",
+   "peepal green-gold",
+   "Krishna blue-gold blaze",
+   "blood sun",
+   "sheesh-daan white-gold",
+   "Kaliyug cosmic",
+   "Khatu saffron night"
+  ],
+  "scene_types": [
+   "hero on ridge above two armies",
+   "orbiting arrows",
+   "ancestor silhouettes",
+   "Devi boon",
+   "arrow marking an army",
+   "mother and son over diya",
+   "golden scales",
+   "lone path",
+   "brahmin on road",
+   "peepal tree",
+   "close-up brahmin",
+   "arrow through leaves",
+   "brahmin to Krishna reveal",
+   "spark between armies",
+   "lone figure under red sun",
+   "symbolic sheesh daan (dissolve into light)",
+   "head on hilltop + name",
+   "Khatu temple with nishan flags"
+  ],
+  "new_kit": [
+   "baan",
+   "dhanush",
+   "barbarik",
+   "peepal + leaf (pierce/hide)",
+   "sheesh (Shyam head, open eyes, garland)",
+   "army",
+   "scales",
+   "temple (shikhara)",
+   "nishan"
+  ],
+  "title": "खाटू श्याम को 'हारे का सहारा' क्यों कहते हैं? | The Story of Barbarik #shorts",
+  "hashtags": [
+   "#IndianMythology",
+   "#HinduMythology",
+   "#KhatuShyam",
+   "#Barbarik",
+   "#Mahabharat",
+   "#ShriKrishna",
+   "#HaareKaSahara",
+   "#shorts"
+  ],
+  "youtube": "rL-Vbjx9aQk (private, publishAt 2026-11-24 08:00 IST)",
+  "status": "uploaded private ~07:11 IST with publishAt (scheduled by YouTube)",
+  "problems": [
+   "setup.sh Kokoro model download failed (fallback voice unavailable; Sahir worked)",
+   "first voice pass 75.1 s: gaps -0.08 + outro 0.7 from cache = 73.3 s"
+  ]
  }
 ]
