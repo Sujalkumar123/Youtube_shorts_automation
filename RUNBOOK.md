@@ -43,6 +43,11 @@ its best get 2-4M. What it does, and what we now do:
   `#shorts #<Character> #<Epic>`. Tags: the character, the epic, "<character> story in Hindi", "<epic> unknown facts".
 - **Credibility is the brand:** every short cites the exact text (book/kanda/parva, chapter). When the popular story
   differs from the text, say so: "ज़्यादातर कहानियों में... पर शिव पुराण में...".
+- **Their look (from their own store page, janimea.com): painted 2.5D scenes drawn in code with Claude Code (no AI
+  images, no stock footage), parallax layers, slow camera pushes, smoke / dust / firelight, a cinematic score of brass,
+  choir, strings and taiko, mixed at -14 LUFS.** Same method as ours, so match it: every shot gets 3+ parallax layers,
+  a slow push or drift, at least one atmosphere effect (smoke, dust motes, embers, mist, god rays, firelight flicker),
+  and the music bed swells at the reveal.
 - **Keep** our comment ask at the end (it lifted comments on the other channel) and the Sahir voice.
 
 **Zapier budget: every Zapier call costs 2 tasks of the user's monthly plan. Use as few as possible.**
@@ -176,7 +181,8 @@ node tools/capture.mjs sheet review/all.jpg 0.5 10      # READ the whole sheet, 
 QA every frame: makes sense, matches the narration, no collisions with the caption strip (y 1570-1710) or the
 watermark (top-left 44-480 × 74-136), one red word, readable Hindi, arms not crossing faces. Fix and re-check.
 Then `node tools/capture.mjs video renders/<slug>.mp4` and a share copy under 35 MB:
-`ffmpeg -i renders/<slug>.mp4 -vf hqdn3d=2:2:4:4 -c:v libx264 -crf 23 -preset slow -pix_fmt yuv420p -c:a aac -b:a 160k -movflags +faststart renders/<slug>-yt.mp4`
+`ffmpeg -i renders/<slug>.mp4 -vf hqdn3d=2:2:4:4 -af loudnorm=I=-14:TP=-1.5:LRA=11 -c:v libx264 -crf 23 -preset slow -pix_fmt yuv420p -c:a aac -b:a 160k -ar 48000 -movflags +faststart renders/<slug>-yt.mp4`
+(loudness -14 LUFS, the Shorts/Reels standard Maya Effects mixes to: our shorts were quieter than the feed around them)
 Cover: the strongest frame (`capture.mjs frames`).
 
 **Quality gate (mandatory, nothing is uploaded without PASS):**
