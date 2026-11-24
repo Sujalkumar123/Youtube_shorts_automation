@@ -83,7 +83,7 @@ Never mock or distort a deity; no violence shown; no caste or political angle.
   "जय श्री कृष्ण" (Jai Shri Krishna), Vishnu → "जय श्री हरि" (Jai Shri Hari), Devi → "जय माता दी" (Jai Mata Di),
   Ganesh → "गणपति बप्पा मोरया" (Ganpati Bappa Morya), Surya → "जय सूर्य देव". The end card shows the chant big in
   Devanagari with 🚩/🔱 and a "👇 Comment" slip.
-- (OLD, replaced 2026-11-25 by English subtitles, see the Maya playbook) Captions were in **Hinglish (Roman script)**: e.g. `"caps": "Aasmaan mein *teen shahar"`,
+- Captions are in **Hinglish (Roman script)** (docs/RULES.md, 2026-11-25), the only text layer on screen: e.g. `"caps": "Aasmaan mein *teen shahar"`,
   `"Ek *sone ka | ek *chaandi ka | aur ek *lohe ka"`, last line `"Follow karein | *Untold Stories"`.
   Simple everyday spelling (mein, hai, aur, ka/ki/ke, nahi, Mahadev, Brahma ji, Vishnu, Shiv). 2-4 words, exactly one
   `*`red word. Keep each caption chunk to the same words, in the same order, as the Hindi it shows, so the timing
