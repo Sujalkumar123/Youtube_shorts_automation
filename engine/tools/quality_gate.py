@@ -2,7 +2,7 @@
 
   python tools/quality_gate.py . renders/<slug>-yt.mp4
 
-Checks: 1080x1920 · 30-120 s · audio present and loud enough · voice clearly above the music (>= 9 dB) ·
+Checks: 1080x1920 · 30-150 s · audio present and loud enough · voice clearly above the music (>= 9 dB) ·
 voice really exists (narration not silent, lines timed) · every script line has captions · no black gaps · no frozen
 video · file under 35 MB. Exit code 0 = PASS, 1 = FAIL.
 """
@@ -20,7 +20,7 @@ v = [s for s in streams if s.get('codec_type') == 'video']; a = [s for s in stre
 dur = float(fmt.get('duration', 0)); size = int(fmt.get('size', 0))
 if not v or (v[0].get('width'), v[0].get('height')) != (1080, 1920): fails.append(f"video is not 1080x1920 ({v[0].get('width') if v else '-'}x{v[0].get('height') if v else '-'})")
 if not a: fails.append('no audio track')
-if not 30 <= dur <= 120: fails.append(f'length {dur:.1f} s is outside 30-120 s')
+if not 30 <= dur <= 150: fails.append(f'length {dur:.1f} s is outside 30-150 s')
 if size > 35 * 1024 * 1024: fails.append(f'file is {size / 1048576:.1f} MB (> 35 MB)')
 
 # 2. audio level + voice clarity

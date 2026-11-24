@@ -38,7 +38,7 @@
   "note": "user: deeper voice, lower & quieter background with more bass (2026-11-20)",
   "narration_style": "emotional storyteller: per-sentence pace, dramatic pauses, light echo (2026-11-20)"
  },
- "captions": "Hinglish (Roman script), from 2026-11-21",
+ "captions": "English subtitles (Maya playbook, from 2026-11-25); Hindi narration",
  "preview_alerts": false,
  "zapier_budget": "~9 Zapier calls/day for 3 videos (morning trend scan 3 + 2 per video) + watchdog 3/day = ~12 calls = ~24 tasks/day (~720/month). Free plan = 100 tasks/month (not enough); Pro trial ends 2026-12-05.",
  "prepared_slots": {
@@ -55,5 +55,17 @@
   "id": "4LIpEnnggPcuL2KuRQIO",
   "plan": "starter 40k credits/month, ~1000 per short"
  },
- "kokoro_voice_fx": null
+ "kokoro_voice_fx": null,
+ "schedule": {
+  "slots_ist": [
+   "16:30",
+   "20:30"
+  ],
+  "run_starts": [
+   "15:15",
+   "19:15"
+  ],
+  "since": "2026-11-25",
+  "why": "Maya Effects posts its main short daily ~16:15-16:45 IST"
+ }
 }

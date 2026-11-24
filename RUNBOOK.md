@@ -16,6 +16,35 @@ is drawn by `engine/src/main.js` (`drawBrand`), on every frame.
 - Read `logs/topics.json` (every topic already made, with its palette and scene types) and `logs/notes.md` (lessons).
 
 ## 1. Pick today's topic from what is trending ON YOUTUBE (do this every run)
+**0. THE MAYA EFFECTS PLAYBOOK (user 2026-11-25: "implement the same thing"). It overrides older rules below where they differ.**
+Studied @maya_effects.official (300k subs, 24.3M views, 41 videos, Hindi mythology): its median short gets ~130k views,
+its best get 2-4M. What it does, and what we now do:
+- **Schedule: TWO shorts a day, 16:30 and 20:30 IST** (they post the main one daily at ~16:15-16:45 IST, sometimes a
+  second at 19:30-20:30). The 16:30 short gets the strongest topic of the day.
+- **Topics: famous epic characters, told from the scripture, correcting the popular version.** Their hits are all
+  Ramayana / Vishnu-family stories everyone half-knows: Lakshmana's sleep (3.0M), Hanuman at Rama's door (3.7M),
+  Sheshnag & Vasuki (3.9M), Gajendra (1.9M), Rahu-Ketu (2.3M), the bow that burned three cities (588k). Pick a famous
+  character (Rama, Sita, Lakshmana, Hanuman, Ravana, Krishna, Arjuna, Karna, Bhishma, Shiva, Parvati, Vishnu, Garuda)
+  and ONE detail from the text that most people don't know or get wrong. Ramayana first, then Mahabharata, then Puranas.
+  Their numbered series (Shiva-Shakti Ep 1-6) did far worse (20-130k): do NOT make series, every short stands alone.
+- **Title = ONE English sentence that states a paradox or a surprising claim** (no question-word clickbait, no Hindi
+  title, max 1 emoji, ≤ 95 characters, no hashtags in the title). Shape: "<famous character> <did/never did X>. <twist>."
+  Our own wording always, e.g. "Ravana's ten heads were not his own. Shiva gave them back.",
+  "Karna knew he was a Pandava before the war. He fought for Duryodhana anyway."
+- **The hook line (narration line 1) says the same paradox in Hindi**, in the first 2 s, then line 2 promises the
+  answer from the source text ("पर वाल्मीकि रामायण कुछ और कहती है...").
+- **Length 80-150 s, sweet spot ~90-110 s** (28-40 lines). Their 80-110 s shorts are the biggest hits.
+- **Hindi narration + ENGLISH subtitles** (they reach viewers beyond Hindi). This replaces the Hinglish captions:
+  `"caps"` = natural English translation of the line, 2-5 words per chunk, one `*` key word, e.g.
+  `"Lakshmana *never slept | for *fourteen years"`.
+- **Description, their format:** line 1 = one-sentence summary that names the source ("..., as the Valmiki Ramayana
+  tells it."); a blank line; 2 short lines on what most retellings get wrong and what the text says ("In Hindi, with
+  English subtitles."); a blank line; "Script & adaptation based on <text, book, chapter>."; then 2-3 hashtags only:
+  `#shorts #<Character> #<Epic>`. Tags: the character, the epic, "<character> story in Hindi", "<epic> unknown facts".
+- **Credibility is the brand:** every short cites the exact text (book/kanda/parva, chapter). When the popular story
+  differs from the text, say so: "ज़्यादातर कहानियों में... पर शिव पुराण में...".
+- **Keep** our comment ask at the end (it lifted comments on the other channel) and the Sahir voice.
+
 **Zapier budget: every Zapier call costs 2 tasks of the user's monthly plan. Use as few as possible.**
 **a. YouTube trend scan (Zapier YouTube connector) ONLY in the morning run,** and only if `logs/trends.md` has no
 scan from today. Afternoon/evening runs reuse today's scan (pick a different story/concept). Use at most 2 searches with `youtube_find_video`
@@ -48,8 +77,7 @@ Never mock or distort a deity; no violence shown; no caste or political angle.
 
 ## 2. Script (`script.json`, copy the shape of `examples/ganga/script.json`)
 - Hindi, conversational, like telling a friend. Hook question → escalation → surprise → twist → loop-back last line.
-- Length: morning and afternoon 20-26 lines (60-75 s). **Evening (8 PM) = longer test: 28-36 lines, 90-115 s**
-  (top devotional Shorts run 1:45-2:30), with an extra open loop in the middle so people stay. Max 120 s.
+- Length (Maya playbook): 28-40 lines, 80-150 s, aim ~90-110 s, with open loops at ~1/3 and ~2/3 so people stay. Max 150 s.
 - One line = one CUT (1.5-3.5 s). One line = one CUT (1.5-3.5 s). Sentences end in "." "?" (not "।").
 - **Last 2 lines always = comment ask + follow** (comments are what pushed the competitor's videos; devotees love to write the chant):
   "अगर आप भी <deity> के भक्त हैं, तो कमेंट में लिखिए... <CHANT>." / "और ऐसी कहानियों के लिए, फ़ॉलो करें अनटोल्ड स्टोरीज़."
@@ -58,7 +86,7 @@ Never mock or distort a deity; no violence shown; no caste or political angle.
   "जय श्री कृष्ण" (Jai Shri Krishna), Vishnu → "जय श्री हरि" (Jai Shri Hari), Devi → "जय माता दी" (Jai Mata Di),
   Ganesh → "गणपति बप्पा मोरया" (Ganpati Bappa Morya), Surya → "जय सूर्य देव". The end card shows the chant big in
   Devanagari with 🚩/🔱 and a "👇 Comment" slip.
-- Captions are in **Hinglish (Roman script)**, the user's choice: e.g. `"caps": "Aasmaan mein *teen shahar"`,
+- (OLD, replaced 2026-11-25 by English subtitles, see the Maya playbook) Captions were in **Hinglish (Roman script)**: e.g. `"caps": "Aasmaan mein *teen shahar"`,
   `"Ek *sone ka | ek *chaandi ka | aur ek *lohe ka"`, last line `"Follow karein | *Untold Stories"`.
   Simple everyday spelling (mein, hai, aur, ka/ki/ke, nahi, Mahadev, Brahma ji, Vishnu, Shiv). 2-4 words, exactly one
   `*`red word. Keep each caption chunk to the same words, in the same order, as the Hindi it shows, so the timing
@@ -160,7 +188,7 @@ fix, do NOT upload: send the Telegram problem alert (section 6b) with the reason
 
 ## 5. Metadata
 - Title: Hindi hook + short English, under 70 chars, e.g. `गंगा धरती पर कैसे आईं? | The Untold Story of Bhagirath`.
-- Description: line 1 = the hook question with emoji; 2-3 Hindi lines of the story (bhakti tone, no spoilers of the twist);
+- (OLD, replaced by the Maya playbook description format) Description: line 1 = the hook question with emoji; 2-3 Hindi lines of the story (bhakti tone, no spoilers of the twist);
   then "क्या आप ये कथा पहले जानते थे? कमेंट में लिखिए <CHANT> 👇" and "<CHANT> 🙏🚩"; then 1 English line;
   then "Sources:" (the texts) lower down; then 8-12 hashtags: 3-4 devotional ones devotees follow (#jaishreeram
   #hanumanji #bajrangbali / #harharmahadev #mahadev #mahakal / #jaishreekrishna #radhekrishna / #jaimatadi), 3-4
@@ -173,7 +201,7 @@ If `~/.untold/secrets.json` (or YT_* env vars) exists AND `logs/settings.json` h
 Setup and the free YouTube audit: docs/youtube-api-setup.md.
 
 ## 6. Publish: private preview ~30 min before, public at the slot (no approval needed)
-Slots (IST): 08:00, 15:00, 20:00 (`logs/settings.json`). The run starts 75 min early.
+Slots (IST): 16:30 and 20:30 (Maya playbook, from 2026-11-25; `logs/settings.json`). The run starts 75 min early (15:15, 19:15).
 1. **Private upload as soon as the video is ready (target: 30 min before the slot).** GitHub releases are blocked in
    these sessions, so: in a clone of Sujalkumar123/Youtube_shorts_automation, `git fetch --depth 1 origin media`,
    check out branch `media`, copy the `-yt.mp4` to `media/<slug>.mp4`, commit and push. The file URL is
