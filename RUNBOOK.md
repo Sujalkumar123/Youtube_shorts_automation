@@ -19,8 +19,9 @@ is drawn by `engine/src/main.js` (`drawBrand`), on every frame.
 **0. THE MAYA EFFECTS PLAYBOOK (user 2026-11-25: "implement the same thing"). It overrides older rules below where they differ.**
 Studied @maya_effects.official (300k subs, 24.3M views, 41 videos, Hindi mythology): its median short gets ~130k views,
 its best get 2-4M. What it does, and what we now do:
-- **Schedule: TWO shorts a day, 16:30 and 20:30 IST** (they post the main one daily at ~16:15-16:45 IST, sometimes a
-  second at 19:30-20:30). The 16:30 short gets the strongest topic of the day.
+- **Schedule: KEEP our three slots, 08:00 / 15:00 / 20:00 IST** (user 2026-11-25). Maya posts its main short at
+  ~16:15-16:45 IST; a scheduled review on 2026-12-25 switches us to 16:30 + 20:30 only if views stay low for a month.
+  The 20:00 short gets the strongest topic of the day.
 - **Topics: famous epic characters, told from the scripture, correcting the popular version.** Their hits are all
   Ramayana / Vishnu-family stories everyone half-knows: Lakshmana's sleep (3.0M), Hanuman at Rama's door (3.7M),
   Sheshnag & Vasuki (3.9M), Gajendra (1.9M), Rahu-Ketu (2.3M), the bow that burned three cities (588k). Pick a famous
@@ -207,7 +208,7 @@ If `~/.untold/secrets.json` (or YT_* env vars) exists AND `logs/settings.json` h
 Setup and the free YouTube audit: docs/youtube-api-setup.md.
 
 ## 6. Publish: private preview ~30 min before, public at the slot (no approval needed)
-Slots (IST): 16:30 and 20:30 (Maya playbook, from 2026-11-25; `logs/settings.json`). The run starts 75 min early (15:15, 19:15).
+Slots (IST): 08:00, 15:00, 20:00 (`logs/settings.json`). The run starts 75 min early.
 1. **Private upload as soon as the video is ready (target: 30 min before the slot).** GitHub releases are blocked in
    these sessions, so: in a clone of Sujalkumar123/Youtube_shorts_automation, `git fetch --depth 1 origin media`,
    check out branch `media`, copy the `-yt.mp4` to `media/<slug>.mp4`, commit and push. The file URL is
