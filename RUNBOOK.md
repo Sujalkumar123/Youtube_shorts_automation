@@ -28,20 +28,36 @@ Score = views ÷ days since publish. Write the top 10 (title, views, views/day, 
 (newest scan on top, keep the last 7 days).
 **b. Read the pattern, not the video.** Note which DEITIES, STORIES and HOOK STYLES are winning (e.g. "क्यों/रहस्य"
 mystery questions about something familiar, a festival this week, a curse, a hidden origin, "X ने Y क्यों किया?").
+**c0. Topic mix (user 2026-11-24, from studying @sanatantoons21: 3.6M views in 23 days, mostly from Hanuman/Mahadev/Vishnu videos):**
+- **Morning (8 AM) and evening (8 PM, prime time) = BIG DEITY videos:** Hanuman, Mahadev/Shiva, Krishna, Shri Ram,
+  Vishnu avatars, Ganesh, Maa Durga/Kali. Pick a famous deity with a surprising angle people search for: secret powers
+  ("हनुमान जी की 8 शक्तियाँ"), why-names ("शिव को महाकाल क्यों कहते हैं?"), hidden meanings, little-known episodes.
+  Mass appeal first, our untold twist second.
+- **Afternoon (3 PM) = an untold/niche story** (curses, lesser-known characters, temple legends), still linked to a
+  big deity whenever possible (e.g. "महादेव" in the title).
 **c. Choose.** Pick ONE story in a winning concept/deity/festival that is NOT in `logs/topics.json`, with our own
 untold angle. Never copy another creator's script, title, structure or frames: same concept, our original story,
 facts from the scriptures. Prefer what is rising this week (high views/day) and a festival in the next 7 days
 (also search the web for this week's festivals/Panchang).
-**d. Title in the winning style:** a Hindi mystery question/hook + short English, ending with #shorts,
-e.g. `गोवर्धन पर्वत हर दिन धरती में क्यों समा रहा है? | The Curse of Govardhan #shorts`.
+**d. Title in the winning style:** DEITY NAME FIRST, a Hindi mystery question, 1-2 emoji (😱🔱🚩🙏), short English, #shorts,
+e.g. `हनुमान जी की 8 शक्तियाँ, जिनका रहस्य आज भी 😱🚩 | Hanuman's Ashta Siddhi #shorts`,
+`महादेव को भूतनाथ क्यों कहते हैं? 🔱 | Why Shiva Is Bhootnath #shorts`.
 **e. Sources:** the story must be documented (Ramayana, Mahabharata, Puranas via wisdomlib.org/sacred-texts.com,
 Britannica, temple/government sites). Keep the sources for the description.
 Never mock or distort a deity; no violence shown; no caste or political angle.
 
 ## 2. Script (`script.json`, copy the shape of `examples/ganga/script.json`)
 - Hindi, conversational, like telling a friend. Hook question → escalation → surprise → twist → loop-back last line.
-- 20-26 lines, ~45-55 s at voice speed 1.1. One line = one CUT (1.5-3.5 s). Sentences end in "." "?" (not "।").
-- Last 2 lines always: "ऐसी ही अनकही कहानियों के लिए," / "फ़ॉलो करें, अनटोल्ड स्टोरीज़." with caps "Aisi hi *ankahi kahaniyon ke liye" / "Follow karein | *Untold Stories".
+- Length: morning and afternoon 20-26 lines (60-75 s). **Evening (8 PM) = longer test: 28-36 lines, 90-115 s**
+  (top devotional Shorts run 1:45-2:30), with an extra open loop in the middle so people stay. Max 120 s.
+- One line = one CUT (1.5-3.5 s). One line = one CUT (1.5-3.5 s). Sentences end in "." "?" (not "।").
+- **Last 2 lines always = comment ask + follow** (comments are what pushed the competitor's videos; devotees love to write the chant):
+  "अगर आप भी <deity> के भक्त हैं, तो कमेंट में लिखिए... <CHANT>." / "और ऐसी कहानियों के लिए, फ़ॉलो करें अनटोल्ड स्टोरीज़."
+  caps "Comment mein likhiye | *<Chant in Roman>" / "Follow karein | *Untold Stories".
+  CHANT by deity: Hanuman/Ram → "जय श्री राम" (Jai Shri Ram), Shiva → "हर हर महादेव" (Har Har Mahadev), Krishna →
+  "जय श्री कृष्ण" (Jai Shri Krishna), Vishnu → "जय श्री हरि" (Jai Shri Hari), Devi → "जय माता दी" (Jai Mata Di),
+  Ganesh → "गणपति बप्पा मोरया" (Ganpati Bappa Morya), Surya → "जय सूर्य देव". The end card shows the chant big in
+  Devanagari with 🚩/🔱 and a "👇 Comment" slip.
 - Captions are in **Hinglish (Roman script)**, the user's choice: e.g. `"caps": "Aasmaan mein *teen shahar"`,
   `"Ek *sone ka | ek *chaandi ka | aur ek *lohe ka"`, last line `"Follow karein | *Untold Stories"`.
   Simple everyday spelling (mein, hai, aur, ka/ki/ke, nahi, Mahadev, Brahma ji, Vishnu, Shiv). 2-4 words, exactly one
@@ -144,9 +160,12 @@ fix, do NOT upload: send the Telegram problem alert (section 6b) with the reason
 
 ## 5. Metadata
 - Title: Hindi hook + short English, under 70 chars, e.g. `गंगा धरती पर कैसे आईं? | The Untold Story of Bhagirath`.
-- Description: 2-3 Hindi lines + 1 English line, then "Sources:" (the texts), then 5-8 hashtags drawn from this
-  week's trend research (mix: 2 broad #IndianMythology #HinduMythology, 3-4 story-specific, 1-2 trending/festival),
-  ending with `#shorts`.
+- Description: line 1 = the hook question with emoji; 2-3 Hindi lines of the story (bhakti tone, no spoilers of the twist);
+  then "क्या आप ये कथा पहले जानते थे? कमेंट में लिखिए <CHANT> 👇" and "<CHANT> 🙏🚩"; then 1 English line;
+  then "Sources:" (the texts) lower down; then 8-12 hashtags: 3-4 devotional ones devotees follow (#jaishreeram
+  #hanumanji #bajrangbali / #harharmahadev #mahadev #mahakal / #jaishreekrishna #radhekrishna / #jaimatadi), 3-4
+  story-specific, 1-2 trending/festival, #hindumythology #sanatandharma, ending with `#shorts`.
+- Tags: also add the deity's popular Hindi and Roman search terms (e.g. "hanuman ji", "हनुमान जी", "bajrangbali").
 
 ## 6.0 Which uploader
 If `~/.untold/secrets.json` (or YT_* env vars) exists AND `logs/settings.json` has `"uploader": "direct"`, use
