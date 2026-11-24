@@ -1,76 +1,83 @@
 {
- "channel": "Untold Stories",
- "voice": "hm_omega",
- "slots_ist": {
-  "morning": {
-   "start": "06:45",
-   "private_preview": "07:30",
-   "publish": "08:00"
+  "channel": "Untold Stories",
+  "voice": "hm_omega",
+  "slots_ist": {
+    "morning": {
+      "start": "06:45",
+      "private_preview": "07:30",
+      "publish": "08:00"
+    },
+    "afternoon": {
+      "start": "13:45",
+      "private_preview": "14:30",
+      "publish": "15:00"
+    },
+    "evening": {
+      "start": "18:45",
+      "private_preview": "19:30",
+      "publish": "20:00"
+    }
   },
-  "afternoon": {
-   "start": "13:45",
-   "private_preview": "14:30",
-   "publish": "15:00"
+  "upload": "zapier",
+  "media_repo": "Sujalkumar123/Youtube_shorts_automation (branch: media)",
+  "privacy": "public",
+  "approval": false,
+  "notify": "Telegram ONLY for problems (failed step, quality gate FAIL, not posted). Silent on success.",
+  "telegram_chat": "1289292985",
+  "telegram_bot": "@Story_teller844_bot",
+  "youtube_channel": "Untold Stories (@untoldstories-z8b, UCfCYsHOoAr5qzldDgRoXNsQ)",
+  "zapier_account": "untoldstories844@gmail.com",
+  "flow": "private preview + Telegram alert ~30 min early, STOP check, then public at slot + live alert",
+  "studio_repo": "Sujalkumar123/Youtube_shorts_automation (branch: main)",
+  "sound": {
+    "voice_fx": "rubberband=pitch=0.93:formant=preserved,highpass=f=70,equalizer=f=150:t=q:w=1:g=3,equalizer=f=320:t=q:w=1.2:g=-1.5,equalizer=f=2200:t=q:w=1:g=1,equalizer=f=7000:t=q:w=1.5:g=-2.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9",
+    "music_db": -26,
+    "music_sa": 110,
+    "music_lp": 2000,
+    "music_sub": 0.65,
+    "note": "user: deeper voice, lower & quieter background with more bass (2026-11-20)",
+    "narration_style": "emotional storyteller: per-sentence pace, dramatic pauses, light echo (2026-11-20)"
   },
-  "evening": {
-   "start": "18:45",
-   "private_preview": "19:30",
-   "publish": "20:00"
+  "captions": "Hinglish (Roman script), one text layer at a time (docs/RULES.md, 2026-11-25)",
+  "preview_alerts": false,
+  "zapier_budget": "~9 Zapier calls/day for 3 videos (morning trend scan 3 + 2 per video) + watchdog 3/day = ~12 calls = ~24 tasks/day (~720/month). Free plan = 100 tasks/month (not enough); Pro trial ends 2026-12-05.",
+  "prepared_slots": {
+    "2026-11-22 morning": {
+      "youtube": "QmWmgymDXBU",
+      "slug": "surya-tej",
+      "publish_at": "2026-11-22T08:00:00+05:30",
+      "note": "made manually with the ElevenLabs Sahir voice; scheduled with publishAt"
+    }
+  },
+  "voice_engine": "elevenlabs",
+  "eleven_voice": {
+    "name": "Sahir",
+    "id": "4LIpEnnggPcuL2KuRQIO",
+    "plan": "starter 40k credits/month, ~1000 per short"
+  },
+  "kokoro_voice_fx": null,
+  "schedule": {
+    "slots_ist": [
+      "08:00",
+      "15:00",
+      "20:00"
+    ],
+    "run_starts": [
+      "06:45",
+      "13:45",
+      "18:45"
+    ],
+    "since": "2026-11-20",
+    "review": "2026-12-25: if views stay low for a month, switch to 16:30 + 20:30 IST (Maya Effects timing)"
+  },
+  "art_style": "Pattachitra-inspired cut paper (docs/RULES.md: one signature style, never rotated)",
+  "music_db": -29,
+  "brand_badge": false,
+  "first_comment": true,
+  "playlists": {
+    "ramayana": "PLaQlNFDMLkcc",
+    "shiva": "PLIhI3Ztc688g",
+    "krishna_vishnu": "PLMA3gKa2CC9s",
+    "mahabharata": "PLX5-yEeFca54"
   }
- },
- "upload": "zapier",
- "media_repo": "Sujalkumar123/Youtube_shorts_automation (branch: media)",
- "privacy": "public",
- "approval": false,
- "notify": "Telegram ONLY for problems (failed step, quality gate FAIL, not posted). Silent on success.",
- "telegram_chat": "1289292985",
- "telegram_bot": "@Story_teller844_bot",
- "youtube_channel": "Untold Stories (@untoldstories-z8b, UCfCYsHOoAr5qzldDgRoXNsQ)",
- "zapier_account": "untoldstories844@gmail.com",
- "flow": "private preview + Telegram alert ~30 min early, STOP check, then public at slot + live alert",
- "studio_repo": "Sujalkumar123/Youtube_shorts_automation (branch: main)",
- "sound": {
-  "voice_fx": "rubberband=pitch=0.93:formant=preserved,highpass=f=70,equalizer=f=150:t=q:w=1:g=3,equalizer=f=320:t=q:w=1.2:g=-1.5,equalizer=f=2200:t=q:w=1:g=1,equalizer=f=7000:t=q:w=1.5:g=-2.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9",
-  "music_db": -26,
-  "music_sa": 110,
-  "music_lp": 2000,
-  "music_sub": 0.65,
-  "note": "user: deeper voice, lower & quieter background with more bass (2026-11-20)",
-  "narration_style": "emotional storyteller: per-sentence pace, dramatic pauses, light echo (2026-11-20)"
- },
- "captions": "Hinglish (Roman script), one text layer at a time (docs/RULES.md, 2026-11-25)",
- "preview_alerts": false,
- "zapier_budget": "~9 Zapier calls/day for 3 videos (morning trend scan 3 + 2 per video) + watchdog 3/day = ~12 calls = ~24 tasks/day (~720/month). Free plan = 100 tasks/month (not enough); Pro trial ends 2026-12-05.",
- "prepared_slots": {
-  "2026-11-22 morning": {
-   "youtube": "QmWmgymDXBU",
-   "slug": "surya-tej",
-   "publish_at": "2026-11-22T08:00:00+05:30",
-   "note": "made manually with the ElevenLabs Sahir voice; scheduled with publishAt"
-  }
- },
- "voice_engine": "elevenlabs",
- "eleven_voice": {
-  "name": "Sahir",
-  "id": "4LIpEnnggPcuL2KuRQIO",
-  "plan": "starter 40k credits/month, ~1000 per short"
- },
- "kokoro_voice_fx": null,
- "schedule": {
-  "slots_ist": [
-   "08:00",
-   "15:00",
-   "20:00"
-  ],
-  "run_starts": [
-   "06:45",
-   "13:45",
-   "18:45"
-  ],
-  "since": "2026-11-20",
-  "review": "2026-12-25: if views stay low for a month, switch to 16:30 + 20:30 IST (Maya Effects timing)"
- },
- "art_style": "Pattachitra-inspired cut paper (docs/RULES.md: one signature style, never rotated)",
- "music_db": -29,
- "brand_badge": false
 }

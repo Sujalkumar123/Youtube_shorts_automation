@@ -238,6 +238,37 @@ Slots (IST): 08:00, 15:00, 20:00 (`logs/settings.json`). The run starts 75 min e
 6. **No success message.** When everything worked, send nothing (only problems go to Telegram).
 - If any step fails, send "⚠️ Untold Stories <slot> failed at <step>: <reason>" to Telegram and log it.
 - If Zapier is not available in the session: send the MP4 + cover + metadata to the user in the session instead.
+## 6a. Growth extras on every upload (user 2026-11-25: "viral krna hai, saare tricks lga de")
+Real growth only: no bought views, bots, sub4sub, fake comments or misleading film/actor tags.
+1. **Custom thumbnail (no extra task).** Before uploading: `node tools/capture.mjs frames review/thumb "<hook-reveal time>"`,
+   then draw the Hindi hook in 2-4 huge words (yellow + white, thick black stroke, top third, never over the face) with
+   ffmpeg drawtext or a canvas script → `renders/<slug>-thumb.jpg` (1080x1920, < 2 MB). Push it to branch `media` with the
+   mp4 and pass its raw URL as the `thumbnail` param of `youtube_upload_video`. Remove it with the mp4 afterwards.
+   (Shorts feed mostly uses the video frame, but search, Home and the channel page show this.)
+2. **Playlist (2 tasks).** After the upload, POST https://www.googleapis.com/youtube/v3/playlistItems with
+   `querystring {"part":"snippet"}`, header Content-Type application/json, body
+   `{"snippet":{"playlistId":"<id>","resourceId":{"kind":"youtube#video","videoId":"<vid>"}}}`. Never put `?part=` in the URL.
+   Playlists: Ramayana `PLaQlNFDMLkcc` · Shiva `PLIhI3Ztc688g` · Krishna & Vishnu `PLMA3gKa2CC9s` · Mahabharata `PLX5-yEeFca54`
+   (other Puranas: the closest one). This puts the short in a binge chain and adds a playlist link under it.
+3. **First comment, only while `logs/settings.json` has `"first_comment": true`** (turn it off when Zapier drops to the
+   free 100 tasks, 5 Dec): POST https://www.googleapis.com/youtube/v3/commentThreads, querystring `{"part":"snippet"}`, body
+   `{"snippet":{"videoId":"<vid>","topLevelComment":{"snippet":{"textOriginal":"<one either/or question about the story, Hindi> 👇\nअगली कथा: <next topic tease>"}}}}`.
+   A question people can answer in one word (e.g. "आप सीता की जगह होते तो क्या करते? 1 या 2?") gets comments, and comments push the short.
+4. **Analytics loop (morning 08:00 run only, 2 tasks).** One `get_report` video_top for the last 7 days, sort `-views`,
+   metrics views, averageViewPercentage, likes, comments, subscribersGained. Append to `logs/analytics.json`
+   (date + one row per video). Then, when picking topics (section 1): prefer the deity/story type and hook shape of the
+   top 2 by averageViewPercentage; drop hook shapes whose videos stayed under 40%. Note the lesson in logs/notes.md.
+
+### Retention rules (the real bottleneck: avg view 37-66% on 20-24 Nov; viral shorts sit at 80-100%+)
+- Line 1 = the hook = the title's contradiction. No greeting, no "आज हम…", no setup before it. Picture moves in frame 1.
+- Line 2 must raise the stakes within 3 s ("…और इसकी कीमत चुकाई पूरी लंका ने").
+- An open loop every 10-12 s: "पर असली राज़ अभी बाकी है…", "और फिर जो हुआ…" — and a new reveal or visual change right after.
+- Picture changes every 1.5-3 s; no shot over 3.5 s. Zoom/whip on every reveal word.
+- Hold the answer to the title until the last 15 s. Never answer it in the first half.
+- Ending loops: the last line leads back into line 1 (end on a half-question that line 1 answers), no outro, no "subscribe" talk,
+  no logo card. The video ends on the last word (≤0.3 s tail).
+- 85-100 s stays the rule (RULES.md), so the script must earn it: if a line adds no new fact or tension, cut it.
+
 ## 6b. Problems → Telegram, always (the user watches Telegram, not this session)
 Wrap every step. If ANY step fails or looks wrong, send to Telegram (Zapier Telegram "Send Message", chat 1289292985):
 "⚠️ Untold Stories <slot> problem
