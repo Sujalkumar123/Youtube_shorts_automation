@@ -63,3 +63,8 @@ Pattern: "X कैसे/क्यों/किसने?" shock questions about
 | 374,619 | Why God Was Cursed to Be Born as a Human (Vishnu's 10 avatars) | curse / origin |
 | 361,902 | कैसे बने थे सुदर्शन चक्र और त्रिशूल? | origin of divine weapons |
 Pattern: "क्यों / रहस्य" questions about familiar things; festival tie-ins; curses; origins of symbols and weapons.
+
+## 2026-11-25 YouTube Studio "Top searches" (user screenshot, our audience)
+untold stories of hindu mythology; sai baba of shirdi (Content gap for Shorts); according to hinduism; tales of mythology and history;
+mythology stories short; mythological creatures stories; untold story of ganesha; dashavatar creations; popular indian mythological
+stories; mythological god stories; lord shiva temple stories. → RUNBOOK section 1 "TOP SEARCHES" block (new topic lanes + where the words go).

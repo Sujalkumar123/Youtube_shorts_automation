@@ -46,6 +46,34 @@ Quick summary (RULES.md wins if anything here differs):
   - FESTIVAL 20 Dec Gita Jayanti: Arjuna was not the only one who heard the Gita (Sanjaya by divine sight, Hanuman on the flag; Bhishma Parva). "कुरुक्षेत्र में गीता सिर्फ़ अर्जुन ने नहीं सुनी थी।"
   - FESTIVAL 23 Dec Datta Jayanti: Anasuya turns Brahma, Vishnu and Shiva into infants (Markandeya Purana / tradition, label it). "ब्रह्मा, विष्णु और महेश, तीनों एक साध्वी की गोद में बच्चे बन गए।"
   Trend scan each morning run can add to this list; never copy another creator's script or wording.
+
+  **YOUTUBE STUDIO "TOP SEARCHES" for our audience (user screenshot, 2026-11-25).** These are what our viewers type.
+  Use them as topics AND as search words (never stuff them; one natural phrase per place):
+  untold stories of hindu mythology · sai baba of shirdi (YouTube marks it **"Content gap for Shorts"**) · according to hinduism ·
+  tales of mythology and history · mythology stories short · mythological creatures stories · untold story of ganesha ·
+  dashavatar · popular indian mythological stories · mythological god stories · lord shiva temple stories.
+  - **Where the words go:** the English hook line in the description starts with the closest phrase
+    ("The untold story of Ganesha: ...", "According to Hinduism, ...", "Lord Shiva temple story: ..."); the last description
+    line is always `Untold stories of Hindu mythology, every day.`; the `tags` field of the upload (not visible, 6-10 tags)
+    carries the matching phrases plus Hindi names. The Hindi title stays the Hindi hook (RULES.md), no English stuffing.
+  - **New topic lanes (mix into the queue, at least 1 a day from here):**
+    - *Ganesha (untold story of ganesha):* why Ganesha wrote the Mahabharata with a broken tusk; why Tulsi is never offered
+      to Ganesha (the curse both ways, Brahmavaivarta); how Ganesha tricked Ravana and the Gokarna linga; Ganesha's head:
+      Shani's glance version vs the guarded-door version (label "एक पुराण कहता है").
+    - *Dashavatar (dashavatar):* one standalone short per avatar with ONE unknown fact (no "part 1/2", no series wording):
+      Kurma's shell held the churning mountain; Varaha married Bhudevi; Narasimha was calmed by Sharabha (Shaiva tradition,
+      label it); Vamana's third step on Bali's head made Bali king of Sutala; Parashurama is still alive; Kalki's horse Devadatta.
+    - *Mythological creatures (mythological creatures stories):* Sharabha, Gandaberunda (Karnataka's state emblem),
+      Navagunjara (Arjuna, Odia Mahabharata), Airavata from the churning, Kamadhenu and Vasishtha vs Vishwamitra,
+      Makara (Ganga's vahana), Garuda stealing amrit, Ucchaihshravas and Vinata's slavery bet. Great for frame 1 visuals.
+    - *Lord Shiva temple stories:* Kedarnath (Shiva hid as a bull from the Pandavas), Somnath (Chandra's curse),
+      Mallikarjuna (Kartikeya left Kailash), Kashi (the city Shiva never leaves), Trimbakeshwar (Gautama and the Godavari),
+      Pashupatinath (same bull story, the head). Source = the Purana + "temple tradition" label.
+    - *Sai Baba of Shirdi (content gap):* source ONLY Shri Sai Satcharitra (Hemadpant), always labelled "साई सच्चरित्र में
+      लिखा है"; respectful, no miracle claims as fact beyond "कहा जाता है"; no Hindu-Muslim debate angle; famous episodes
+      only (lamps lit with water at Dwarkamai, the grinding of wheat to stop the cholera, the dhuni that never went out).
+      1-2 a week max, test with analytics before doing more.
+  - Re-check Studio → Research → "Your audience's searches" when the user sends a new screenshot; update this block.
 - **Length 85-100 s, ~160-170 Hindi words.** Beats: hook → stakes → setup → turn → twist → closing line that flips the
   hook → "ऐसी ही अनकही कहानियों के लिए फॉलो करें Untold Stories।" (this replaces the comment-ask ending; the comment
   question goes in the description). Folk/later details marked "कहा जाता है"/"तुलसीदास लिखते हैं", always AFTER the hook.
