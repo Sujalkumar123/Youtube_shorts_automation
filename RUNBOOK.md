@@ -18,6 +18,8 @@ is drawn by `engine/src/main.js` (`drawBrand`), on every frame.
 ## 1. Pick today's topic from what is trending ON YOUTUBE (do this every run)
 **0. CHANNEL RULES (user, 2026-11-25): `docs/RULES.md` is the source of truth. Read it IN FULL first; it replaces
 every older rule in this runbook where they conflict (titles, hooks, length, captions, sound, description, topics).**
+STORY STYLE (user, 2026-11-25): every Short is now a dark, scary suspense story (RULES.md section 3a): scary hook, tension
+  held to the end, the conclusion/reveal in the last 10-15 s. No more calm "why/how" trivia.
 Quick summary (RULES.md wins if anything here differs):
 - **Hook = line 1 = the title:** a contradiction / surprising fact about a FAMOUS figure, stated as a fact, 8-16 Hindi
   words, under 3 s. Never a question ("क्यों/कैसे/किसने", "क्या आप जानते हैं"), never scene-setting, shloka, disclaimer,
