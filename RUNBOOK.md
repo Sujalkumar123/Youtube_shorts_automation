@@ -47,6 +47,23 @@ Quick summary (RULES.md wins if anything here differs):
   - FESTIVAL 23 Dec Datta Jayanti: Anasuya turns Brahma, Vishnu and Shiva into infants (Markandeya Purana / tradition, label it). "ब्रह्मा, विष्णु और महेश, तीनों एक साध्वी की गोद में बच्चे बन गए।"
   Trend scan each morning run can add to this list; never copy another creator's script or wording.
 
+  **MAYA EFFECTS DEEP STUDY #3 (2026-11-25, all 42 videos, data in logs/competitors/maya-2026-11-25.json).**
+  Their 6 biggest (3.9M, 3.7M, 3.0M, 2.3M, 1.9M, 1.5M) are ALL 80-105 s shorts from their first 10 days. Since they moved
+  to 120-180 s shorts and numbered series ("Shiva-Shakti, Episode 01-06": 40-130k), views fell 10-50x. Lessons:
+  1. **Emotion, not trivia.** Every mega-hit is a feeling: two brothers split apart, Hanuman guarding Rama from death,
+     Urmila sleeping 14 years so Lakshmana could stay awake. Each short needs one of: sacrifice, loyalty, a mother/brother/
+     wife bond, a curse that hurts the one who gave it, a devotee's love. State the emotion in the script's planning notes.
+  2. **The hidden-identity reveal.** Their #1 never names Lakshmana until the end: "the brother who never slept" came
+     again... A side character turns out to be someone everyone knows. Hold the famous name back to the last 15 s;
+     the viewer who recognises it first feels smart, rewatches and comments.
+  3. **The comment question rewards that recognition:** "Did you recognise the brother who never slept? 👇",
+     "क्या आप उर्मिला की कहानी जानते थे? 👇". 270-640 comments on their hits. Use this shape, not generic "comment karo".
+  4. **80-105 s. Never numbered parts in shorts.** (Our RULES.md 85-100 s already fits.)
+  5. **Title = one calm sentence with a paradox**, the same line opens the description, then a 3-5 line story summary
+     in plain words (search reads it), then the question, then sources. Our Hindi version of this is fine.
+  6. **Novel visual formats travel:** "Shri Ram's whole journey on one map" got 1.18M. Once a week we may do a
+     Pattachitra MAP short (a route drawn stop by stop: Ram van gaman, Pandavas' exile, Ganga's descent, Hanuman's leap).
+  7. Same time every day (they post ~16:15-16:45 IST, one main short). Our 16:30 slot matches.
   **WINNER FORMULA (Kumbhakarna, 25 Nov: 826 views + 4.1% likes in under 4 h, our best start).** Copy its DNA every time:
   - A villain/side character EVERYONE knows (Kumbhakarna, Ravana, Shurpanakha, Duryodhana, Karna, Ashwatthama, Kansa...)
     + the one famous thing about him turned upside down ("he never asked for sleep"). The flip of a fact people are sure of
