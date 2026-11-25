@@ -79,5 +79,15 @@
     "shiva": "PLIhI3Ztc688g",
     "krishna_vishnu": "PLMA3gKa2CC9s",
     "mahabharata": "PLX5-yEeFca54"
+  },
+  "pending_uploads": {
+    "kumbhakarna-nidra": {
+      "file": "media/kumbhakarna-nidra.mp4 (branch media)",
+      "thumb": "media/kumbhakarna-nidra-thumb.jpg",
+      "title": "कुम्भकर्ण ने नींद कभी माँगी ही नहीं थी",
+      "description_from": "examples/kumbhakarna-nidra/script.json sources + RULES.md template",
+      "playlist": "PLaQlNFDMLkcc",
+      "note": "made 2026-11-25 morning, upload throttled by Zapier. Next run: upload this first (any slot), then remove it here and from branch media."
+    }
   }
 }
