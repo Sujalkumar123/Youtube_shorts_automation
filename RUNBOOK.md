@@ -279,7 +279,7 @@ What happened: <one plain sentence>
 Done so far: <e.g. video rendered, not uploaded>
 What I did: <retried / used fallback / skipped>
 Needs you: <nothing | what the user should do, in one line>"
-Retry a failed step once before alerting. Fallbacks: trend scan fails → use web search + logs/trends.md; a scene fails QA →
+Retry a failed step once before alerting. **Zapier 'throttled' / 429 on upload_video: try ONCE per run, never loop or switch connections** (every extra try extends Zapier's block). Keep the file on branch media, add it to pending_uploads, send ONE Telegram alert per day for it, and let the next run try once again. Fallbacks: trend scan fails → use web search + logs/trends.md; a scene fails QA →
 simplify it rather than skip the video; upload fails → retry once, then alert with the file kept on branch media.
 If the video is late, still publish it as soon as it's ready and say so. If Zapier itself is unreachable (so Telegram
 can't be sent), tell the user in this session: the app's push notification is the fallback.
