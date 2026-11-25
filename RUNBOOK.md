@@ -47,6 +47,18 @@ Quick summary (RULES.md wins if anything here differs):
   - FESTIVAL 23 Dec Datta Jayanti: Anasuya turns Brahma, Vishnu and Shiva into infants (Markandeya Purana / tradition, label it). "ब्रह्मा, विष्णु और महेश, तीनों एक साध्वी की गोद में बच्चे बन गए।"
   Trend scan each morning run can add to this list; never copy another creator's script or wording.
 
+  **WINNER FORMULA (Kumbhakarna, 25 Nov: 826 views + 4.1% likes in under 4 h, our best start).** Copy its DNA every time:
+  - A villain/side character EVERYONE knows (Kumbhakarna, Ravana, Shurpanakha, Duryodhana, Karna, Ashwatthama, Kansa...)
+    + the one famous thing about him turned upside down ("he never asked for sleep"). The flip of a fact people are sure of
+    beats a fact they never heard of. Prefer this pattern over obscure topics: at least 1 of the 2 daily shorts.
+  - Ramayana while the film keeps Ramayana searches high. Hook = 6-9 words, a flat statement, no question mark.
+  - Pattachitra look + Sahir voice + RULES.md structure, exactly as that video.
+  - Title the user picked when he uploaded it: the Hindi hook + "!!!" then hashtags in the title. Use the same shape:
+    `<Hindi hook>!!! #indianmythology #hindumythology #facts #hindi` (only true tags: never #astrology or unrelated trends).
+  Next ideas in this pattern: Ravana was Shiva's greatest devotee AND a Veda scholar who wrote Shiva Tandava Stotram;
+  Shurpanakha's husband was killed by Ravana himself; Karna's real killer was a curse, not Arjuna; Duryodhana went to heaven
+  and the Pandavas saw hell first (Svargarohana Parva); Kansa was told by a voice from the sky, not by a sage; Meghnad
+  defeated Indra (that is why "Indrajit"); Mandodari asked Ravana to return Sita (Yuddha Kanda).
   **YOUTUBE STUDIO "TOP SEARCHES" for our audience (user screenshot, 2026-11-25).** These are what our viewers type.
   Use them as topics AND as search words (never stuff them; one natural phrase per place):
   untold stories of hindu mythology · sai baba of shirdi (YouTube marks it **"Content gap for Shorts"**) · according to hinduism ·
@@ -307,7 +319,7 @@ What happened: <one plain sentence>
 Done so far: <e.g. video rendered, not uploaded>
 What I did: <retried / used fallback / skipped>
 Needs you: <nothing | what the user should do, in one line>"
-Retry a failed step once before alerting. **Zapier 'throttled' / 429 on upload_video: try ONCE per run, never loop or switch connections** (every extra try extends Zapier's block). Keep the file on branch media, add it to pending_uploads, send ONE Telegram alert per day for it, and let the next run try once again. Fallbacks: trend scan fails → use web search + logs/trends.md; a scene fails QA →
+Retry a failed step once before alerting. **Zapier 'throttled' / 429 on upload_video: try ONCE per run, never loop or switch connections** (every extra try extends Zapier's block). Keep the file on branch media, add it to pending_uploads, and send it to the user on Telegram so he can upload it from his phone (the user did this on 25 Nov and it went viral): Zapier Telegram send video/document with the raw.githubusercontent media URL (file < 50 MB), caption = title + full description + playlist name. Tell him to reply in chat when it is up. Before any upload, ALWAYS first check the channel's latest uploads (playlistItems) for the same title: if the user already posted it by hand, drop it from pending_uploads and do NOT upload again. Fallbacks: trend scan fails → use web search + logs/trends.md; a scene fails QA →
 simplify it rather than skip the video; upload fails → retry once, then alert with the file kept on branch media.
 If the video is late, still publish it as soon as it's ready and say so. If Zapier itself is unreachable (so Telegram
 can't be sent), tell the user in this session: the app's push notification is the fallback.
