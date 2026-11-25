@@ -48,13 +48,14 @@
       "publish_at": "2026-11-22T08:00:00+05:30",
       "note": "made manually with the ElevenLabs Sahir voice; scheduled with publishAt"
     },
-    "2026-11-26 16:30": {
+    "2026-11-26 16:00": {
       "slug": "ashwatthama-shraap",
       "made": "2026-11-25 23:00 IST in chat",
       "media": "branch media: media/ashwatthama-shraap.mp4 + -thumb.jpg",
       "title": "श्रीकृष्ण ने एक योद्धा को मरने नहीं दिया!!! #indianmythology #hindumythology #mahabharat #hindi",
       "playlist": "PLX5-yEeFca54",
-      "note": "Already sent to the user on Telegram (thumbnail + link + full description). The 14:45 run must NOT make a new video: first check the channel for this title (user may have uploaded it by hand). If it is there: log it, add it to the playlist, remove the media files. If not: try Zapier upload_video ONCE with publish at 16:30 (description = the Telegram text); if throttled, do nothing more (user has it)."
+      "note": "Already sent to the user on Telegram (thumbnail + link + full description). The 14:45 run must NOT make a new video: first check the channel for this title (user may have uploaded it by hand). If it is there: log it, add it to the playlist, remove the media files. If not: try Zapier upload_video ONCE with publish at 16:00 (description = the Telegram text); if throttled, do nothing more (user has it). Zapier was still throttled at 23:38 on 25 Nov; the user was asked to schedule it himself from the YouTube app. A private/scheduled video with this title on the channel counts as done.",
+      "publish": "2026-11-26 16:00 IST (user asked 23:38: \"4 baje daal diyo\")"
     }
   },
   "voice_engine": "elevenlabs",
