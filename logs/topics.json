@@ -815,5 +815,18 @@
   "problems": [
    "Zapier YouTube upload_video: 429 Too Many Requests x5 (07:13-07:22 IST), then 'This action has been throttled without retry' on every try until 08:05 (also without thumbnail, and as public). YouTube GET requests worked. Telegram alerts sent."
   ]
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "afternoon",
+  "slug": "kumbhakarna-nidra",
+  "topic": "(retry of the unposted morning video, no new video made)",
+  "title": "कुम्भकर्ण ने नींद कभी माँगी ही नहीं थी",
+  "title_lang": "hi",
+  "youtube": null,
+  "status": "NOT POSTED: Zapier upload_video 'throttled without retry' at 13:47, 13:49 (YouTube #2 connection, same channel), 13:52, 14:22 IST. mp4 + thumb still on branch media.",
+  "problems": [
+   "Zapier YouTube upload_video throttled on both connections; YouTube GET and Telegram send_message worked. Telegram alerts sent 13:52 and 14:21 IST."
+  ]
  }
 ]
