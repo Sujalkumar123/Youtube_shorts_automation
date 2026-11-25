@@ -58,17 +58,15 @@
   "kokoro_voice_fx": null,
   "schedule": {
     "slots_ist": [
-      "08:00",
-      "15:00",
+      "16:30",
       "20:00"
     ],
     "run_starts": [
-      "06:45",
-      "13:45",
+      "14:45",
       "18:45"
     ],
-    "since": "2026-11-20",
-    "review": "2026-12-25: if views stay low for a month, switch to 16:30 + 20:30 IST (Maya Effects timing)"
+    "since": "2026-11-26",
+    "note": "user 2026-11-25: 2 a day at 4:30 PM and 8 PM; replaces 08:00/15:00/20:00; Dec-25 review dropped"
   },
   "art_style": "Pattachitra-inspired cut paper (docs/RULES.md: one signature style, never rotated)",
   "music_db": -29,

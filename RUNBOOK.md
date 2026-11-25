@@ -88,8 +88,8 @@ Quick summary (RULES.md wins if anything here differs):
   Put each caption in an EMPTY part of the frame: set `capY` on the shot (default 1400; e.g. 420 when the bottom is busy).
   Keep the existing end card.
 - **Description template and 3-5 hashtags:** RULES.md section 7.
-- **Posting schedule EXCEPTION (user, 2026-11-25, after reading RULES.md): keep 3 shorts a day at 08:00 / 15:00 /
-  20:00 IST. Ignore RULES.md section 8 ("1 a day at 4:15 PM, never 3") until the 2026-12-25 review decides.**
+- **Posting schedule (user, 2026-11-25 18:28): 2 shorts a day, 16:30 and 20:00 IST.** This replaces the old 3-a-day
+  (08:00/15:00/20:00) and RULES.md section 8. The 2026-12-25 timing review is no longer needed.
 
 **a. YouTube trend scan (Zapier YouTube connector) ONLY in the morning run,** and only if `logs/trends.md` has no
 scan from today. Afternoon/evening runs reuse today's scan (pick a different story/concept). Use at most 2 searches with `youtube_find_video`
@@ -247,7 +247,7 @@ If `~/.untold/secrets.json` (or YT_* env vars) exists AND `logs/settings.json` h
 Setup and the free YouTube audit: docs/youtube-api-setup.md.
 
 ## 6. Publish: private preview ~30 min before, public at the slot (no approval needed)
-Slots (IST): 08:00, 15:00, 20:00 (`logs/settings.json`). The run starts 75 min early.
+Slots (IST): 16:30 and 20:00 (`logs/settings.json`). Runs start at 14:45 (for 16:30) and 18:45 (for 20:00).
 1. **Private upload as soon as the video is ready (target: 30 min before the slot).** GitHub releases are blocked in
    these sessions, so: in a clone of Sujalkumar123/Youtube_shorts_automation, `git fetch --depth 1 origin media`,
    check out branch `media`, copy the `-yt.mp4` to `media/<slug>.mp4`, commit and push. The file URL is
@@ -284,7 +284,7 @@ Real growth only: no bought views, bots, sub4sub, fake comments or misleading fi
    free 100 tasks, 5 Dec): POST https://www.googleapis.com/youtube/v3/commentThreads, querystring `{"part":"snippet"}`, body
    `{"snippet":{"videoId":"<vid>","topLevelComment":{"snippet":{"textOriginal":"<one either/or question about the story, Hindi> 👇\nअगली कथा: <next topic tease>"}}}}`.
    A question people can answer in one word (e.g. "आप सीता की जगह होते तो क्या करते? 1 या 2?") gets comments, and comments push the short.
-4. **Analytics loop (morning 08:00 run only, 2 tasks).** One `get_report` video_top for the last 7 days, sort `-views`,
+4. **Analytics loop (the 14:45 run for the 16:30 slot only, 2 tasks).** One `get_report` video_top for the last 7 days, sort `-views`,
    metrics views, averageViewPercentage, likes, comments, subscribersGained. Append to `logs/analytics.json`
    (date + one row per video). Then, when picking topics (section 1): prefer the deity/story type and hook shape of the
    top 2 by averageViewPercentage; drop hook shapes whose videos stayed under 40%. Note the lesson in logs/notes.md.
