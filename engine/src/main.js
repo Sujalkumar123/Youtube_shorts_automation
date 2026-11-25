@@ -4,6 +4,7 @@ import { W, H, setCtx, ctx, clamp, eo, eio } from './core/lib.js';
 import { T, loadTiming } from './core/timing.js';
 import { buildCaptions, drawCaption, captionList, CAP } from './core/captions.js';
 import { buildShots } from './shots.js';
+import { STYLE } from './core/kit.js';
 
 const cv = document.getElementById('cv');
 setCtx(cv.getContext('2d'));
@@ -18,6 +19,20 @@ function drawBrand() {
   ctx.fillStyle = '#A8322D'; ctx.beginPath(); ctx.arc(x + 32, y + h / 2, 17, 0, Math.PI * 2); ctx.fill();
   ctx.fillStyle = '#F6D98A'; ctx.font = '700 22px Martel'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(label[0], x + 32, y + h / 2 + 2);
   ctx.font = '700 34px Martel'; ctx.textAlign = 'left'; ctx.fillStyle = '#F6D98A'; ctx.fillText(label, x + 60, y + h / 2 + 3);
+  ctx.restore();
+}
+
+
+// Pattachitra frame: cream patta band with ink + vermilion rules and a running flower/dot motif (style "pattachitra")
+function pattaFrame() {
+  ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0);
+  const b = 26;
+  ctx.fillStyle = '#EFE0BC'; ctx.beginPath(); ctx.rect(0, 0, W, H); ctx.rect(W - b, b, -(W - 2 * b), H - 2 * b); ctx.fill('evenodd');
+  ctx.strokeStyle = '#1C120B'; ctx.lineWidth = 4; ctx.strokeRect(b, b, W - 2 * b, H - 2 * b);
+  ctx.strokeStyle = '#B5321F'; ctx.lineWidth = 3; ctx.strokeRect(7, 7, W - 14, H - 14);
+  const dot = (x, y, k) => { ctx.fillStyle = k % 2 ? '#B5321F' : '#1C120B'; ctx.beginPath(); ctx.arc(x, y, k % 2 ? 4.5 : 3, 0, Math.PI * 2); ctx.fill(); if (k % 4 === 1) { ctx.fillStyle = '#D9A12E'; for (let a = 0; a < 4; a++) { ctx.beginPath(); ctx.ellipse(x + Math.cos(a * Math.PI / 2) * 7, y + Math.sin(a * Math.PI / 2) * 7, 3.2, 3.2, 0, 0, Math.PI * 2); ctx.fill(); } ctx.fillStyle = '#B5321F'; ctx.beginPath(); ctx.arc(x, y, 3.5, 0, Math.PI * 2); ctx.fill(); } };
+  let k = 0; for (let x = 30; x < W - 20; x += 30) { dot(x, 16.5, k); dot(x, H - 16.5, k++); }
+  k = 0; for (let y = 50; y < H - 40; y += 30) { dot(16.5, y, k); dot(W - 16.5, y, k++); }
   ctx.restore();
 }
 
@@ -54,9 +69,13 @@ function autoTrans(sh) {
 function grade(t, sh) {
   if (sh.fx === false) return;
   ctx.save();
+  if (STYLE.patta) { // warm cream patta wash (Pattachitra palette: ochre / vermilion / indigo on cream)
+    ctx.globalCompositeOperation = 'soft-light'; ctx.globalAlpha = 0.3; ctx.fillStyle = '#F2DFB0'; ctx.fillRect(0, 0, W, H);
+  } else {
   // teal shadows / warm highlights (soft-light), like a film grade
   const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, 'rgba(40,70,110,0.55)'); g.addColorStop(0.55, 'rgba(128,128,128,0)'); g.addColorStop(1, 'rgba(255,150,70,0.5)');
   ctx.globalCompositeOperation = 'soft-light'; ctx.globalAlpha = 0.35; ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  }
   // drifting light leak
   const lx = 540 + Math.sin(t * 0.23) * 620, ly = 500 + Math.cos(t * 0.17) * 520, r = ctx.createRadialGradient(lx, ly, 0, lx, ly, 700);
   r.addColorStop(0, 'rgba(255,170,90,0.9)'); r.addColorStop(1, 'rgba(255,170,90,0)');
@@ -93,6 +112,7 @@ function draw(t) {
   // film grain (cached noise tiles)
   if (!OP._grain) { OP._grain = [0, 1, 2, 3].map((k) => { const c = document.createElement('canvas'); c.width = 360; c.height = 640; const g = c.getContext('2d'), im = g.createImageData(360, 640); let sd = 1234 + k * 999; for (let i = 0; i < im.data.length; i += 4) { sd = (sd * 16807) % 2147483647; const v = sd % 256; im.data[i] = im.data[i + 1] = im.data[i + 2] = v; im.data[i + 3] = 255; } g.putImageData(im, 0, 0); return c; }); }
   ctx.save(); ctx.globalAlpha = 0.05; ctx.globalCompositeOperation = 'overlay'; ctx.imageSmoothingEnabled = false; ctx.drawImage(OP._grain[Math.floor(t * 10) % 4], 0, 0, W, H); ctx.restore();
+  if (STYLE.patta) pattaFrame();
   if (OP.script && OP.script.brand_badge) drawBrand();
   const fade = Math.min(clamp(t / 0.25), clamp((T.dur - t) / 0.35));
   if (fade < 1) { ctx.fillStyle = '#000'; ctx.globalAlpha = 1 - fade; ctx.fillRect(0, 0, W, H); ctx.globalAlpha = 1; }
@@ -105,6 +125,7 @@ function draw(t) {
     await document.fonts.load('900 100px Inter'); await document.fonts.load('700 100px Caladea'); await document.fonts.load('700 100px Martel', 'गंगा Untold');
     const script = await (await fetch('script.json', { cache: 'no-store' })).json();
     await loadTiming();
+    STYLE.patta = script.style === 'pattachitra';
     buildCaptions(script);
     const { shots, cues } = buildShots();
     shots.sort((a, b) => a.at - b.at);

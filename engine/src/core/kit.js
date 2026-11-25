@@ -11,7 +11,16 @@ const SERIF = 'Martel';
 
 // ═════════════════════════ CUT PAPER ═════════════════════════
 /** draw a path as a piece of cut paper: soft shadow, light paper edge, then the fill. path() builds the path. */
+// STYLE.patta (script.json "style": "pattachitra", set by main.js): Pattachitra-inspired look = flat fills with
+// bold dark-ink outlines instead of the light paper edge, and only a faint drop shadow.
+export const STYLE = { patta: false };
 export function cut(path, fill, { shadow = 1, edge = 6 } = {}) {
+  if (STYLE.patta) {
+    if (shadow) { ctx.save(); ctx.shadowColor = 'rgba(40,20,8,0.28)'; ctx.shadowBlur = 6 * shadow; ctx.shadowOffsetX = 3 * shadow; ctx.shadowOffsetY = 4 * shadow; path(); ctx.fillStyle = fill; ctx.fill(); ctx.restore(); }
+    path(); ctx.fillStyle = fill; ctx.fill();
+    if (edge) { path(); ctx.strokeStyle = '#1C120B'; ctx.lineWidth = 2.5 + edge * 0.65; ctx.lineJoin = 'round'; ctx.stroke(); }
+    return;
+  }
   ctx.save();
   if (shadow) { ctx.shadowColor = 'rgba(70,45,20,0.35)'; ctx.shadowBlur = 14 * shadow; ctx.shadowOffsetX = 6 * shadow; ctx.shadowOffsetY = 9 * shadow; path(); ctx.fillStyle = fill; ctx.fill(); }
   ctx.restore();

@@ -1,0 +1,232 @@
+{
+ "voice": "eleven:Sahir",
+ "eleven_voice": "4LIpEnnggPcuL2KuRQIO",
+ "eleven_model": "eleven_multilingual_v2",
+ "eleven_stability": 0.42,
+ "eleven_style": 0.4,
+ "eleven_speed": 1.16,
+ "lead": 0.15,
+ "outro": 0.3,
+ "gap": 0.2,
+ "breaths": false,
+ "music": "devotional",
+ "music_db": -29,
+ "music_sa": 110,
+ "music_lp": 2000,
+ "music_sub": 0.9,
+ "voice_fx": "highpass=f=60,equalizer=f=130:t=q:w=1:g=3,equalizer=f=6500:t=q:w=1.5:g=-1.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9",
+ "brand_badge": false,
+ "style": "pattachitra",
+ "title": "कुम्भकर्ण ने नींद कभी माँगी ही नहीं थी",
+ "sources": [
+  "Valmiki Ramayana, Uttara Kanda, Sarga 10 (the brothers' tapas; Brahma asks Saraswati to be the speech in Kumbhakarna's mouth; he asks to sleep for many years, then regrets it and thinks the gods deluded him)",
+  "Valmiki Ramayana, Yuddha Kanda, Sarga 61 (Vibhishana tells Rama: on Ravana's plea Brahma let Kumbhakarna sleep six months and wake one day); Sargas 60-63 (Ravana has him woken; Kumbhakarna tells Ravana he acted wrongly, then goes to fight)",
+  "Indrasana/Nidrasana slip: popular later retelling (marked 'कहा जाता है')"
+ ],
+ "lines": [
+  {
+   "text": "कुम्भकर्ण ने नींद, कभी माँगी ही नहीं थी.",
+   "caps": "*Kumbhakaran ne neend | kabhi *maangi | hi nahi thi",
+   "speed": 1.12,
+   "gap": 0.05
+  },
+  {
+   "text": "उसकी ज़ुबान फिसल गई थी.",
+   "caps": "Uski *zubaan | *phisal gayi thi",
+   "speed": 1.12,
+   "gap": 0.17
+  },
+  {
+   "text": "और उस एक शब्द ने, उसकी पूरी ज़िंदगी छीन ली.",
+   "caps": "Aur us *ek shabd ne | uski poori | *zindagi chheen li",
+   "speed": 1.1,
+   "gap": 0.22
+  },
+  {
+   "text": "वाल्मीकि रामायण का, उत्तर कांड.",
+   "caps": "*Valmiki Ramayan ka | *Uttar Kaand",
+   "speed": 1.12,
+   "gap": 0.07
+  },
+  {
+   "text": "तीन भाई. रावण, कुम्भकर्ण, और विभीषण.",
+   "caps": "*Teen bhai | Ravan, *Kumbhakaran | aur Vibhishan",
+   "speed": 1.12,
+   "gap": 0.07
+  },
+  {
+   "text": "तीनों ने ब्रह्मा जी के लिए, कठोर तप किया.",
+   "caps": "Teenon ne *Brahma ji | ke liye | *kathor tap kiya",
+   "speed": 1.14,
+   "gap": 0.05
+  },
+  {
+   "text": "पर कुम्भकर्ण का तप, सबसे भयंकर था.",
+   "caps": "Par Kumbhakaran ka *tap | sabse *bhayankar tha",
+   "speed": 1.12,
+   "gap": 0.05
+  },
+  {
+   "text": "गर्मी में आग के बीच. सर्दी में, पानी के अंदर.",
+   "caps": "Garmi mein *aag ke beech | Sardi mein | *paani ke andar",
+   "speed": 1.14,
+   "gap": 0.05
+  },
+  {
+   "text": "पूरे दस हज़ार साल.",
+   "caps": "Poore *das hazaar | saal",
+   "speed": 1.05,
+   "gap": 0.22
+  },
+  {
+   "text": "पर ये देखकर, देवता डर गए.",
+   "caps": "Par ye dekhkar | *devta | *dar gaye",
+   "speed": 1.12,
+   "gap": 0.05
+  },
+  {
+   "text": "बिना वरदान के ही, ये राक्षस इतना भयंकर है.",
+   "caps": "Bina *vardaan ke hi | ye raakshas | itna *bhayankar hai",
+   "speed": 1.14,
+   "gap": 0.05
+  },
+  {
+   "text": "अगर वर मिल गया, तो तीनों लोक नहीं बचेंगे.",
+   "caps": "Agar var mil gaya | to *teenon lok | nahi *bachenge",
+   "speed": 1.14,
+   "gap": 0.17
+  },
+  {
+   "text": "तब ब्रह्मा जी ने, देवी सरस्वती को बुलाया.",
+   "caps": "Tab Brahma ji ne | *Devi Saraswati ko | bulaaya",
+   "speed": 1.12,
+   "gap": 0.05
+  },
+  {
+   "text": "और कहा, इस राक्षस की वाणी बन जाओ.",
+   "caps": "Aur kaha | is raakshas ki | *vaani ban jaao",
+   "speed": 1.08,
+   "gap": 0.22
+  },
+  {
+   "text": "ब्रह्मा जी प्रकट हुए. बोले, वर माँगो.",
+   "caps": "Brahma ji *prakat hue | Bole | *var maango",
+   "speed": 1.12,
+   "gap": 0.17
+  },
+  {
+   "text": "पर अब जो बोल रहा था, वो कुम्भकर्ण नहीं था...",
+   "caps": "Par ab jo *bol raha tha | vo *Kumbhakaran | nahi tha",
+   "speed": 1.08,
+   "gap": 0.27
+  },
+  {
+   "text": "कहा जाता है, वो माँगना चाहता था, इंद्रासन.",
+   "caps": "Kaha jaata hai | vo maangna chaahta tha | *Indraasan",
+   "speed": 1.1,
+   "gap": 0.05
+  },
+  {
+   "text": "पर मुँह से निकला... निद्रासन.",
+   "caps": "Par munh se *nikla | *Nidraasan",
+   "speed": 1.02,
+   "gap": 0.27
+  },
+  {
+   "text": "वाल्मीकि लिखते हैं, उसने माँगी, बरसों की नींद.",
+   "caps": "Valmiki likhte hain | usne maangi | *barson ki neend",
+   "speed": 1.08,
+   "gap": 0.07
+  },
+  {
+   "text": "ब्रह्मा जी बोले, तथास्तु.",
+   "caps": "Brahma ji bole | *Tathaastu",
+   "speed": 1.05,
+   "gap": 0.22
+  },
+  {
+   "text": "सरस्वती चली गईं. और कुम्भकर्ण को होश आया.",
+   "caps": "Saraswati chali gayin | aur Kumbhakaran ko | *hosh aaya",
+   "speed": 1.12,
+   "gap": 0.05
+  },
+  {
+   "text": "ये मेरे मुँह से, क्या निकल गया?",
+   "caps": "Ye mere munh se | kya *nikal gaya?",
+   "speed": 1.08,
+   "gap": 0.05
+  },
+  {
+   "text": "मुझे देवताओं ने, भ्रम में डाल दिया.",
+   "caps": "Mujhe *devtaaon ne | *bhram mein daal diya",
+   "speed": 1.1,
+   "gap": 0.27
+  },
+  {
+   "text": "पर असली मोड़, अभी बाक़ी था...",
+   "caps": "Par *asli mod | abhi *baaki tha",
+   "speed": 1.08,
+   "gap": 0.17
+  },
+  {
+   "text": "युद्ध कांड में विभीषण बताते हैं, रावण ने भाई के लिए विनती की.",
+   "caps": "Yuddh Kaand mein | Vibhishan batate hain | Ravan ne bhai ke liye | *vinti ki",
+   "speed": 1.14,
+   "gap": 0.05
+  },
+  {
+   "text": "तब ब्रह्मा जी ने कहा, छह महीने नींद, और बस एक दिन जागना.",
+   "caps": "Tab Brahma ji ne kaha | *chhah mahine neend | aur bas *ek din jaagna",
+   "speed": 1.12,
+   "gap": 0.17
+  },
+  {
+   "text": "फिर युद्ध आया. और रावण ने, उसे बीच नींद में जगा दिया.",
+   "caps": "Phir *yuddh aaya | Aur Ravan ne | use beech neend mein | *jaga diya",
+   "speed": 1.14,
+   "gap": 0.07
+  },
+  {
+   "text": "जागते ही कुम्भकर्ण ने, रावण से साफ़ कहा.",
+   "caps": "Jaagte hi Kumbhakaran ne | Ravan se | *saaf kaha",
+   "speed": 1.1,
+   "gap": 0.05
+  },
+  {
+   "text": "भैया, आपने ग़लत किया है.",
+   "caps": "Bhaiya, aapne | *galat kiya hai",
+   "speed": 1.02,
+   "gap": 0.22
+  },
+  {
+   "text": "फिर भी, वो भाई के लिए लड़ने गया.",
+   "caps": "Phir bhi | vo *bhai ke liye | ladne gaya",
+   "speed": 1.08,
+   "gap": 0.05
+  },
+  {
+   "text": "और फिर कभी नहीं लौटा.",
+   "caps": "Aur phir kabhi | *nahi lauta",
+   "speed": 1.0,
+   "gap": 0.32
+  },
+  {
+   "text": "सबको याद है, वो जो छह महीने सोता था.",
+   "caps": "Sabko yaad hai | vo jo *chhah mahine | sota tha",
+   "speed": 1.1,
+   "gap": 0.05
+  },
+  {
+   "text": "पर कौन याद करता है, कि जागते ही उसने, सच बोला था?",
+   "caps": "Par kaun yaad karta hai | ki jaagte hi usne | *sach bola tha?",
+   "speed": 1.05,
+   "gap": 0.32
+  },
+  {
+   "text": "ऐसी ही अनकही कहानियों के लिए, फ़ॉलो करें अनटोल्ड स्टोरीज़.",
+   "caps": "Aisi hi *ankahi kahaaniyon ke liye | follow karein | *Untold Stories",
+   "speed": 1.12,
+   "gap": 0.05
+  }
+ ]
+}

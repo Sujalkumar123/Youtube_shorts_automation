@@ -775,5 +775,45 @@
   "voice": "ElevenLabs Sahir",
   "duration_s": 68.8,
   "problems": "none (full render + slow-preset encode exceeded one 10-min shell call; re-encoded with -preset fast)"
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "morning",
+  "slug": "kumbhakarna-nidra",
+  "topic": "Kumbhakarna's slip of the tongue (Saraswati as his speech; asked for sleep, not Indra's throne)",
+  "story": "Valmiki Uttara Kanda 10 + Yuddha Kanda 60-63",
+  "palette": "Pattachitra: vermilion / cream / indigo / ochre (first video in the signature style)",
+  "scenes": [
+   "sleeping giant",
+   "throne cracking",
+   "tapas fire/water",
+   "devas on clouds",
+   "three-world panels",
+   "Brahma",
+   "Saraswati light stream",
+   "moon wheel",
+   "war banners rise",
+   "truth aura"
+  ],
+  "new_kit": [
+   "kit.STYLE.patta (ink outlines) + main.js pattaFrame/patta wash",
+   "examples/kumbhakarna-nidra: patta(), tree(), sunDisc(), moonDisc(), flames(), waves(), kumbha(), sleeper(rise), throne(crack), deva(), cloudBand(), saraswati(), stream(), petals()",
+   "tools/fix_words.py",
+   "tools/thumb.html + thumb_shot.cjs"
+  ],
+  "title": "कुम्भकर्ण ने नींद कभी माँगी ही नहीं थी",
+  "title_lang": "hi",
+  "hashtags": [
+   "#Kumbhakarna",
+   "#Ramayana",
+   "#IndianMythology",
+   "#shorts"
+  ],
+  "duration": 99.9,
+  "youtube": null,
+  "status": "NOT POSTED: Zapier upload_video throttled; mp4 + thumb kept on branch media (media/kumbhakarna-nidra.mp4)",
+  "problems": [
+   "Zapier YouTube upload_video: 429 Too Many Requests x5 (07:13-07:22 IST), then 'This action has been throttled without retry' on every try until 08:05 (also without thumbnail, and as public). YouTube GET requests worked. Telegram alerts sent."
+  ]
  }
 ]
