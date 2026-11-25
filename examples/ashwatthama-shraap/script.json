@@ -1,0 +1,123 @@
+{
+ "voice": "eleven:Sahir",
+ "eleven_voice": "4LIpEnnggPcuL2KuRQIO",
+ "eleven_model": "eleven_multilingual_v2",
+ "eleven_stability": 0.42,
+ "eleven_style": 0.4,
+ "eleven_speed": 1.16,
+ "lead": 0.15,
+ "outro": 0.3,
+ "gap": 0.2,
+ "breaths": false,
+ "music": "tension",
+ "music_db": -29,
+ "music_sa": 110,
+ "music_lp": 2000,
+ "music_sub": 0.9,
+ "voice_fx": "highpass=f=60,equalizer=f=130:t=q:w=1:g=3,equalizer=f=6500:t=q:w=1.5:g=-1.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9",
+ "brand_badge": false,
+ "style": "pattachitra",
+ "title": "श्रीकृष्ण ने एक योद्धा को मरने नहीं दिया",
+ "sources": [
+  "Mahabharata, Sauptika Parva 1-18 (the owl and the crows; the night raid; Draupadi's five sons; the Brahmashira at the Ganga; Arjuna withdraws, Ashwatthama turns it to Uttara's womb; Krishna revives Parikshit and curses Ashwatthama to wander 3000 years alone, reeking of pus and blood; the gem taken from his head)",
+  "Asirgarh fort / Gupteshwar Mahadev and the tall man asking for oil: popular local belief (marked 'कहा जाता है')"
+ ],
+ "lines": [
+  {
+   "text": "श्रीकृष्ण ने एक योद्धा को, मरने नहीं दिया.",
+   "caps": "*Shri Krishna ne | ek yoddha ko | *marne nahi diya",
+   "speed": 1.12,
+   "gap": 0.08
+  },
+  {
+   "text": "क्योंकि मौत, उसके लिए बहुत छोटी सज़ा थी.",
+   "caps": "Kyunki *maut | uske liye | bahut *chhoti saza thi",
+   "speed": 1.12,
+   "gap": 0.25
+  },
+  {
+   "text": "युद्ध की आख़िरी रात, उसने एक उल्लू को देखा...",
+   "caps": "Yuddh ki *aakhri raat | usne ek *ullu ko dekha",
+   "speed": 1.14,
+   "gap": 0.06
+  },
+  {
+   "text": "जो सोते हुए कौओं को, एक-एक करके मार रहा था.",
+   "caps": "Jo *sote hue kauon ko | ek ek karke | maar raha tha",
+   "speed": 1.12,
+   "gap": 0.18
+  },
+  {
+   "text": "उसी रात, वो पांडवों के शिविर में घुसा.",
+   "caps": "Usi raat | wo *Pandavon ke shivir mein ghusa",
+   "speed": 1.16,
+   "gap": 0.12
+  },
+  {
+   "text": "सुबह, द्रौपदी के पाँचों बेटे, कभी नहीं उठे.",
+   "caps": "Subah | *Draupadi ke paanchon bete | *kabhi nahi uthe",
+   "speed": 1.08,
+   "gap": 0.25
+  },
+  {
+   "text": "पर असली पाप, अभी बाक़ी था.",
+   "caps": "Par asli *paap | abhi baaki tha",
+   "speed": 1.1,
+   "gap": 0.15
+  },
+  {
+   "text": "उसने ब्रह्मास्त्र मोड़ दिया... एक माँ के गर्भ की ओर.",
+   "caps": "Usne *brahmastra mod diya | ek maa ke *garbh ki or",
+   "speed": 1.12,
+   "gap": 0.25
+  },
+  {
+   "text": "कृष्ण ने बच्चे को बचाया... और फिर, श्राप दिया.",
+   "caps": "Krishna ne bachche ko *bachaya | aur phir | *shraap diya",
+   "speed": 1.1,
+   "gap": 0.25
+  },
+  {
+   "text": "तीन हज़ार साल तक भटकेगा. अकेला. तेरे घाव, कभी नहीं भरेंगे.",
+   "caps": "*Teen hazaar saal | bhatkega *akela | ghaav kabhi *nahi bharenge",
+   "speed": 1.08,
+   "gap": 0.2
+  },
+  {
+   "text": "माथे की मणि छीन ली गई. वहाँ बस एक घाव रह गया.",
+   "caps": "Maathe ki *mani chheen li | bas ek *ghaav reh gaya",
+   "speed": 1.12,
+   "gap": 0.3
+  },
+  {
+   "text": "उसका नाम था... अश्वत्थामा.",
+   "caps": "Uska naam tha | *Ashwatthama",
+   "speed": 1.0,
+   "gap": 0.4
+  },
+  {
+   "text": "कहा जाता है, असीरगढ़ के शिव मंदिर में, आज भी हर सुबह, ताज़े फूल मिलते हैं.",
+   "caps": "Kaha jaata hai | *Asirgarh ke Shiv mandir mein | aaj bhi har subah | *taaze phool milte hain",
+   "speed": 1.16,
+   "gap": 0.1
+  },
+  {
+   "text": "दरवाज़ा खुलने से पहले.",
+   "caps": "Darwaza *khulne se pehle",
+   "speed": 1.06,
+   "gap": 0.3
+  },
+  {
+   "text": "तीन हज़ार साल... अभी पूरे नहीं हुए.",
+   "caps": "Teen hazaar saal | abhi *poore nahi hue",
+   "speed": 1.02,
+   "gap": 0.35
+  },
+  {
+   "text": "फॉलो करें, Untold Stories.",
+   "caps": "Follow karein | *Untold Stories",
+   "speed": 1.14,
+   "gap": 0.0
+  }
+ ]
+}

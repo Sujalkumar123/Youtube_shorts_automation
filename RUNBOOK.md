@@ -58,7 +58,7 @@ Quick summary (RULES.md wins if anything here differs):
      the viewer who recognises it first feels smart, rewatches and comments.
   3. **The comment question rewards that recognition:** "Did you recognise the brother who never slept? 👇",
      "क्या आप उर्मिला की कहानी जानते थे? 👇". 270-640 comments on their hits. Use this shape, not generic "comment karo".
-  4. **80-105 s. Never numbered parts in shorts.** (Our RULES.md 85-100 s already fits.)
+  4. **Never numbered parts in shorts.** Length: the user chose 45-55 s (crisper than Maya's 80-105 s).
   5. **Title = one calm sentence with a paradox**, the same line opens the description, then a 3-5 line story summary
      in plain words (search reads it), then the question, then sources. Our Hindi version of this is fine.
   6. **Novel visual formats travel:** "Shri Ram's whole journey on one map" got 1.18M. Once a week we may do a
@@ -103,7 +103,7 @@ Quick summary (RULES.md wins if anything here differs):
       only (lamps lit with water at Dwarkamai, the grinding of wheat to stop the cholera, the dhuni that never went out).
       1-2 a week max, test with analytics before doing more.
   - Re-check Studio → Research → "Your audience's searches" when the user sends a new screenshot; update this block.
-- **Length 85-100 s, ~160-170 Hindi words.** Beats: hook → stakes → setup → turn → twist → closing line that flips the
+- **Length 45-55 s, ~120-135 Hindi words, 14-17 crisp lines (user 2026-11-25 23:00; replaces 85-100 s).** Model: examples/ashwatthama-shraap. Beats: hook → stakes → setup → turn → twist → closing line that flips the
   hook → "ऐसी ही अनकही कहानियों के लिए फॉलो करें Untold Stories।" (this replaces the comment-ask ending; the comment
   question goes in the description). Folk/later details marked "कहा जाता है"/"तुलसीदास लिखते हैं", always AFTER the hook.
 - **Sound:** voice starts at 0.0-0.3 s (`"lead": 0.15`); no music/cue before the first word (mix.py now enforces it);
@@ -326,7 +326,7 @@ Real growth only: no bought views, bots, sub4sub, fake comments or misleading fi
 - Hold the answer to the title until the last 15 s. Never answer it in the first half.
 - Ending loops: the last line leads back into line 1 (end on a half-question that line 1 answers), no outro, no "subscribe" talk,
   no logo card. The video ends on the last word (≤0.3 s tail).
-- 85-100 s stays the rule (RULES.md), so the script must earn it: if a line adds no new fact or tension, cut it.
+- 45-55 s is the rule (RULES.md): if a line adds no new fact or tension, cut it.
 
 ## 6b. Problems → Telegram, always (the user watches Telegram, not this session)
 Wrap every step. If ANY step fails or looks wrong, send to Telegram (Zapier Telegram "Send Message", chat 1289292985):

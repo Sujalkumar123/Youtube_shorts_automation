@@ -49,7 +49,7 @@ Tone: horror atmosphere, not gore. Darkness, silence, footsteps, whispers, shado
 Still real mythology only: Mahabharata, Ramayana, Puranas, Upanishads, Vetala Panchavimshati, or clearly labelled folk belief ("कहा जाता है"). No invented ghosts or fake "true events".
 Story ideas that fit (not used yet): Ashwatthama, cursed to wander with a wound that never heals (Mahabharata, Sauptika Parva); Parikshit sealed in a tower and the snake hidden in a fruit (Bhagavata 1.18-19 / 12.6); Jarasandha, born in two halves and joined by a demoness (Sabha Parva); Raktabija, every drop of blood becomes a new demon (Devi Mahatmya); Bhairava and Brahma's skull that would not leave his hand (Shiva Purana); Nachiketa waiting three nights at Yama's door (Katha Upanishad); Vikram and Betaal on the cremation-ground tree (Vetala Panchavimshati); Shiva as Bhootnath with the ghosts of the shamshan; Kumbhakarna woken by force (already used, don't repeat); Ravana's Ahiravan taking Rama and Lakshmana to Patal (folk Ramayana, label it); Andhaka, Shiva's blind son (Shiva Purana).
 4. Script structure and length
-85 to 100 seconds, about 160 to 170 Hindi words. Add one more twist to reach this length, never padding or a slower voice.
+**45 to 55 seconds (user, 25 Nov 2026 23:00: "short crispy honi chahiye, hooks strong, end tak audience rakhe"), about 120-135 Hindi words in 14-17 lines.** Crisp: every line 5-10 words, no setup sentences, no repetition; cut any line that adds no new fact or tension. (This replaces 85-100 s.)
 Beats:
 Hook (0 to 3 s): the contradiction, told as something scary (section 3a).
 Second line (3 to 8 s): raises the stakes or reveals the "who/why" question.
@@ -118,7 +118,7 @@ Rules:
 1. HOOK: The first sentence states a SCARY, eerie contradiction or surprising fact about a famous figure, as a fact, in 8-16 Hindi words. Never open with a question, "क्या आप जानते हैं", scene-setting, a shloka, a disclaimer or the channel name.
 2. TITLE: The title is the same sentence as the hook, in Hindi, under 70 characters, with no hashtags and no "| English" suffix. Also give an English version of the same line.
 3. TOPIC: A figure most Indians know (prefer Ramayana, then Shiva, Krishna, Vishnu's avatars, major Mahabharata names) plus a fact few people know. The Short must stand alone (no episodes).
-4. LENGTH: 160-170 Hindi words (85-100 seconds). Story style: dark suspense/horror atmosphere (no gore); build tension in 2-3 steps and hold the answer back. Structure: scary hook, stakes line, setup, rising dread, twist, the conclusion/reveal in the last 10-15 s, a closing line that leaves a chill, then "ऐसी ही अनकही कहानियों के लिए फॉलो करें Untold Stories।"
+4. LENGTH: 120-135 Hindi words (45-55 seconds), 14-17 short crisp lines. Story style: dark suspense/horror atmosphere (no gore); build tension in 2-3 steps and hold the answer back. Structure: scary hook, stakes line, setup, rising dread, twist, the conclusion/reveal in the last 10-15 s, a closing line that leaves a chill, then "ऐसी ही अनकही कहानियों के लिए फॉलो करें Untold Stories।"
 5. FACTS: Use only well-established accounts and name the text. Mark later retellings or folk details with "कहा जाता है" or name the source (e.g. "तुलसीदास लिखते हैं"), always after the hook. No invented dialogue, numbers or scripture. Numbers in Hindi words.
 6. VISUALS: For each line give a scene description. Scene 1 must show the contradiction itself. One short on-screen phrase per scene.
 7. DESCRIPTION: hook in Hindi; hook in English; 1-2 lines without the twist; a question for comments ending in 👇; "Sources:" with exact text and chapter; 3-5 hashtags ending with #shorts.
@@ -128,7 +128,7 @@ Self-check before publishing each Short
  Suspense held to the end; the conclusion/reveal is in the last 10-15 seconds
  Title = first line; no #shorts or "| English" in the title
  Famous figure; not a repeat of a story listed above
- 85 to 100 seconds
+ 45 to 55 seconds, crisp lines
  Voice starts at 0.0 to 0.3 s; no music before the first word; music well under the voice
  Frame 1 shows the contradiction; one text layer at a time; the signature art style
  Description follows the template, with sources and a comment question
