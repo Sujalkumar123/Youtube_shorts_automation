@@ -828,5 +828,18 @@
   "problems": [
    "Zapier YouTube upload_video throttled on both connections; YouTube GET and Telegram send_message worked. Telegram alerts sent 13:52 and 14:21 IST."
   ]
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "evening (20:00)",
+  "slug": "kumbhakarna-nidra",
+  "topic": "(retry of the unposted morning video, no new video made)",
+  "title": "कुम्भकर्ण ने नींद कभी माँगी ही नहीं थी",
+  "title_lang": "hi",
+  "youtube": null,
+  "status": "NOT POSTED: Zapier upload_video 'throttled without retry' at 18:55 IST (1 try, default connection, publish_at 20:00). mp4 + thumb still on branch media.",
+  "problems": [
+   "Zapier upload throttled for the 4th run in a row; Telegram alert sent 18:51 IST. No new video made (would be unuploadable; saved ElevenLabs credits)."
+  ]
  }
 ]
