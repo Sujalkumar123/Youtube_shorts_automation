@@ -51,6 +51,32 @@ function camera(sh, lt, d, t) {
   for (const c of OP._impacts) { const dt = t - c.t; if (dt < 0 || dt > 0.45) continue; const a = c.k * Math.exp(-dt * 9); sx += Math.sin(dt * 90) * 16 * a; sy += Math.cos(dt * 77) * 12 * a; rot += Math.sin(dt * 60) * 0.006 * a; }
   ctx.translate(cx + sx, cy + sy); ctx.rotate(rot); ctx.scale(punch * drift, punch * drift); ctx.translate(-cx, -cy);
 }
+// Hook banner (user 27 Nov: "apply this type", viral sticker style): big red/yellow sticker in the first ~2.2 s.
+// script.banner = { top: 'छोटी लाइन', big: 'बड़ी लाइन!!!', until: 2.2, y: 330 }. Frame 1 is also the Shorts feed thumbnail.
+function drawHookBanner(t) {
+  const b = OP.script && OP.script.banner; if (!b) return; const until = b.until ?? 2.2; if (t > until) return;
+  const pop = Math.min(1, 0.82 + (t / 0.16) * 0.18), out = Math.min(1, (until - t) / 0.2), k = Math.min(pop, out); if (k <= 0) return;
+  const sc = (0.6 + 0.4 * k) * (1 + 0.025 * Math.sin(t * 9)), cy = b.y ?? 330;
+  ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = k; ctx.translate(540, cy); ctx.rotate(-0.045); ctx.scale(sc, sc);
+  // burst spikes
+  ctx.fillStyle = '#FFD21A'; ctx.beginPath(); for (let i = 0; i < 28; i++) { const a = i / 28 * Math.PI * 2, r = i % 2 ? 300 : 360; ctx.lineTo(Math.cos(a) * r * 1.55, Math.sin(a) * r * 0.62); } ctx.closePath(); ctx.fill();
+  ctx.lineWidth = 10; ctx.strokeStyle = '#111'; ctx.stroke();
+  // red panel + yellow strip
+  ctx.shadowColor = 'rgba(0,0,0,0.55)'; ctx.shadowBlur = 24; ctx.shadowOffsetY = 8;
+  ctx.fillStyle = '#D0201A'; ctx.beginPath(); ctx.roundRect(-470, -150, 940, 300, 28); ctx.fill(); ctx.shadowBlur = 0; ctx.shadowOffsetY = 0;
+  ctx.lineWidth = 12; ctx.strokeStyle = '#FFE14D'; ctx.stroke();
+  const g = ctx.createLinearGradient(0, 0, 0, 140); g.addColorStop(0, '#FFE14D'); g.addColorStop(1, '#FFB000');
+  ctx.fillStyle = g; ctx.beginPath(); ctx.roundRect(-450, 10, 900, 125, 20); ctx.fill();
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round';
+  const fit = (txt, max, size) => { let s2 = size; ctx.font = `700 ${s2}px Martel`; while (ctx.measureText(txt).width > max && s2 > 40) { s2 -= 4; ctx.font = `700 ${s2}px Martel`; } return s2; };
+  if (b.top) { const s1 = fit(b.top, 860, 82); ctx.lineWidth = s1 * 0.16; ctx.strokeStyle = '#000'; ctx.strokeText(b.top, 0, -68); ctx.fillStyle = '#FFFFFF'; ctx.fillText(b.top, 0, -68); }
+  if (b.big) { const s2 = fit(b.big, 860, 112); ctx.lineWidth = s2 * 0.15; ctx.strokeStyle = '#000'; ctx.strokeText(b.big, 0, 74); ctx.fillStyle = '#C8102E'; ctx.fillText(b.big, 0, 74); }
+  ctx.restore();
+  // red arrow pointing down at the subject
+  if (b.arrow !== false) { const ay = (b.ay ?? cy + 170) + 14 * Math.sin(t * 10); ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = k; ctx.translate(b.ax ?? 880, ay); ctx.rotate(b.arot ?? 0.7); ctx.scale(b.as ?? 0.7, b.as ?? 0.7);
+    ctx.fillStyle = '#E3261C'; ctx.strokeStyle = '#111'; ctx.lineWidth = 9; ctx.beginPath(); ctx.moveTo(-34, 0); ctx.lineTo(34, 0); ctx.lineTo(34, 120); ctx.lineTo(80, 120); ctx.lineTo(0, 220); ctx.lineTo(-80, 120); ctx.lineTo(-34, 120); ctx.closePath(); ctx.fill(); ctx.stroke(); ctx.restore(); }
+}
+
 function renderShot(i, lt, t, target) {
   const S = OP._shots, sh = S[i], end = i < S.length - 1 ? S[i + 1].at : T.dur, d = end - sh.at;
   const g = target.getContext('2d'); setCtx(g);
@@ -114,7 +140,8 @@ function draw(t) {
   ctx.save(); ctx.globalAlpha = 0.05; ctx.globalCompositeOperation = 'overlay'; ctx.imageSmoothingEnabled = false; ctx.drawImage(OP._grain[Math.floor(t * 10) % 4], 0, 0, W, H); ctx.restore();
   if (STYLE.patta) pattaFrame();
   if (OP.script && OP.script.brand_badge) drawBrand();
-  const fade = Math.min(clamp(t / 0.25), clamp((T.dur - t) / 0.35));
+  drawHookBanner(t);
+  const fade = Math.min((OP.script && OP.script.banner) ? 1 : clamp(t / 0.25), clamp((T.dur - t) / 0.35));   // no fade-in when a hook banner is on: frame 1 = feed thumbnail
   if (fade < 1) { ctx.fillStyle = '#000'; ctx.globalAlpha = 1 - fade; ctx.fillRect(0, 0, W, H); ctx.globalAlpha = 1; }
   CAP.y = sh.capY ?? 1400;   // per shot: put the caption in an empty part of the frame (shot.capY)
   drawCaption(t);
