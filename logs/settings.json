@@ -47,6 +47,11 @@
       "slug": "surya-tej",
       "publish_at": "2026-11-22T08:00:00+05:30",
       "note": "made manually with the ElevenLabs Sahir voice; scheduled with publishAt"
+    },
+    "2026-11-26 20:00": {
+      "slug": "bhangarh-shraap",
+      "made": "2026-11-26 ~17:15 IST in chat (user asked)",
+      "note": "Made in the chat and sent to the user on Telegram (title + description). The 18:45 run must NOT make a new video for the 20:00 slot. It only checks the channel (via Zapier) for this title; if the user uploaded it, add it to playlist 'Untold Stories' default/none and post the first comment; if not, do nothing more."
     }
   },
   "voice_engine": "elevenlabs",
