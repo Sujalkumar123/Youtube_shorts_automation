@@ -47,15 +47,6 @@
       "slug": "surya-tej",
       "publish_at": "2026-11-22T08:00:00+05:30",
       "note": "made manually with the ElevenLabs Sahir voice; scheduled with publishAt"
-    },
-    "2026-11-26 16:00": {
-      "slug": "ashwatthama-shraap",
-      "made": "2026-11-25 23:00 IST in chat",
-      "media": "branch media: media/ashwatthama-shraap.mp4 + -thumb.jpg",
-      "title": "श्रीकृष्ण ने एक योद्धा को मरने नहीं दिया!!! #indianmythology #hindumythology #mahabharat #hindi",
-      "playlist": "PLX5-yEeFca54",
-      "note": "Already sent to the user on Telegram (thumbnail + link + full description). The 14:45 run must NOT make a new video: first check the channel for this title (user may have uploaded it by hand). If it is there: log it, add it to the playlist, remove the media files. If not: try Zapier upload_video ONCE with publish at 16:00 (description = the Telegram text); if throttled, do nothing more (user has it). Zapier was still throttled at 23:38 on 25 Nov; the user was asked to schedule it himself from the YouTube app. A private/scheduled video with this title on the channel counts as done.",
-      "publish": "2026-11-26 16:00 IST (user asked 23:38: \"4 baje daal diyo\")"
     }
   },
   "voice_engine": "elevenlabs",
@@ -91,5 +82,11 @@
   "short_length_s": [
     45,
     55
-  ]
+  ],
+  "youtube_api": {
+    "status": "connected 2026-11-26 (own Google Cloud project untold-stories-uploader, In production, unverified, NOT audited yet)",
+    "use_now": "ALL reads and light writes go through engine/tools/yt_direct.py / the YouTube API directly: latest uploads, duplicate check, playlists, first comment, analytics (YouTube Analytics API), competitor/trend searches. Zapier is only a fallback.",
+    "uploads": "Until the API audit is approved, videos uploaded through the API are locked private by YouTube. So keep sending the finished video to the user on Telegram for him to upload/schedule by hand (title, description, playlist). After he uploads, the run (or the next run) finds it via the API, adds it to the playlist and posts the first comment. When the user says 'audit approved', switch uploads to yt_direct.py upload + publish.",
+    "quota": "10,000 units/day per project; upload=1,600, search=100, list/insert=1-50."
+  }
 }
