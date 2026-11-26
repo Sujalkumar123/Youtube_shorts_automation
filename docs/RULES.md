@@ -14,6 +14,17 @@ Maya's multi-part "Episode" Shorts had a median of 73K versus 181K for standalon
 These are patterns from public data, not guarantees.
 
 Rules for every Short
+0. LOCKED WINNING FORMULA (user 26 Nov 2026 19:02: "It's working bro, do it same as it"). Kumbhakarna (826 views in 4 h) and Ashwatthama (1.2k views in 2.5 h) both used this. EVERY short, every lane, follows it exactly; copy the structure of examples/ashwatthama-shraap and examples/bhangarh-shraap:
+   a) Line 1 (= Hindi title + "!!!"): a famous name or place + the one thing everyone believes, flipped or made frightening. 6-12 words. Example: "श्रीकृष्ण ने एक योद्धा को मरने नहीं दिया." / "भानगढ़ में सूरज ढलने के बाद जाना मना है... और ये सरकार ने लिखा है."
+   b) Line 2 raises the stakes in under 3 s ("क्योंकि मौत, उसके लिए बहुत छोटी सज़ा थी.").
+   c) Every 3-4 s a new image/fact; a "पर असली ... अभी बाकी था" type open loop in the middle.
+   d) The key name or answer is held back until ~65-70% of the video (Ashwatthama named at 37 s of 54).
+   e) Ending: a creepy present-day hook (आज भी..., अभी पूरे नहीं हुए) or a direct question to the viewer, then "फॉलो करें, Untold Stories."
+   f) 45-55 s, 14-16 lines, Sahir voice, tension music, scary dark Pattachitra look, red/night palette, one red-glow detail.
+   g) Thumbnail: the scariest frame + 2-3 lines of huge Hindi text at the TOP, caption area darkened (examples/*/thumb.html style).
+   h) Description: hook line, one English sentence with the search phrase, 2 lines of story, a yes/no or recognition question 👇, Sources, channel line, 10 hashtags max; 3 hashtags in the title; 10-15 tags.
+   Do not experiment with this structure unless the 14:45 analytics show two shorts in a row below 300 views in 24 h; then note why in logs/notes.md and change ONE thing only.
+
 1. Opening line (most important)
 The first spoken sentence is a contradiction or surprising fact, stated as a fact, about a figure most Indians already know.
 It must work in under 3 seconds: one or two short sentences, ideally 8 to 16 Hindi words.
