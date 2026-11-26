@@ -864,5 +864,13 @@
   "slug": "ashwatthama-shraap",
   "youtube": "https://youtube.com/shorts/px8hqGs2QXI",
   "status": "private, publishAt 2026-11-26T11:00Z; added to Untold Mahabharata via own API"
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "16:30 (run 14:45)",
+  "slug": "ashwatthama-shraap",
+  "youtube": "px8hqGs2QXI",
+  "status": "prepared slot: verified processed + private with publishAt 2026-11-26T11:00Z (16:30 IST); no new video made, no ElevenLabs credits used",
+  "problems": []
  }
 ]

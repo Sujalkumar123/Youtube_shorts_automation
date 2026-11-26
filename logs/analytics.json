@@ -1,9 +1,138 @@
-[{"date":"2026-11-25","range":"2026-11-20..24","rows":[
-{"id":"TYtIlrzNMhM","topic":"Govardhan","views":699,"avg_pct":59.9},
-{"id":"QmWmgymDXBU","topic":"Trishul","views":360,"avg_pct":47.8},
-{"id":"WZL7iiv6jno","topic":"Tripura","views":174,"avg_pct":44.8},
-{"id":"lCaaC-I7PM8","topic":"Ravana name","views":53,"avg_pct":65.6},
-{"id":"A_kloXXdkZc","topic":"Hanuman","views":48,"avg_pct":43.9},
-{"id":"wpOev47bmls","topic":"Aruna","views":39,"avg_pct":58.6},
-{"id":"fNmMlvHxxBk","topic":"Vishnu eye","views":29,"avg_pct":37.2},
-{"id":"HfmVAtqrlrg","topic":"Matsya","views":14,"avg_pct":49.9}]}]
+[
+ {
+  "date": "2026-11-25",
+  "range": "2026-11-20..24",
+  "rows": [
+   {
+    "id": "TYtIlrzNMhM",
+    "topic": "Govardhan",
+    "views": 699,
+    "avg_pct": 59.9
+   },
+   {
+    "id": "QmWmgymDXBU",
+    "topic": "Trishul",
+    "views": 360,
+    "avg_pct": 47.8
+   },
+   {
+    "id": "WZL7iiv6jno",
+    "topic": "Tripura",
+    "views": 174,
+    "avg_pct": 44.8
+   },
+   {
+    "id": "lCaaC-I7PM8",
+    "topic": "Ravana name",
+    "views": 53,
+    "avg_pct": 65.6
+   },
+   {
+    "id": "A_kloXXdkZc",
+    "topic": "Hanuman",
+    "views": 48,
+    "avg_pct": 43.9
+   },
+   {
+    "id": "wpOev47bmls",
+    "topic": "Aruna",
+    "views": 39,
+    "avg_pct": 58.6
+   },
+   {
+    "id": "fNmMlvHxxBk",
+    "topic": "Vishnu eye",
+    "views": 29,
+    "avg_pct": 37.2
+   },
+   {
+    "id": "HfmVAtqrlrg",
+    "topic": "Matsya",
+    "views": 14,
+    "avg_pct": 49.9
+   }
+  ]
+ },
+ {
+  "date": "2026-11-26",
+  "range": "2026-11-19..26 (Analytics API latency: Kumbhakarna not in report yet)",
+  "rows": [
+   {
+    "id": "TYtIlrzNMhM",
+    "topic": "Govardhan",
+    "views": 747,
+    "avg_pct": 60.6,
+    "likes": 24
+   },
+   {
+    "id": "QmWmgymDXBU",
+    "topic": "Trishul",
+    "views": 364,
+    "avg_pct": 47.8,
+    "likes": 13
+   },
+   {
+    "id": "XNNllvIfBE0",
+    "topic": "Nandi",
+    "views": 214,
+    "avg_pct": 49.9,
+    "likes": 17,
+    "subs": 1
+   },
+   {
+    "id": "WZL7iiv6jno",
+    "topic": "Tripura",
+    "views": 174,
+    "avg_pct": 44.8
+   },
+   {
+    "id": "lCaaC-I7PM8",
+    "topic": "Ravana name",
+    "views": 93,
+    "avg_pct": 64.7
+   },
+   {
+    "id": "A_kloXXdkZc",
+    "topic": "Hanuman",
+    "views": 64,
+    "avg_pct": 48.2
+   },
+   {
+    "id": "wpOev47bmls",
+    "topic": "Aruna",
+    "views": 39,
+    "avg_pct": 58.6
+   },
+   {
+    "id": "fNmMlvHxxBk",
+    "topic": "Vishnu eye",
+    "views": 32,
+    "avg_pct": 35.7
+   },
+   {
+    "id": "0y5I88DFP-A",
+    "topic": "Kartikeya",
+    "views": 18,
+    "avg_pct": 36.2
+   },
+   {
+    "id": "HfmVAtqrlrg",
+    "topic": "Matsya",
+    "views": 17,
+    "avg_pct": 58.3
+   },
+   {
+    "id": "rL-Vbjx9aQk",
+    "topic": "Barbarik",
+    "views": 6,
+    "avg_pct": 10.8
+   }
+  ],
+  "public_stats": {
+   "nv-MdlZE2Zc (Kumbhakarna, RULES.md format, 25 Nov)": {
+    "views": 1372,
+    "likes": 40
+   }
+  }
+ }
+]
