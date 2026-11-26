@@ -1,0 +1,111 @@
+{
+ "voice": "eleven:Sahir",
+ "eleven_voice": "4LIpEnnggPcuL2KuRQIO",
+ "eleven_model": "eleven_multilingual_v2",
+ "eleven_stability": 0.42,
+ "eleven_style": 0.4,
+ "eleven_speed": 1.16,
+ "lead": 0.15,
+ "outro": 0.3,
+ "gap": 0.2,
+ "breaths": false,
+ "music": "tension",
+ "music_db": -29,
+ "music_sa": 110,
+ "music_lp": 2000,
+ "music_sub": 0.9,
+ "voice_fx": "highpass=f=60,equalizer=f=130:t=q:w=1:g=3,equalizer=f=6500:t=q:w=1.5:g=-1.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9",
+ "brand_badge": false,
+ "style": "pattachitra",
+ "title": "श्रीकृष्ण को भी एक श्राप मिला था",
+ "sources": [
+  "Mahabharata, Stri Parva 25 (Gandhari curses Krishna: in the 36th year his kinsmen will kill each other and he will die alone in a forest; Krishna accepts)",
+  "Mahabharata, Mausala Parva 1-8 (the Yadavas destroy each other with eraka grass that turns into iron clubs; the hunter Jara's arrow strikes Krishna's foot; the sea swallows Dwarka)"
+ ],
+ "lines": [
+  {
+   "text": "श्रीकृष्ण को भी एक श्राप मिला था... और वो पूरा सच हुआ.",
+   "caps": "*Shri Krishna ko bhi | ek *shraap mila tha | aur wo *sach hua",
+   "speed": 1.12,
+   "gap": 0.1
+  },
+  {
+   "text": "और श्राप देने वाली... एक माँ थी.",
+   "caps": "Shraap dene wali | ek *maa thi",
+   "speed": 1.04,
+   "gap": 0.25
+  },
+  {
+   "text": "कुरुक्षेत्र का युद्ध ख़त्म हुआ, और उसके सौ बेटे, मारे जा चुके थे.",
+   "caps": "Kurukshetra khatam | uske *sau bete | maare ja chuke the",
+   "speed": 1.14,
+   "gap": 0.12
+  },
+  {
+   "text": "उसने कृष्ण से कहा: तुम चाहते, तो ये युद्ध रुक सकता था.",
+   "caps": "Tum chahte | toh ye yuddh | *ruk sakta tha",
+   "speed": 1.12,
+   "gap": 0.15
+  },
+  {
+   "text": "और फिर श्राप दिया: छत्तीस साल बाद, तुम्हारा पूरा वंश, आपस में लड़कर मिट जाएगा.",
+   "caps": "*Chhattees saal baad | tumhara *poora vansh | aapas mein lad ke mit jayega",
+   "speed": 1.14,
+   "gap": 0.1
+  },
+  {
+   "text": "और तुम, जंगल में अकेले मारे जाओगे.",
+   "caps": "Aur tum | jungle mein *akele | maare jaoge",
+   "speed": 1.08,
+   "gap": 0.2
+  },
+  {
+   "text": "कृष्ण मुस्कुराए... और श्राप स्वीकार कर लिया.",
+   "caps": "Krishna *muskuraye | aur shraap *sweekar kiya",
+   "speed": 1.06,
+   "gap": 0.2
+  },
+  {
+   "text": "पर असली दर्द, अभी बाकी था.",
+   "caps": "Par asli *dard | abhi baaki tha",
+   "speed": 1.06,
+   "gap": 0.2
+  },
+  {
+   "text": "छत्तीस साल बाद, द्वारका में यदुवंशी लड़ पड़े... समुद्र किनारे की घास, लोहे की गदा बन गई.",
+   "caps": "36 saal baad | *Yaduvanshi lad pade | ghaas *lohe ki gada ban gayi",
+   "speed": 1.16,
+   "gap": 0.12
+  },
+  {
+   "text": "कृष्ण एक पेड़ के नीचे लेटे थे, जब एक शिकारी ने, उनके पैर को हिरण समझकर, तीर चला दिया.",
+   "caps": "Ek *shikari ne | pair ko *hiran samajh kar | teer chala diya",
+   "speed": 1.14,
+   "gap": 0.15
+  },
+  {
+   "text": "फिर समुद्र ने, पूरी द्वारका निगल ली.",
+   "caps": "Phir *samudra ne | poori *Dwarka nigal li",
+   "speed": 1.08,
+   "gap": 0.3
+  },
+  {
+   "text": "वो माँ थी... गांधारी.",
+   "caps": "Wo maa thi | *Gandhari",
+   "speed": 1.0,
+   "gap": 0.35
+  },
+  {
+   "text": "एक माँ के आँसू, भगवान को भी नहीं छोड़ते.",
+   "caps": "Ek maa ke *aansu | bhagwan ko bhi | *nahi chhodte",
+   "speed": 1.04,
+   "gap": 0.3
+  },
+  {
+   "text": "फॉलो करें, Untold Stories.",
+   "caps": "Follow karein | *Untold Stories",
+   "speed": 1.14,
+   "gap": 0.0
+  }
+ ]
+}
