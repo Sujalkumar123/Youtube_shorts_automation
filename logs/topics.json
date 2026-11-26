@@ -872,5 +872,15 @@
   "youtube": "px8hqGs2QXI",
   "status": "prepared slot: verified processed + private with publishAt 2026-11-26T11:00Z (16:30 IST); no new video made, no ElevenLabs credits used",
   "problems": []
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "20:00 (run 18:45)",
+  "slug": "bhangarh-shraap",
+  "lane": "B",
+  "youtube": "gLr-hJj_qxw",
+  "title": "भानगढ़ में सूरज ढलने के बाद जाना मना है!!! 😱 #bhangarh #horrorstory #shorts",
+  "status": "prepared slot: uploaded by the user by hand; verified processed, 54 s, private with publishAt 2026-11-26T14:30Z (20:00 IST); no new video made, no ElevenLabs credits used; no playlist (Lane B has none)",
+  "problems": []
  }
 ]
