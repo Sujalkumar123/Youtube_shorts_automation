@@ -1,0 +1,112 @@
+{
+ "voice": "eleven:Sahir",
+ "eleven_voice": "4LIpEnnggPcuL2KuRQIO",
+ "eleven_model": "eleven_multilingual_v2",
+ "eleven_stability": 0.42,
+ "eleven_style": 0.4,
+ "eleven_speed": 1.16,
+ "lead": 0.15,
+ "outro": 0.3,
+ "gap": 0.2,
+ "breaths": false,
+ "music": "tension",
+ "music_db": -29,
+ "music_sa": 110,
+ "music_lp": 2000,
+ "music_sub": 0.9,
+ "voice_fx": "highpass=f=60,equalizer=f=130:t=q:w=1:g=3,equalizer=f=6500:t=q:w=1.5:g=-1.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9",
+ "brand_badge": false,
+ "style": "pattachitra",
+ "title": "भानगढ़ में सूरज ढलने के बाद जाना मना है",
+ "sources": [
+  "Archaeological Survey of India notice at Bhangarh fort (entry before sunrise and after sunset prohibited)",
+  "Bhangarh built in the late 16th c. under Raja Bhagwant Das of Amber for his son Madho Singh",
+  "The tantrik Singhia / princess Ratnavati curse: local legend (marked 'कहा जाता है'); decline through famine and wars"
+ ],
+ "lines": [
+  {
+   "text": "भानगढ़ में सूरज ढलने के बाद जाना मना है... और ये भूतों ने नहीं, सरकार ने लिखा है.",
+   "caps": "*Bhangarh mein | sooraj dhalne ke baad | jaana *mana hai",
+   "speed": 1.16,
+   "gap": 0.11
+  },
+  {
+   "text": "पुरातत्व विभाग के बोर्ड पर लिखा है: सूर्यास्त के बाद, यहाँ रुकना मना है.",
+   "caps": "*ASI ke board par likha hai | suryast ke baad | *rukna mana hai",
+   "speed": 1.18,
+   "gap": 0.15
+  },
+  {
+   "text": "ये किला, आमेर के राजा भगवंत दास ने, अपने बेटे के लिए बनवाया था.",
+   "caps": "Raja *Bhagwant Das ne | apne *bete ke liye banwaya",
+   "speed": 1.2,
+   "gap": 0.06
+  },
+  {
+   "text": "फिर एक दिन, सब ख़ाली हो गया.",
+   "caps": "Phir ek din | sab *khaali ho gaya",
+   "speed": 1.1,
+   "gap": 0.22
+  },
+  {
+   "text": "कहा जाता है, एक तांत्रिक, राजकुमारी रत्नावती पर मोहित हो गया.",
+   "caps": "Kaha jaata hai | ek *tantrik | rajkumari *Ratnavati par mohit",
+   "speed": 1.16,
+   "gap": 0.08
+  },
+  {
+   "text": "उसने इत्र की शीशी पर, वशीकरण का मंत्र फूँक दिया.",
+   "caps": "Usne *itr ki sheeshi par | *mantra phoonk diya",
+   "speed": 1.16,
+   "gap": 0.08
+  },
+  {
+   "text": "पर राजकुमारी समझ गई... और शीशी, एक चट्टान पर फेंक दी.",
+   "caps": "Par rajkumari *samajh gayi | sheeshi *chattaan par phenk di",
+   "speed": 1.14,
+   "gap": 0.11
+  },
+  {
+   "text": "चट्टान लुढ़की... और तांत्रिक उसके नीचे कुचल गया.",
+   "caps": "Chattaan *ludhki | aur tantrik | *kuchal gaya",
+   "speed": 1.12,
+   "gap": 0.15
+  },
+  {
+   "text": "मरते-मरते उसने श्राप दिया: ये पूरा शहर, उजड़ जाएगा.",
+   "caps": "Marte marte | usne *shraap diya | ye shehar *ujad jayega",
+   "speed": 1.08,
+   "gap": 0.22
+  },
+  {
+   "text": "इतिहास कहता है, शहर अकाल और युद्धों में धीरे-धीरे ख़ाली हुआ.",
+   "caps": "Itihaas kehta hai | *akaal aur yuddh mein | khaali hua",
+   "speed": 1.16,
+   "gap": 0.11
+  },
+  {
+   "text": "पर आज भी, यहाँ के ज़्यादातर घरों की छतें... नहीं हैं.",
+   "caps": "Par aaj bhi | yahan ke gharon ki *chhatein | *nahi hain",
+   "speed": 1.1,
+   "gap": 0.19
+  },
+  {
+   "text": "और सूरज ढलते ही, पहरेदार सबको बाहर निकाल देते हैं.",
+   "caps": "Aur *sooraj dhalte hi | sabko *bahar nikaal dete hain",
+   "speed": 1.12,
+   "gap": 0.22
+  },
+  {
+   "text": "आप रात में वहाँ रुकेंगे?",
+   "caps": "Aap *raat mein | wahan *rukenge?",
+   "speed": 1.04,
+   "gap": 0.3
+  },
+  {
+   "text": "फॉलो करें, Untold Stories.",
+   "caps": "Follow karein | *Untold Stories",
+   "speed": 1.18,
+   "gap": 0.0
+  }
+ ]
+}

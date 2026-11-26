@@ -57,11 +57,16 @@ export function raja(o) {
   eyes(-915, o.eyes ?? 1, 28);
   cut(() => { ctx.beginPath(); ctx.moveTo(-34, -862); ctx.quadraticCurveTo(-16, -878, 0, -866); ctx.quadraticCurveTo(16, -878, 34, -862); ctx.quadraticCurveTo(16, -868, 0, -858); ctx.quadraticCurveTo(-16, -868, -34, -862); ctx.closePath(); }, INK, { shadow: 0, edge: 0 });
   ctx.fillStyle = CRIMSON; ctx.fillRect(-3, -965, 6, 26);
+  if (o.crown !== false) {
   // crown (mukut)
   cut(P_rr(-82, -985, 164, 30, 8), GOLD, { shadow: 0.4, edge: 3 });
   cut(() => { ctx.beginPath(); ctx.moveTo(-84, -982); ctx.lineTo(-96, -1040); ctx.lineTo(-62, -1022); ctx.lineTo(-44, -1075); ctx.lineTo(-20, -1040); ctx.lineTo(0, -1100); ctx.lineTo(20, -1040); ctx.lineTo(44, -1075); ctx.lineTo(62, -1022); ctx.lineTo(96, -1040); ctx.lineTo(84, -982); ctx.closePath(); }, GOLD, { shadow: 0.5, edge: 3 });
   cut(P_rr(-88, -1000, 176, 22, 8), GOLD_D, { shadow: 0.2, edge: 2 }); for (let i = -3; i <= 3; i++) circle(i * 24, -989, 5, i % 2 ? '#F7EFDC' : CRIMSON);
   cut(P_poly([[0, -1030], [-15, -1052], [0, -1076], [15, -1052]]), CRIMSON, { shadow: 0.2, edge: 2 }); circle(0, -1106, 9, '#F7EFDC'); for (const k of [-1, 1]) circle(k * 44, -1080, 7, '#F7EFDC');
+  } else { // no crown: plain head-wrap / matted hair (tantrik, guard, commoner)
+    cut(() => { ctx.beginPath(); ctx.ellipse(0, -975, 90, 46, 0, Math.PI, TAU); ctx.closePath(); }, o.wrap || '#2A1A12', { shadow: 0.3, edge: 3 });
+    if (o.bun) cut(P_circ(0, -1030, 34), o.wrap || '#2A1A12', { shadow: 0.2, edge: 3 });
+  }
   // front arm
   const armsF = { stand: [14, 6], tapas: [172, -150.6], walk: [22 * wk, 34 * wk], decree: [118, 150] }[pose];
   const hand = limb(100, -730, armsF[0], 170, armsF[1], pose === 'tapas' ? 232 : 150, 66, 48, SKIN, GOLD);
