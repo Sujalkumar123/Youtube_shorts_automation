@@ -52,6 +52,11 @@
       "slug": "bhangarh-shraap",
       "media": "branch media: media/bhangarh-shraap.mp4 + -thumb.jpg",
       "note": "Re-upload of the clean Bhangarh short. 18:45 run: do NOT make a new video; re-send it to the user on Telegram (thumbnail, download button, title, description with 10 hashtags, tags) and tell him not to add any sound in the YouTube app."
+    },
+    "2026-11-27 16:30": {
+      "slug": "gandhari-shraap",
+      "made": "27 Nov ~01:40 IST in chat (user asked)",
+      "note": "Mythology short for the back test, made in chat and sent on Telegram. The 14:45 run must NOT make a new video; only check the channel and do analytics."
     }
   },
   "voice_engine": "elevenlabs",
