@@ -23,6 +23,7 @@ Rules for every Short
    f) 45-55 s, 14-16 lines, Sahir voice, tension music, scary dark Pattachitra look, red/night palette, one red-glow detail.
    g) Thumbnail: the scariest frame + 2-3 lines of huge Hindi text at the TOP, caption area darkened (examples/*/thumb.html style).
    h) Description: hook line, one English sentence with the search phrase, 2 lines of story, a yes/no or recognition question 👇, Sources, channel line, 10 hashtags max; 3 hashtags in the title; 10-15 tags.
+   i) RESULT 26 Nov 22:50: Bhangarh (Lane B) stalled at ~187 public / 358 Studio views in 3 h while Ashwatthama (mythology) did 1,243 and Kumbhakarna 1,556. Lessons, now rules: (1) never pick an over-covered topic (Bhangarh, Kuldhara, "most haunted" lists): the "fact few people know" must really be unknown; check the top 10 Hindi Shorts for that topic first, and if 3+ recent ones already say our hook, drop it. (2) Frame 1 always shows a character's face/figure, not only a place. (3) Slot plan from 27 Nov until the 7-day reweight: 16:30 = mythology (Lane C) every day; 20:00 = Lane A (a famous king/queen with a little-known twist) or mythology; Lane B (horror places) paused, unless the mystery is tied to a famous mythological or royal name.
    Do not experiment with this structure unless the 14:45 analytics show two shorts in a row below 300 views in 24 h; then note why in logs/notes.md and change ONE thing only.
 
 1. Opening line (most important)
