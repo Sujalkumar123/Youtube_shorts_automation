@@ -51,12 +51,16 @@
     "2026-11-27 20:00": {
       "slug": "bhangarh-shraap",
       "media": "branch media: media/bhangarh-shraap.mp4 + -thumb.jpg",
-      "note": "Re-upload of the clean Bhangarh short. 18:45 run: do NOT make a new video; re-send it to the user on Telegram (thumbnail, download button, title, description with 10 hashtags, tags) and tell him not to add any sound in the YouTube app."
+      "note": "Re-upload of the clean Bhangarh short. 18:45 run: do NOT make a new video; re-send it to the user on Telegram (thumbnail, download button, title, description with 10 hashtags, tags) and tell him not to add any sound in the YouTube app.",
+      "youtube": "pzAP2an7AGI",
+      "status": "ALREADY re-uploaded by the user (seen by the 14:45 run): processed, 61 s, private, publishAt 2026-11-27T14:45Z (20:15 IST). The 18:45 run should NOT re-send it on Telegram; only verify it goes public and post its first comment."
     },
     "2026-11-27 16:30": {
       "slug": "gandhari-shraap",
       "made": "27 Nov ~01:40 IST in chat (user asked)",
-      "note": "Mythology short for the back test, made in chat and sent on Telegram. The 14:45 run must NOT make a new video; only check the channel and do analytics."
+      "note": "Mythology short for the back test, made in chat and sent on Telegram. The 14:45 run must NOT make a new video; only check the channel and do analytics.",
+      "youtube": "IW6tCInly0Y",
+      "status": "uploaded by the user by hand; processed, private, publishAt 2026-11-27T11:00Z (16:30 IST); added to Mahabharata playlist by the 14:45 run"
     }
   },
   "voice_engine": "elevenlabs",

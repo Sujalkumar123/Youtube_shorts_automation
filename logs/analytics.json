@@ -134,5 +134,103 @@
     "likes": 40
    }
   }
+ },
+ {
+  "date": "2026-11-27",
+  "range": "2026-11-20..27 (Analytics latency: Kumbhakarna/Ashwatthama not in report yet)",
+  "rows": [
+   {
+    "id": "TYtIlrzNMhM",
+    "topic": "Govardhan",
+    "views": 750,
+    "avg_pct": 60.3,
+    "likes": 24
+   },
+   {
+    "id": "QmWmgymDXBU",
+    "topic": "Trishul",
+    "views": 368,
+    "avg_pct": 54.7,
+    "likes": 13
+   },
+   {
+    "id": "XNNllvIfBE0",
+    "topic": "Nandi",
+    "views": 218,
+    "avg_pct": 51.1,
+    "likes": 18,
+    "subs": 1
+   },
+   {
+    "id": "WZL7iiv6jno",
+    "topic": "Tripura",
+    "views": 176,
+    "avg_pct": 45.4
+   },
+   {
+    "id": "lCaaC-I7PM8",
+    "topic": "Ravana name",
+    "views": 105,
+    "avg_pct": 61.1
+   },
+   {
+    "id": "A_kloXXdkZc",
+    "topic": "Hanuman",
+    "views": 69,
+    "avg_pct": 47.7
+   },
+   {
+    "id": "wpOev47bmls",
+    "topic": "Aruna",
+    "views": 41,
+    "avg_pct": 56.3
+   },
+   {
+    "id": "0y5I88DFP-A",
+    "topic": "Kartikeya",
+    "views": 35,
+    "avg_pct": 38.6
+   },
+   {
+    "id": "fNmMlvHxxBk",
+    "topic": "Vishnu eye",
+    "views": 33,
+    "avg_pct": 34.7
+   },
+   {
+    "id": "HfmVAtqrlrg",
+    "topic": "Matsya",
+    "views": 21,
+    "avg_pct": 57.5
+   },
+   {
+    "id": "rL-Vbjx9aQk",
+    "topic": "Barbarik",
+    "views": 17,
+    "avg_pct": 45.3
+   },
+   {
+    "id": "6B3sAwq3brA",
+    "topic": "Kaliya",
+    "views": 11,
+    "avg_pct": 20.0
+   },
+   {
+    "id": "MDydvRkZkBw",
+    "topic": "Sudama",
+    "views": 7,
+    "avg_pct": 38.2
+   }
+  ],
+  "public_stats": {
+   "nv-MdlZE2Zc (Kumbhakarna, 25 Nov)": {
+    "views": 1754,
+    "likes": 53
+   },
+   "px8hqGs2QXI (Ashwatthama, 26 Nov)": {
+    "views": 1283,
+    "likes": 33
+   }
+  }
  }
 ]
