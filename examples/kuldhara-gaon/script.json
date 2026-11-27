@@ -1,0 +1,112 @@
+{
+ "voice": "eleven:Sahir",
+ "eleven_voice": "4LIpEnnggPcuL2KuRQIO",
+ "eleven_model": "eleven_multilingual_v2",
+ "eleven_stability": 0.42,
+ "eleven_style": 0.4,
+ "eleven_speed": 1.16,
+ "lead": 0.15,
+ "outro": 0.3,
+ "gap": 0.2,
+ "breaths": false,
+ "music": "tension",
+ "music_db": -29,
+ "music_sa": 110,
+ "music_lp": 2000,
+ "music_sub": 0.9,
+ "voice_fx": "highpass=f=60,equalizer=f=130:t=q:w=1:g=3,equalizer=f=6500:t=q:w=1.5:g=-1.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9",
+ "brand_badge": false,
+ "style": "pattachitra",
+ "title": "एक रात में पूरा गाँव गायब हो गया",
+ "sources": [
+  "Kuldhara, Jaisalmer district, Rajasthan: Paliwal Brahmin village from about the 13th century, abandoned in the early 19th century (commonly dated 1825) together with neighbouring Paliwal villages (Wikipedia, Kuldhara; local accounts say 84)",
+  "Diwan Salim Singh / village chief's daughter story and the curse that no one can resettle: local legend, marked 'कहा जाता है'",
+  "Historians' explanations: water scarcity, heavy taxes; a 2017 Current Science study (A. B. Roy et al.) suggests an earthquake"
+ ],
+ "lines": [
+  {
+   "text": "राजस्थान का एक गाँव, एक ही रात में ख़ाली हो गया... और आज तक, वहाँ कोई नहीं बसा.",
+   "caps": "Ek gaon | *ek hi raat mein khaali | aaj tak *koi nahi basa",
+   "speed": 1.14,
+   "gap": 0.1
+  },
+  {
+   "text": "एक नहीं... कहा जाता है, आसपास के चौरासी गाँव, उसी रात ख़ाली हुए.",
+   "caps": "Ek nahi | *84 gaon | usi raat *khaali",
+   "speed": 1.16,
+   "gap": 0.18
+  },
+  {
+   "text": "यहाँ अमीर पालीवाल ब्राह्मण रहते थे.",
+   "caps": "Yahan ameer | *Paliwal Brahmin | rehte the",
+   "speed": 1.18,
+   "gap": 0.1
+  },
+  {
+   "text": "फिर दीवान सालिम सिंह की नज़र, मुखिया की बेटी पर पड़ी.",
+   "caps": "Diwan *Salim Singh ki nazar | mukhiya ki *beti par",
+   "speed": 1.16,
+   "gap": 0.1
+  },
+  {
+   "text": "लड़की दो... वरना सज़ा भुगतो.",
+   "caps": "Ladki do | *warna saza",
+   "speed": 1.1,
+   "gap": 0.2
+  },
+  {
+   "text": "उस रात, सारे गाँवों की चौपाल बैठी... और एक फैसला हुआ.",
+   "caps": "Us raat | *chaupal baithi | ek *faisla hua",
+   "speed": 1.14,
+   "gap": 0.2
+  },
+  {
+   "text": "सुबह सिपाही आए, तो घर खुले थे... पर एक भी इंसान नहीं था.",
+   "caps": "Subah *sipahi aaye | ghar *khule the | ek bhi *insaan nahi",
+   "speed": 1.16,
+   "gap": 0.15
+  },
+  {
+   "text": "हज़ारों लोग, एक रात में कहाँ गए, कोई नहीं जानता.",
+   "caps": "Hazaaron log | *kahan gaye | koi nahi jaanta",
+   "speed": 1.14,
+   "gap": 0.15
+  },
+  {
+   "text": "कहा जाता है, जाते-जाते उन्होंने श्राप दिया: यहाँ कोई नहीं बस पाएगा.",
+   "caps": "Jaate jaate *shraap | yahan *koi nahi bas payega",
+   "speed": 1.14,
+   "gap": 0.22
+  },
+  {
+   "text": "इतिहासकार पानी की कमी, टैक्स या भूकंप बताते हैं.",
+   "caps": "Itihaaskaar kehte | *paani ki kami | ya *bhookamp",
+   "speed": 1.18,
+   "gap": 0.12
+  },
+  {
+   "text": "पर दो सौ साल बाद भी... वो गाँव, आज भी ख़ाली है.",
+   "caps": "Par *200 saal baad bhi | gaon aaj bhi | *khaali hai",
+   "speed": 1.1,
+   "gap": 0.2
+  },
+  {
+   "text": "उसका नाम है... कुलधरा. जैसलमेर के पास.",
+   "caps": "Naam hai | *Kuldhara | Jaisalmer ke paas",
+   "speed": 1.04,
+   "gap": 0.22
+  },
+  {
+   "text": "आप वहाँ, एक रात रुकेंगे?",
+   "caps": "Aap wahan | *ek raat | rukenge?",
+   "speed": 1.04,
+   "gap": 0.3
+  },
+  {
+   "text": "फॉलो करें, Untold Stories.",
+   "caps": "Follow karein | *Untold Stories",
+   "speed": 1.18,
+   "gap": 0.0
+  }
+ ]
+}

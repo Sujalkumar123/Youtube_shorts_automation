@@ -61,6 +61,16 @@
       "note": "Mythology short for the back test, made in chat and sent on Telegram. The 14:45 run must NOT make a new video; only check the channel and do analytics.",
       "youtube": "IW6tCInly0Y",
       "status": "uploaded by the user by hand; processed, private, publishAt 2026-11-27T11:00Z (16:30 IST); added to Mahabharata playlist by the 14:45 run"
+    },
+    "2026-11-28 16:30": {
+      "slug": "yudhishthir-ardh-satya",
+      "lane": "mythology",
+      "note": "made in chat 28 Nov 01:00-ish and sent on Telegram; the 14:45 run must NOT make a new video, only verify upload, playlist (Untold Mahabharata), first comment, analytics"
+    },
+    "2026-11-28 20:00": {
+      "slug": "kuldhara-gaon",
+      "lane": "horror",
+      "note": "made in chat and sent on Telegram; the 18:45 run must NOT make a new video, only verify upload, first comment, analytics"
     }
   },
   "voice_engine": "elevenlabs",

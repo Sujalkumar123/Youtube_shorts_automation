@@ -1,0 +1,112 @@
+{
+ "voice": "eleven:Sahir",
+ "eleven_voice": "4LIpEnnggPcuL2KuRQIO",
+ "eleven_model": "eleven_multilingual_v2",
+ "eleven_stability": 0.42,
+ "eleven_style": 0.4,
+ "eleven_speed": 1.16,
+ "lead": 0.15,
+ "outro": 0.3,
+ "gap": 0.2,
+ "breaths": false,
+ "music": "tension",
+ "music_db": -29,
+ "music_sa": 110,
+ "music_lp": 2000,
+ "music_sub": 0.9,
+ "voice_fx": "highpass=f=60,equalizer=f=130:t=q:w=1:g=3,equalizer=f=6500:t=q:w=1.5:g=-1.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9",
+ "brand_badge": false,
+ "style": "pattachitra",
+ "title": "जिसने कभी झूठ नहीं बोला, उसके आधे झूठ ने गुरु की जान ले ली",
+ "sources": [
+  "Mahabharata, Drona Parva (Drona-vadha): Bhima kills an elephant named Ashvatthama; Yudhishthira says 'Ashvatthama is slain' and adds 'the elephant' indistinctly; his chariot, which used to stay four fingers above the ground, touches the earth; Drona lays down his weapons and is slain by Dhrishtadyumna",
+  "Mahabharata, Svargarohana Parva 3: Indra tells Yudhishthira he was shown hell for a moment because he deceived Drona",
+  "Krishna's conch drowning the last word: popular retelling, marked 'कहा जाता है'"
+ ],
+ "lines": [
+  {
+   "text": "जिसने कभी झूठ नहीं बोला... उसके आधे झूठ ने, एक गुरु की जान ले ली.",
+   "caps": "Jisne *kabhi jhooth nahi bola | uske *aadhe jhooth ne | guru ki *jaan le li",
+   "speed": 1.12,
+   "gap": 0.1
+  },
+  {
+   "text": "और उसका रथ, ज़मीन से चार उंगल ऊपर चलता था.",
+   "caps": "Uska *rath | zameen se *chaar ungal upar | chalta tha",
+   "speed": 1.12,
+   "gap": 0.22
+  },
+  {
+   "text": "कुरुक्षेत्र में, द्रोण को कोई नहीं रोक पा रहा था.",
+   "caps": "Kurukshetra mein | *Drona ko | koi *rok nahi pa raha tha",
+   "speed": 1.16,
+   "gap": 0.1
+  },
+  {
+   "text": "तब कृष्ण ने, एक चाल चली.",
+   "caps": "Tab *Krishna ne | ek *chaal chali",
+   "speed": 1.06,
+   "gap": 0.2
+  },
+  {
+   "text": "भीम ने अश्वत्थामा नाम का हाथी मारा... और चिल्लाया: अश्वत्थामा मारा गया!",
+   "caps": "Bheem ne ek *haathi maara | naam tha *Ashwatthama | Ashwatthama *mara gaya!",
+   "speed": 1.16,
+   "gap": 0.12
+  },
+  {
+   "text": "द्रोण ने उसी से पूछा, जो कभी झूठ नहीं बोलता था.",
+   "caps": "Drona ne *usi se poochha | jo *kabhi jhooth nahi bolta",
+   "speed": 1.16,
+   "gap": 0.12
+  },
+  {
+   "text": "उसने कहा: अश्वत्थामा मारा गया... फिर धीरे से: हाथी या इंसान.",
+   "caps": "*Ashwatthama mara gaya | phir *dheere se | *haathi ya insaan?",
+   "speed": 1.12,
+   "gap": 0.15
+  },
+  {
+   "text": "कहा जाता है, तभी कृष्ण ने शंख बजा दिया, और आख़िरी शब्द डूब गए.",
+   "caps": "Tabhi *shankh baja | aakhiri shabd | *doob gaye",
+   "speed": 1.16,
+   "gap": 0.15
+  },
+  {
+   "text": "द्रोण ने हथियार रख दिए... और उनका वध हो गया.",
+   "caps": "Drona ne *hathiyaar rakh diye | aur *vadh ho gaya",
+   "speed": 1.12,
+   "gap": 0.18
+  },
+  {
+   "text": "और हवा में चलने वाला रथ... ज़मीन पर आ गया.",
+   "caps": "*Hawa mein chalne wala rath | *zameen par aa gaya",
+   "speed": 1.12,
+   "gap": 0.2
+  },
+  {
+   "text": "इस आधे सच के लिए, उसे कुछ पल नरक देखना पड़ा.",
+   "caps": "Is *aadhe sach ke liye | kuch pal *narak dekhna pada",
+   "speed": 1.14,
+   "gap": 0.22
+  },
+  {
+   "text": "वो थे... धर्मराज युधिष्ठिर.",
+   "caps": "Wo the | *Dharmraj Yudhishthir",
+   "speed": 1.0,
+   "gap": 0.25
+  },
+  {
+   "text": "क्या आधा सच भी, झूठ होता है?",
+   "caps": "Kya *aadha sach bhi | *jhooth hota hai?",
+   "speed": 1.04,
+   "gap": 0.3
+  },
+  {
+   "text": "फॉलो करें, Untold Stories.",
+   "caps": "Follow karein | *Untold Stories",
+   "speed": 1.18,
+   "gap": 0.0
+  }
+ ]
+}
