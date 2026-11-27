@@ -107,6 +107,12 @@
     "16:30": "NEW mythology short (made by the 14:45 run)",
     "20:00": "re-upload of bhangarh-shraap (prepared, clean audio; user deleted the 26 Nov upload because of an extra music track)",
     "decide_on": "2026-11-28 14:45 run, 24 h views",
-    "rule": "Bhangarh < 50% of mythology and < ~600 views -> drop horror, mythology in both slots; else keep 1+1"
-  }
+    "rule": "Bhangarh < 50% of mythology and < ~600 views -> drop horror, mythology in both slots; else keep 1+1",
+    "result": "28 Nov 00:45 IST: Bhangarh 706 views in ~4.5 h vs Gandhari 154 in ~8 h -> horror kept. Final check with 24-48 h numbers on 29 Nov."
+  },
+  "lanes_from_2026_11_28": {
+    "16:30": "mythology",
+    "20:00": "horror (famous place + 'mana hai' / forbidden hook, like Bhangarh; not over-covered places)"
+  },
+  "viral_sticker_style": "CANCELLED by user 28 Nov 00:56 - keep the current style (no banner, no emoji titles, no search block, no extra end-card line)"
 }
