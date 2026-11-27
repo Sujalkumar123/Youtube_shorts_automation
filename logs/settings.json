@@ -114,5 +114,17 @@
     "16:30": "mythology",
     "20:00": "horror (famous place + 'mana hai' / forbidden hook, like Bhangarh; not over-covered places)"
   },
-  "viral_sticker_style": "CANCELLED by user 28 Nov 00:56 - keep the current style (no banner, no emoji titles, no search block, no extra end-card line)"
+  "viral_sticker_style": "CANCELLED by user 28 Nov 00:56 - keep the current style (no banner, no emoji titles, no search block, no extra end-card line)",
+  "lane_overrides": {
+    "2026-11-29": {
+      "16:30": "horror",
+      "20:00": "mythology",
+      "why": "SWAP TEST (user 28 Nov 00:59 'han swap karo'): new-formula mythology was only ever posted at 16:30; old-format data showed 20:00 ~3.5x better than 15:00. Compare both 29 Nov shorts against 28 Nov (16:30 myth / 20:00 horror) at 24 h."
+    }
+  },
+  "swap_test_2026_11_29": {
+    "compare": "28 Nov: 16:30 mythology vs 20:00 horror  |  29 Nov: 16:30 horror vs 20:00 mythology",
+    "decide_on": "2026-11-30 14:45 run, 24 h views (and avg % viewed if Analytics has it)",
+    "rule": "Each lane keeps the slot where it got more 24 h views; if one slot wins for both lanes, put the stronger lane there. Report the result to the user on Telegram. From 30 Nov use lanes_from_2026_11_28 until the user agrees to a change."
+  }
 }

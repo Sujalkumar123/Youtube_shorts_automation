@@ -32,6 +32,8 @@ Rules for every Short
       - Do NOT copy the reference's niche ("subscriber kaise badhaye"), its wording or its visuals.
    Do not experiment with this structure unless the 14:45 analytics show two shorts in a row below 300 views in 24 h; then note why in logs/notes.md and change ONE thing only.
 
+   k) LANE OVERRIDES: before choosing the lane for a slot, check logs/settings.json "lane_overrides" for today's date; if present it wins over lanes_from_2026_11_28. 29 Nov 2026 = SWAP TEST: 16:30 horror, 20:00 mythology.
+
 1. Opening line (most important)
 The first spoken sentence is a contradiction or surprising fact, stated as a fact, about a figure most Indians already know.
 It must work in under 3 seconds: one or two short sentences, ideally 8 to 16 Hindi words.
