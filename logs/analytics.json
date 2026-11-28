@@ -232,5 +232,68 @@
     "likes": 33
    }
   }
+ },
+ {
+  "date": "2026-11-28",
+  "run": "14:45",
+  "report_range": "2026-11-21..2026-11-28 (Analytics lags; Gandhari/Bhangarh/Ashwatthama not in report yet)",
+  "top": [
+   {
+    "id": "nv-MdlZE2Zc",
+    "topic": "Kumbhakarna",
+    "views": 1390,
+    "avg_pct": 58.15,
+    "likes": 39,
+    "subs": 2
+   },
+   {
+    "id": "TYtIlrzNMhM",
+    "topic": "Govardhan",
+    "views": 751,
+    "avg_pct": 60.18
+   },
+   {
+    "id": "QmWmgymDXBU",
+    "topic": "Trishul",
+    "views": 368,
+    "avg_pct": 54.66
+   },
+   {
+    "id": "XNNllvIfBE0",
+    "topic": "Nandi",
+    "views": 222,
+    "avg_pct": 50.88
+   },
+   {
+    "id": "lCaaC-I7PM8",
+    "topic": "Ravana name",
+    "views": 105,
+    "avg_pct": 61.12
+   },
+   {
+    "id": "6B3sAwq3brA",
+    "topic": "Kaliya",
+    "views": 89,
+    "avg_pct": 40.89
+   }
+  ],
+  "public_stats": {
+   "nv-MdlZE2Zc (Kumbhakarna, 25 Nov)": {
+    "views": 2076,
+    "likes": 55
+   },
+   "px8hqGs2QXI (Ashwatthama, 26 Nov)": {
+    "views": 1289,
+    "likes": 33
+   },
+   "IW6tCInly0Y (Gandhari, 27 Nov 16:30)": {
+    "views": 168,
+    "likes": 6
+   },
+   "pzAP2an7AGI (Bhangarh re-upload, 27 Nov 20:15)": {
+    "views": 846,
+    "likes": 12
+   }
+  }
  }
 ]
