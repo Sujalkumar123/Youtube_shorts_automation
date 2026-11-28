@@ -188,5 +188,23 @@
       "avg_viewed_pct_30_60s": 50,
       "avg_viewed_pct_80_95s": 45
     }
+  },
+  "title_length_rule_2026_11_28": {
+    "rule": "Hindi title 38-48 characters before hashtags",
+    "evidence": {
+      "41": 2092,
+      "43": 1289,
+      "44": 875,
+      "35": 168,
+      "56": 186,
+      "56b": 24,
+      "61": 4,
+      "65": 52,
+      "69": 46
+    },
+    "note": "over ~50 chars = the feed truncates the hook"
+  },
+  "aspect_warning": {
+    "pzAP2an7AGI": "stored 1920x1080 (horizontal) - may not be in the Shorts feed; exclude from lane comparisons until checked in Studio"
   }
 }

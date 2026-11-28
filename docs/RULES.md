@@ -39,6 +39,14 @@ Rules for every Short
       - Do NOT copy the reference's niche ("subscriber kaise badhaye"), its wording or its visuals.
    Do not experiment with this structure unless the 14:45 analytics show two shorts in a row below 300 views in 24 h; then note why in logs/notes.md and change ONE thing only.
 
+   m) TITLE LENGTH IS A HARD RULE (found 28 Nov 2026 from the channel's own data). Characters in the Hindi title BEFORE the hashtags, against views:
+      41 Kumbhakarna 2,092 | 43 Ashwatthama 1,289 | 44 Bhangarh 875 | 35 Gandhari 168 | 56 Kaliya 186 | 56 Rukmini 24 | 61 Yudhishthir 4 | 65 Mahadev 52 | 69 Khatu Shyam 46
+      Every title over ~50 characters has done badly. Every title in the 41-44 band has done well. The feed truncates a long title, so the hook is cut off exactly where it should land.
+      RULE: the Hindi title is 38-48 characters before the hashtags. Count them before publishing; if it is over 48, cut words, do not shrink the font or rely on the thumbnail. The title is still the spoken first line, so when the line is longer than 48 characters, SHORTEN THE SPOKEN LINE TOO - do not keep a long line and a different short title.
+      Note: 35 characters (Gandhari) also underperformed, so do not go under ~38 either; it reads as vague.
+
+   n) ALWAYS CHECK THE UPLOAD IS VERTICAL. Bhangarh (pzAP2an7AGI) is recorded by YouTube as 1920x1080, not 1080x1920, so it may not be in the Shorts feed at all and its 875 views cannot be compared with the vertical shorts. Before trusting any comparison, confirm each video's stored resolution (videos.list part=fileDetails) is 1080x1920, and tell the user if one is not.
+
    l) GROWTH PLAN TO 100K (user 28 Nov 2026 16:51 "jaldi se jaldi 1 lakh views"). Evidence, 28 Nov, YouTube Analytics API + public stats:
       Kumbhakarna PT1M40S (100 s) = 2,076 views, 58.2% average viewed, 58 s average view duration, 2 subs, 39 likes - the channel's best short ever.
       Ashwatthama PT54S = 1,289. Bhangarh PT1M1S = 875. Gandhari PT56S = 168. Older 3-a-day shorts: 24-751 views, 34-61% viewed.

@@ -83,3 +83,4 @@
 
 - 2026-11-28: growth plan set. Kumbhakarna 100s=2076 views/58.2%; Ashwatthama 54s=1289; Bhangarh 61s=875; Gandhari 56s=168. Length A/B starts 29 Nov (16:30 long 80-95s, 20:00 short 50-55s). Hook: 5-10 words, payoff in frame 1, movement in first 2s. Related video + pinned comment on every upload.
 - 2026-11-29 16:30 LONG arm: ram-lakshman-saza, 88.7 s, 25 lines. Opening line: "राम ने अपने ही छोटे भाई को, मौत की सज़ा सुनाई थी." Reveal "लक्ष्मण" at 62.6 s (71%). Gate PASS, voice 20.4 dB over music.
+- 2026-11-28 17:50: Yudhishthir at 4 views in 1.2 h. Status clean (public, processed, 1080x1920, not made-for-kids). Found: title length correlates hard with views - 41-44 chars did 875-2092, over 56 chars did 4-186. Yudhishthir title is 61 chars. Also Bhangarh is stored 1920x1080, so it may not be a Short at all.
