@@ -141,5 +141,45 @@
     "compare": "28 Nov: 16:30 mythology vs 20:00 horror  |  29 Nov: 16:30 horror vs 20:00 mythology",
     "decide_on": "2026-11-30 14:45 run, 24 h views (and avg % viewed if Analytics has it)",
     "rule": "Each lane keeps the slot where it got more 24 h views; if one slot wins for both lanes, put the stronger lane there. Report the result to the user on Telegram. From 30 Nov use lanes_from_2026_11_28 until the user agrees to a change."
+  },
+  "growth_plan_2026_11_28": {
+    "goal": "100k channel views fast (user 28 Nov 16:51)",
+    "evidence": {
+      "kumbhakarna": {
+        "len_s": 100,
+        "views": 2076,
+        "avg_viewed_pct": 58.2,
+        "avg_dur_s": 58
+      },
+      "ashwatthama": {
+        "len_s": 54,
+        "views": 1289
+      },
+      "bhangarh": {
+        "len_s": 61,
+        "views": 875
+      },
+      "gandhari": {
+        "len_s": 56,
+        "views": 168
+      }
+    },
+    "length_ab_test": {
+      "from": "2026-11-29",
+      "days": 3,
+      "16:30": "LONG 80-95 s",
+      "20:00": "SHORT 50-55 s",
+      "decide_by": "24 h views + averageViewPercentage per pair, logged in logs/notes.md, told to user on Telegram"
+    },
+    "manual_steps_for_user": [
+      "Related video -> Kumbhakarna (nv-MdlZE2Zc) on every short",
+      "pin the first comment",
+      "send the Studio 'Viewed vs swiped away' screenshot for each short"
+    ],
+    "targets": {
+      "chose_to_view_pct": 70,
+      "avg_viewed_pct_30_60s": 50,
+      "avg_viewed_pct_80_95s": 45
+    }
   }
 }

@@ -32,6 +32,21 @@ Rules for every Short
       - Do NOT copy the reference's niche ("subscriber kaise badhaye"), its wording or its visuals.
    Do not experiment with this structure unless the 14:45 analytics show two shorts in a row below 300 views in 24 h; then note why in logs/notes.md and change ONE thing only.
 
+   l) GROWTH PLAN TO 100K (user 28 Nov 2026 16:51 "jaldi se jaldi 1 lakh views"). Evidence, 28 Nov, YouTube Analytics API + public stats:
+      Kumbhakarna PT1M40S (100 s) = 2,076 views, 58.2% average viewed, 58 s average view duration, 2 subs, 39 likes - the channel's best short ever.
+      Ashwatthama PT54S = 1,289. Bhangarh PT1M1S = 875. Gandhari PT56S = 168. Older 3-a-day shorts: 24-751 views, 34-61% viewed.
+      Benchmarks from research: a Short needs roughly 70%+ "chose to view" (viewed vs swiped away) to move to the next test pool; ~50% average-viewed is the starting point for 30-60 s Shorts; the viewer decides to stay or swipe in about 2 seconds.
+      So the single biggest lever is average view DURATION, not shortness: 58 s of watch time from a 100 s short beats a fully-watched 52 s short. The 45-55 s rule (set 26 Nov) is therefore ON TEST, not locked:
+      1. LENGTH A/B, from 29 Nov, for 3 days: the 16:30 slot runs LONG (80-95 s, 22-26 lines) with the same hook discipline; the 20:00 slot stays 50-55 s. The 14:45 run compares 24 h views AND averageViewPercentage for each pair, writes the result in logs/notes.md, and tells the user on Telegram. Whichever length wins becomes the default; do not change anything else while this test runs.
+      2. HOOK, every short, both lengths: the first spoken line is 5-10 Hindi words, the payoff visible in FRAME 1 (the scariest/most dramatic image, with a face or figure in it), and something must MOVE or CHANGE inside the first 2 s (a pattern interrupt: a fast push-in, a flash, a figure turning). No slow fade, no empty landscape, no music before the first word.
+      3. HOOK TESTING: keep a running list in logs/notes.md of each short's opening line and its "viewed vs swiped away" and averageViewPercentage once the user sends the Studio screenshot. Three different hook shapes a week (flipped belief / forbidden thing / "X ne Y kyun kiya" stated as fact), never three of the same shape in a row.
+      4. RELATED VIDEO on every upload: in YouTube Studio, Content -> the short -> Related video -> pick the best-performing short (currently Kumbhakarna, nv-MdlZE2Zc). This is a manual 10-second step for the user; put it in every Telegram upload message as a checklist line.
+      5. PINNED COMMENT: the run posts the description's one-word question as the first comment and the user pins it. Links in Shorts comments are not clickable, so no links - just the question.
+      6. SERIES NAMING so viewers recognise the channel: mythology shorts about a curse are the "Shraap" series, haunted/forbidden places are the "Jaana Mana Hai" series. Same first-word pattern in the title where it fits naturally; never force it.
+      7. TOPIC RULE (unchanged but now the hard filter): a famous name everyone knows + a fact that is genuinely little known. Little-known figures died on this channel (Aruna 40, Matsya 19, Kaliya 89). Over-covered topics also die. Check the top 10 Hindi Shorts for the topic first.
+      8. NEVER: buying views (bots have zero retention and actively damage the watch-time signal), re-uploading a short that flopped (make a new one instead), keyword stuffing, unrelated tags.
+      9. Consistency stays 2 shorts a day. Do not pause the schedule to chase a single idea.
+
    k) LANE OVERRIDES: before choosing the lane for a slot, check logs/settings.json "lane_overrides" for today's date; if present it wins over lanes_from_2026_11_28. 29 Nov 2026 = SWAP TEST: 16:30 horror, 20:00 mythology.
 
 1. Opening line (most important)
