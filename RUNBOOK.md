@@ -341,6 +341,17 @@ simplify it rather than skip the video; upload fails → retry once, then alert 
 If the video is late, still publish it as soon as it's ready and say so. If Zapier itself is unreachable (so Telegram
 can't be sent), tell the user in this session: the app's push notification is the fallback.
 
+## 6b. Growth steps on every upload (added 28 Nov 2026)
+Do these for EVERY short, in this order, right after it is public:
+1. Post the description's one-word question as the first comment. No links (not clickable in Shorts comments).
+2. Tell the user on Telegram to: pin that comment, and set Related video -> Kumbhakarna (nv-MdlZE2Zc)
+   in Studio (Content -> the short -> Related video). Both are 10-second manual steps.
+3. Append to logs/notes.md: date, slot, slug, length in seconds, the opening line verbatim, and the lane.
+   When the user sends a "Viewed vs swiped away" screenshot, add that number on the same line.
+4. The 14:45 run reads the last 7 days of those lines plus the Analytics numbers and reports on Telegram:
+   24 h views and averageViewPercentage per short, and which LENGTH is winning the A/B (RULES.md 0l item 1).
+Targets to judge against: ~70% chose-to-view, ~50% average viewed for 30-60 s, ~45% for 80-95 s.
+
 ## 7. Log (always, even if something failed)
 Append to `logs/topics.json`: date, slot, slug, topic, story, palette, scene types, new kit pieces, title, hashtags,
 youtube id/status, and problems. Add lessons to `logs/notes.md`. Commit + push to the studio repo (never the video).

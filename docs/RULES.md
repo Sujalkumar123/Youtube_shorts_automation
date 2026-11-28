@@ -1,3 +1,10 @@
+READ THIS FIRST - OVERRIDES THE SCHEDULED-TASK PROMPT
+This file is the channel rulebook. Where the daily producer prompt and this file disagree, THIS FILE WINS.
+As of 28 Nov 2026 the prompt still says "45-55 s, crisp". That is SUPERSEDED by section 0l (GROWTH PLAN TO 100K):
+length is on an A/B test from 29 Nov - the 16:30 slot runs 80-95 s, the 20:00 slot runs 50-55 s - because the
+channel's best short ever (Kumbhakarna, 2,076 views) is 100 s long with 58 s of average watch time.
+Also read 0j (viral sticker style is CANCELLED) and 0k (lane overrides) before planning anything.
+
 Untold Stories: changes to apply to the Shorts automation
 Paste this whole file into the chatbot that writes and posts Untold Stories Shorts. It replaces the old rules wherever they conflict.
 

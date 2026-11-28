@@ -80,3 +80,5 @@
 - BACK TEST RESULT (24 h): Bhangarh re-upload 846 views / 12 likes vs Gandhari (mythology, 16:30) 168 / 6 -> Bhangarh is 5x, so the horror lane is KEPT (1 horror + 1 mythology a day). Swap test 29 Nov goes ahead as planned (lane_overrides). Not sent on Telegram: the scheduled prompt says Telegram only for problems.
 - Analytics (11-21..28): report still lags 2-3 days; Kumbhakarna 1,390 / 58% avg view leads. No lane reweight yet (first on/after 2026-12-03). Zapier calls: inspect x4, GET x2, playlist POST, get_report x2 (+ first comment after 16:32).
 - 2026-11-28 16:33 IST: Yudhishthir (flMB-JPMlhE) confirmed public via publishAt; first comment posted (yes/no 'aadha sach jhooth tha?' + tease tonight 8 PM Kuldhara). Kuldhara's first comment is for the 18:45 run after 20:03. No Telegram (nothing went wrong).
+
+- 2026-11-28: growth plan set. Kumbhakarna 100s=2076 views/58.2%; Ashwatthama 54s=1289; Bhangarh 61s=875; Gandhari 56s=168. Length A/B starts 29 Nov (16:30 long 80-95s, 20:00 short 50-55s). Hook: 5-10 words, payoff in frame 1, movement in first 2s. Related video + pinned comment on every upload.
