@@ -75,6 +75,13 @@
       "note": "made in chat and sent on Telegram; the 18:45 run must NOT make a new video, only verify upload, first comment, analytics",
       "youtube": "DbpIBrPFvTQ",
       "status": "uploaded by the user; processed, 54 s, private, publishAt 2026-11-28T14:33Z (20:03 IST) (seen by the 14:45 run)"
+    },
+    "2026-11-29 16:30": {
+      "slug": "ram-lakshman-saza",
+      "lane": "mythology",
+      "length_s": 88.7,
+      "arm": "LONG",
+      "note": "Made in chat 28 Nov. The 14:45 run must NOT make a new video: only verify the upload, post+pin the first comment, set Related video -> Kumbhakarna, and log the length-test numbers."
     }
   },
   "voice_engine": "elevenlabs",

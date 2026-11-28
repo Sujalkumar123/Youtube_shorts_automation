@@ -1,0 +1,179 @@
+{
+ "voice": "eleven:Sahir",
+ "eleven_voice": "4LIpEnnggPcuL2KuRQIO",
+ "eleven_model": "eleven_multilingual_v2",
+ "eleven_stability": 0.42,
+ "eleven_style": 0.4,
+ "eleven_speed": 1.16,
+ "lead": 0.15,
+ "outro": 0.3,
+ "gap": 0.2,
+ "breaths": false,
+ "music": "tension",
+ "music_db": -29,
+ "music_sa": 110,
+ "music_lp": 2000,
+ "music_sub": 0.9,
+ "voice_fx": "highpass=f=60,equalizer=f=130:t=q:w=1:g=3,equalizer=f=6500:t=q:w=1.5:g=-1.5,aecho=0.7:0.5:14|23:0.05|0.03,acompressor=threshold=-24dB:ratio=2.5:attack=10:release=250,alimiter=limit=0.9",
+ "brand_badge": false,
+ "style": "pattachitra",
+ "title": "राम ने अपने ही भाई को मौत की सज़ा दी थी",
+ "sources": [
+  "Valmiki Ramayana, Uttara Kanda ~ch.103-106: Kala (Time/Death) comes to Rama disguised as an ascetic and asks for a private meeting on condition that whoever sees or hears them must be put to death; Rama agrees and posts Lakshmana at the door",
+  "Uttara Kanda: Durvasa arrives and threatens to curse Ayodhya and the house of Raghu; Lakshmana reasons that only he will die if he interrupts, and opens the door",
+  "Uttara Kanda ch.106 'Rama banishes Lakshmana': the ministers advise Rama to abandon Lakshmana rather than let his word prove false (abandonment counted equal to death); Lakshmana urges Rama to keep his promise",
+  "Uttara Kanda: Lakshmana goes to the bank of the Sarayu, stops his senses and ceases to breathe"
+ ],
+ "lines": [
+  {
+   "text": "राम ने अपने ही छोटे भाई को, मौत की सज़ा सुनाई थी.",
+   "caps": "Ram ne apne hi *chhote bhai ko | *maut ki saza sunai thi",
+   "speed": 0.902,
+   "gap": 0.12
+  },
+  {
+   "text": "और भाई ने, बिना एक शब्द कहे, वो सज़ा मान ली.",
+   "caps": "Aur bhai ne | bina ek *shabd kahe | wo saza *maan li",
+   "speed": 0.918,
+   "gap": 0.25
+  },
+  {
+   "text": "अयोध्या में सब शांत था. तभी एक तपस्वी द्वार पर आया.",
+   "caps": "Ayodhya mein sab *shaant tha | tabhi ek *tapasvi aaya",
+   "speed": 0.951,
+   "gap": 0.12
+  },
+  {
+   "text": "उसने कहा: मुझे राम से, अकेले में बात करनी है.",
+   "caps": "Mujhe Ram se | *akele mein baat karni hai",
+   "speed": 0.934,
+   "gap": 0.12
+  },
+  {
+   "text": "और एक शर्त रखी, जो सब बदल देगी.",
+   "caps": "Aur ek *shart rakhi | jo *sab badal degi",
+   "speed": 0.902,
+   "gap": 0.19
+  },
+  {
+   "text": "जो भी हमारी बात सुनेगा, उसे मृत्युदंड मिलेगा.",
+   "caps": "Jo bhi hamari baat *sunega | use *mrityudand milega",
+   "speed": 0.918,
+   "gap": 0.25
+  },
+  {
+   "text": "राम ने वचन दे दिया.",
+   "caps": "Ram ne *vachan de diya",
+   "speed": 0.869,
+   "gap": 0.22
+  },
+  {
+   "text": "और पहरे पर खड़ा किया, अपने सबसे प्यारे भाई को.",
+   "caps": "Pahre par khada kiya | apne *sabse pyare bhai ko",
+   "speed": 0.934,
+   "gap": 0.22
+  },
+  {
+   "text": "अंदर वो तपस्वी बोला: मैं काल हूँ.",
+   "caps": "Andar tapasvi bola | *main Kaal hoon",
+   "speed": 0.869,
+   "gap": 0.19
+  },
+  {
+   "text": "समय, जो एक दिन सबको मिटा देता है.",
+   "caps": "Samay | jo ek din | *sabko mita deta hai",
+   "speed": 0.918,
+   "gap": 0.25
+  },
+  {
+   "text": "पर असली परीक्षा, अभी बाकी थी.",
+   "caps": "Par *asli pariksha | *abhi baaki thi",
+   "speed": 0.869,
+   "gap": 0.25
+  },
+  {
+   "text": "बाहर, ऋषि दुर्वासा आ गए.",
+   "caps": "Bahar | *Rishi Durvasa aa gaye",
+   "speed": 0.902,
+   "gap": 0.15
+  },
+  {
+   "text": "बोले: अभी मिलाओ, वरना पूरी अयोध्या को श्राप दूँगा.",
+   "caps": "Abhi milao | warna poori Ayodhya ko | *shraap doonga",
+   "speed": 0.951,
+   "gap": 0.22
+  },
+  {
+   "text": "भाई के सामने, सिर्फ़ दो रास्ते थे.",
+   "caps": "Bhai ke saamne | sirf *do raaste the",
+   "speed": 0.902,
+   "gap": 0.19
+  },
+  {
+   "text": "दरवाज़ा खोलो, और खुद मर जाओ.",
+   "caps": "*Darwaza kholo | aur *khud mar jao",
+   "speed": 0.885,
+   "gap": 0.19
+  },
+  {
+   "text": "या चुप रहो, और पूरा नगर राख हो जाए.",
+   "caps": "Ya *chup raho | aur poora nagar | *raakh ho jaaye",
+   "speed": 0.918,
+   "gap": 0.25
+  },
+  {
+   "text": "उसने एक पल भी नहीं सोचा. दरवाज़ा खोल दिया.",
+   "caps": "Ek pal bhi *nahi socha | *darwaza khol diya",
+   "speed": 0.902,
+   "gap": 0.22
+  },
+  {
+   "text": "वो भाई था, लक्ष्मण.",
+   "caps": "Wo bhai tha | *Lakshman",
+   "speed": 0.82,
+   "gap": 0.31
+  },
+  {
+   "text": "अब राम, अपने ही वचन में बँध चुके थे.",
+   "caps": "Ab Ram | *apne hi vachan mein | *bandh chuke the",
+   "speed": 0.918,
+   "gap": 0.22
+  },
+  {
+   "text": "मंत्रियों ने कहा: इन्हें त्याग दीजिए. त्याग, मृत्यु के बराबर है.",
+   "caps": "Mantriyon ne kaha | *tyaag dijiye | tyaag *mrityu ke barabar hai",
+   "speed": 0.951,
+   "gap": 0.22
+  },
+  {
+   "text": "लक्ष्मण बोले: भैया, अपना वचन मत तोड़िए.",
+   "caps": "Lakshman bole | bhaiya | *apna vachan mat todiye",
+   "speed": 0.918,
+   "gap": 0.25
+  },
+  {
+   "text": "और चुपचाप, सरयू के किनारे चले गए.",
+   "caps": "Aur chupchaap | *Sarayu ke kinare chale gaye",
+   "speed": 0.902,
+   "gap": 0.25
+  },
+  {
+   "text": "वहीं उन्होंने, अपनी साँसें रोक लीं.",
+   "caps": "Wahin unhone | apni *saansein rok leen",
+   "speed": 0.852,
+   "gap": 0.31
+  },
+  {
+   "text": "क्या राम के पास, कोई और रास्ता था?",
+   "caps": "Kya Ram ke paas | *koi aur raasta tha?",
+   "speed": 0.852,
+   "gap": 0.38
+  },
+  {
+   "text": "फॉलो करें, Untold Stories.",
+   "caps": "Follow karein | *Untold Stories",
+   "speed": 0.967,
+   "gap": 0.0
+  }
+ ]
+}

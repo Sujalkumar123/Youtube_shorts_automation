@@ -82,3 +82,4 @@
 - 2026-11-28 16:33 IST: Yudhishthir (flMB-JPMlhE) confirmed public via publishAt; first comment posted (yes/no 'aadha sach jhooth tha?' + tease tonight 8 PM Kuldhara). Kuldhara's first comment is for the 18:45 run after 20:03. No Telegram (nothing went wrong).
 
 - 2026-11-28: growth plan set. Kumbhakarna 100s=2076 views/58.2%; Ashwatthama 54s=1289; Bhangarh 61s=875; Gandhari 56s=168. Length A/B starts 29 Nov (16:30 long 80-95s, 20:00 short 50-55s). Hook: 5-10 words, payoff in frame 1, movement in first 2s. Related video + pinned comment on every upload.
+- 2026-11-29 16:30 LONG arm: ram-lakshman-saza, 88.7 s, 25 lines. Opening line: "राम ने अपने ही छोटे भाई को, मौत की सज़ा सुनाई थी." Reveal "लक्ष्मण" at 62.6 s (71%). Gate PASS, voice 20.4 dB over music.
